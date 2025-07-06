@@ -17,10 +17,9 @@ Whether you're building a Sales Prospecting Agent, a Research Assistant, or a Kn
 
 | Project | Stack | Description |
 |--------|-------|-------------|
-| `sales-prospecting-agent/` | React + n8n + Pinecone | An agent that finds ideal leads, scores them, and auto-generates emails |
+| `sales-prospecting-agent/` | React + n8n  | An agent that finds ideal leads, scores them, and auto-generates emails |
 | `newsletter-generator-agent/` | Next.js + Notion API + n8n | Summarizes updates and drafts a styled newsletter with images |
 | `research-assistant-agent/` | Flask + RAG + n8n | Finds, validates, and summarizes articles on a given topic |
-| `data-analyst-agent/` | Streamlit + pgvector + OpenAI | Performs SQL + charting based on business queries |
 | `airbnb-vacation-agent/` | Lovable.dev + webhook + n8n | Search your perfect vibe-coded vacation using text prompts and open search |
 
 > 💡 Each folder contains frontend code, backend logic, prompt structure, and ready-to-import n8n flows (`.json` files)
