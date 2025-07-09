@@ -293,10 +293,12 @@
     {
       "parameters": {
         "formTitle": "Sales ICP Agent",
+        "formDescription": "Find Perfect Customers with AI Precision\n\nAI analyzes job postings to identify prospects that match your Ideal Customer Profile—delivered automatically.",
         "formFields": {
           "values": [
             {
               "fieldLabel": "Describe your Ideal Customer Profile",
+              "placeholder": "Companies with 20-500 employees focusing on content marketing",
               "requiredField": true
             },
             {
@@ -502,7 +504,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "ed913500-9dac-40b7-837b-0a31b8685ac0",
+  "versionId": "f5ca6b6d-0200-4eb9-8416-8bfaef678ded",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "9d290d25cfc5ef9b1bca02394377f3cd68b677c7c10a8b0c165f9336ea80fb7f"
