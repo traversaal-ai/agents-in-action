@@ -1,5 +1,5 @@
 {
-  "name": "ICP_Workflow_form_input",
+  "name": "ICP_Builder_With_Form",
   "nodes": [
     {
       "parameters": {
@@ -9,10 +9,10 @@
       "type": "n8n-nodes-base.rssFeedRead",
       "typeVersion": 1.1,
       "position": [
-        -1720,
-        420
+        100,
+        460
       ],
-      "id": "6603d8ff-3b26-41e3-9aea-d5ad186cd523",
+      "id": "6ae2d3c5-9a76-4f71-8c11-7ce0066ccd34",
       "name": "Get Remote Jobs RSS feed",
       "retryOnFail": true
     },
@@ -23,10 +23,10 @@
       "type": "n8n-nodes-base.limit",
       "typeVersion": 1,
       "position": [
-        -1520,
-        420
+        300,
+        460
       ],
-      "id": "012f1e8e-94d7-433d-9d41-55bca41e3bc7",
+      "id": "e28dc3d8-8924-4505-9aa0-21b5b5e24786",
       "name": "Limit"
     },
     {
@@ -42,10 +42,10 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -520,
-        360
+        1940,
+        500
       ],
-      "id": "2de07ae2-aa3e-46f6-8830-83e898beccf4",
+      "id": "e0287cec-df53-4153-af0d-f70f69de8b6d",
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
@@ -62,10 +62,10 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        -280,
-        340
+        2160,
+        460
       ],
-      "id": "9a2ce6fd-9012-47be-bc19-907fc1879405",
+      "id": "a22394cc-c7e2-4904-9b51-b20410e8b231",
       "name": "Structured Output Parser"
     },
     {
@@ -77,10 +77,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
       "position": [
-        -440,
-        20
+        1960,
+        220
       ],
-      "id": "6b19e2d1-cb99-456f-a8cf-7734e2409dbc",
+      "id": "21c2c68d-0e1c-4a62-b516-5ebd8857939e",
       "name": "Analyze ICP Match",
       "retryOnFail": true
     },
@@ -94,10 +94,10 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        -40,
-        440
+        2560,
+        580
       ],
-      "id": "591d259a-e71f-485a-b2a6-d084ae983b67",
+      "id": "ef16f0c4-5cb3-4642-84ff-9dffe1a3a42f",
       "name": "Send Prospect Email",
       "webhookId": "169b0a22-48f1-43a9-9cd3-046aca3f495c",
       "credentials": {
@@ -112,25 +112,12 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        160,
-        440
+        2900,
+        580
       ],
-      "id": "fbdec2e1-5ebe-4585-815e-667fb94cbf0d",
+      "id": "b154e1f2-1d50-4c75-bd49-3a0da3317018",
       "name": "Wait 5s",
       "webhookId": "f9fa67c6-75d9-4f82-951b-df26219f580f"
-    },
-    {
-      "parameters": {
-        "content": "Input: email and ICP\nFinds jobs matching ICP"
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        -1880,
-        140
-      ],
-      "typeVersion": 1,
-      "id": "b1776c0f-121d-442f-b97f-679ebcad8452",
-      "name": "Sticky Note"
     },
     {
       "parameters": {
@@ -139,10 +126,10 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        -780,
-        420
+        1420,
+        480
       ],
-      "id": "95e85df5-df0f-43e2-9b35-042baa06d5fe",
+      "id": "33ff5f7d-b247-46d7-a0c1-1850a30692c8",
       "name": "Loop Over Items"
     },
     {
@@ -158,10 +145,10 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -1340,
-        640
+        540,
+        700
       ],
-      "id": "ebcfb277-e5ff-49b1-9a35-d74c1d099fc8",
+      "id": "758784c9-2025-4d32-bb2e-52d0468c12cc",
       "name": "OpenAI Chat Model1",
       "credentials": {
         "openAiApi": {
@@ -198,10 +185,10 @@
       "type": "n8n-nodes-base.filter",
       "typeVersion": 2.2,
       "position": [
-        -980,
-        420
+        1060,
+        480
       ],
-      "id": "f4f8b7c3-6e13-4da3-ab64-307b9abd555d",
+      "id": "00bf9862-7fb8-4331-9dec-3b42998a292c",
       "name": "Filter"
     },
     {
@@ -212,10 +199,10 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        -1120,
-        640
+        760,
+        700
       ],
-      "id": "81ff2167-9b55-4332-8f13-0de08fd60a85",
+      "id": "5a5c0517-ee1f-4dc6-b808-165434a9ebc0",
       "name": "Structured Output Parser1"
     },
     {
@@ -228,10 +215,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.7,
       "position": [
-        -1300,
-        420
+        580,
+        480
       ],
-      "id": "78a9ab41-d944-4b34-905c-ee1065f9b0c5",
+      "id": "23fb3902-6fd9-4638-b095-20880c57f475",
       "name": "Filter relevant roles",
       "onError": "continueRegularOutput"
     },
@@ -245,10 +232,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.7,
       "position": [
-        -1280,
-        20
+        580,
+        -180
       ],
-      "id": "d80d4153-5424-432d-a3d9-152a3118a939",
+      "id": "232a394f-163f-4445-be8b-ff28ba5ef10d",
       "name": "Basic LLM Chain"
     },
     {
@@ -264,10 +251,10 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -1280,
-        240
+        580,
+        40
       ],
-      "id": "6fe092de-b792-47f5-840b-1ae8600746f5",
+      "id": "17c33746-2fb2-42a2-84a9-6c80ed5fb374",
       "name": "OpenAI Chat Model2",
       "credentials": {
         "openAiApi": {
@@ -284,10 +271,10 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        -1100,
-        240
+        760,
+        40
       ],
-      "id": "9ef013da-8aaf-478e-a0c4-9218d79b5236",
+      "id": "94a6c5ac-45ab-4bee-b9c6-d5b168076482",
       "name": "Structured Output Parser2"
     },
     {
@@ -312,12 +299,172 @@
       "type": "n8n-nodes-base.formTrigger",
       "typeVersion": 2.2,
       "position": [
-        -1560,
-        20
+        220,
+        -180
       ],
-      "id": "d38c9ad8-2f6f-4252-a0ef-18938d4a3bf7",
+      "id": "a551da4f-0f66-4850-94f4-ef1f954369f5",
       "name": "On form submission",
       "webhookId": "7e028b8d-47f2-4284-8225-f9545a423a39"
+    },
+    {
+      "parameters": {
+        "content": "🎯 **AI-Powered ICP Matching Workflow**\n\n\n**Overview:** \n\nThis workflow automatically identifies ideal customer prospects from job postings using AI. It analyzes your Ideal Customer Profile (ICP), finds relevant job feeds, filters opportunities, and delivers detailed prospect intelligence via email.\n\n**Flow:**\n\n1. Input Collection → ICP description + email to send ICP information to\n\n2. Smart RSS Feed Selection → AI chooses best job category and selects the right RSS feed link. RSS feeds are custom URLs that allow access site data. Custom RSS feeds can be created here: https://rss.app/\n\n3. Data Collection → Fetch latest job postings\n\n4. Initial Filtering → AI pre-screens for ICP relevance\n\n5. Deep Analysis → Comprehensive prospect evaluation which includes details about the company, the role and what services can be provided by your company\n\n6. Email Delivery → Formatted reports with actionable insights.\n\n\n**Key Features:**\n\n- Multi-stage AI filtering for precision\n- Comprehensive company intelligence extraction\n- Customized pitch recommendations\n- Priority scoring and urgency assessment\\n- Automated prospect report generation\n",
+        "height": 760,
+        "width": 780,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -820,
+        -200
+      ],
+      "id": "b10c4588-e272-47f3-936e-c2ae51fa5507",
+      "name": "Workflow Overview"
+    },
+    {
+      "parameters": {
+        "content": "📝 **Entry Point**\n\nForm collects:\n- Ideal Customer Profile description\n- User email for prospect delivery\n\n\nTriggers the entire workflow when submitted.",
+        "height": 300,
+        "width": 380,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        80,
+        -340
+      ],
+      "id": "7041796d-ad68-4a24-9ade-4ff75d12237d",
+      "name": "Form Input Note"
+    },
+    {
+      "parameters": {
+        "content": "🧠 **Smart Feed Selection**\n\nAI analyzes your ICP and selects the most relevant job category, example:\n- Data/Analytics roles\n- Marketing positions\n- Finance/Legal jobs\n- HR/Recruiting roles\n- Software Development\n\n\nEnsures we target the right audience from the start.",
+        "height": 620,
+        "width": 420,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        500,
+        -440
+      ],
+      "id": "7fc381fd-2d06-4c32-9c75-15b96127dd67",
+      "name": "Feed Selection Note"
+    },
+    {
+      "parameters": {
+        "content": "📡 **Data Collection**\n\nFetches latest job postings from the selected RSS feed. Limit set to 10 jobs for efficient processing while maintaining quality prospects.",
+        "height": 320,
+        "width": 400,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        60,
+        320
+      ],
+      "id": "5ba61f90-9f55-49d3-ae70-1de63f4016e6",
+      "name": "Data Collection Note"
+    },
+    {
+      "parameters": {
+        "content": "🔍 **Initial AI Filtering**\n\nFirst-pass AI analysis:\n\n- Evaluates each job against your ICP\n- Extracts company intelligence\n- Scores relevance (0-10)\n- Identifies tech stack and growth indicators",
+        "height": 640,
+        "width": 420,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        500,
+        220
+      ],
+      "id": "07abeefa-31a1-4ef9-8027-84067c63d6e6",
+      "name": "Initial Filtering Note"
+    },
+    {
+      "parameters": {
+        "content": "✅ **Quality Filter**\n\nFilters out non-relevant jobs based on AI analysis. Only prospects marked as 'relevant' with strong ICP alignment continue through the pipeline.",
+        "height": 340,
+        "width": 280,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        960,
+        320
+      ],
+      "id": "f800cd3a-46f3-4f94-9722-67216616a1f8",
+      "name": "Quality Filter Note"
+    },
+    {
+      "parameters": {
+        "content": "🔄 **Batch Processing**\n\nProcesses filtered prospects one by one to:\n\n- Ensure detailed analysis quality\n- Prevent API rate limits\n- Generate personalized reports\n\n\nEach prospect gets individual attention.",
+        "height": 400,
+        "width": 340,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1320,
+        260
+      ],
+      "id": "132d2928-7dbc-4978-9b52-8257536a92ea",
+      "name": "Batch Processing Note"
+    },
+    {
+      "parameters": {
+        "content": "🎯 **Deep ICP Analysis**\n\nComprehensive prospect evaluation:\n\n- Validates ICP alignment\n- Identifies specific business needs\n- Maps solution value propositions\n- Creates tailored pitch strategies\n- Assesses budget and urgency\n\n\nGenerates actionable sales intelligence.",
+        "height": 680,
+        "width": 580,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        -40
+      ],
+      "id": "27fbc265-315b-4594-add4-1168fb825d90",
+      "name": "Deep Analysis Note"
+    },
+    {
+      "parameters": {
+        "content": "📧 **Intelligent Email Delivery**\n\nSends beautifully formatted prospect reports containing:\n\n- Company overview and ICP match score\n- Specific needs and challenges\n- Tailored value propositions\n- Recommended pitch strategy\n- Key talking points\n- Next steps and timing\n\n\nReady-to-action sales intelligence.",
+        "height": 500,
+        "width": 360,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2460,
+        240
+      ],
+      "id": "248dae42-46c5-43e9-9e5c-477cf617c174",
+      "name": "Email Delivery Note"
+    },
+    {
+      "parameters": {
+        "content": "⏱️ **Rate Limiting**\n\n5-second delay between processing to:\n\n- Respect API rate limits\n- Ensure stable workflow execution\n- Maintain email deliverability\n\n\nPrevents system overload.",
+        "height": 400,
+        "width": 260,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2840,
+        320
+      ],
+      "id": "3a38b18b-b401-47bd-a182-3b6c597903fe",
+      "name": "Rate Limiting Note"
     }
   ],
   "pinData": {},
@@ -504,11 +651,10 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "f5ca6b6d-0200-4eb9-8416-8bfaef678ded",
+  "versionId": "03e514cb-682e-48a3-8ee5-2784312efed7",
   "meta": {
-    "templateCredsSetupCompleted": true,
     "instanceId": "9d290d25cfc5ef9b1bca02394377f3cd68b677c7c10a8b0c165f9336ea80fb7f"
   },
-  "id": "nQ0MFP3LEieuCzBD",
+  "id": "OLUFP7p6ORGaHYB7",
   "tags": []
 }
