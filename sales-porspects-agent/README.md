@@ -1,4 +1,4 @@
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdyY3F6N29zNHQ2b21lMTJxb201bDhrYnNmZG4ybXV4YnpyZGRsbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cjudSgwvgj8tqmTwN9/giphy.gif" alt="Sales Automation" style="width:100%;max-height:320px;object-fit:cover;border-radius:12px;" />
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdyY3F6N29zNHQ2b21lMTJxb201bDhrYnNmZG4ybXV4YnpyZGRsbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cjudSgwvgj8tqmTwN9/giphy.gif" alt="Sales Automation" style="width:400px;max-height:320px;object-fit:cover;border-radius:12px;" />
 
 # 💼 Sales Prospects Agent
 
