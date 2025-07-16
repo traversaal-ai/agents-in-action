@@ -1,4 +1,4 @@
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnhxcHZkNXVrbmk4Y3Fxazk0aHFqbHplbDZueWRtMXUxNGFxNXF2bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ASH5ovgLK95jIKRSYy/giphy.gif" alt="YouTube to LinkedIn Automation" style="width:100%;height:auto;object-fit:cover;border-radius:12px;" />
+<div style="display:flex;justify-content:center;align-items:center;width:100%"><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnhxcHZkNXVrbmk4Y3Fxazk0aHFqbHplbDZueWRtMXUxNGFxNXF2bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ASH5ovgLK95jIKRSYy/giphy.gif" alt="YouTube to LinkedIn Automation" style="width:100%;height:auto;object-fit:cover;border-radius:12px;" /></div>
 
 # 🔗 YouTube to LinkedIn n8n Workflow
 
