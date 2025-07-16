@@ -1,3 +1,5 @@
+![Sales Automation](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdyY3F6N29zNHQ2b21lMTJxb201bDhrYnNmZG4ybXV4YnpyZGRsbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cjudSgwvgj8tqmTwN9/giphy.gif)
+
 # Sales Prospects Agent
 
 This folder contains workflows for building Ideal Customer Profiles (ICP) and managing sales prospecting automation using n8n.

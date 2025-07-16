@@ -1,3 +1,5 @@
+![YouTube to LinkedIn Automation](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnhxcHZkNXVrbmk4Y3Fxazk0aHFqbHplbDZueWRtMXUxNGFxNXF2bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ASH5ovgLK95jIKRSYy/giphy.gif)
+
 # YouTube to LinkedIn n8n Workflow
 
 This folder contains the **YouTube Link to LinkedIn Post Automation Workflow** for n8n.
@@ -38,6 +40,3 @@ This workflow automates the process of turning YouTube videos into LinkedIn post
    - LinkedIn (for publishing)
 3. Configure Google Sheet structure as expected by the workflow.
 4. Adjust Slack and LinkedIn nodes for your workspace/account.
-
-## References
-- For help, see the sticky notes in the workflow or contact the creator listed in the workflow metadata. 

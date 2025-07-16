@@ -39,7 +39,3 @@ This workflow automates the process of searching Airbnb listings based on user q
 ## Integration with Frontend
 - The frontend app in `chrono-voyage-ai` is pre-configured to send requests to this workflow's webhook.
 - Make sure the webhook URL matches in both places.
-
-## References
-- [YouTube Setup Tutorial](https://youtu.be/C_FSNLCPx_Q)
-- For help, contact: contact@loopsera.com 

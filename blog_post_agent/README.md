@@ -1,3 +1,5 @@
+![AI Blog Writing](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzB5cjY4YTY4MGs2ZDQxNWdsM3RxMjVwYm42bHpscnVwbnN4NjVqeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VzHq1HMblXXQRIRNJf/giphy.gif)
+
 # Blog Post Agent
 
 This folder contains workflows and configurations for automated blog post generation using n8n and AI.
