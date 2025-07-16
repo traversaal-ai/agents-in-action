@@ -1,5 +1,3 @@
-<div style="display:flex;justify-content:center;align-items:center;width:100%"><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnhxcHZkNXVrbmk4Y3Fxazk0aHFqbHplbDZueWRtMXUxNGFxNXF2bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ASH5ovgLK95jIKRSYy/giphy.gif" alt="YouTube to LinkedIn Automation" style="width:100%;height:auto;object-fit:cover;border-radius:12px;" /></div>
-
 # 🔗 YouTube to LinkedIn n8n Workflow
 
 This folder contains the **YouTube Link to LinkedIn Post Automation Workflow** for n8n.
@@ -53,3 +51,6 @@ This workflow automates the process of turning YouTube videos into LinkedIn post
 
 ## 📚 References
 - 📝 For help, see the sticky notes in the workflow or contact the creator listed in the workflow metadata.
+
+
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnhxcHZkNXVrbmk4Y3Fxazk0aHFqbHplbDZueWRtMXUxNGFxNXF2bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ASH5ovgLK95jIKRSYy/giphy.gif" alt="YouTube to LinkedIn Automation" style="width:100vw;height:700px;object-fit:contain;border-radius:12px;" />
