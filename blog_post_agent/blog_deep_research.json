@@ -1,0 +1,801 @@
+{
+    "nodes": [
+      {
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "5c28393f-6e8b-425b-babb-22eac9ad7238",
+                "name": "API_KEY",
+                "value": "ares_a79c77acc353d13a751f576e5ebccef9fd49a002d8b5365a15f104ea760afe43",
+                "type": "string"
+              },
+              {
+                "id": "a848bf0c-0a5f-4acc-9412-aebd93c84380",
+                "name": "top_results",
+                "value": "={{ $json.top_results ?? 3 }}",
+                "type": "number"
+              },
+              {
+                "id": "c52bbef3-c0a6-4017-a403-abaaee216895",
+                "name": "context",
+                "value": "={{ $json.context }}",
+                "type": "string"
+              },
+              {
+                "id": "ae883a9e-7207-48ef-ad1f-9c86076e0308",
+                "name": "num_search_terms",
+                "value": "={{ $json.num_search_terms ?? 2 }}",
+                "type": "number"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4,
+        "position": [
+          460,
+          580
+        ],
+        "id": "3c535570-9c99-4d87-9482-ffef1164ccea",
+        "name": "configuration"
+      },
+      {
+        "parameters": {
+          "schemaType": "manual",
+          "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"search_terms\": {\n            \"type\": \"array\",\n            \"description\": \"the google search terms\",\n            \"items\": {\n                \"type\": \"string\"\n            }\n        }\n    },\n    \"required\": [\n        \"search_terms\"\n    ]\n}"
+        },
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "typeVersion": 1.2,
+        "position": [
+          1020,
+          880
+        ],
+        "id": "fa24b809-061b-4cff-bed2-ff55602e210d",
+        "name": "Structured Output Parser"
+      },
+      {
+        "parameters": {
+          "model": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gpt-4o-mini"
+          },
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "typeVersion": 1.2,
+        "position": [
+          2520,
+          1080
+        ],
+        "id": "cabbe421-08cd-4226-97dd-6688d03e0f0c",
+        "name": "OpenAI Chat Model",
+        "credentials": {
+          "openAiApi": {
+            "id": "1NYcjHdurohDfhOk",
+            "name": "OpenAi account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "fieldToSplitOut": "output.search_terms",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.splitOut",
+        "typeVersion": 1,
+        "position": [
+          1160,
+          580
+        ],
+        "id": "ad0f7c59-b670-459a-ac7a-91590c9bdcf5",
+        "name": "Split Out"
+      },
+      {
+        "parameters": {
+          "fieldToSplitOut": "=data.web_url",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.splitOut",
+        "typeVersion": 1,
+        "position": [
+          1580,
+          580
+        ],
+        "id": "d89c875f-6850-4012-bdcd-f1df0de6e57a",
+        "name": "Split Out1"
+      },
+      {
+        "parameters": {
+          "operation": "extractHtmlContent",
+          "extractionValues": {
+            "values": [
+              {
+                "key": "data",
+                "cssSelector": "body",
+                "returnValue": "html"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.html",
+        "typeVersion": 1.2,
+        "position": [
+          2680,
+          580
+        ],
+        "id": "87d80dca-d9ca-4b00-975b-078e9bc8f160",
+        "name": "HTML"
+      },
+      {
+        "parameters": {
+          "html": "={{ $json.data }}",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.markdown",
+        "typeVersion": 1,
+        "position": [
+          2920,
+          580
+        ],
+        "id": "e7ed8acc-99a4-441a-964f-52f7c2e24094",
+        "name": "Markdown"
+      },
+      {
+        "parameters": {
+          "schemaType": "manual",
+          "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"summary\": {\n            \"type\": \"string\",\n            \"description\": \"the summary of the content\"\n        }\n    },\n    \"required\": [\n        \"summary\"\n    ]\n}"
+        },
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "typeVersion": 1.2,
+        "position": [
+          3640,
+          940
+        ],
+        "id": "0290bd46-5d33-412b-bbd2-ea0e91b2772d",
+        "name": "Structured Output Parser1"
+      },
+      {
+        "parameters": {
+          "schemaType": "manual",
+          "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"relevant_to_context\": {\n            \"type\": \"boolean\",\n            \"description\": \"whether the researched content is relevant to the context\"\n        }\n    },\n    \"required\": [\n        \"relevant_to_article\"\n    ]\n}"
+        },
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "typeVersion": 1.2,
+        "position": [
+          4040,
+          920
+        ],
+        "id": "2d883f5c-400b-4a53-8cfb-f62667aaaba1",
+        "name": "Structured Output Parser2"
+      },
+      {
+        "parameters": {
+          "aggregate": "aggregateAllItemData",
+          "destinationFieldName": "research_results",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.aggregate",
+        "typeVersion": 1,
+        "position": [
+          4740,
+          580
+        ],
+        "id": "898c7bc9-4081-49d9-ab93-1a5e5683a999",
+        "name": "Aggregate"
+      },
+      {
+        "parameters": {
+          "workflowInputs": {
+            "values": [
+              {
+                "name": "top_results",
+                "type": "number"
+              },
+              {
+                "name": "context"
+              },
+              {
+                "name": "num_search_terms",
+                "type": "number"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "typeVersion": 1.1,
+        "position": [
+          140,
+          580
+        ],
+        "id": "e402ca5a-8cb5-489d-97b4-7211ebf01992",
+        "name": "When Executed by Another Workflow"
+      },
+      {
+        "parameters": {
+          "content": "# Configure\n\n- Custom API key",
+          "height": 400,
+          "color": 3
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          400,
+          400
+        ],
+        "id": "2fe12d7f-ec57-470a-9d19-5313760f412c",
+        "name": "Sticky Note"
+      },
+      {
+        "parameters": {
+          "content": "# Custom Search API documentation\n\nhttps://api-ares.traversaal.ai/live/predict",
+          "height": 200,
+          "width": 620
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          140,
+          120
+        ],
+        "id": "356cb1e1-dcb0-479a-a536-ae2bda268f46",
+        "name": "Sticky Note2"
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "=<Context>\n{{ $json.context }}\n</Context>\n\n<Instructions>\nI want to run a research on Google on the context above. \nHelp me to come up with search terms I can use.\nI need exactly {{ $json.num_search_terms }} search term(s) - no more no less. \nMake sure to be creative, and give me different ones so I can get diverse search results.\n</Instructions>",
+          "hasOutputParser": true
+        },
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "typeVersion": 1.5,
+        "position": [
+          780,
+          580
+        ],
+        "id": "71bfe7e7-4d6f-43d7-bb39-927e29380165",
+        "name": "create search terms"
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://api-ares.traversaal.ai/live/predict",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "x-api-key",
+                "value": "={{ $('configuration').item.json.API_KEY }}"
+              }
+            ]
+          },
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "query",
+                "value": "={{ [$json['output.search_terms']] }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          1360,
+          580
+        ],
+        "id": "a3e8b792-dc0b-4bcd-b536-b6e8f100b375",
+        "name": "search on Custom API",
+        "retryOnFail": true
+      },
+      {
+        "parameters": {
+          "url": "={{ $json['data.web_url'] }}",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "user-agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          2100,
+          580
+        ],
+        "id": "291750ca-4f34-4a1f-9b4c-afc30f10170d",
+        "name": "get the content of the link",
+        "retryOnFail": false,
+        "onError": "continueErrorOutput"
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "99cf6ac1-d77b-491c-86dc-44555032f5b0",
+                "leftValue": "={{ $json.error }}",
+                "rightValue": "",
+                "operator": {
+                  "type": "object",
+                  "operation": "notExists",
+                  "singleValue": true
+                }
+              },
+              {
+                "id": "e6dd1301-acb8-4dc4-83d0-4d5b1a7f2036",
+                "leftValue": "={{ $json.data }}",
+                "rightValue": "",
+                "operator": {
+                  "type": "string",
+                  "operation": "exists",
+                  "singleValue": true
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.filter",
+        "typeVersion": 2.2,
+        "position": [
+          2460,
+          580
+        ],
+        "id": "6c4b2ca2-9f26-4c47-af24-69a2347b162e",
+        "name": "filter out the errors"
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "e70a34f7-b723-47fe-a62f-1a318c483959",
+                "leftValue": "={{ $json.data }}",
+                "rightValue": "",
+                "operator": {
+                  "type": "string",
+                  "operation": "notEmpty",
+                  "singleValue": true
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.filter",
+        "typeVersion": 2.2,
+        "position": [
+          3140,
+          580
+        ],
+        "id": "4087a069-7a9a-461c-92aa-4eddff8c58b4",
+        "name": "filter empty results"
+      },
+      {
+        "parameters": {
+          "jsCode": "for (const item of $input.all()) {\n  item.json.data = item.json.data.replace(/!\\[[^\\]]+\\]\\([^\\)]+\\)/g, \"\") // remove images\n  item.json.data = item.json.data.replace(/\\[.*?\\]\\(.*?\\)/g, \"\") // remove links\n  item.json.data = item.json.data.replace(/\\n{2,}/g, \"\") // remove extra new line characters\n}\n\nreturn $input.all();"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          3340,
+          580
+        ],
+        "id": "8f22c3be-f596-47a6-b5ce-d38c2b3f415e",
+        "name": "cleanup the markdown"
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "=I've collected research content using Google search.\n\nRead the research content, and analyze whether it is relevant to the context below.\nMake sure it's also useful, and contains relevant information for my context.\n\n<Context>\n{{ $('configuration').item.json.context }}\n</Context>\n\n<ResearchContentSummary>\n{{ $json.output.summary }}\n</ResearchContentSummary>",
+          "hasOutputParser": true
+        },
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "typeVersion": 1.5,
+        "position": [
+          3940,
+          580
+        ],
+        "id": "a5b9167c-33f3-4348-a9e3-41978e7f4ea0",
+        "name": "is it relevant?",
+        "retryOnFail": true
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "=Please summarize the following content for me. Make sure to capture all the information in a concise format. Don't miss anything important.\nIgnore generic website elements like cookie policies, etc.\n\n<Content>\n{{ $json.data }}\n</Content>",
+          "hasOutputParser": true
+        },
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "typeVersion": 1.5,
+        "position": [
+          3560,
+          580
+        ],
+        "id": "7827b878-a7a3-4612-bbd2-4d753f09e104",
+        "name": "summarize",
+        "retryOnFail": true
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "a72e5161-9b19-45fb-bb4f-5ae28d3da266",
+                "leftValue": "={{ $json.output.relevant_to_context }}",
+                "rightValue": "",
+                "operator": {
+                  "type": "boolean",
+                  "operation": "true",
+                  "singleValue": true
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.filter",
+        "typeVersion": 2.2,
+        "position": [
+          4280,
+          580
+        ],
+        "id": "41d75264-cfce-49d8-82c1-d6bbaa8b5106",
+        "name": "filter irrelevant"
+      },
+      {
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "53e16d12-8a90-4cf8-85e2-6aa2ef2ae3af",
+                "name": "summary",
+                "value": "={{ $('summarize').item.json.output.summary }}",
+                "type": "string"
+              },
+              {
+                "id": "1ca9f5a5-0e9a-47e6-9fef-079367dc4769",
+                "name": "title",
+                "value": "Search Result",
+                "type": "string"
+              },
+              {
+                "id": "11c33d6b-d23c-4bc6-9003-b8ca022b3ada",
+                "name": "link",
+                "value": "={{ $('Split Out1').item.json['data.web_url'] }}",
+                "type": "string"
+              },
+              {
+                "id": "eea8547b-2e21-4b71-a9dc-74639d658485",
+                "name": "snippet",
+                "value": "Custom API search result",
+                "type": "string"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4,
+        "position": [
+          4520,
+          580
+        ],
+        "id": "22f59bba-f47e-48b3-8c03-a7fab9bf8b1d",
+        "name": "set fields to return"
+      },
+      {
+        "parameters": {
+          "content": "# You can replace OpenAI with Ollama!",
+          "height": 320,
+          "width": 420
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          2160,
+          920
+        ],
+        "id": "cce05870-de11-4141-b0fa-58dc0e3911f1",
+        "name": "Sticky Note1"
+      },
+      {
+        "parameters": {
+          "maxItems": 10
+        },
+        "type": "n8n-nodes-base.limit",
+        "typeVersion": 1,
+        "position": [
+          1800,
+          580
+        ],
+        "id": "99343ea2-1016-46be-8c8e-ab5311ed19ee",
+        "name": "Limit"
+      }
+    ],
+    "connections": {
+      "configuration": {
+        "main": [
+          [
+            {
+              "node": "create search terms",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Structured Output Parser": {
+        "ai_outputParser": [
+          [
+            {
+              "node": "create search terms",
+              "type": "ai_outputParser",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenAI Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "create search terms",
+              "type": "ai_languageModel",
+              "index": 0
+            },
+            {
+              "node": "summarize",
+              "type": "ai_languageModel",
+              "index": 0
+            },
+            {
+              "node": "is it relevant?",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Split Out": {
+        "main": [
+          [
+            {
+              "node": "search on Custom API",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Split Out1": {
+        "main": [
+          [
+            {
+              "node": "Limit",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "HTML": {
+        "main": [
+          [
+            {
+              "node": "Markdown",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Markdown": {
+        "main": [
+          [
+            {
+              "node": "filter empty results",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Structured Output Parser1": {
+        "ai_outputParser": [
+          [
+            {
+              "node": "summarize",
+              "type": "ai_outputParser",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Structured Output Parser2": {
+        "ai_outputParser": [
+          [
+            {
+              "node": "is it relevant?",
+              "type": "ai_outputParser",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "When Executed by Another Workflow": {
+        "main": [
+          [
+            {
+              "node": "configuration",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "create search terms": {
+        "main": [
+          [
+            {
+              "node": "Split Out",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "search on Custom API": {
+        "main": [
+          [
+            {
+              "node": "Split Out1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "get the content of the link": {
+        "main": [
+          [
+            {
+              "node": "filter out the errors",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          []
+        ]
+      },
+      "filter out the errors": {
+        "main": [
+          [
+            {
+              "node": "HTML",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "filter empty results": {
+        "main": [
+          [
+            {
+              "node": "cleanup the markdown",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "cleanup the markdown": {
+        "main": [
+          [
+            {
+              "node": "summarize",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "is it relevant?": {
+        "main": [
+          [
+            {
+              "node": "filter irrelevant",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "summarize": {
+        "main": [
+          [
+            {
+              "node": "is it relevant?",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "filter irrelevant": {
+        "main": [
+          [
+            {
+              "node": "set fields to return",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "set fields to return": {
+        "main": [
+          [
+            {
+              "node": "Aggregate",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Limit": {
+        "main": [
+          [
+            {
+              "node": "get the content of the link",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "pinData": {},
+    "meta": {
+      "templateCredsSetupCompleted": true,
+      "instanceId": "1725aaf255f271a2cb370b9051de0a61864aaf0b262c35ad3f624929f92bfcff"
+    }
+  }
