@@ -1,4 +1,4 @@
-<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGp6b2FhcjFjcWQyZjNlOXM5MTQzbml6djhoMzJtdXR1b3NyNWR5aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tu991S46UttOSmtK8B/giphy.gif" alt="Airbnb Workflow Animation" style="width:100%;max-height:320px;object-fit:cover;border-radius:12px;" />
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGp6b2FhcjFjcWQyZjNlOXM5MTQzbml6djhoMzJtdXR1b3NyNWR5aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tu991S46UttOSmtK8B/giphy.gif" alt="Airbnb Workflow Animation" style="width:100%;height:auto;object-fit:cover;border-radius:12px;" />
 
 # 🏠 Airbnb n8n Workflow
 

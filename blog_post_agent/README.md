@@ -1,4 +1,4 @@
-<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzB5cjY4YTY4MGs2ZDQxNWdsM3RxMjVwYm42bHpscnVwbnN4NjVqeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VzHq1HMblXXQRIRNJf/giphy.gif" alt="AI Blog Writing" style="width:100%;max-height:320px;object-fit:cover;border-radius:12px;" />
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzB5cjY4YTY4MGs2ZDQxNWdsM3RxMjVwYm42bHpscnVwbnN4NjVqeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VzHq1HMblXXQRIRNJf/giphy.gif" alt="AI Blog Writing" style="width:100%;height:auto;object-fit:cover;border-radius:12px;" />
 
 # ✍️ Blog Post Agent
 

@@ -1,4 +1,4 @@
-<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmtjYmpyaHdiYncwcXVjc21kOWNheGdsZHI2NnF3YTI1ZGZtZjE1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zUwHGTclRb7W/giphy.gif" alt="Workflow Creator" style="width:100%;max-height:320px;object-fit:cover;border-radius:12px;" />
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmtjYmpyaHdiYncwcXVjc21kOWNheGdsZHI2NnF3YTI1ZGZtZjE1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zUwHGTclRb7W/giphy.gif" alt="Workflow Creator" style="width:100%;height:auto;object-fit:cover;border-radius:12px;" />
 
 # 🛠️ Workflow Creator
 
