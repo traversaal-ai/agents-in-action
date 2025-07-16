@@ -16,11 +16,12 @@ Whether you're building a Sales Prospecting Agent, a Research Assistant, or a Kn
 ## 🧩 What's Inside?
 
 | Project | Stack | Description |
-|--------|-------|-------------|
-| `sales-prospecting-agent/` | React + n8n  | An agent that finds ideal leads, scores them, and auto-generates emails |
-| `newsletter-generator-agent/` | Next.js + Notion API + n8n | Summarizes updates and drafts a styled newsletter with images |
-| `research-assistant-agent/` | Flask + RAG + n8n | Finds, validates, and summarizes articles on a given topic |
-| `airbnb-vacation-agent/` | Lovable.dev + webhook + n8n | Search your perfect vibe-coded vacation using text prompts and open search |
+|---------|-------|-------------|
+| `airbnb-agent/` | React + n8n | Search for your perfect Airbnb stay using AI and automation |
+| `blog_post_agent/` | n8n + AI | Automated blog post generation with deep research sub-workflow |
+| `sales-porspects-agent/` | n8n + AI | Build Ideal Customer Profiles and automate sales prospecting |
+| `workflow_creator/` | n8n | Visual workflow creator and manager for automation projects |
+| `youtube-to-linkedin/` | n8n + React | Turn YouTube videos into LinkedIn posts with human review |
 
 > 💡 Each folder contains frontend code, backend logic, prompt structure, and ready-to-import n8n flows (`.json` files)
 
