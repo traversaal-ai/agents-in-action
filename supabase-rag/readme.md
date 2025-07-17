@@ -1,234 +1,188 @@
-RAG Agent with Memory - n8n Workflow
-A powerful Retrieval-Augmented Generation (RAG) chatbot built with n8n that combines document knowledge with conversational AI and persistent memory.
-🌟 Features
+# 🧠 RAG Agent with Memory — n8n Workflow
 
-🤖 Intelligent Chat Agent: Powered by OpenAI GPT-4o-mini for natural conversations
-💾 Persistent Memory: Remembers conversation history using PostgreSQL
-🔍 Document Search: Semantic search through your knowledge base
-📚 Document Processing: Automated PDF ingestion and vectorization
-🎯 Real-time Chat: Webhook-based chat interface for instant responses
+A powerful Retrieval-Augmented Generation (RAG) chatbot built using **n8n**, combining document knowledge with conversational AI and persistent memory.
 
-🏗️ Architecture
-This workflow consists of two main components:
-1. Document Processing Pipeline (Setup)
-CopyManual Trigger → Google Drive Download → Text Splitter → Document Loader → Embeddings → Vector Store
-2. Chat Interface (Runtime)
-CopyChat Trigger → RAG Agent → [Memory + LLM + Vector Search] → Response
-🚀 Quick Start
-Prerequisites
-Before setting up this workflow, ensure you have:
+---
 
-n8n instance (cloud or self-hosted)
-OpenAI API key with GPT-4o-mini access
-PostgreSQL database for conversation memory
-Supabase account for vector storage
-Google Drive API access for document downloads
+## 🌟 Features
 
-Required Credentials
-Set up the following credentials in n8n:
+- 🤖 **Intelligent Chat Agent**: Powered by OpenAI GPT-4o-mini for natural conversations
+- 💾 **Persistent Memory**: Remembers conversation history using PostgreSQL
+- 🔍 **Document Search**: Semantic search through your knowledge base
+- 📚 **Document Processing**: Automated PDF ingestion and vectorization
+- 🎯 **Real-time Chat**: Webhook-based chat interface for instant responses
 
-OpenAI API
+---
 
-API Key from OpenAI platform
-Used for: Chat model and embeddings
+## 🏗️ Architecture
 
+This workflow has two main pipelines:
 
-PostgreSQL
+### 1. Document Processing (Setup)
+Manual Trigger → Google Drive Download → Text Splitter → Document Loader → Embeddings → Vector Store
 
-Database connection for chat memory
-Creates tables automatically
 
+### 2. Chat Interface (Runtime)
+Chat Trigger → RAG Agent → [Memory + LLM + Vector Search] → Response
 
-Supabase
 
-Project URL and API key
-Used for vector storage
+---
 
+## 🚀 Quick Start
 
-Google Drive OAuth2
+### ✅ Prerequisites
 
-For downloading documents
-Requires OAuth2 setup
+- An `n8n` instance (cloud or self-hosted)
+- OpenAI API Key with GPT-4o-mini access
+- PostgreSQL database (for memory)
+- Supabase account (for vector storage)
+- Google Drive API access
 
+---
 
+### 🔑 Required Credentials in n8n
 
-Installation Steps
+| Service         | Purpose                          |
+|-----------------|----------------------------------|
+| OpenAI          | Chat model + embeddings          |
+| PostgreSQL      | Stores persistent chat memory    |
+| Supabase        | Hosts vector embeddings          |
+| Google Drive    | Downloads source PDFs            |
 
-Import the Workflow
-bashCopy# Copy the JSON and import into your n8n instance
+---
 
-Configure Credentials
+## 📋 Setup Instructions
 
-Set up all required API credentials
-Test each connection
+### Step 1: Document Processing (Run Once)
+1. Upload PDF to Google Drive
+2. Replace the file ID in the `Download File` node
+3. Trigger the workflow manually
+4. Check Supabase to confirm vector storage
 
+### Step 2: Chat Interface (Always Running)
+1. Activate the webhook trigger
+2. Copy the webhook URL for your chat frontend
+3. POST messages to the URL
+4. Receive smart document-grounded responses
 
-Prepare Your Knowledge Base
+---
 
-Upload your PDF document to Google Drive
-Update the Google Drive file ID in the workflow
-Run the document processing pipeline once
+## 🔧 Configuration
 
+### Document Settings
+- Text Splitter: Recursive character splitter
+- Embedding Model: `text-embedding-ada-002`
+- Vector Store Table: `documents` (Supabase)
 
-Start Chatting
+### Agent Settings
+- System Message: `"You are a helpful assistant."`
+- Model: `gpt-4o-mini`
+- Tools: `aws_knowledge_base` (vector search tool)
 
-Activate the chat trigger
-Send messages to your RAG agent
+### Memory Configuration
+- Type: PostgreSQL memory
+- Persistence: Across sessions
+- Context: Previous messages included in prompts
 
+---
 
+## 🛠️ Customization
 
-📋 Setup Instructions
-Step 1: Document Processing (Run Once)
+### Add New Docs
+- Upload to Drive → Update file ID → Run processing
 
-Upload Document: Place your PDF in Google Drive
-Update File ID: Replace the file ID in the "Download File" node
-Run Processing: Click "Test workflow" on the manual trigger
-Verify Storage: Check that vectors are stored in Supabase
+### Modify Behavior
+- Edit system message
+- Change model (e.g. `gpt-4`)
+- Tune chunk size, retrieval count
 
-Step 2: Chat Interface (Always Running)
+### Extend Functionality
+- Add web scraping
+- Use different loaders (e.g., DOCX, CSV)
+- Add API integrations or custom tools
 
-Activate Trigger: Enable the "When chat message received" trigger
-Get Webhook URL: Copy the webhook URL for your chat interface
-Send Messages: POST messages to the webhook endpoint
-Enjoy Conversations: The agent will respond with document knowledge
+---
 
-🔧 Configuration
-Document Settings
+## 📊 Example Use Cases
 
-Text Splitter: Recursive character splitting for optimal chunks
-Embedding Model: OpenAI text-embedding-ada-002
-Vector Store: Supabase with 'documents' table
+**User:** "What is AWS Lambda?"
+**Agent:** Searches + answers from docs
 
-Agent Settings
+**User:** "How do I deploy it?"
+**Agent:** Uses memory + relevant info
 
-System Message: "You are a helpful assistant"
-Model: GPT-4o-mini for cost-effective performance
-Memory: PostgreSQL chat history storage
-Tools: Vector search tool named 'aws_knowledge_base'
+**User:** "What about pricing?"
+**Agent:** Infers Lambda pricing context
 
-Memory Configuration
+---
 
-Type: PostgreSQL chat memory
-Persistence: Conversation history maintained across sessions
-Context: Previous messages inform current responses
+## 🧪 Troubleshooting
 
-🛠️ Customization
-Adding New Documents
+### 🛑 No Document Results?
+- Ensure vectors are stored
+- Validate embeddings format
 
-Upload new PDF to Google Drive
-Update file ID in workflow
-Run document processing pipeline
-Documents will be added to existing knowledge base
+### ❌ Memory Not Saving?
+- Verify DB connection & tables
+- Check credentials & permissions
 
-Modifying System Behavior
+### ⚠️ Chat Issues?
+- Confirm webhook URL and request shape
+- Test with Postman or simple client
 
-System Message: Edit the RAG Agent's system message
-Model Selection: Change to different OpenAI models
-Chunk Size: Adjust text splitter settings
-Search Results: Modify vector store retrieval count
+---
 
-Extending Functionality
+## 📈 Optimization
 
-Multi-format Support: Add different document loaders
-Web Scraping: Replace Google Drive with web scrapers
-API Integration: Add external data sources as tools
-Custom Tools: Create specialized search tools
+### 💸 Cost
+- Use GPT-4o-mini
+- Optimize chunking strategy
+- Cache frequent responses
 
-📊 Usage Examples
-Basic Chat
-CopyUser: "What is AWS Lambda?"
-Agent: [Searches knowledge base + generates response with document context]
-Follow-up Questions
-CopyUser: "How do I deploy a Lambda function?"
-Agent: [Uses conversation memory + searches for deployment info]
-Context Awareness
-CopyUser: "What about pricing?"
-Agent: [Understands context refers to Lambda pricing from previous conversation]
-🔍 Troubleshooting
-Common Issues
+### ⚡ Speed
+- Tune similarity thresholds
+- Run async document processing
+- Use indexed vector search
 
-No Document Responses
+---
 
-Check if vector store has data
-Verify embedding model compatibility
-Test vector search functionality
+## 🔐 Security
 
+- Store credentials securely in n8n
+- Use read-only DB access
+- Add webhook authentication
+- Define data retention policies
 
-Memory Not Working
+---
 
-Confirm PostgreSQL connection
-Check database permissions
-Verify table creation
+## 📚 Resources
 
+- 📹 [Original Tutorial by Nate Herk](https://www.youtube.com/watch?v=nVvHy-gTg8Y)
+- 📖 [n8n Docs](https://docs.n8n.io/)
+- 🧠 [LangChain Node Integration](https://docs.n8n.io/integrations/langchain/)
 
-Chat Trigger Issues
+---
 
-Validate webhook URL
-Check request format
-Test with simple HTTP client
+## 🤝 Contributing
 
+We welcome:
+- Bug reports & PRs
+- New document types
+- Code improvements & tooling
 
+---
 
-Debug Steps
+## 📢 Learn More
 
-Test Document Processing
+Want to learn how to build full-stack AI agents from scratch?
+📘 [Enroll in our hands-on GenAI Agent course on Maven](https://maven.com/boring-bot/advanced-llm?promoCode=MAVEN100)
 
-Run manual trigger
-Check each node output
-Verify Supabase storage
+---
 
+## 📄 License
 
-Test Chat Flow
+Provided for educational & practical use. Please comply with TOS of APIs used.
 
-Send test message
-Check agent response
-Verify memory storage
+---
 
-
-Check Logs
-
-Review n8n execution logs
-Monitor API usage
-Check error messages
-
-
-
-📈 Performance Optimization
-Cost Optimization
-
-Model Selection: Use GPT-4o-mini for cost efficiency
-Chunking Strategy: Optimize chunk sizes for relevance
-Caching: Implement response caching for common queries
-
-Speed Improvements
-
-Vector Search: Tune similarity thresholds
-Parallel Processing: Process multiple documents simultaneously
-Index Optimization: Optimize Supabase vector indices
-
-🔐 Security Considerations
-
-API Keys: Store securely in n8n credentials
-Database Access: Use read-only credentials where possible
-Webhook Security: Implement authentication for chat endpoint
-Data Privacy: Consider data retention policies
-
-📚 Additional Resources
-
-Original Tutorial: Nate Herk | AI Automation
-n8n Documentation: n8n.io/docs
-LangChain Integration: n8n LangChain Nodes
-
-🤝 Contributing
-Feel free to:
-
-Report issues
-Suggest improvements
-Share your modifications
-Add new document types
-
-📄 License
-This workflow is provided as-is for educational and practical use. Please respect the terms of service for all integrated APIs and services.
-
-Credits: Based on the excellent tutorial by Nate Herk | AI Automation
-Need Help? Check the troubleshooting section or refer to the original YouTube tutorial for detailed setup guidance.
+🎓 Special thanks to [Nate Herk](https://www.linkedin.com/in/nateherk/) for the original workflow inspiration.
