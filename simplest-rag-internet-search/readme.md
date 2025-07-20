@@ -43,7 +43,7 @@ graph TD
 
 **For Ares Internet Search:**
 
-* Sign up at [Traversaal](https://traversaal.ai)
+* Sign up at [Traversaal](https://api.traversaal.ai)
 * Navigate to API section and generate an API key
 * Copy the API key for configuration
 
