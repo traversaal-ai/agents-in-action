@@ -103,7 +103,7 @@ In the **"AWS Document Search"** node:
 Example message:
 
 ```
-Research the latest developments in quantum computing in 2024
+Research the latest developments in quantum computing in 2025
 ```
 
 ### Common Query Types
@@ -111,7 +111,7 @@ Research the latest developments in quantum computing in 2024
 * 🔍 Current Events: “Latest AI industry trends this month?”
 * 🛍️ Product Research: “Top project management tools”
 * 🧑‍💻 Technical Docs: “Setup AWS Lambda functions” (uses RAG)
-* 📈 Market Trends: “Crypto predictions for 2024”
+* 📈 Market Trends: “Crypto predictions for 2025”
 
 ### Agent Behavior
 
