@@ -1,0 +1,281 @@
+{
+  "name": "search-rag-comments",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 📝 WORKFLOW OVERVIEW\n\nThis n8n workflow provides AI-powered research assistance with two specialized tools:\n\n🌐 **Ares Internet Search** (api.traversaal.ai)\n- Real-time web search capabilities\n- Current news, trends, and general information\n- Live data from across the internet\n\n📚 **Traversaal Pro RAG** (pro.traversaal.ai) \n- Retrieval Augmented Generation\n- Searches through uploaded document collections\n- Currently configured for AWS documentation\n- Can be configured for any document corpus\n\nBoth tools work together to provide comprehensive research capabilities for the AI agent.",
+        "height": 464,
+        "width": 569,
+        "color": 5
+      },
+      "id": "20820924-e188-4be2-b2fb-69af28d0bf77",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -420,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🌐 ARES INTERNET SEARCH\n\n**API Endpoint:** api.traversaal.ai\n**Purpose:** Real-time internet search\n\n**Setup Required:**\n1. Get API key from Traversaal\n2. Update x-api-key header below\n3. Configure query parameter\n\n**What it does:**\n- Searches live web content\n- Returns current information\n- Perfect for news, trends, product info\n- Handles general research queries",
+        "height": 419,
+        "width": 310
+      },
+      "id": "098cdb18-78a2-4e55-8b76-84e54c5ea7a6",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        940,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 📚 TRAVERSAAL PRO RAG\n\n**API Endpoint:** pro.traversaal.ai\n**Purpose:** Document-based search with RAG\n\n**Current Setup:**\n- Configured for AWS documentation\n- Uses Bearer token authentication\n- Searches uploaded document corpus\n\n**To modify for other documents:**\n1. Upload your documents to Traversaal Pro\n2. Update the Bearer token\n3. Change project IDs if needed\n\n**Best for:**\n- Company documentation\n- Technical manuals\n- Knowledge bases\n- Specific document collections\n\nDownload link: https://drive.google.com/file/d/1YpYeC9evKEIIP5qa6p6TlsZ0s12yxZz9/view?usp=sharing",
+        "height": 639,
+        "width": 318
+      },
+      "id": "e79f69ce-d2ef-422d-9726-4a9028020c75",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## ⚡ CHAT TRIGGER\n\nStarts the workflow when a user sends a message. The message becomes available as `chatInput` for the AI agent and tools to use.",
+        "height": 178,
+        "width": 242
+      },
+      "id": "72a0e8ce-3634-4376-99c1-74a8619583df",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🤖 AI CONFIGURATION\n\n**Model:** GPT-4o-mini\n**Memory:** Buffer window for conversation context\n**Tools:** Connected to both search APIs\n\nThe agent decides which tool to use based on the user's query:\n- Internet search for current/general info\n- RAG search for document-specific queries",
+        "height": 199,
+        "width": 279
+      },
+      "id": "06682c98-2bbc-4f6e-af8b-48b4e144b4c9",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        400,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        240,
+        300
+      ],
+      "id": "c1bc93bf-2c96-4748-9d05-c4a50d321d3b",
+      "name": "When chat message received",
+      "webhookId": "da993f35-788d-4f94-bfe8-d63cc305c491"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}",
+        "options": {
+          "systemMessage": "=You are a helpful assistant"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        500,
+        240
+      ],
+      "id": "e1053374-c4ac-4950-9d1c-8cbaf43c0de3",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        460,
+        520
+      ],
+      "id": "e3291d24-ee2c-4237-b9bb-6ab40dbdb993",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "1NYcjHdurohDfhOk",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        640,
+        560
+      ],
+      "id": "75b3353b-94d5-4274-b7e5-3a4687244900",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Returns answers to AWS documentation",
+        "method": "POST",
+        "url": "https://pro-documents.traversaal-api.com/documents/search",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJudEUxQ3BWcEhJT0RMZE1kNDF4MEl3TXRnbiIsImlhdCI6MTc1Mjk4ODAyNCwidXNlcklkIjoidXNlcl8ybnRFMUNwVnBISU9ETGRNZDQxeDBJd010Z24iLCJvcmdhbmlzYXRpb25JZCI6Im9yZ18ybndUU001VjFYeGtGcFlkT29oQU40ZTU0OXkiLCJwcm9qZWN0SWRzIjpbImNtZGFqOWZ0YjAwMDFjZjB6anZ0bWhycnkiXX0.e4hoYbJENku-2A4AO5G4I_BHk6xBU__mXHGbQ-qwLusNEfUaoUhR07z2q7fFBL-IcTdZQiJpNg59qepnfgcez2UNvThZxwqzotCoQgXDoVkro58oAb-jTcruPm3cAJgo5K7dP_H9J0cjWNRyI5cv_9T1y45vs6laQic5kItZJhj4wligyLI2z6B6-X-hufp4vUj0pGkam1T-fismuk6qEIBOdPU2Lf0hb72cwrDMdvXKcsJWg88TwKKghX0pW1kTwUa_tWw1QmISyGMs-Ayy1VfXqtTws-NQBGHAPZ-SawEX2E42JC4djBzcLw22yjrB9ZavkYylGv42D_ipul6l2g"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters0_Value', ``, 'string') }}"
+            },
+            {
+              "name": "generation",
+              "value": "false"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        1300,
+        480
+      ],
+      "id": "e177bae2-bce0-49fc-88c5-c7ab24e523cc",
+      "name": "AWS Document Search"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Does Internet Search",
+        "method": "POST",
+        "url": "https://api-ares.traversaal.ai/live/predict",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "..enter value.."
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"query\": [\n    \"{{ $json.chatInput }}\"\n  ]\n} ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        560
+      ],
+      "id": "e9b99567-fc59-4a4a-9b5b-bada52c16408",
+      "name": "Internet Search"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS Document Search": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Internet Search": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "136102ee-4306-4d50-99d6-a6ae8a4d322a",
+  "meta": {
+    "instanceId": "1725aaf255f271a2cb370b9051de0a61864aaf0b262c35ad3f624929f92bfcff"
+  },
+  "id": "qp5J56nscgqECYAt",
+  "tags": []
+}
