@@ -25,8 +25,8 @@ graph TD
     B --> E[Internet Search Tool]
     B --> F[Document RAG Tool]
 
-    E --> G[Ares API\napi.traversaal.ai]
-    F --> H[Traversaal Pro\npro.traversaal.ai]
+    E --> G[Ares API: api.traversaal.ai]
+    F --> H[Traversaal Pro: pro.traversaal.ai]
 ```
 
 ---
