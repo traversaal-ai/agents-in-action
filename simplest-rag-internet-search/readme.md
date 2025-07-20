@@ -212,7 +212,3 @@ Ready to dive deeper into agentic systems?
 
 👉 **[Join our GenAI Agents course on Maven](https://maven.com/boring-bot/advanced-llm)**
 Build intelligent research agents, RAG pipelines, and more — hands-on and production-ready.
-
----
-
-Let me know if you want this published to your GitHub automatically or need a copy saved.
