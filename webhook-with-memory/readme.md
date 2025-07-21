@@ -1,6 +1,8 @@
-# 🤖 AI Assistant Webhook Workflow with GPT-4o-mini + Ares Internet Search
+# 🤖 AI Assistant Webhook back and forth + Ares Internet Search
 
 A fully integrated **n8n** chatbot that accepts user queries via **webhook**, uses **OpenAI GPT-4o-mini** for reasoning, optionally fetches real-time data via **Traversaal Ares Internet Search API**, and maintains memory using a **custom session-based buffer**.
+
+You can use this to converse with Lovable frontend back and forth
 
 ---
 
@@ -158,4 +160,3 @@ Want to build more like this? Join our GenAI Agents course:
 👉 **[Enroll now](https://maven.com/boring-bot/advanced-llm)**
 
 Open to contributions! Fork, modify, and raise issues.
-
