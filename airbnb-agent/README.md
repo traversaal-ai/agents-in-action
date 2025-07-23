@@ -52,8 +52,6 @@ This workflow automates the process of searching Airbnb listings based on user q
 
 ---
 
-## 📚 References
-- 🎥 [YouTube Setup Tutorial](https://youtu.be/C_FSNLCPx_Q)
 
 
 
