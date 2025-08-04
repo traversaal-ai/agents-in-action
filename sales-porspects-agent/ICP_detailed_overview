@@ -1,0 +1,722 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "multipleMethods": true,
+        "path": "b44f6d26-2ea0-4ecb-a8f6-14fbadab4d46",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -2300,
+        360
+      ],
+      "id": "8276a1a1-1aa3-4548-b17a-45ea7d920245",
+      "name": "Webhook",
+      "webhookId": "b44f6d26-2ea0-4ecb-a8f6-14fbadab4d46"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.output.selected_feed_url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        -2700,
+        800
+      ],
+      "id": "a945d5b5-fce6-4b38-94cd-55f517def5a6",
+      "name": "Get Remote Jobs RSS feed",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "maxItems": 10
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        -2060,
+        700
+      ],
+      "id": "b8b2f35b-8626-488f-b248-9907cee387ec",
+      "name": "Limit"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "gpt-4o"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -540,
+        720
+      ],
+      "id": "384ba1cb-661b-47ef-b555-f42dc5926b44",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "1NYcjHdurohDfhOk",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n      \"company_name\": {\n            \"type\": \"string\",\n            \"description\": \"Company Name\"\n        },\n      \"company_link\": {\n            \"type\": \"string\",\n            \"description\": \"job url\"\n        },\n      \"tech_stack\": {\n            \"type\": \"string\",\n            \"description\": \"detailed overview of the tech stack\"\n        },\n       \"job_title\": {\n            \"type\": \"string\",\n            \"description\": \"Job title\"\n        },\n        \"company_summary\": {\n            \"type\": \"string\",\n            \"description\": \"Detailed summary of what the company likely does based on job posting\"\n        },\n        \"company_industry\": {\n            \"type\": \"string\",\n            \"description\": \"Primary industry sector based on job description clues\"\n        },\n        \"company_size_estimate\": {\n            \"type\": \"string\",\n            \"description\": \"Estimated company size (startup/small/medium/large/enterprise)\"\n        },\n        \"specific_needs\": {\n            \"type\": \"string\",\n            \"description\": \"Detailed analysis of their specific needs from the job posting that match our ICP\"\n        },\n        \"specific_challenges\": {\n            \"type\": \"string\",\n            \"description\": \"Specific challenges mentioned in the job description\"\n        },\n        \"why_perfect_match\": {\n            \"type\": \"string\",\n            \"description\": \"Specific reasons why our product/service would be valuable for their use case based on ICP\"\n        },\n        \"recommended_pitch\": {\n            \"type\": \"string\",\n            \"description\": \"Tailored pitch strategy based on their specific needs and our ICP\"\n        },\n        \"urgency_level\": {\n            \"type\": \"string\",\n            \"enum\": [\"High\", \"Medium\", \"Low\"],\n            \"description\": \"Priority level for outreach\"\n        },\n        \"key_talking_points\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"string\"\n            },\n            \"description\": \"5 specific talking points for outreach based on ICP match\"\n        },\n        \"budget_estimate\": {\n            \"type\": \"string\",\n            \"description\": \"Estimated budget capacity based on company indicators\"\n        }\n    },\n    \"required\": [\n        \"company_name\",\n        \"company_link\",\n        \"job_title\",\n        \"company_summary\",\n        \"company_industry\",\n        \"company_size_estimate\",\n        \"specific_needs\",\n        \"specific_challenges\",\n        \"why_perfect_match\",\n        \"recommended_pitch\",\n        \"urgency_level\",\n        \"key_talking_points\",\n        \"budget_estimate\"\n    ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -320,
+        740
+      ],
+      "id": "48dd1ec1-be54-43e4-bea8-7a909e451d9b",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=<Instructions>\nYou are an expert at analyzing companies and job postings to identify prospects that match our Ideal Customer Profile (ICP). \n\n**Our ICP (Ideal Customer Profile):**\n{{ $('Webhook').item.json.body.icp || $('Webhook').item.json.query.icp }}\n\n**Your Task:**\nAnalyze this job posting thoroughly and create a comprehensive prospect assessment based on how well this company matches our ICP. This job has already been pre-filtered as a potential ICP match, so focus on extracting detailed intelligence and creating actionable outreach strategy.\n\n**IMPORTANT:** Only proceed with full analysis if this is a strong ICP match (7+ out of 10). If the company doesn't align well with our ICP after detailed review, respond with \"SKIP - Not a strong ICP match\" and provide brief reasoning.\n</Instructions>\n\n<Job_Posting_Data>\n**Company:** {{ $json.output.company_name || $json.creator }}\n**Position:** {{ $json.output.job_title || $json.title }}\n**Industry:** {{ $json.output.company_industry }}\n**Company Size:** {{ $json.output.company_size_estimate }}\n**Company Stage:** {{ $json.output.company_stage }}\n**Location:** {{ $json.output.location || 'Not specified' }}\n**Remote Work:** {{ $json.output.remote_work ? 'Yes' : 'No' }}\n**Role Level:** {{ $json.output.role_level }}\n**Tech Stack:** {{ $json.output.tech_stack }}\n**Salary Range:** {{ $json.output.salary_mentioned || 'Not specified' }}\n**Posted:** {{ $json.published_date }}\n**Job URL:** {{ $json.output.job_link}}\n**LLM Pre-Filter Score:** {{ $json.output.relevance_score }}/10\n**Pre-Filter Reason:** {{ $json.output.reason }}\n**Growth Indicators:** {{ $json.output.growth_indicators }}\n**Budget Capacity Hints:** {{ $json.output.budget_capacity_hints }}\n\n**Company Summary:** {{ $json.output.company_summary }}\n\n**Complete Job Description:**\n{{ $json.output.job_summary }}\n</Job_Posting_Data>\n\n<Analysis_Framework>\n**Since this job has been pre-qualified as ICP relevant, focus on:**\n\n1. **Deep Company Intelligence:** \n   - Validate and expand on the company profile from pre-filter\n   - Identify specific business challenges from job requirements\n   - Assess decision-making authority and procurement process\n   - Map organizational structure and key stakeholders\n\n2. **Precision ICP Alignment:**\n   - Confirm strong alignment with our ICP criteria\n   - Identify specific use cases where our solution fits\n   - Assess timing and urgency of their needs\n   - Evaluate competitive landscape and alternatives they might consider\n\n3. **Solution-Specific Value Mapping:**\n   - Map job requirements to our product capabilities\n   - Identify measurable outcomes we can deliver\n   - Calculate potential ROI and business impact\n   - Determine implementation complexity and timeline\n\n4. **Strategic Outreach Planning:**\n   - Identify optimal decision makers and influencers\n   - Craft specific value propositions for this company\n   - Determine best outreach channels and timing\n   - Prepare objection handling based on their likely concerns\n   - Set realistic deal size and timeline expectations\n\n5. **Competitive Intelligence:**\n   - Assess their current tech stack for compatibility/competition\n   - Identify gaps in their current solutions\n   - Evaluate their technical sophistication and adoption readiness\n\n**Output Focus:** Create actionable intelligence for immediate outreach with specific talking points, value propositions, and strategic approach tailored to this exact company and role.\n</Analysis_Framework>",
+        "hasOutputParser": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        -500,
+        280
+      ],
+      "id": "e8a2e355-2740-4fc4-ab87-49c729d4ffd8",
+      "name": "Analyze ICP Match",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Webhook').item.json.body.email || $('Webhook').item.json.query.email }}",
+        "subject": "=🎯 {{ $json.output.urgency_level }} Priority ICP Match: {{ $json.output.company_name}}",
+        "message": "=<div style=\"font-family: 'Poppins', Arial, sans-serif; max-width: 800px; line-height: 1.6;\">\n\n<h1 style=\"color: #2c3e50; margin-bottom: 5px; font-family: 'Poppins', Arial, sans-serif;\">🏢 {{ $json.output.company_name }}</h1>\n<p style=\"color: #7f8c8d; font-size: 16px; margin-top: 0; margin-bottom: 20px; font-family: 'Poppins', Arial, sans-serif;\">{{ $json.output.company_industry }} • {{ $json.output.company_size_estimate }}</p>\n\n<div style=\"background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; margin: 20px 0;\">\n<h2 style=\"margin: 0; color: white; font-size: 24px; font-family: 'Poppins', Arial, sans-serif;\">🎯 {{ $json.output.urgency_level }} Priority ICP Match</h2>\n<p style=\"margin: 10px 0 5px 0; font-size: 18px; font-weight: bold; font-family: 'Poppins', Arial, sans-serif;\">{{ $json.output.job_title }}</p>\n<p style=\"margin: 0; font-size: 14px; opacity: 0.9; font-family: 'Poppins', Arial, sans-serif;\">💰 Budget Estimate: {{ $json.output.budget_estimate }}</p>\n</div>\n\n<div style=\"background-color: #e8f5e8; padding: 15px; border-radius: 8px; border-left: 4px solid #28a745;\">\n<h3 style=\"color: #28a745; margin-top: 0; font-size: 16px; font-family: 'Poppins', Arial, sans-serif;\">⚙️ Tech Stack & Details</h3>\n<p style=\"margin: 5px 0; font-size: 14px; font-family: 'Poppins', Arial, sans-serif;\">{{ $json.output.tech_stack || 'Not specified in posting' }}</p>\n<br>\n<p style=\"margin: 5px 0; font-size: 14px; font-family: 'Poppins', Arial, sans-serif;\"><strong>Industry:</strong> {{ $json.output.company_industry || 'To be determined' }}</p>\n<p style=\"margin: 5px 0; font-size: 14px; font-family: 'Poppins', Arial, sans-serif;\"><strong>Job Link:</strong> <a href=\"{{ $json.output.company_link }}\" target=\"_blank\">View Position</a></p>\n</div>\n\n<div style=\"background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; margin: 20px 0; border-radius: 8px;\">\n<h3 style=\"color: #856404; margin-top: 0; font-family: 'Poppins', Arial, sans-serif;\">🏢 Company Overview</h3>\n<p style=\"margin-bottom: 0; font-family: 'Poppins', Arial, sans-serif;\">{{ $json.output.company_summary }}</p>\n</div>\n\n<div style=\"background-color: #d4edda; border-left: 4px solid #28a745; padding: 20px; margin: 20px 0; border-radius: 8px;\">\n<h3 style=\"color: #155724; margin-top: 0; font-family: 'Poppins', Arial, sans-serif;\">📊 Their Specific Needs (ICP Match)</h3>\n<p style=\"margin-bottom: 10px; font-family: 'Poppins', Arial, sans-serif;\">{{ $json.output.specific_needs }}</p>\n<div style=\"background-color: rgba(255,255,255,0.7); padding: 10px; border-radius: 5px; margin-top: 10px;\">\n<strong style=\"font-family: 'Poppins', Arial, sans-serif;\">Specific Challenges:</strong><br>\n<span style=\"font-family: 'Poppins', Arial, sans-serif;\">{{ $json.output.specific_challenges }}</span>\n</div>\n</div>\n\n<div style=\"background-color: #cce5ff; border-left: 4px solid #007bff; padding: 20px; margin: 20px 0; border-radius: 8px;\">\n<h3 style=\"color: #004085; margin-top: 0; font-family: 'Poppins', Arial, sans-serif;\">🎯 Why We're a Perfect Match</h3>\n<p style=\"margin-bottom: 0; font-family: 'Poppins', Arial, sans-serif;\">{{ $json.output.why_perfect_match }}</p>\n</div>\n\n<div style=\"background-color: #f8d7da; border-left: 4px solid #dc3545; padding: 20px; margin: 20px 0; border-radius: 8px;\">\n<h3 style=\"color: #721c24; margin-top: 0; font-family: 'Poppins', Arial, sans-serif;\">🎯 Recommended Pitch Strategy</h3>\n<p style=\"margin-bottom: 0; font-family: 'Poppins', Arial, sans-serif;\">{{ $json.output.recommended_pitch }}</p>\n</div>\n\n<div style=\"background-color: #e2e3e5; padding: 20px; border-radius: 8px; margin: 20px 0;\">\n<h3 style=\"color: #383d41; margin-top: 0; font-family: 'Poppins', Arial, sans-serif;\">💡 Key Talking Points</h3>\n<ol style=\"margin: 0; padding-left: 20px; font-family: 'Poppins', Arial, sans-serif;\">\n{{ $json.output.key_talking_points.map(point => `<li style=\"margin: 8px 0; font-size: 14px; font-family: 'Poppins', Arial, sans-serif;\"><strong>${point}</strong></li>`).join('') }}\n</ol>\n</div>\n\n<div style=\"background-color: #17a2b8; color: white; padding: 20px; border-radius: 8px; margin: 20px 0;\">\n<h3 style=\"color: white; margin-top: 0; font-family: 'Poppins', Arial, sans-serif;\">🔗 Next Steps</h3>\n<p style=\"margin: 8px 0; font-family: 'Poppins', Arial, sans-serif;\">📝 <a href=\"{{ $json.output.company_link }}\" style=\"color: #fff; text-decoration: underline;\">Review Full Job Posting</a></p>\n<p style=\"margin: 8px 0; font-family: 'Poppins', Arial, sans-serif;\">⏰ <strong>Action Timeline:</strong> {{ $json.output.urgency_level === 'High' ? 'Reach out within 24 hours' : $json.output.urgency_level === 'Medium' ? 'Reach out within 3 days' : 'Add to pipeline for next week' }}</p>\n<p style=\"margin: 8px 0; font-family: 'Poppins', Arial, sans-serif;\">🎯 <strong>Focus:</strong> Highlight ICP alignment and specific value proposition</p>\n<p style=\"margin: 8px 0; font-family: 'Poppins', Arial, sans-serif;\">💼 <strong>Decision Maker:</strong> Likely hiring manager or department head for this role</p>\n</div>\n\n<!-- Maven Course CTA -->\n<div style=\"background: linear-gradient(135deg, #ff6b35 0%, #ff3366 100%); color: white; padding: 25px; border-radius: 12px; margin: 30px 0; text-align: center; border: 2px solid #ff3366;\">\n<h3 style=\"color: white; margin-top: 0; font-size: 20px; font-family: 'Poppins', Arial, sans-serif;\">🚀 Want to Build Your Own AI Systems Like This?</h3>\n<p style=\"margin: 15px 0; font-size: 16px; font-family: 'Poppins', Arial, sans-serif;\">Learn how to design and build production-ready ML systems from scratch in my comprehensive course!</p>\n<p style=\"margin: 15px 0; font-size: 14px; opacity: 0.9; font-family: 'Poppins', Arial, sans-serif;\">✨ <strong>ML System Design Masterclass</strong> - From concept to deployment</p>\n<div style=\"margin: 20px 0;\">\n<a href=\"https://maven.com/boring-bot/ml-system-design?promoCode=Stanford20\" style=\"background-color: white; color: #ff3366; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 16px; display: inline-block; font-family: 'Poppins', Arial, sans-serif; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\">\n🎓 Enroll Now - 20% OFF with Stanford20\n</a>\n</div>\n<p style=\"margin: 10px 0 0 0; font-size: 12px; opacity: 0.8; font-family: 'Poppins', Arial, sans-serif;\">Limited time offer • Join 500+ students already enrolled</p>\n</div>\n\n<div style=\"background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 15px; border-radius: 8px; margin: 20px 0;\">\n<h4 style=\"color: #495057; margin-top: 0; font-size: 14px; font-family: 'Poppins', Arial, sans-serif;\">📋 Our ICP Reference:</h4>\n<p style=\"margin: 0; font-size: 12px; color: #6c757d; font-style: italic; font-family: 'Poppins', Arial, sans-serif;\">{{ $('Webhook').item.json.body.icp || $('Webhook').item.json.query.icp }}</p>\n</div>\n\n<hr style=\"margin: 30px 0; border: none; border-top: 1px solid #dee2e6;\">\n<p style=\"text-align: center; color: #6c757d; font-style: italic; margin: 0; font-family: 'Poppins', Arial, sans-serif;\">📈 Auto-identified ICP match from active job posting • Match Score: {{ $('Loop Over Items').item.json.match_score || 'N/A' }}</p>\n\n</div>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -40,
+        700
+      ],
+      "id": "6970fde0-959e-4255-8de5-94dd482c3036",
+      "name": "Send Prospect Email",
+      "webhookId": "169b0a22-48f1-43a9-9cd3-046aca3f495c",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "3jyx45aKvHqjrGjM",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        180,
+        740
+      ],
+      "id": "aa70ff7c-01b1-4042-82c9-9feddae9630e",
+      "name": "Wait 5s",
+      "webhookId": "f9fa67c6-75d9-4f82-951b-df26219f580f"
+    },
+    {
+      "parameters": {
+        "content": "Input: email and ICP\nFinds jobs matching ICP"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2520,
+        420
+      ],
+      "typeVersion": 1,
+      "id": "ac33dba5-c7dd-4201-bfd9-33b10930fbc3",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -1000,
+        700
+      ],
+      "id": "5e4e98c3-fe21-4428-b75f-7edbbfda35d0",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -1760,
+        920
+      ],
+      "id": "6da290a6-72d5-4b79-8e4c-31b27a49ba56",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "1NYcjHdurohDfhOk",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "3ad6b919-bc9b-4188-b58c-403ce2f30a2f",
+              "leftValue": "={{ $json.output.is_relevant }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -1480,
+        700
+      ],
+      "id": "48e06aa9-9b37-4beb-b9c0-0d7a422a34c9",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"is_relevant\": {\n            \"type\": \"boolean\",\n            \"description\": \"Whether this job matches the ICP criteria - true only for strong matches\"\n        },\n        \"relevance_score\": {\n            \"type\": \"number\",\n            \"minimum\": 0,\n            \"maximum\": 10,\n            \"description\": \"Relevance score from 0-10 where 0=no match, 10=perfect ICP match\"\n        },\n        \"reason\": {\n            \"type\": \"string\",\n            \"description\": \"Brief explanation of why this job does or doesn't match the ICP criteria\"\n        },\n        \"company_name\": {\n            \"type\": \"string\",\n            \"description\": \"Company name from the job posting\"\n        },\n        \"job_title\": {\n            \"type\": \"string\",\n            \"description\": \"Job title being hired for\"\n        },\n       \"job_link\": {\n            \"type\": \"url\",\n            \"description\": \"Job posting url\"\n        },\n         \"job_summary\": {\n            \"type\": \"title\",\n            \"description\": \"summary of the job\"\n        },\n        \"company_summary\": {\n            \"type\": \"string\",\n            \"description\": \"Brief summary of what the company does based on job posting context\"\n        },\n        \"company_industry\": {\n            \"type\": \"string\",\n            \"description\": \"Primary industry sector based on job description clues\"\n        },\n        \"company_size_estimate\": {\n            \"type\": \"string\",\n            \"enum\": [\"startup\", \"small\", \"medium\", \"large\", \"enterprise\"],\n            \"description\": \"Estimated company size based on job posting indicators\"\n        },\n        \"tech_stack\": {\n            \"type\": \"string\",\n            \"description\": \"Technologies, tools, and tech stack mentioned in the job posting\"\n        },\n        \"role_level\": {\n            \"type\": \"string\",\n            \"enum\": [\"junior\", \"mid\", \"senior\", \"lead\", \"manager\", \"director\", \"executive\"],\n            \"description\": \"Seniority level of the role being hired\"\n        },\n        \"remote_work\": {\n            \"type\": \"boolean\",\n            \"description\": \"Whether the role offers remote work options\"\n        },\n        \"location\": {\n            \"type\": \"string\",\n            \"description\": \"Job location if specified\"\n        },\n        \"salary_mentioned\": {\n            \"type\": \"string\",\n            \"description\": \"Salary range if mentioned in the posting\"\n        },\n        \"company_stage\": {\n            \"type\": \"string\",\n            \"enum\": [\"early_stage\", \"growth\", \"established\", \"enterprise\", \"unknown\"],\n            \"description\": \"Company growth stage based on job posting indicators\"\n        },\n        \"funding_indicators\": {\n            \"type\": \"string\",\n            \"description\": \"Any mentions of funding, investment, or financial backing\"\n        },\n        \"team_size_hints\": {\n            \"type\": \"string\",\n            \"description\": \"Indicators about team size or department structure\"\n        },\n        \"growth_indicators\": {\n            \"type\": \"string\",\n            \"description\": \"Signs of company growth, expansion, or scaling mentioned in posting\"\n        },\n        \"company_indicators\": {\n            \"type\": \"string\",\n            \"description\": \"Key indicators from the job posting that suggest ICP alignment or misalignment\"\n        },\n        \"match_confidence\": {\n            \"type\": \"string\",\n            \"enum\": [\"High\", \"Medium\", \"Low\"],\n            \"description\": \"Confidence level in the ICP match assessment\"\n        },\n        \"budget_capacity_hints\": {\n            \"type\": \"string\",\n            \"description\": \"Indicators of company budget capacity or spending ability\"\n        }\n    },\n    \"required\": [\n        \"is_relevant\",\n        \"relevance_score\",\n        \"reason\",\n        \"company_name\",\n        \"job_title\",\n        \"company_summary\",\n        \"company_industry\",\n        \"company_size_estimate\",\n        \"tech_stack\",\n        \"role_level\",\n        \"remote_work\",\n        \"company_indicators\",\n        \"match_confidence\"\n    ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -1600,
+        920
+      ],
+      "id": "eb8e25ba-2b3d-43a5-92fe-96c9a30d1eaa",
+      "name": "Structured Output Parser1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an expert at evaluating job postings against an Ideal Customer Profile (ICP) and extracting comprehensive company intelligence.\n\n**ICP to Match Against:**\n{{ $('Webhook').item.json.body.icp || $('Webhook').item.json.query.icp }}\n\n**Job to Evaluate:**\n- **Company:** {{ $json['dc:creator'] || 'Unknown' }}\n- **Job Title:** {{ $json.title }}\n- **Job Description:** {{ $json.contentSnippet || $json.description || $json.content }}\n- **Job URL:** {{ $json.link }}\n- **Published:** {{ $json.pubDate }}\n\n**Task:** \n1. Determine if this job posting represents a company that matches our ICP\n2. Extract comprehensive company and role information from the job posting\n3. Analyze company indicators, tech stack, and business context\n4. Not all companies have exact roles, please be linient in your rating and allow even if remotely close to ICP\n5. You should allow at least three roles\n6. Atleast three should be considered relevant\n\n**Evaluation Criteria:**\n1. Does the company type/industry align with our ICP?\n2. Does the job role suggest the company has the needs we address?\n3. Are there indicators of company size, stage, or budget that match our ICP?\n4. Would the hiring company likely benefit from our product/service?\n5. What can we infer about the company's tech stack, growth stage, and team structure?\n\n**Analysis Instructions:**\n- Set `is_relevant` to true only if this is a strong ICP match (score 7+ out of 10)\n- Score relevance 0-10 (0=no match, 10=perfect ICP match)\n- Extract all available company information from the job posting context\n- Identify technologies, tools, and technical requirements mentioned\n- Assess company size based on role scope, team mentions, and job complexity\n- Look for growth indicators like funding mentions, scaling language, expansion plans\n- Estimate company stage from hiring patterns and role descriptions\n- Be selective - only pass through jobs that are genuinely good prospects\n- Consider both the company profile AND the specific role being hired for\n\n**Information Extraction Guidelines:**\n- Company summary: Infer what the company does from job context, role requirements, and industry clues\n- Tech stack: Extract all mentioned technologies, programming languages, tools, platforms\n- Company size: Look for team size hints, department structure, role scope indicators\n- Growth stage: Identify scaling language, funding mentions, expansion indicators\n- Budget capacity: Assess from role level, tech requirements, company stage indicators\n- Industry classification: Determine primary sector from job description context\n\nProvide comprehensive analysis in the structured JSON format with all required fields filled based on available information from the job posting.",
+        "hasOutputParser": true,
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -1800,
+        720
+      ],
+      "id": "fe3018b8-26ef-4ee8-8afa-6d361983a88f",
+      "name": "Filter relevant roles",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -2000,
+        580
+      ],
+      "id": "589b32d1-188f-421c-a95b-890fe9142933",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "1NYcjHdurohDfhOk",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"selected_feed_url\": {\n            \"type\": \"string\",\n            \"description\": \"The most relevant RSS feed URL based on ICP analysis\"\n        },\n        \"reasoning\": {\n            \"type\": \"string\",\n            \"description\": \"Brief explanation of why this feed was selected\"\n        },\n        \"target_roles\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"string\"\n            },\n            \"description\": \"List of job roles most likely to be found in this feed that match the ICP\"\n        },\n        \"confidence_level\": {\n            \"type\": \"string\",\n            \"enum\": [\"High\", \"Medium\", \"Low\"],\n            \"description\": \"Confidence level in the feed selection\"\n        }\n    },\n    \"required\": [\n        \"selected_feed_url\",\n        \"reasoning\",\n        \"target_roles\",\n        \"confidence_level\"\n    ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -1700,
+        580
+      ],
+      "id": "9ec48b50-b4af-448a-b8cb-7dd282310fa8",
+      "name": "Structured Output Parser2"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -960,
+        560
+      ],
+      "id": "2464abda-958b-442a-96f4-3072c4946c39",
+      "name": "Structured Output Parser3"
+    },
+    {
+      "parameters": {
+        "content": "Receives webhook trigger\nwith email + ICP params"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2380,
+        240
+      ],
+      "typeVersion": 1,
+      "id": "147099d0-5774-44cf-be39-88ab5d8e9d6d",
+      "name": "Webhook Note"
+    },
+    {
+      "parameters": {
+        "content": "Analyzes ICP to select\nbest RSS feed source"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2080,
+        240
+      ],
+      "typeVersion": 1,
+      "id": "06296cd0-9ecb-42d5-81b6-ff23ae32e185",
+      "name": "Feed Selection Note"
+    },
+    {
+      "parameters": {
+        "content": "GPT-4o-mini model for\nfeed selection analysis"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2140,
+        820
+      ],
+      "typeVersion": 1,
+      "id": "c5a602a7-9f89-449b-a963-972d39827a06",
+      "name": "OpenAI Model2 Note"
+    },
+    {
+      "parameters": {
+        "content": "Parses feed selection\ninto structured format"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1640,
+        420
+      ],
+      "typeVersion": 1,
+      "id": "588ed69b-0564-47b0-b91b-132ce2e49782",
+      "name": "Parser2 Note"
+    },
+    {
+      "parameters": {
+        "content": "Fetches job postings from\nselected RSS feed"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2660,
+        600
+      ],
+      "typeVersion": 1,
+      "id": "3c9cb76b-4acf-4cac-8c0e-f767d15ad8e9",
+      "name": "RSS Feed Note"
+    },
+    {
+      "parameters": {
+        "content": "Limits processing to 10\nitems for performance"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2140,
+        600
+      ],
+      "typeVersion": 1,
+      "id": "05b2bfb4-b2d2-431f-8657-a7373dbd488f",
+      "name": "Limit Note"
+    },
+    {
+      "parameters": {
+        "content": "First-pass AI filtering\nof job relevance to ICP"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1880,
+        620
+      ],
+      "typeVersion": 1,
+      "id": "da9a12d5-a18a-4e99-bec4-69e8f59f83cf",
+      "name": "Filter Roles Note"
+    },
+    {
+      "parameters": {
+        "content": "GPT-4o-mini for initial\njob posting analysis"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1980,
+        1080
+      ],
+      "typeVersion": 1,
+      "id": "e43db340-9cb1-4594-951d-ce303d2d6b88",
+      "name": "OpenAI Model1 Note"
+    },
+    {
+      "parameters": {
+        "content": "Structures pre-filter\nanalysis results"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1520,
+        1020
+      ],
+      "typeVersion": 1,
+      "id": "c918c8ae-9523-4c0b-85e1-0ebed18e103b",
+      "name": "Parser1 Note"
+    },
+    {
+      "parameters": {
+        "content": "Quality filter - only allows\njobs scoring 7+ relevance"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1400,
+        640
+      ],
+      "typeVersion": 1,
+      "id": "2c4f3cda-a187-4817-b2b2-f373eb6854ea",
+      "name": "Filter Note"
+    },
+    {
+      "parameters": {
+        "content": "Processes qualified prospects\none by one for deep analysis"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1020,
+        940
+      ],
+      "typeVersion": 1,
+      "id": "c6f7af31-2e9f-4a4b-922b-61255de42569",
+      "name": "Loop Note"
+    },
+    {
+      "parameters": {
+        "content": "Deep ICP analysis with\nactionable outreach intel"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -420,
+        180
+      ],
+      "typeVersion": 1,
+      "id": "2bcdd319-91f9-4dd1-bef5-4c3b6f420167",
+      "name": "Analyze Note"
+    },
+    {
+      "parameters": {
+        "content": "GPT-4o for comprehensive\nprospect intelligence"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -560,
+        860
+      ],
+      "typeVersion": 1,
+      "id": "a073fa3f-57de-4482-9db8-584e5525d22e",
+      "name": "OpenAI Model Note"
+    },
+    {
+      "parameters": {
+        "content": "Formats analysis into\nstructured prospect data"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -160,
+        860
+      ],
+      "typeVersion": 1,
+      "id": "5572fd6f-31b9-47ae-aef6-8aebf21d3628",
+      "name": "Parser Note"
+    },
+    {
+      "parameters": {
+        "content": "Sends formatted prospect\nemail with full analysis"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -40,
+        620
+      ],
+      "typeVersion": 1,
+      "id": "3a392451-c57e-4c40-bbc7-b5e332a62a3b",
+      "name": "Email Note"
+    },
+    {
+      "parameters": {
+        "content": "Rate limiting delay\nbetween email sends"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        300,
+        680
+      ],
+      "typeVersion": 1,
+      "id": "ab1bc3b7-1001-42a7-b311-9339726a1375",
+      "name": "Wait Note"
+    },
+    {
+      "parameters": {
+        "content": "Unused parser - can be\nremoved from workflow"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -880,
+        460
+      ],
+      "typeVersion": 1,
+      "id": "5d3d3e58-f98d-4b83-9d77-831452af858e",
+      "name": "Parser3 Note"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an expert at analyzing Ideal Customer Profiles (ICPs) and matching them to relevant job categories.\n\n**Available RSS Feed Options:**\n1. https://remotive.com/remote-jobs/feed/data - Data science, analytics, ML, AI, data engineering roles\n2. https://remotive.com/remote-jobs/feed/marketing - Marketing, growth, content, digital marketing roles  \n3. https://remotive.com/remote-jobs/feed/finance-legal - Finance, accounting, legal, compliance roles\n4. https://remotive.com/remote-jobs/feed/hr - HR, recruiting, people operations, talent acquisition roles\n5. https://remotive.com/remote-jobs/feed/software-dev - Software development, engineering, DevOps, technical roles\n\n**Your Task:**\nAnalyze the provided ICP and determine which RSS feed would contain the most relevant job postings for finding companies that match the profile.\n\n**ICP to Analyze:**\n{{ $('Webhook').item.json.body.icp || $('Webhook').item.json.query.icp }}\n\n**Analysis Criteria:**\n1. What type of companies does the ICP target?\n2. What roles/departments would most likely need the product/service described?\n3. Which job category would hiring managers from target companies most likely post in?\n4. Consider the decision makers and influencers mentioned in the ICP\n\n**Selection Logic:**\n- **Data feed**: Choose if ICP targets companies needing data science, analytics, ML, AI, business intelligence, or data-driven solutions\n- **Marketing feed**: Choose if ICP targets companies needing marketing tools, growth solutions, content platforms, or customer acquisition tools\n- **Finance-Legal feed**: Choose if ICP targets financial services, fintech, accounting firms, legal services, compliance tools, or financial software\n- **HR feed**: Choose if ICP targets HR tech, recruiting tools, people management, workforce solutions, or talent platforms\n- **Software-Dev feed**: Choose if ICP targets companies needing development tools, DevOps solutions, infrastructure, security, or general B2B software\n\n**Instructions:**\n- Return ONLY the URL of the most relevant RSS feed\n- If the ICP could match multiple categories, choose the one with the highest likelihood of decision makers\n- Consider where the budget holder for the ICP's product/service would most likely be found\n- Be decisive - select the single best match\n\n**Output Format:**\nReturn only the URL, nothing else.\n\n**Examples:**\n- ICP targeting \"SaaS companies needing customer analytics\" → data feed\n- ICP targeting \"Fintech companies hiring compliance officers\" → finance-legal feed  \n- ICP targeting \"Startups needing DevOps automation\" → software-dev feed\n- ICP targeting \"Companies hiring growth marketers\" → marketing feed\n- ICP targeting \"Companies needing recruiting automation\" → hr feed",
+        "hasOutputParser": true,
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -2000,
+        360
+      ],
+      "id": "f1ef8145-d078-4c0e-82a4-9ddd176f7267",
+      "name": "RSS Feed Selector"
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "RSS Feed Selector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Remote Jobs RSS feed": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "Filter relevant roles",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Analyze ICP Match",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Analyze ICP Match",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze ICP Match": {
+      "main": [
+        [
+          {
+            "node": "Send Prospect Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Prospect Email": {
+      "main": [
+        [
+          {
+            "node": "Wait 5s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 5s": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Analyze ICP Match",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Filter relevant roles",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Filter relevant roles",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter relevant roles": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "RSS Feed Selector",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "RSS Feed Selector",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Feed Selector": {
+      "main": [
+        [
+          {
+            "node": "Get Remote Jobs RSS feed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "1725aaf255f271a2cb370b9051de0a61864aaf0b262c35ad3f624929f92bfcff"
+  }
+}
