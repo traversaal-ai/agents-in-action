@@ -73,7 +73,7 @@ It combines:
 3. **Add Credentials**
 
    * **OpenAI API Key** for GPT-4o Mini
-   * **ARES API Key** from [Traversaal](https://traversaal.ai)
+   * **ARES API Key** from [Traversaal](https://api.traversaal.ai)
 
 4. **Deploy Webhook**
 
@@ -119,4 +119,3 @@ Want to build and customize more AI agents like this?
 📖 [ML System Design Course](https://maven.com/boring-bot/ml-system-design)
 
 💻 [GitHub: Agents in Action](https://github.com/traversaal-ai/agents-in-action)
-
