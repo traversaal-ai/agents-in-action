@@ -1,6 +1,10 @@
-# 🔍 Book Companion Search API — Full-Stack Voice System
+# 🎙️🤖🔎 Book Companion Voice RAG Agent
+
+## Building an LLM Application (from Scratch)
 
 A complete voice-enabled book companion system with **n8n** as the core RAG engine, integrated into a full-stack application with React frontend, Supabase backend, and real-time voice interaction capabilities.
+
+**URL:** https://building-llm-apps-from-scratch-companion.lovable.app/
 
 ---
 
