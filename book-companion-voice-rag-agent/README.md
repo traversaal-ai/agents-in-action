@@ -1,26 +1,54 @@
-# 🔍 Book Companion RAG Search API — n8n Workflow
+# 🔍 Book Companion Search API — Full-Stack Voice System
 
-A lightweight document search API built using **n8n**, providing fast semantic search through "Building an LLM Application (from Scratch)" content without AI processing overhead.
+A complete voice-enabled book companion system with **n8n** as the core RAG engine, integrated into a full-stack application with React frontend, Supabase backend, and real-time voice interaction capabilities.
 
 ---
 
 ## 🌟 Features
 
-- 🔍 **Semantic Document Search**: Fast vector-based search through "Building LLM from Scratch" content
-- ⚡ **Lightweight API**: No AI processing overhead for maximum speed and cost efficiency
-- 📚 **Pre-processed Knowledge**: Ready-to-search vectorized book content
-- 🎯 **Clean JSON Output**: Structured responses perfect for frontend integration
-- 🌐 **CORS Enabled**: Ready for web application integration
+- 🎙️ **Full Voice Interface**: Complete speech-to-speech interaction using React frontend
+- 🔍 **Intelligent RAG Search**: n8n workflow provides semantic document retrieval
+- 🗃️ **Full-Stack Architecture**: React + Supabase + Edge Functions + n8n integration
+- 💾 **Session Management**: User authentication and chat memory persistence
+- ⚡ **Real-time Experience**: Live transcription and instant voice responses
+- 📚 **Book-Focused**: Specialized for "Building LLM from Scratch" content
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ System Architecture
 
-This is a single-pipeline workflow:
+This system combines multiple components for a complete voice AI experience:
 
-### Search API (Runtime)
+![System Architecture](diagrams/system-architecture.svg)
 
-Webhook Trigger → Vector Search → [Embeddings + Document Retrieval] → JSON Formatting → Response
+### Frontend (React)
+
+Browser-based voice interface with real-time audio processing
+
+### Backend (Supabase)
+
+- **Authentication**: User sessions and security
+- **Edge Functions**: Transcription, completion, TTS, and memory management
+- **Database**: Chat history with Row Level Security (RLS)
+- **Realtime**: Live subscriptions and updates
+
+### RAG Engine (n8n)
+
+- **Vector Search**: Semantic document retrieval
+- **External Integration**: Connects to vector databases and APIs
+- **Webhook Interface**: RESTful integration with Supabase functions
+
+### Voice Processing Flow
+
+![Voice Sequence](diagrams/voice-sequence.svg)
+
+The complete voice interaction follows this sequence:
+
+1. User speaks → Browser captures audio
+2. Audio transcribed via Whisper → Text displayed
+3. RAG search via n8n webhook → Document chunks retrieved
+4. LLM processes with context → Response generated
+5. Text-to-speech → Audio played back
 
 ---
 
