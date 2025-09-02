@@ -1,0 +1,449 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [1136, 848],
+      "id": "df661165-0e3b-4fa3-b149-d3b32de9d474",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "AC6qDxlfvN76eReA",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "dataType": "binary",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [1264, 848],
+      "id": "487da720-304f-40e1-b3ac-0b159afb6d28",
+      "name": "Default Data Loader"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [1344, 1056],
+      "id": "72f65be8-76a7-44aa-a4a8-f4ad60ac0acb",
+      "name": "Recursive Character Text Splitter"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [688, 624],
+      "id": "d3ca902c-fa01-4c8b-bbc1-8bb50ea891b8",
+      "name": "When clicking 'Test workflow'"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": {
+          "__rl": true,
+          "value": "documents",
+          "mode": "list",
+          "cachedResultName": "documents"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [1168, 624],
+      "id": "fa7e33f5-6ae0-4161-8fc6-e0738826e7a4",
+      "name": "Add to Supabase",
+      "credentials": {
+        "supabaseApi": {
+          "id": "FD4H94XhmR0z6VrX",
+          "name": "Supabase voice-ai-playground"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "15Vq7dWWcW07BhY7UxxN21OdIA2_IKpmV",
+          "mode": "list",
+          "cachedResultName": "Build_LLM_Applications_(from_Scratch)_v1_MEAP.pdf",
+          "cachedResultUrl": "https://drive.google.com/file/d/15Vq7dWWcW07BhY7UxxN21OdIA2_IKpmV/view?usp=drivesdk"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [912, 624],
+      "id": "9a6fcf9b-fe77-431c-b4f5-d4eeb2947a33",
+      "name": "Download File",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "hh8J4NGtlm06CbHd",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "load",
+        "tableName": {
+          "__rl": true,
+          "value": "documents",
+          "mode": "list",
+          "cachedResultName": "documents"
+        },
+        "prompt": "={{ $json.body.question }}",
+        "topK": 2,
+        "includeDocumentMetadata": false,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [992, -592],
+      "id": "09aa765e-5ec6-4923-89f6-19ebb0a411bf",
+      "name": "Supabase Vector Store",
+      "credentials": {
+        "supabaseApi": {
+          "id": "FD4H94XhmR0z6VrX",
+          "name": "Supabase voice-ai-playground"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [992, -384],
+      "id": "dd30a5ea-48aa-4de2-a711-ade8b82d20a4",
+      "name": "Embeddings",
+      "credentials": {
+        "openAiApi": {
+          "id": "AC6qDxlfvN76eReA",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# Document Processing Pipeline\n\n📁 **STEP 1: Document Ingestion**\n- Downloads Book PDF from Google Drive\n- Splits document into manageable chunks\n- Converts text to vector embeddings\n- Stores in Supabase vector database\n\n⚡ **How it works:**\n1. Manual trigger starts the process\n2. Document is downloaded as binary data\n3. Text splitter breaks it into chunks\n4. OpenAI creates embeddings for each chunk\n5. Everything gets stored in Supabase\n\n🔄 **Run this ONCE to populate your knowledge base**",
+        "height": 760,
+        "width": 1140
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [278, 24],
+      "typeVersion": 1,
+      "id": "5bf332d7-34fa-423c-bba0-35fa562dee37",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "📥 **MANUAL TRIGGER**\n\nClick to start document processing!\n- One-time setup process\n- Prepares your knowledge base\n- Run this before chatting",
+        "height": 280,
+        "width": 200,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [448, 496],
+      "typeVersion": 1,
+      "id": "2d5ff10d-ea38-41d5-be1a-c1926bd06de9",
+      "name": "Manual Trigger Explanation"
+    },
+    {
+      "parameters": {
+        "content": "📂 **GOOGLE DRIVE DOWNLOAD**\n\nDownloads specific file:\n- Building LLM Applications PDF\n- Binary data format\n- Ready for processing",
+        "height": 140,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [848, 464],
+      "typeVersion": 1,
+      "id": "92b12c69-e9af-4a57-9f3a-af4f4357165d",
+      "name": "Drive Explanation"
+    },
+    {
+      "parameters": {
+        "content": "💾 **VECTOR DATABASE INSERT**\n\nStores processed documents:\n- Embeddings + metadata\n- Supabase 'documents' table\n- Ready for retrieval\n- Searchable knowledge base",
+        "height": 200,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [1488, 560],
+      "typeVersion": 1,
+      "id": "fa9ea8da-faa4-4fe6-8ce9-ecf99bb6455c",
+      "name": "Insert Explanation"
+    },
+    {
+      "parameters": {
+        "content": "🔤 **EMBEDDINGS FOR STORAGE**\n\nConverts text chunks to vectors:\n- OpenAI embedding model\n- Numerical representations\n- Enables semantic search\n- Feeds into vector store",
+        "height": 280,
+        "width": 220,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [848, 848],
+      "typeVersion": 1,
+      "id": "4b9c6e2e-6f35-4399-adec-62df3e6798cd",
+      "name": "Storage Embedding Explanation"
+    },
+    {
+      "parameters": {
+        "content": "📄 **DOCUMENT LOADER**\n\nProcesses binary files:\n- Extracts text from PDF\n- Handles various formats\n- Converts to readable text\n- Prepares for chunking\n\nData type: binary",
+        "height": 140,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [1536, 816],
+      "typeVersion": 1,
+      "id": "b6f4016a-84a3-425c-8bb7-265c3bac7a49",
+      "name": "Loader Explanation"
+    },
+    {
+      "parameters": {
+        "content": "✂️ **TEXT SPLITTER**\n\nBreaks documents into chunks:\n- Recursive character splitting\n- Manageable piece sizes\n- Preserves context\n- Optimizes for embeddings\n\nFeeds into Document Loader",
+        "height": 140,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [1488, 1072],
+      "typeVersion": 1,
+      "id": "bc0530d7-3a3c-4854-b3b9-d9a02ea6b372",
+      "name": "Splitter Explanation"
+    },
+    {
+      "parameters": {
+        "content": "🔤 **EMBEDDING MODEL**\n\nConverts text to vectors for:\n- Semantic search\n- Similarity matching\n- Document retrieval\n- Vector comparisons\n\nUsed by vector store for search",
+        "height": 140,
+        "width": 220,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [752, -416],
+      "typeVersion": 1,
+      "id": "55b26887-c370-49e1-8515-ea807dc57f1d",
+      "name": "Embedding Explanation"
+    },
+    {
+      "parameters": {
+        "content": "🔍 **VECTOR SEARCH ENGINE**\nCore search functionality!\n- Searches \"Building LLM from Scratch\" document chunks\n- Returns top 2 most relevant results\n- Uses semantic similarity matching\n- No metadata included for clean results",
+        "height": 184,
+        "width": 296,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [960, -800],
+      "typeVersion": 1,
+      "id": "c191ef6a-c430-45d0-8be1-629f7dc2b4e1",
+      "name": "Vector Tool Explanation"
+    },
+    {
+      "parameters": {
+        "content": "# Book Companion -> RAG Search\n\n🔍 **SIMPLE SEARCH INTERFACE**\n- User sends text question → Vector search → Raw chunks returned\n- Direct semantic search without AI processing\n- Returns top 2 relevant book chunks as JSON\n- No conversation memory or session management required at this layer\n\n📚 **DIRECT RETRIEVAL**\n- Supabase vector store searches \"Building an LLM App from Scratch\" content\n- OpenAI text-embedding-3-large for semantic matching\n- No LLM processing - just raw document chunks\n- Code node formats results for clean JSON output\n\n🎯 **LIGHTWEIGHT API**\n- Simple POST webhook receives questions\n- No transcription, TTS, or memory overhead\n- Fast vector-only search and retrieval\n- Perfect for building custom frontends or integrations\n\n⚡ **STREAMLINED FLOW**\n- Question → Embedding → Vector Search → Code Processing → JSON Response\n- No AI agent, memory, or audio processing in n8n\n- Minimal latency and cost\n- Pure document retrieval service",
+        "height": 720,
+        "width": 1120,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [-368, -736],
+      "typeVersion": 1,
+      "id": "df911d4d-8f79-4861-8efa-7a860188350a",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst chunks = [];\n\nfor (const item of items) {\n  if (item.json && item.json.document && item.json.document.pageContent) {\n    chunks.push({\n      \"text\": item.json.document.pageContent\n    });\n  }\n}\n\nreturn {chunks};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1344, -592],
+      "id": "7d6d3391-6a10-4bb3-b918-4398eda19d37",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "00d859c1-50a4-4fde-aff3-f13a5e86a64a",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [768, -592],
+      "id": "ede8b8c2-f29c-40c7-aa0d-3bfa279c07ad",
+      "name": "Webhook",
+      "webhookId": "00d859c1-50a4-4fde-aff3-f13a5e86a64a"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [1648, -592],
+      "id": "ba46f9f2-8fbe-40e1-a73d-9cc8e9938a55",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "content": "🎯 **API TRIGGER**\nReceives search requests!\n- Accepts POST requests with question in body\n- CORS enabled for web frontend integration\n- Passes questions to vector search pipeline",
+        "height": 196,
+        "width": 328,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [512, -736],
+      "typeVersion": 1,
+      "id": "4c5c162f-078c-4400-ae1f-22880c075991",
+      "name": "Trigger Explanation"
+    },
+    {
+      "parameters": {
+        "content": "📤 **JSON RESPONSE**\nReturns search results!\n- Sends formatted document chunks as JSON\n- Completes the API request cycle\n- Ready for frontend consumption",
+        "height": 196,
+        "width": 328,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [1552, -816],
+      "typeVersion": 1,
+      "id": "43d5016f-9379-41c2-9177-52e7504cb7ff",
+      "name": "Trigger Explanation1"
+    },
+    {
+      "parameters": {
+        "content": "⚙️ **CHUNK FORMATTER**\nProcesses search results!\n- Extracts pageContent from vector results\n- Formats chunks into clean JSON structure\n- Prepares data for API response",
+        "height": 184,
+        "width": 296,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [1312, -448],
+      "typeVersion": 1,
+      "id": "be2d1c19-7830-4f8a-b7e8-479d5c199431",
+      "name": "Vector Tool Explanation2"
+    }
+  ],
+  "connections": {
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Add to Supabase",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Add to Supabase",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recursive Character Text Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking 'Test workflow'": {
+      "main": [
+        [
+          {
+            "node": "Download File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download File": {
+      "main": [
+        [
+          {
+            "node": "Add to Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase Vector Store": {
+      "ai_tool": [[]],
+      "ai_vectorStore": [[]],
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Supabase Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Supabase Vector Store",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "52f3ea1091e7549d03d6d6af8d10ffb0eb258a70b8ac87a64741364349b14adc"
+  }
+}
