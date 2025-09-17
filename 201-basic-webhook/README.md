@@ -8,7 +8,8 @@ It shows the simplest “**HTTP in → AI out**” pattern using a **Webhook**, 
 ## ✨ Overview
 
 Send a POST request to an n8n **Webhook**, pass a prompt, and get a short AI answer back.
-Test with `curl`, Postman, or the provided **Colab notebook**.
+Best tested with the provided **Google Colab notebook**.
+You can also try with `curl` or Postman.
 
 ---
 
@@ -53,8 +54,6 @@ graph LR
 }
 ```
 
-> The Webhook node exposes your payload under `body`. The workflow reads `body.query` and `body.username`.
-
 ---
 
 ## 📤 Output
@@ -77,7 +76,26 @@ graph LR
 
 ## 🧪 Try It
 
-### Option A — cURL
+### ✅ Main Option — **Google Colab (Python)**
+
+- Open the Colab:
+  **[201 Basic — Webhook Client (Colab)](https://colab.research.google.com/drive/1o66IjJDEQZ404gs5MNiItm2WqxcU2bzx?usp=sharing)**
+- **Make it editable:**
+
+  - Click **Copy to Drive** (or **File → Save a copy in Drive**) to create your own editable copy.
+
+- **Update the webhook URL variable:**
+
+  - Locate the variable (`url` or `WEBHOOK_URL`) and replace it with your **Production Webhook URL** from n8n.
+
+- **Run the notebook:**
+
+  - Click **Runtime → Run all** (or run cells one by one).
+  - You should see the HTTP status and the AI’s reply printed.
+
+---
+
+### 🔄 Alternative Option A — cURL
 
 ```bash
 WEBHOOK_URL="https://<your-n8n>/webhook/<id>"   # Paste the Production URL
@@ -86,9 +104,12 @@ curl -X POST "$WEBHOOK_URL" \
   -d '{"query":"Tell me two fun facts about Sydney.","username":"demo-user-1"}'
 ```
 
-### Option B — Postman
+---
+
+### 🔄 Alternative Option B — Postman
 
 1. New → **POST** request to your **Production Webhook URL**.
+
 2. Body → **raw** → **JSON**:
 
    ```json
@@ -99,25 +120,6 @@ curl -X POST "$WEBHOOK_URL" \
    ```
 
 3. Send → See the reply.
-
-### Option C — **Google Colab (Python)**
-
-- Open the instructor’s Colab:
-  **[201 Basic — Webhook Client (Colab)](https://colab.research.google.com/drive/1o66IjJDEQZ404gs5MNiItm2WqxcU2bzx?usp=sharing)**
-- **Make it editable:**
-
-  - Click **Copy to Drive** (or **File → Save a copy in Drive**) to create your own editable copy.
-
-- **Update the webhook URL variable:**
-
-  - In your copy, locate the variable that holds the webhook URL (commonly named `url` or `WEBHOOK_URL`) and **paste your Production Webhook URL** from n8n.
-
-- **Run the notebook:**
-
-  - Click **Runtime → Run all** (or run cells sequentially).
-  - You should see the HTTP status and the AI’s reply printed.
-
-> If the notebook uses a variable named `url`, replace that value with your Production Webhook URL. If it uses `WEBHOOK_URL`, replace that instead.
 
 ---
 
@@ -132,14 +134,10 @@ curl -X POST "$WEBHOOK_URL" \
 
 ## 🧠 What to Notice (Teaching Points)
 
-- The exact wording of `query` changes the answer — try general vs. specific prompts.
+- The exact wording of `query` changes the answer:
+
+  - _“Tell me about AWS”_ → general cloud answer.
+  - _“Tell me about S3 storage classes”_ → specific, detailed S3 answer.
+
 - `username` enables per-user conversational continuity.
 - This pattern is the foundation for app integrations (next) and RAG.
-
----
-
-## 📚 References
-
-- 📖 [n8n Webhook Docs](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/)
-- 📖 [Respond to Webhook](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/)
-- 📖 [AI / OpenAI Nodes](https://docs.n8n.io/advanced-ai/intro-tutorial/#what-you-will-need/)

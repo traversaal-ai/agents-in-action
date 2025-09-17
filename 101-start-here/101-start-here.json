@@ -3,7 +3,7 @@
     {
       "parameters": {
         "options": {
-          "systemMessage": "You are a simple AI for demonstrating how wording in a prompt changes the response.\n\nRules:\n- Keep replies short (2–3 sentences).\n- Use clear, everyday language.\n- If the request is vague, give a general answer and point out that adding detail would improve it.\n- If the request is more specific, show how the answer becomes more tailored.\n\nExamples:\nUser: \"Tell me about Paris\"\nAI: \"Paris is a city in France, known for landmarks like the Eiffel Tower.\"\nAI note: \"That was general because the prompt was general.\"\n\nUser: \"Tell me about Paris as a foodie\"\nAI: \"Paris is famous for bakeries, cafés, and Michelin-starred restaurants.\"\nAI note: \"The extra detail shaped the answer.\"\n\nUser: \"I have eggs and rice\"\nAI: \"You could make a quick fried rice by scrambling the eggs with rice and vegetables.\"\nAI note: \"Listing ingredients helps me suggest something specific.\"\n"
+          "systemMessage": "You are an **AI Agent** for a simple demo.\n\nRules:\n- Reply in short, clear sentences (2–3 max).\n- Use everyday language anyone can understand.\n- If the user’s request is vague, give a general answer and explain that adding detail would improve it.\n- If the request is more specific, tailor your answer to match the detail.\n\nExamples:\nUser: \"Tell me about Paris\"\nAI: \"Paris is a city in France, famous for the Eiffel Tower.\"  \nAI note: \"That was general because the prompt was general.\"\n\nUser: \"Tell me about Paris as a foodie\"\nAI: \"Paris is known for cafés, bakeries, and fine dining.\"  \nAI note: \"Adding 'as a foodie' made the answer more specific.\"\n\nUser: \"I have eggs and rice\"\nAI: \"You could make a simple fried rice by scrambling the eggs with rice and vegetables.\"  \nAI note: \"Listing ingredients helped me give a tailored suggestion.\"\n"
         }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -54,7 +54,7 @@
     },
     {
       "parameters": {
-        "content": "# Start Here — AI Chat Trigger\n\n💬 **Chat Trigger**\n- Entry point: type directly in n8n’s chat UI\n- No setup beyond OpenAI credentials\n- Perfect for “Hello World” demo\n\n🧠 **AI Agent**\n- Simple rules: short, clear answers\n- Shows how prompt wording changes output\n\n🤖 **OpenAI Model**\n- Model: gpt-4o-mini\n- Fast + inexpensive\n- Generates responses based on the chat message\n\n🗂️ **Memory**\n- Keeps track of previous messages during chat\n- Makes conversation feel continuous\n\n✨ **What to Notice**\n- General prompt = general answer\n- Specific prompt = tailored answer\n- First step before connecting apps or webhooks\n",
+        "content": "# Start Here — AI Chat Trigger\n\n💬 **Chat Trigger**\n- Entry point: type directly in n8n’s chat UI\n- No setup beyond OpenAI credentials\n- Perfect for “Hello World” demo\n\n🧠 **AI Agent**\n- Follows simple rules: short, clear answers\n- Highlights how vague vs. specific prompts change replies\n\n🤖 **OpenAI Model**\n- Model: gpt-4o-mini\n- Fast + inexpensive\n- Generates responses based on the chat message\n\n🗂️ **Memory**\n- Keeps track of previous messages during chat\n- Makes conversation feel continuous\n\n✨ **What to Notice**\n- General prompt = general answer\n- Specific prompt = tailored answer\n- First step before connecting apps or webhooks\n",
         "height": 576,
         "width": 1120,
         "color": 7
@@ -79,7 +79,7 @@
     },
     {
       "parameters": {
-        "content": "🧠 AI AGENT\n- Applies simple system rules\n- Demonstrates how wording changes the reply\n",
+        "content": "🧠 AI AGENT\n- Uses a fixed set of rules\n- Shows the impact of prompt wording on the response",
         "height": 104,
         "width": 304,
         "color": 4

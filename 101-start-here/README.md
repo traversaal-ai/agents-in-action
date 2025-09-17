@@ -7,7 +7,7 @@ It’s the simplest way to see how n8n can connect to an AI model and respond to
 
 ## ✨ Overview
 
-This workflow demonstrates how a **chat message** can trigger an n8n workflow that talks to **OpenAI GPT** and remembers what you said.
+This workflow demonstrates how a **chat message** can trigger an n8n workflow that talks to **OpenAI GPT** and shows how prompt wording changes the response.
 
 ---
 
@@ -55,6 +55,8 @@ Here are some prompts to test how wording changes answers:
 - `I have eggs and rice`
 
 👉 Notice how the more **specific your prompt**, the more **tailored the answer**.
+
+👉 Each example shows how vague vs. specific prompts change the answer.
 
 ---
 
