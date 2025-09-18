@@ -141,7 +141,7 @@
             "parameters": [
               {
                 "name": "x-api-key",
-                "value": "ares_6f3b6c6e6de6210b0c24af89d6786fbbfd300e3b16805a28af54c964fda6a5a5"
+                "value": "your_traversaal_api_key_here"
               }
             ]
           },

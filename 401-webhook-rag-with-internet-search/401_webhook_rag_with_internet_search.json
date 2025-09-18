@@ -319,7 +319,7 @@
           "parameters": [
             {
               "name": "x-api-key",
-              "value": ""
+              "value": "your_traversaal_api_key_here"
             }
           ]
         },
