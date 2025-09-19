@@ -3,6 +3,8 @@
 This folder contains the **Agents Chat Frontend** workflow for n8n, designed to give students a hands-on way to interact with the agents they’ve built (`201`, `301`, `401`).
 It provides a **Loveable UI** where users can select which backend workflow to route their chat to.
 
+**URL:** https://agents-in-action-chat.lovable.app/
+
 ---
 
 ## ✨ Overview
