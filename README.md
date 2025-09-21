@@ -29,17 +29,19 @@ Whether you're building a Sales Prospecting Agent, a Research Assistant, or a Kn
 
 ## 📚 Learn While You Build
 
-All projects here are part of the [**"Building GenAI Agents for Enterprise: Beyond the Hype"**](https://maven.com/boring-bot/advanced-llm) course on Maven — a hands-on, code-first program where 10,000+ learners have already joined us to:
+All projects here are part of the following courses on Maven:
+🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
+💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)\
 
+These are hands-on, code-first/no-code programs where 10,000+ learners have already joined us to:
 - Build autonomous, multi-agent systems
 - Learn MCP, ADK, and Agent-to-Agent (A2A) orchestration
 - Deploy private LLMs & quantized models
 - Construct knowledge graphs & semantic pipelines
 
-### 🔥 **New Cohort Starting Soon**
-Use promo code `MAVEN100` to join now →
-👉 [**Enroll here**](https://maven.com/boring-bot/advanced-llm?promoCode=MAVEN100)
-
+### 🔥 **New Cohorts Starting Soon**
+- **For Leaders & Managers**: 🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
+- **For Developers & Engineers** 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
 ---
 
 ## 🧠 Contribute
