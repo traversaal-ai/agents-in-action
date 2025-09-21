@@ -17,7 +17,8 @@ The Blog Post Agent automates the process of generating high-quality blog posts.
 ---
 
 ## 🧩 Sub-Workflow Requirement
-**To enable deep research and richer content, you should also add the `deep research n8n` workflow as a sub-workflow.**
+**To enable deep research and richer content, you should also add the `scrape link` and `deep research` workflows as sub-workflows.**
+- 🛠️ The `scrape_link.json` file extracts and summarizes the content from a link. 
 - 🧠 The `blog_deep_research.json` file provides a research pipeline that can be called from the main blog post generator workflow.
 - 📚 This allows the agent to gather and synthesize information before drafting the post.
 
@@ -26,18 +27,26 @@ The Blog Post Agent automates the process of generating high-quality blog posts.
 ## ⚙️ Setup
 1. 📥 Import `blog_post_generator.json` into your n8n instance as the main workflow.
 2. 🧠 Import `blog_deep_research.json` as a sub-workflow.
-3. 🔑 Configure any required credentials (OpenAI, Google, etc.) in n8n.
-4. 🛠️ Adjust prompts and workflow logic as needed for your use case.
+3. 🛠️ Import `scrape_link.json` as a sub-workflow.
+4. 🔑 Configure any required credentials (OpenAI, Google, etc.) in n8n.
+5. 🛠️ Adjust prompts and workflow logic as needed for your use case.
 
 ---
 
 ## 🚦 Usage
 - ▶️ Trigger the main workflow with your desired topic or prompt.
-- 🔄 The workflow will optionally call the deep research sub-workflow, then generate a blog post draft.
+- 🔄 The workflow will call the scrape link and deep research sub-workflows, then generate a blog post draft.
 - 📤 Output can be sent to your preferred platform (Google Docs, Notion, etc.).
 
 ---
 
 ## 📁 Files
 - `blog_post_generator.json` — Main workflow for blog post generation
-- `blog_deep_research.json` — Sub-workflow for deep research 
+- `scrape_link.json` — Sub-workflow for content extraction
+- `blog_deep_research.json` — Sub-workflow for deep research
+
+## 🎓 Learn More
+Want to build and customize more AI agents like this?\
+📖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
+💻 [GitHub: Agents in Action](https://github.com/traversaal-ai/agents-in-action)
+
