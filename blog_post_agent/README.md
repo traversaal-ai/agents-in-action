@@ -47,6 +47,8 @@ The Blog Post Agent automates the process of generating high-quality blog posts.
 
 ## 🎓 Learn More
 Want to build and customize more AI agents like this?\
-📖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
-💻 [GitHub: Agents in Action](https://github.com/traversaal-ai/agents-in-action)
+🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
+💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)\
+📂 [GitHub: Agents in Action](https://github.com/traversaal-ai/agents-in-action)
+
 
