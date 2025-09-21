@@ -30,7 +30,7 @@ Whether you're building a Sales Prospecting Agent, a Research Assistant, or a Kn
 ## 📚 Learn While You Build
 
 All projects here are part of the following courses on Maven:\
-🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)
+🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
 
 These are hands-on, code-first/no-code programs where 10,000+ learners have already joined us to:
@@ -40,7 +40,7 @@ These are hands-on, code-first/no-code programs where 10,000+ learners have alre
 - Construct knowledge graphs & semantic pipelines
 
 ### 🔥 **New Cohorts Starting Soon**
-- **For Leaders & Managers**: 🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
+- **For Leaders & Managers**: 🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)
 - **For Developers & Engineers** 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
 ---
 
