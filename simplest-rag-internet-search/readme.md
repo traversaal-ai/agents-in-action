@@ -208,7 +208,8 @@ MIT License. Use responsibly and respect API limits.
 
 ---
 
-Ready to dive deeper into agentic systems?
-
-👉 **[Join our GenAI Agents course on Maven](https://maven.com/boring-bot/advanced-llm)**
-Build intelligent research agents, RAG pipelines, and more — hands-on and production-ready.
+## 🎓 Learn More
+Want to build and customize more AI agents like this?\
+🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
+💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)\
+📂 [GitHub: Agents in Action](https://github.com/traversaal-ai/agents-in-action)
