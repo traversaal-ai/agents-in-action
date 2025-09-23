@@ -17,10 +17,22 @@ Whether you're building a Sales Prospecting Agent, a Research Assistant, or a Kn
 
 | Project | Stack | Description |
 |---------|-------|-------------|
+| `101-start-here/` | n8n | Your first workflow in n8n |
+| `201-basic-webhook/` | n8n | Basic webhook using OpenAI |
+| `301-webhook-rag/` | n8n + RAG | Webhook & Retrieval Augmented Generation (RAG) workflow |
+| `401-webhook-rag-with-internet-search/` | n8n + RAG + Search | Webhook with RAG and internet search workflow |
+| `511-agents-chat-frontend/` | Lovable | Agents chat frontend for workflows: 201, 301, 401 |
 | `airbnb-agent/` | React + n8n | Search for your perfect Airbnb stay using AI and automation |
 | `blog_post_agent/` | n8n + AI | Automated blog post generation with deep research sub-workflow |
+| `book-companion-voice-rag-agent/` | n8n + AI + RAG | Voice-enabled book companion for "Building an LLM Application (from Scratch)" |
+| `finance-agent/` | n8n + AI | AI financial analyst workflow |
+| `linkedpost-human-in-the-loop/` | n8n + AI | Human in the loop LinkedIn post generation workflow |
 | `sales-porspects-agent/` | n8n + AI | Build Ideal Customer Profiles and automate sales prospecting |
-| `workflow_creator/` | n8n | Visual workflow creator and manager for automation projects |
+| `simplest-rag-internet-serach/` | n8n + AI | AI Research Assistant with Ares internet search & Traversaal Pro RAG |
+| `supabase-rag/` | n8n + AI + RAG | RAG agent with memory |
+| `travel-agent/` | n8n + AI + MCP | AI Travel Assistant with MCP |
+| `webhook-with-memory/` | n8n + Ares | Webhook back and forth with Ares internet search |
+| `workflow-creator/` | n8n | Visual workflow creator and manager for automation projects |
 | `youtube-to-linkedin/` | n8n + React | Turn YouTube videos into LinkedIn posts with human review |
 
 > 💡 Each folder contains frontend code, backend logic, prompt structure, and ready-to-import n8n flows (`.json` files)
