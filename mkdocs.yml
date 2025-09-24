@@ -3,6 +3,6 @@ theme:
   name: material
 nav:
   - Home: index.md
-  - Tutorials:
+  - Blogs:
       - blog_1: 01-agents-are-here-and-they-are-staying.md
       - blog_2: 02-how-agents-think.md
