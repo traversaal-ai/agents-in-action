@@ -1,6 +1,6 @@
 site_name: Agents in Action
 theme:
-  name: material
+  name: architect
 nav:
   - Home: index.md
   - 7-Day Agents in Action Series:
