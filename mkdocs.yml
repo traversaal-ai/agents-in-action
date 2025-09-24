@@ -2,8 +2,8 @@ site_name: Agents in Action
 theme:
   name: material
 nav:
-  - **Home**: index.md
-  - **7-Day Agents in Action Series**:
+  - Home: index.md
+  - 7-Day Agents in Action Series:
     - Day 01 - Agents are here and they are staying: 01-agents-are-here-and-they-are-staying.md
     - Day 02 - How Agents Think: 02-how-agents-think.md
     - Day 03 - Memory - The Agent's Brain: 03-memory-the-agents-brain.md
