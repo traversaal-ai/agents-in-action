@@ -39,8 +39,8 @@ So we started layering memory, planning, and reflection into the loop. That’s 
 
 We’re not prompting anymore. We’re assigning work.
 
+![ChatGPT](images/who-wrote-that-email.png) 
 <p>
-  <img src="images/who-wrote-that-email.png">
   <em>We all know who wrote that email</em>
 </p>
 
@@ -48,9 +48,8 @@ In simple words, Agents = LLMs with access to tools and memory, tasked with plan
 
 “Unlike LLMs, Today’s AI agents are an engineering innovation, not an AI innovation”
 
+![Agent Flow Chart](images/agent-flow.png)
 <p>
-  <img src="images/agent-flow.png">
-  
   <em><a href="https://www.promptingguide.ai/agents/introduction">Source: Introduction to AI Agents | Prompt Engineering Guide</a></em>
 </p>
 
@@ -114,8 +113,8 @@ Companies adopting vertical agents are reporting 2–5x productivity boosts. Som
 
 ## **The Data Analyst Agent — A Glimpse of What’s Coming**
 
+![Data Analyst Agent](images/data-analyst-agent.png)
 <p>
-  <img src="images/data-analyst-agent.png">
   <em>Your RAG Powered Data Analyst</em>
 </p>
 
@@ -166,21 +165,15 @@ That’s what we mean when we say "SaaS is dead."
 
 ## **Agents in the Wild: What’s Already Here**
 
-<p>
-  <img src="images/vertical-ai-agents">
-</p>
+![Vertical AI Agents](images/vertical-ai-agents.png)
 
 Imagine a world, where didn’t need to write code, introducing, the concept of vibe coding
 
-<p>
-  <img src="images/idea-to-app.gif">
-</p>
+![Idea to App](images/idea-to-app.gif)
 
 At [Traversaal](https://traversaal.ai/), we don’t just talk about agents - we deploy them. Our AI data science agents help teams make real-time, reliable, insight-driven decisions.
 
-<p>
-  <img src="images/data-science-agent.gif">
-</p>
+![Data Science Agent](images/data-science-agent.gif)
 
 The key takeaway? The most impactful AI agents aren’t the ones that can do everything, but the ones that can do one thing exceptionally well.
 
@@ -194,6 +187,4 @@ You’ll start to see how agent behavior emerges from the structures we give the
 
 Don’t forget to check out my AI Agents for Enterprise course on Maven if you are interested to be a part of something bigger.
 
-<p>
-  <img src="images/ai-bootcamp.png">
-</p>
+![AI Bootcamp](images/ai-bootcamp.png)
