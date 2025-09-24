@@ -3,10 +3,15 @@
 Welcome to **Agents in Action** — the central open-source playground for building full-stack AI Agents 🚀
 
 This repo is where we share **real, working agent projects** from our live courses and workshops, including:
+
 - 🔗 Frontend interfaces
+  
 - ⚙️ Backend logic
+
 - 🔁 Automation flows using **n8n**
+
 - 📦 MCP server + webhooks
+
 - 🛠️ Example datasets, prompts, and use-case templates
 
 Whether you're building a Sales Prospecting Agent, a Research Assistant, or a Knowledge Graph-powered Analyst — this is your go-to lab.
@@ -41,8 +46,10 @@ Whether you're building a Sales Prospecting Agent, a Research Assistant, or a Kn
 
 ## 📚 Learn While You Build
 
-All projects here are part of the following courses on Maven:\
-🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
+All projects here are part of the following courses on Maven:
+
+🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)
+
 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
 
 These are hands-on, code-first/no-code programs where 10,000+ learners have already joined us to:
@@ -52,7 +59,9 @@ These are hands-on, code-first/no-code programs where 10,000+ learners have alre
 - Construct knowledge graphs & semantic pipelines
 
 ### 🔥 **New Cohorts Starting Soon**
+
 - **For Leaders & Managers**: 🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)
+
 - **For Developers & Engineers** 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
 
 ---
