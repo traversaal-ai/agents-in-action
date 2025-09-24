@@ -15,12 +15,10 @@ Let’s get started!
 
 ## **The Advent of Agents**
 
+![AI Agents](images/ai-agents.gif)
 <p>
-  <img src="images/ai-agents.gif">
   <em>Agents are LLMs with access to fancy tools!</em>
 </p>
-
-![AI Agents](images/ai-agents.gif)
 
 If I had to choose one word to describe the experience of the internet these days, it would be “surreal”. The past year has been a blur of LLM demos, ChatGPT wrappers, and fancy UIs trying to make GenAI feel useful. But under the surface, something much deeper is shifting.
 
