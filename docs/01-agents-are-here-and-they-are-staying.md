@@ -16,7 +16,7 @@ Let’s get started!
 ## **The Advent of Agents**
 
 <p>
-  <img src="/images/ai-agents.gif">
+  <img src="/docs/images/ai-agents.gif">
   <em>Agents are LLMs with access to fancy tools!</em>
 </p>
 
