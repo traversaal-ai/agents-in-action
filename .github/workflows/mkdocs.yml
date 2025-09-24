@@ -3,7 +3,7 @@ name: Deploy MkDocs
 on:
   push:
     branches:
-      - main  # or master, if that's your default
+      - substack-blogs # default branch
 
 permissions:
   contents: write
