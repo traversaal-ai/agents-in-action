@@ -1,0 +1,7 @@
+site_name: agents-in-action
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Tutorials:
+      - 01: 01-agents-are-here-and-they-are-staying.md
