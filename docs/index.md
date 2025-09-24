@@ -54,6 +54,7 @@ These are hands-on, code-first/no-code programs where 10,000+ learners have alre
 ### 🔥 **New Cohorts Starting Soon**
 - **For Leaders & Managers**: 🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)
 - **For Developers & Engineers** 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+
 ---
 
 ## 🧠 Contribute
