@@ -4,5 +4,5 @@ theme:
 nav:
   - Home: index.md
   - Blogs:
-      - blog_1: 01-agents-are-here-and-they-are-staying.md
-      - blog_2: 02-how-agents-think.md
+    - blog_1: 01-agents-are-here-and-they-are-staying.md
+    - blog_2: 02-how-agents-think.md
