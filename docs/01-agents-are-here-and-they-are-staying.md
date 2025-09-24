@@ -50,7 +50,7 @@ In simple words, Agents = LLMs with access to tools and memory, tasked with plan
 
 <p>
   <img src="images/agent-flow.png">
-  <em>[Introduction to AI Agents-Prompt Engineering Guide](https://www.promptingguide.ai/agents/introduction)</em>
+  <em><a href="https://www.promptingguide.ai/agents/introduction">Source: Introduction to AI Agents | Prompt Engineering Guide</a>[Introduction to AI Agents-Prompt Engineering Guide](https://www.promptingguide.ai/agents/introduction)</em>
 </p>
 
 ## **Agent Components: What Makes Them Work**
