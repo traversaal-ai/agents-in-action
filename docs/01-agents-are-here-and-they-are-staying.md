@@ -7,7 +7,7 @@
 
 Hi!
 
-My name is [Hamza]((https://www.linkedin.com/in/hamzafarooq/)), and I am so excited to welcome you our new course. Joining me is [Jaya]((https://www.linkedin.com/in/jayarajwani/)), who is a ninja in Agents!
+My name is [Hamza](https://www.linkedin.com/in/hamzafarooq/), and I am so excited to welcome you our new course. Joining me is [Jaya](https://www.linkedin.com/in/jayarajwani/), who is a ninja in Agents!
 
 In these 7 sessions we will uncover all we can about Agents, what they are, how they work and the what’s really behind all this hype?
 
