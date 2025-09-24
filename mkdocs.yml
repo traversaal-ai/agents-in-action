@@ -1,7 +1,8 @@
-site_name: agents-in-action
+site_name: Agents in Action
 theme:
   name: material
 nav:
   - Home: index.md
   - Tutorials:
-      - 01: 01-agents-are-here-and-they-are-staying.md
+      - blog_1: 01-agents-are-here-and-they-are-staying.md
+      - blog_2: 02-how-agents-think.md
