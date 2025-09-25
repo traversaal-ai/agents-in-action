@@ -134,3 +134,12 @@ The outlined process demonstrates how to:
 This process shows how AI can bridge the gap between different types of data, text and visuals, to solve real-world problems. With the right approach, a RAG system becomes more than just a tool; it becomes a way to gain meaningful insights and make smarter decisions.
 
 # **Full Code Companion**
+The complete code for this tutorial is available in the following Colab notebook (formatting tends to be off for the code in the article): [Colab Notebook: Multimodal RAG Implementation](https://colab.research.google.com/drive/1JPqGFM2mfFhRWeXue6NNJqwDDeCx1d4z?usp=sharing)
+
+**Next Up: Build Your Own Agent From Scratch**: In Day 6, we roll up our sleeves and build a complete agent loop — the thinking engine behind any autonomous system. You’ll learn how to initialize your agent’s “brain,” generate and run code dynamically, manage dependencies, and orchestrate everything from a central control layer.
+
+**ARE WE VIBING!!?**
+
+If you like this series, you should check out my AI Agents for Enterprise course on [Maven](https://maven.com/boring-bot/ml-system-design) and be a part of something bigger and join hundreds of builders to develop enterprise level agents.
+
+![AI Bootcamp](images/ai-bootcamp.png)
