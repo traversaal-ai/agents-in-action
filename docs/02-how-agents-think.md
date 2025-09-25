@@ -53,7 +53,7 @@ This is no longer about reacting. This is thought, action, and observation cycle
 |-----------------------------|-----------------------------|
 | ![Act](images/act.png) | ![Observe](images/observe.png) |
 <p>
-  <em>[Understanding AI Agents through the Thought-Action-Observation Cycle](https://huggingface.co/learn/agents-course/en/unit1/agent-steps-and-structure)</em>
+  <em><a href="https://huggingface.co/learn/agents-course/en/unit1/agent-steps-and-structure">Understanding AI Agents through the Thought-Action-Observation Cycle</a></em>
 </p>
 
 There are several combinations for this thought-action-observation loop. These combinations determin how we implement intelligent behavior in real systems. Let’s connect these styles to actual design patterns used in today’s GenAI agents.
@@ -175,3 +175,44 @@ Self-Reflection borrows directly from how humans improve: by learning from their
 Used in: AutoGen (via feedback mode) and LangChain Experimental Agents
 
 ## **5. Multi-Agent Systems**
+
+Sometimes a single agent isn’t enough. In complex tasks, we need planners, executors, verifiers - each with their own role, working together in coordination. Multi-agent systems are inspired by how real teams operate: different roles, communication, and collaboration.
+
+**How it works:**
+
+- A high-level Planner assigns subtasks
+- Specialized agents (e.g., Coders, Writers, Validators) execute in parallel
+- Agents share memory and context or report to a central Orchestrator
+
+**Why it matters**: This pattern unlocks true scalability. One agent can only do so much, but multiple agents can handle parallelism, specialization, and redundancy.
+
+*Example:*
+
+`A research team agent delegates background research to one agent, summary writing to another, and citation checking to a third. Then compiles everything into a polished report.`
+
+Used by: AutoGen, CrewAI, and open-ended research platforms.
+
+## **6. Agentic RAG (Retrieval-Augmented Generation)**
+
+Agentic RAG builds on the classic Retrieval-Augmented Generation pattern — but adds planning, memory, and sometimes even tool use to the mix. Rather than just grabbing documents and summarizing them, these agents actively reason over what they retrieve and incorporate it into a broader goal-oriented workflow.
+
+**How it works:**
+
+- Performs semantic or hybrid search (e.g., vector DB + keyword lookup)
+- Retrieves relevant documents or context snippets
+- Uses the LLM to reason over that information in real-time
+- Optionally uses tools or APIs to validate or supplement
+- Generates a final output through a response synthesis phase
+
+**Why it matters**: RAG was already useful for grounding answers in knowledge. Agentic RAG supercharges that by weaving in logic, decision trees, and memory. It bridges the gap between passive search and active understanding.
+
+*Example:*
+
+`A policy audit agent retrieves applicable laws, compares them with current internal documentation, identifies gaps, and generates action items — with citations.`
+
+Used by: **Perplexity**, internal agents in search, compliance, legal ops
+
+![Agentic Design Patterns by Rakesh Gohel](images/design-patterns.png)
+<p>
+  <em><a href="https://www.linkedin.com/feed/update/urn:li:activity:7321515242390249472/">Agentic Design Patterns by Rakesh Gohel</a></em>
+</p>
