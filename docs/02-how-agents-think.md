@@ -1,4 +1,4 @@
-# How Agents Think
+# Day 2: How Agents Think
 ### Types, Behaviors & Design Patterns
 
 [**Hamza Farooq**](https://github.com/hamzafarooq) and [**Jaya Rajwani**](https://github.com/JayaRajwani)
