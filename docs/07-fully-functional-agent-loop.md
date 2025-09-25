@@ -38,3 +38,18 @@ We explored how Google’s ADK, A2A protocol, and MCP create scalable agentic in
 For this finale, we’re going from theory to reality: building a working travel agent using only the concepts and tools we covered over the past week.
 
 ![AI Travel Assistant Workflow](images/travel-assistant.png)
+
+This workflow was built using [n8n](https://n8n.io/), a no-code/low-code automation tool that allows you to visually connect agents, tools, and APIs.
+
+Here’s how it works:
+
+- The agent receives a natural language input from the user (e.g., planning a trip)
+- It uses reasoning steps to identify missing information or clarify ambiguous ones
+- Then, it plans which tools to use and in what sequence (e.g., flight search → hotel search → itinerary planning)
+- It accesses those tools using structured queries (inspired by MCP principles)
+- Finally, it assembles a summary and sends it to the user via email and adds the trip to their calendar
+
+# **Step-by-Step: Travel Agent Workflow**
+We’ll break down the entire workflow node-by-node.
+
+## **Step 1: User Input Trigger**
