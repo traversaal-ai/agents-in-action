@@ -21,7 +21,7 @@ When you give an agent a task, for example: "write a report," "search for a poli
 
 ![Agent Thinking Method](images/agent-thinking-method.png)
 <p>
-  <em>[New Thinking Method for Agents | Better than reasoning models](https://aiablog.medium.com/new-thinking-method-for-agents-better-than-reasoning-models-fbd71ae77464)</em>
+  <em><a href="https://aiablog.medium.com/new-thinking-method-for-agents-better-than-reasoning-models-fbd71ae77464">New Thinking Method for Agents | Better than reasoning models</a></em>
 </p>
 
 That, right there, is where most GenAI builders hit their ceiling. Because you can bolt memory and tools onto an LLM, but if the agent doesn’t have a thinking loop, it breaks down after step one. This is where Agent Thinking Styles come into play.
@@ -48,6 +48,7 @@ This is no longer about reacting. This is thought, action, and observation cycle
 1. **Thought**: The LLM part of the Agent decides what the next step should be.
 2. **Action**: The agent takes an action, by calling the tools with the associated arguments.
 3. **Observation**: The model reflects on the response from the tool.
- 
+
+| - | - | 
 | ![Query](images/query.png) | ![Think](images/think.png) |
 | ![Act](images/act.png) | ![Observe](images/observe.png) |
