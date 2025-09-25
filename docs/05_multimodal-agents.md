@@ -56,7 +56,7 @@ Choosing the right tools for PDF processing is critical. With so many libraries 
 
 The table below compares the time taken to process PDFs of varying page counts using three libraries: PDFium, PyMuPDF, and PDFPlumber.
 
-![PDF Comparison Table](images/pdf-table)
+![PDF Comparison Table](images/pdf-table.png)
 <p>
   <em>Performance of each Python package across different number of pages</em>
 </p>
