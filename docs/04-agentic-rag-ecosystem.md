@@ -44,3 +44,17 @@ This architecture stands in contrast to the so-called "closed-book" LLMs that re
 <p>
   <em>Source: <a href="https://towardsdatascience.com/beyond-naive-rag-advanced-techniques-for-building-smarter-and-reliable-ai-systems-c4fbcf8718b8/">Beyond Naive RAG: Advanced Techniques for Building Smarter and Reliable AI Systems</a></em>
 </p>
+
+**Example**: Instead of asking a model to summarize GDPR from memory, a RAG system retrieves the actual GDPR document and generates the summary from it.
+
+To understand RAG in depth, let’s cover the core components of RAG.
+
+## **Core Components of a RAG System**
+
+**1. Retriever:**
+
+The retriever component is responsible for identifying and returning relevant context from a large corpus of documents. It typically consists of:
+
+- Embedding Model: Converts queries and documents into dense vector representations using pretrained models like **BERT** [[Devlin et al., 2018](https://arxiv.org/abs/1810.04805)], **MiniLM** [[Wang et al., 2020](https://arxiv.org/abs/2002.10957)], or domain-specific models like **SciBERT** [[Beltagy et al., 2019](https://arxiv.org/abs/1903.10676)].
+- Vector Index: These vectors are stored in a specialized vector index such as FAISS (Facebook AI Similarity Search) [Johnson et al., 2017] for efficient retrieval.
+- Similarity Search: Matches query embeddings against stored vectors using distance metrics like cosine similarity or L2 (Euclidean) distance. Approximate Nearest Neighbor (ANN) algorithms like HNSW [Malkov & Yashunin, 2018] are used to retrieve millions of documents.
