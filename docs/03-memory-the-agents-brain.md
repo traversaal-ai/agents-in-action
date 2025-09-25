@@ -1,4 +1,4 @@
-# Memory — The Agent's Brain
+# Day 3: Memory — The Agent's Brain
 ### We got our agents to think and remember
 
 [**Hamza Farooq**](https://github.com/hamzafarooq) and [**Jaya Rajwani**](https://github.com/JayaRajwani)
