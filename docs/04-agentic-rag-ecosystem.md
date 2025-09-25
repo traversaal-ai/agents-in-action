@@ -51,10 +51,25 @@ To understand RAG in depth, let’s cover the core components of RAG.
 
 ## **Core Components of a RAG System**
 
-**1. Retriever:**
+### **1. Retriever:**
 
 The retriever component is responsible for identifying and returning relevant context from a large corpus of documents. It typically consists of:
 
-- Embedding Model: Converts queries and documents into dense vector representations using pretrained models like **BERT** [[Devlin et al., 2018](https://arxiv.org/abs/1810.04805)], **MiniLM** [[Wang et al., 2020](https://arxiv.org/abs/2002.10957)], or domain-specific models like **SciBERT** [[Beltagy et al., 2019](https://arxiv.org/abs/1903.10676)].
-- Vector Index: These vectors are stored in a specialized vector index such as FAISS (Facebook AI Similarity Search) [Johnson et al., 2017] for efficient retrieval.
-- Similarity Search: Matches query embeddings against stored vectors using distance metrics like cosine similarity or L2 (Euclidean) distance. Approximate Nearest Neighbor (ANN) algorithms like HNSW [Malkov & Yashunin, 2018] are used to retrieve millions of documents.
+- **Embedding Model**: Converts queries and documents into dense vector representations using pretrained models like **BERT** [[Devlin et al., 2018](https://arxiv.org/abs/1810.04805)], **MiniLM** [[Wang et al., 2020](https://arxiv.org/abs/2002.10957)], or domain-specific models like **SciBERT** [[Beltagy et al., 2019](https://arxiv.org/abs/1903.10676)].
+- **Vector Index**: These vectors are stored in a specialized vector index such as **FAISS** (Facebook AI Similarity Search) [[Johnson et al., 2017](https://arxiv.org/abs/1702.08734)] for efficient retrieval.
+- **Similarity Search**: Matches query embeddings against stored vectors using distance metrics like cosine similarity or L2 (Euclidean) distance. Approximate Nearest Neighbor (ANN) algorithms like **HNSW** [[Malkov & Yashunin, 2018](https://arxiv.org/abs/1603.09320)] are used to retrieve millions of documents.
+
+![FAISS](images/faiss.png)
+<p>
+  <em>Source: <a href="https://medium.com/@pankaj_pandey/faiss-efficient-similarity-search-and-clustering-of-dense-vectors-dace1df1e235">FAISS: Efficient Similarity Search and Clustering of Dense Vectors</a></em>
+</p>
+
+### **2. Generator**
+
+The generator is typically an autoregressive language model (e.g., GPT, T5, Claude) that receives both the original query and the retrieved context and generates a natural language response. The quality of generation depends on:
+
+Prompt Engineering: Ensuring the retrieved documents are properly formatted and injected into the prompt.
+
+Context Length: The model's ability to handle long contexts (e.g., 4k vs. 32k tokens) impacts how many documents can be used.
+
+Relevance Weighting: Some architectures (e.g., Fusion-in-Decoder [Izacard & Grave, 2020]) weigh multiple retrieved documents during generation to enhance relevance.
