@@ -37,3 +37,4 @@ We explored how Google’s ADK, A2A protocol, and MCP create scalable agentic in
 
 For this finale, we’re going from theory to reality: building a working travel agent using only the concepts and tools we covered over the past week.
 
+![AI Travel Assistant Workflow](images/travel-assistant.png)
