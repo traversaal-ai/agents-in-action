@@ -49,6 +49,6 @@ This is no longer about reacting. This is thought, action, and observation cycle
 2. **Action**: The agent takes an action, by calling the tools with the associated arguments.
 3. **Observation**: The model reflects on the response from the tool.
 
-| - | - | 
 | ![Query](images/query.png) | ![Think](images/think.png) |
-| ![Act](images/act.png) | ![Observe](images/observe.png) |
+|-----------------------------|-----------------------------|
+| ![Act](images/act.png)     | ![Observe](images/observe.png) |
