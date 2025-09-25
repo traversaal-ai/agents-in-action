@@ -3,6 +3,8 @@
 
 [**Hamza Farooq**](https://github.com/hamzafarooq) and [**Jaya Rajwani**](https://github.com/JayaRajwani)
 
+## Welcome to Day 3 of the 7-Day Agents in Action Series.
+
 Hi!
 
 My name is [Hamza](https://www.linkedin.com/in/hamzafarooq/), and I am so excited to welcome you our new course. Joining me is [Jaya](https://www.linkedin.com/in/jayarajwani/), who is a ninja in Agents!
