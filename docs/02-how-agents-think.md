@@ -95,7 +95,83 @@ Design patterns are recurring, proven strategies that define how an agent proces
 
 ![Agentic Design Patterns](images/agentic-design-patterns.png)
 <p>
-  <em>[Agentic Design Patterns](https://medium.com/%40bijit211987/agentic-design-patterns-cbd0aae2962f)</em>  
+  <em><a href="https://medium.com/%40bijit211987/agentic-design-patterns-cbd0aae2962f">Agentic Design Patterns</a></em>  
 </p>
 
 Let’s explore how we implement these styles using design patterns - and when to use each.
+
+## **1. ReAct (Reason + Act)**
+Originally proposed by Yao et al. in 2022, ReAct is like giving your agent an inner monologue. It thinks, acts, observes the result, and keeps going.
+
+**How it works:**
+
+1. **Thought**: “Hmm, I should probably search for battery startups.”
+2. **Action**: Calls a web search tool.
+3. **Observation**: Reads the results.
+4. Repeats with updated thoughts.
+
+**Why it matters**: This cycle enables agents to operate with feedback. Rather than relying on a single giant prompt, ReAct breaks thinking into chunks. This not only grounds the agent in reality but also makes its reasoning interpretable, auditable, and easier to debug.
+
+*Example:*
+
+`An agent investigating “Who are the top battery tech startups in Silicon Valley right now?” It thinks, searches, reflects, and refines just like a junior analyst.`
+
+Used in: LangChain, AutoGen, CrewAI
+
+## **2. CodeAct (Code-generation agents)**
+
+If ReAct is about language and logic, CodeAct is where agents become engineers. These agents take natural language instructions and turn them into real, executable programs, then run those programs and act on the results.
+
+**How it works:**
+
+- Takes a prompt like “build a graph of monthly sales.”
+- Plans how to approach it.
+- Writes Python using libraries like pandas or matplotlib.
+- Runs the code.
+- Adapts if errors occur.
+
+**Why it matters**: CodeAct-style agents are capable of automation, transformation, and analysis at machine speed. They’re ideal for workflows like report generation, ETL pipelines, data visualization, or even bug fixing.
+
+*Example*:
+
+`A product manager asks: “Give me a dashboard of conversion rates by campaign over the last 3 months.” The agent queries data, generates charts, and emails the results and no human data analyst needed.`
+
+Popular in: Replit Ghostwriter, Devin by Cognition
+
+## **3. Tool Use**
+Modern agents don’t live in a vacuum, they interact with APIs, databases, and external environments. This pattern is about orchestrating that interaction effectively.
+
+**How it works:**
+- Uses a protocol like MCP (Model-Context Protocol) to define available tools
+- Selects the right tool based on the current context and task
+- Passes structured arguments and receives outputs
+- Can chain tools together or retry with fallback tools if needed
+
+**Why it matters**: Tool use is what makes agents useful. Whether it’s calling a calendar API, sending an email, or scraping a web page, this pattern turns passive LLMs into powerful actors.
+
+*Example:*
+
+`A virtual assistant checks your calendar, books a slot with your colleague, and sends a follow-up message - all through API calls.`
+
+Used in: LangGraph, Cursor, Autogen
+
+## **4. Self-Reflection**
+
+Self-Reflection borrows directly from how humans improve: by learning from their own mistakes. This pattern introduces a secondary LLM whose sole job is to critique the output of the primary agent enabling self-correction and iterative learning.
+
+**How it works:**
+
+- The primary agent completes a task or responds to a prompt
+- A second LLM (the critic) reviews the result
+- If the answer is flawed, incomplete, or poorly reasoned, the critic suggests improvements
+- The agent then reattempts the task with updated context
+
+**Why it matters**: This reflective loop helps agents move from brittle one-shot responses to more resilient, self-improving behavior. Especially useful in complex or high-stakes domains where accuracy improves over iterations.
+
+*Example:*
+
+`An agent fails to generate a valid SQL query. Instead of giving up, a second LLM analyzes the query, pinpoints the issue, and suggests a fix allowing the agent to retry and succeed.`
+
+Used in: AutoGen (via feedback mode) and LangChain Experimental Agents
+
+## **5. Multi-Agent Systems**
