@@ -31,7 +31,7 @@ That’s where memory comes in. Just like humans, agents need memory to stay coh
 
 ![AI Agents Memory](images/memory.gif)
 <p>
-  <em><a href="https://www.newsletter.swirlai.com/p/simple-way-to-explain-memory-in-ai">Simple explanation of memory in Agentic Systems</a><em>
+  <em><a href="https://www.newsletter.swirlai.com/p/simple-way-to-explain-memory-in-ai">Simple explanation of memory in Agentic Systems</a></em>
 </p>
     
 In this module, we’ll explore the layers of memory, lightweight strategies like caching, and introduce the foundations of retrieval.
