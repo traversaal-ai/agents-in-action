@@ -51,3 +51,30 @@ At its core is the BaseAgent class - a flexible template you can extend to defin
 Think of ADK as your workbench for real-world agent systems.
 
 Not just one chatbot. Not just one clever workflow. A foundation for building intelligent systems that can collaborate, adapt, and operate with guardrails in place.
+
+# **Core Pillars of ADK**
+ADK provides capabilities across the entire agent development lifecycle:
+
+- Multi-Agent by Design – Modular, hierarchical agent composition
+- Model Flexibility – Works with Gemini, Vertex AI, LiteLLM, and more
+- Tool Ecosystem – Supports MCP tools, LangChain, LlamaIndex, etc.
+- Built-in Streaming – Audio/video streaming for multimodal interaction
+- Flexible Orchestration – Sequential, parallel, loop, or dynamic flows
+- Dev Experience – Local CLI + visual UI for testing and debugging
+- Built-in Evaluation – Assess final outputs and intermediate steps
+- Easy Deployment – Container-ready for any environment
+
+For more information and docs on ADK, reference the github: [https://google.github.io/adk-docs/](https://google.github.io/adk-docs/)
+
+# **Acting in the World: Model Context Protocol (MCP)**
+Now that you’ve built an agent with ADK, how do you let it interact with the real world?
+
+Imagine your agent needs to call a Stripe API, run a SQL query, or access your file system. These are straightforward for a human developer. But for a language model, even a capable one, public APIs are inaccessible without help.
+
+This is where the Model Communication Protocol (MCP) comes in. MCP acts as a standardized bridge between agents and tools. It wraps APIs, databases, and local services in a format that agents can understand and safely call. Think of it like an adapter — instead of teaching an agent the details of every single API, MCP lets you plug in pre-wrapped tools that just work.
+
+In a nutshell, what MCP does is:
+
+- Standardizes agent-tool communication
+- Secure external access
+- Plug-and-play tool integration
