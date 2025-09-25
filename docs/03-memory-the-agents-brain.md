@@ -17,7 +17,7 @@ Before we dive in — **We’ve got a bonus live session** coming up to help you
 
 Sign up here: [Design Vertical AI Agents that Deliver Results, Beyond Hype](https://maven.com/p/075022/design-vertical-ai-agents-that-deliver-results?utm_source=instructor&utm_medium=ll_share_link&ajs_uid=18166)
 
-![Develop Enterprise AI Agents](images/develop-enterprise-ai-agents)
+![Develop Enterprise AI Agents](images/develop-enterprise-ai-agents.png)
 
 **Back to Day 3 of the course….**
 
