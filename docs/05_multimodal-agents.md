@@ -45,3 +45,92 @@ Text is just one part of most real-world documents. From technical drawings to s
 - Disaster reports with maps and stats
 - Legal or medical records with annotated images
 - Environmental data with satellite imagery
+
+This evolution transforms RAG into something far more useful and realistic.
+
+# **Part 1: Data Ingestion for Multimodal RAG Systems**
+
+The foundation of any RAG system is reliable data. For a system to retrieve and generate accurate results, the content it processes needs to be clean, complete, and well-structured. When dealing with PDFs, this means extracting not just text but also images and tables, ensuring no valuable information is lost.
+
+Choosing the right tools for PDF processing is critical. With so many libraries available, it can be overwhelming to decide which one suits your needs. Some prioritize speed, others focus on accuracy, and a few offer a balance between the two. To help you make an informed decision, we’ve evaluated three popular libraries: PyMuPDF, PDFium, and PDFPlumber.
+
+The table below compares the time taken to process PDFs of varying page counts using three libraries: PDFium, PyMuPDF, and PDFPlumber.
+
+![PDF Comparison Table](images/pdf-table)
+<p>
+  <em>Performance of each Python package across different number of pages</em>
+</p>
+
+Based on the performance analysis, PyMuPDF consistently outperforms PDFium and PDFPlumber, being up to **2.3x faster than PDFium** and **59x faster than PDFPlumber** for processing PDFs with a page count exceeding 1,000.
+
+## **Key Takeaways**
+- **PyMuPDF** is the fastest, making it ideal for large-scale or time-sensitive tasks.
+- **PDFium** offers a balance between speed and accuracy but lacks image extraction capabilities.
+- **PDFPlumber** is slower but excels in extracting detailed tables from complex PDFs.
+
+![Accuracy vs Speed](images/accuracy-vs-speed.png)
+<p>
+  <em>Text Extraction Accuracy vs. Speed</em>
+</p>
+
+Clean extraction is non-negotiable — poor inputs lead to poor outputs. Choosing the right tool here impacts the performance of everything downstream.
+
+To learn more about PDF benchmarking, check this repository out: https://github.com/py-pdf/benchmarks?tab=readme-ov-file
+
+# **Part 2: Embedding Text and Images**
+Once data is extracted, the next step is transforming both text and images into vector embeddings - mathematical representations that allow similarity-based retrieval. This is a crucial differentiator from traditional RAG systems which embed only text.
+
+## **Processing and Embedding Text and Images**
+- **Text Embeddings**:
+  - First, the text is split into manageable chunks
+  - Each chunk is tagged with metadata like a unique identifier (UUID) and the source file path for traceability.
+  - Lastly, we use models like Nomic Text Embed or Sentence Transformers to encode the textual content.
+- **Image Embeddings**:
+  - Each extracted image is embedded using the mean of the model’s final hidden state.
+  - Metadata includes the file name and path for reloading and referencing during retrieval.
+  - **Nomic Vision Embed** or a similar vision encoder is used to embed images.
+
+# **Key Notes:**
+  - **Flexibility in Tools**: While Nomic models are used here, alternatives like Sentence Transformers or custom models can be substituted to meet specific requirements.
+  - **Metadata Importance**: Adding relevant metadata like unique identifiers ensures traceability and enhances retrieval accuracy.
+
+# **Part 3: Creating Retriever**
+Finally, bring everything together by setting up a multimodal retriever, enabling us to retrieve both text chunks and images that match a user query. The retriever is configured to return the top 3 results from each collection, text and images, based on similarity scores.
+
+**Why Separate Collections?**
+
+Text and image embeddings operate in different feature spaces, and their similarity scores are not directly comparable. By separating the collections and running independent queries, we ensure that both text and image results are retrieved with proper weight and relevance. This approach avoids situations where one modality (e.g., text) dominates the results due to higher similarity scores, which could overshadow relevant results from the other modality.
+
+The use of independent collections ensures that:
+
+- Text chunks are retrieved based on their semantic similarity to the query.
+- Images are retrieved based on their visual similarity, independent of text scores.
+
+This separation is critical for multimodal systems where both modalities are equally important for satisfying user intent.
+
+**Why This Step Matters**:
+
+A multimodal agent doesn’t just retrieve paragraphs, it can also surface diagrams, screenshots, or charts that visually answer the query.
+
+# **Part 4: Multimodal RAG with LLM Integration**
+To build a **MultiModal RAG** system pipeline, you can integrate any multimodal LLM to handle both text and images. Here’s how it works:
+
+1. **Prepare the Data**: Separate the text chunks (a context list) and images into a list of their file paths.
+2. **Process Images**: Convert the image file paths into encoded image data. These encoded images will then be passed to the model as URLs or encoded objects, depending on the model’s requirements.
+3. **Input to the Model**: Combine the text chunks and the encoded images into a single input format. The multimodal LLM will use the text chunks as context and the images as visual data to generate answers.
+
+This approach allows the model to seamlessly process both textual and visual information, providing a comprehensive and accurate response.
+
+Our Multi Modal RAG function accepts image paths as input, opens and encodes the images, then passes them to the Multimodal LLM for answering user queries. These image paths are stored in the payload, as discussed in the image embedding collection step. When the retriever fetches image embeddings, we use their payload to get the image paths for our multimodal LLM.
+
+# **Part 5: Making Multimodal Data Work for You.**
+Building a multimodal RAG system is about turning complex, diverse data into something truly useful. From extracting content with tools like PyMuPDF, to embedding text and images with models like Nomic Vision and Text, and organizing it all in Qdrant, each step builds toward a system that works seamlessly. Adding a multimodal LLM at the end brings everything together, enabling the system to deliver answers that are not just accurate but also contextually rich and comprehensive.
+
+The outlined process demonstrates how to:
+- Extract multimodal data.
+- Embed and store it in Qdrant.
+- Retrieve it for multimodal LLM-based processing.
+
+This process shows how AI can bridge the gap between different types of data, text and visuals, to solve real-world problems. With the right approach, a RAG system becomes more than just a tool; it becomes a way to gain meaningful insights and make smarter decisions.
+
+# **Full Code Companion**
