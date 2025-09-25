@@ -134,4 +134,24 @@ Not all RAG systems are built the same. Depending on the complexity of the task,
 - Supports dynamic tool use and reasoning chains.
 - Powerful in enterprise settings or when dealing with fragmented data sources.
 
+![RAG Architectures](images/rag-architectures.png)
 
+## **Real-World Applications of RAG by Domain**
+Isn’t RAG quite cool? Want to know something more cool? It’s use cases. These architectures are being adopted by companies to solve real problems which serve real customers. I compiled a list of such examples for you across multiple indusctires.
+
+**Healthcare** - [Mayo Clinic](https://www.mayoclinicplatform.org/)'s internal clinical decision support tools combine LLMs with structured and unstructured knowledge sources to augment physician decision-making. Their platform, Mayo Clinic Platform_Connect, facilitates retrieval of patient-specific content and up-to-date clinical trial information.
+
+**Legal** - [Casetext](https://legal.thomsonreuters.com/en/products/cocounsel-legal), acquired by Thomson Reuters, developed "CoCounsel" - a legal assistant using GPT-4 with retrieval over legal databases, briefs, and case law. It enables tasks like deposition prep and document review with citations.
+
+**Enterprise Knowledge Management** - Atlassian launched "[Atlassian Intelligence](https://www.atlassian.com/trust/atlassian-intelligence)," which uses OpenAI models with embedded document retrieval to answer team queries from Jira, Confluence, and other workspace tools.
+
+**Customer Support** - Intercom's [Fin AI](https://fin.ai/?utm_source=google&utm_medium=sem&utm_campaign=22485552221&utm_term=intercom%20fin%20ai&utm_ad_collection=182654069671&utm_ad=753184554147&utm_geo=9077141&gad_source=1&gad_campaignid=22485552221&gbraid=0AAAAAoKeDyJlZHWG7s0dl1Ry9YZzi5KMy&gclid=Cj0KCQjwuvrBBhDcARIsAKRrkjeskoVCHfXquqoYtsNTNrMdCgOOIQaH39-5BaeGeeZO3lVAKHAvoIoaArRrEALw_wcB) agent uses vector search over past tickets, help docs, and support articles to deliver immediate, accurate answers to users. It’s a live production deployment of RAG for customer service.
+
+RAG transforms language models from static encyclopedias into dynamic knowledge workers. It is more than just a plug-in to fix hallucinations - it's a paradigm shift. It redefines how LLMs interact with knowledge: not by remembering everything, but by knowing where to look.
+
+Next up, we take this further in **Day 5: Multimodal Agents – Going Beyond Text** — where agents go from understanding only language to also interpreting tables, images, documents, and more. You’ll learn how to design high-level multimodal architectures, why vision + language agents are shaping the future, and how structured data fits into agent workflows.
+
+# **WANT TO DIVE DEEPER?**
+Check out my AI Agents for Enterprise course on [Maven](https://maven.com/boring-bot/ml-system-design) if you are interested to be a part of something bigger.
+
+![AI Bootcamp](images/ai-bootcamp.png)
