@@ -216,3 +216,7 @@ Used by: **Perplexity**, internal agents in search, compliance, legal ops
 <p>
   <em><a href="https://www.linkedin.com/feed/update/urn:li:activity:7321515242390249472/">Agentic Design Patterns by Rakesh Gohel</a></em>
 </p>
+
+**Next: Agent Memory and Retrieval** In the next module, we’ll explore how agents remember, recall, and use long-term memory. You’ll learn how vector stores, semantic embeddings, and caching can drastically change your agent’s behavior.
+
+![AI Bootcamp](images/ai-bootcamp.png)
