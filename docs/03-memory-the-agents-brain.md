@@ -129,3 +129,44 @@ It supports multiple types of memory (working, episodic, semantic) and plugs dir
 This diagram shows how memory fits into the broader agent workflow, with a specific focus on mem0 as the memory layer.
 
 ![mem0](images/mem0.png)
+
+**What's Happening Here**
+
+- When the user makes a request, the agent doesn’t immediately respond.
+- Instead, it first checks mem0 memory - a layer that stores:
+  - User preferences
+  - Past interactions
+  - Previously retrieved facts or summaries
+- This memory can include working memory (e.g., what tools the agent just used) and episodic memory (e.g., last conversation topics).
+- If relevant context exists, it’s passed into the agent’s prompt before a response is generated via OpenAI.
+
+This gives the LLM the ability to respond with continuity. Without mem0 or a similar system, the agent would forget everything between sessions making it feel shallow and repetitive.
+
+## **How Memory Actually Improves Agents**
+
+Let’s compare two agents.
+
+**Agent CapabilityAgent Without MemoryAgent With MemoryBehavior** Repeats the same mistakesLearns from past inputs and outcomes
+
+**Input Handling** Asks for the same input repeatedlyRemembers past user inputs across turns
+
+**Consistency** Gives inconsistent or conflicting answersMaintains coherent, goal-aligned responses
+
+**Reasoning** Starts from scratch every timeBuilds on prior reasoning and context
+
+**Task Execution** Handles one-off requests without contextFollows through on multi-step goals
+
+**Tool Use Awareness** Doesn’t track what it’s doneKnows which tools it installed or used previously
+
+*Example:*
+
+`Imagine a data analyst agent. In round one, it learns your table schema. In round two, it remembers it. By round three, it’s proactively flagging anomalies you didn’t even ask about.`
+
+That’s not just helpful - that’s powerful.
+
+**Next Up: RAG (Retrieval-Augmented Generation)** — the engine that lets agents access real-world knowledge beyond their training data. You’ll see how memory + retrieval becomes a superpower, and how it powers truly vertical, intelligent agents. You’ll also learn how tools like embeddings and vector databases let agents understand and retrieve meaning at scale.
+
+READY TO GO DEEPER?
+Don’t forget to check out my AI Agents for Enterprise course on [Maven](https://maven.com/boring-bot/ml-system-design) if you are interested to be a part of something bigger.
+
+![AI Bootcamp](images/ai-bootcamp.png)
