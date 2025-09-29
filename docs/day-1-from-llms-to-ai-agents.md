@@ -197,7 +197,7 @@ A Level 2 agent that maintains our thought leadership:
 - **Distributes**: Schedules posts across platforms via APIs
 - **Learns**: Adjusts content strategy based on engagement metrics
 
-[![Watch the video](https://img.youtube.com/vi/vbccjer8rwI/maxresdefault.jpg)](https://www.youtube.com/watch?v=vbccjer8rwI)
+[![Watch the video](https://img.youtube.com/vi/vbccjer8rwI/sneakers.png)](https://www.youtube.com/watch?v=vbccjer8rwI)
 
 ![Content Creator Agent](images/content-creator-agent.png)
 
