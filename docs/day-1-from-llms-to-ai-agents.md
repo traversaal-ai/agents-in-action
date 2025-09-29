@@ -234,7 +234,7 @@ Welcome to that future. Let's build it together.
 ## **🎓 Ready to Build Your Own Sales Agent?**
 Join me in free our hands-on workshop where we'll build a complete sales prospecting agent together! You'll walk away with a working agent that can automatically research prospects, qualify leads, and populate your CRM.
 
-![Build Your Own Sales Agent With Me](sales-prospect-agent.png)
+![Sales Prospect Agent](sales-prospect-agent.png)
 
 Join our Free [Live Session](https://maven.com/p/1fdb6c/build-a-sales-prospect-agent-with-me-no-code-tool)
 
