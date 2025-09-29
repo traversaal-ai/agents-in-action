@@ -14,3 +14,29 @@ In today's session, we'll dive deep into **n8n**—the workflow automation platf
 This is an important tool, as we’ve used this very tool to help us land customers!
 
 # **🎯 What You'll Master Today**
+![n8n](images/n8n.png)
+
+By the end of today's lesson, you'll have hands-on experience with:
+
+- 🔧 n8n Fundamentals: Understanding the platform that powers thousands of automated workflows
+- 🏗️ Workflow Architecture: How to design reliable, scalable agent workflows
+- 🎣 Sales Prospecting: Building an agent that finds and qualifies leads automatically
+- 🔗 API Integration: Connecting your agent to real-world systems like LinkedIn, CRMs, and databases
+- 📊 Data Processing: Teaching your agent to analyze and score prospects
+- 🚀 Deployment: Making your agent live and accessible
+
+---
+
+# **🤖 What Is n8n and Why It's Perfect for AI Agents**
+**n8n** (pronounced "n-eight-n") is a powerful, open-source workflow automation platform that's become the go-to choice for building Level 2 AI agents. Think of it as the digital plumbing that connects different services, APIs, and tools into intelligent, automated workflows.
+
+If you want a quick start for n8n, you can start with this video:
+
+[![Watch the video](https://img.youtube.com/vi/4cQWJViybAQ/0.jpg)](https://www.youtube.com/watch?v=4cQWJViybAQ)
+
+or this:
+
+[![Watch the video](https://img.youtube.com/vi/kEtYJOijCBM/0.jpg)](https://www.youtube.com/watch?v=kEtYJOijCBM)
+
+Here's what makes n8n special for AI agents:
+
