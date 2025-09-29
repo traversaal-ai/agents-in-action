@@ -25,7 +25,7 @@ Over the past year, tools like ChatGPT have revolutionized how we interact with 
 
 They're like having an incredibly knowledgeable consultant who only speaks when spoken to and forgets everything the moment the conversation ends.
 
-![ChatGPT](images/chatgpt-content.png)
+![ChatGPT](images/chatgpt-image.png)
 
 **That's where AI agents change everything.**
 
