@@ -11,7 +11,7 @@ I'm [Hamza](https://www.linkedin.com/in/hamzafarooq/), and joining me is [Bhavna
 
 Today, we're exploring content automation, one of the most powerful applications of AI agents in marketing and personal branding.
 
-![YouTube to LinkedIn](YTtoLI.gif)
+![YouTube to LinkedIn](images/YTtoLI.gif)
 
 See the tool in action, [here](https://linkyou.traversaal.ai/)
 
@@ -49,7 +49,7 @@ Content consistency drives engagement, builds authority, and generates leads. Th
 
 # **🏗️ The Architecture of Our YouTube to LinkedIn Agent**
 
-![YouTube to LinkedIn Architecture](YtoL-architecture.png)
+![YouTube to LinkedIn Architecture](images/YtoL-architecture.png)
 
 Here's the GitHub [link](https://github.com/traversaal-ai/agents-in-action/tree/main/youtube-to-linkedin)
 
