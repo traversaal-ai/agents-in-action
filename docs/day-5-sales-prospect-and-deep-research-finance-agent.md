@@ -3,8 +3,6 @@
 
 [Hamza Farooq](https://github.com/hamzafarooq) and Bhavna Jain
 
-![Video](https://maven.com/p/1fdb6c)
-
 Welcome back to Day 5 of our AI Agents in Action!
 
 If you've missed the previous days, you can access them here: [Day 1](link) | [Day 2](link) | [Day 3](link) | [Day 4](link)
@@ -12,6 +10,8 @@ If you've missed the previous days, you can access them here: [Day 1](link) | [D
 I'm [Hamza](https://www.linkedin.com/in/hamzafarooq/), and joining me is [Bhavna](https://www.linkedin.com/in/bhavna-s-jain/). On August 15th, we conducted our live MAVEN session on **"Building Production-Ready AI Agents"** and the response was incredible! Over 250 participants joined us as we built two complete agent systems from scratch.
 
 # **🛠️ What We Built Together**
+
+Here's the link to the session: [Build a Sales Prospect and Deep Research Finance Agent](https://maven.com/p/1fdb6c)
 
 In our 60-minute intensive session, we built two complete, production-ready agents:
 
