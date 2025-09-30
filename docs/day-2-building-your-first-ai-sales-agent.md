@@ -134,6 +134,7 @@ The system extracts structured data including:
 - Growth indicators and budget capacity
 - ICP alignment scoring and reasoning
 - Personalized outreach recommendations
+
 ---
 
 # **📊 Real-World Example: Remote SaaS Tools Sales Agent**
@@ -174,6 +175,7 @@ Key Talking Points:
 - Auto-scale infrastructure for their projected 10x growth`
 
 See the website in [action](https://spark-lead-ignition-98.lovable.app/)
+
 ---
 
 # **Common Pitfalls and How to Avoid Them**
@@ -187,7 +189,8 @@ The pre-filter should be permissive (score 7+ threshold works well). Too strict 
 The workflow includes built-in delays and batching for good reason. Removing these will get you rate-limited or banned from APIs.
 
 ## **Generic ICP Descriptions**
-Vague ICPs like "SaaS companies" produce poor results. Be specific: "Series A SaaS companies (20-100 employees) with customer-facing applications, hiring senior frontend engineers, showing signs of scaling challenges"
+Vague ICPs like "SaaS companies" produce poor results. Be specific: "Series A SaaS companies (20-100 employees) with customer-facing applications, hiring senior frontend engineers, showing signs of scaling challenges."
+
 ---
 
 # **💡 Pro Tips for Success**
@@ -211,6 +214,7 @@ The 5-second wait between emails and batch processing prevents deliverability is
 
 ## **A/B Test Feed Selection**
 Try different RSS feeds for the same ICP to see which generates better-quality prospects. The AI's selection might not always be optimal for your specific use case.
+
 ---
 
 # **🚀 Advanced Workflow Enhancements**
