@@ -95,6 +95,7 @@ These are your standard chatbots, sophisticated text generators that excel at co
 - Creative writing assistance
 
 **When to use**: When you need intelligent conversation without external actions.
+
 ---
 
 ### **Level 2: LLMs with Tools**
@@ -111,6 +112,7 @@ User: "Schedule a meeting with the marketing team for next Tuesday"
 Agent: → Checks calendar API → Finds available slots → Sends invites → Confirms booking
 
 **When to use**: For specific, well-defined tasks within known systems.
+
 ---
 
 ### **Level 3: ReAct Agents (Reasoning + Acting)**
@@ -141,6 +143,7 @@ Agent thinks: "I need to identify competitors, research each one, and compile fi
 → Compiles comprehensive comparison report
 
 **When to use**: For complex, undefined problems requiring planning and adaptation.
+
 ---
 
 ### **Level 4: Multi-Agent Systems**
@@ -159,11 +162,13 @@ Multiple specialized agents working together, each with distinct roles, collabor
 - **Coordinator Agent**: Manages workflow and deadlines
 
 **When to use**: For enterprise-scale problems requiring multiple specialized skills.
+
 ---
 
 ![Agent Levels](images/agent-levels.png)
 
 ### 🌐 **See our Agent in action - [Sales Research Agent](https://preview--spark-lead-ignition.lovable.app/)**
+
 ---
 
 ## **🎯 Real-World Agents in Action**
@@ -237,6 +242,3 @@ Join me in free our hands-on workshop where we'll build a complete sales prospec
 ![Build Sales Prospect Agent With Me](images/sales-prospect-agent.png)
 
 Join our Free [Live Session](https://maven.com/p/1fdb6c/build-a-sales-prospect-agent-with-me-no-code-tool)
-
-
-
