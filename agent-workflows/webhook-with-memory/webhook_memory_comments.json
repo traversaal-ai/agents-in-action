@@ -1,0 +1,302 @@
+{
+  "name": "webhook-memory-comments",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 🚀 WORKFLOW ENTRY POINT\n\n**Webhook Trigger**\n- Accepts POST requests\n- Path: ce08af64-8da6-4297-9eef-5efe7a9b972e\n- Response mode: responseNode (waits for response)\n\n**Expected Input:**\n```json\n{\n  \"query\": \"user question\",\n  \"username\": \"user_id\"\n}\n```\n\n**Access via:**\nhttps://your-n8n-domain/webhook/ce08af64-8da6-4297-9eef-5efe7a9b972e",
+        "height": 420,
+        "width": 490
+      },
+      "id": "2bd012eb-85a2-462b-8c2f-f162a2405583",
+      "name": "Sticky Note - Webhook",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🤖 AI ORCHESTRATOR\n\n**AI Agent Core Functions:**\n- Processes user query from webhook body\n- Decides when to use Internet Search tool\n- Manages conversation flow\n- Returns structured responses\n\n**Key Features:**\n- System message: \"You are a helpful assistant\"\n- Includes URL links when using search\n- Connected to GPT-4o-mini model\n- Has access to memory and search tools",
+        "height": 280,
+        "width": 320
+      },
+      "id": "aa91fb5a-6e1e-498f-ae5b-ed9ec07d79e3",
+      "name": "Sticky Note - Agent",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        20
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 📤 RESPONSE HANDLER\n\n**Webhook Response:**\n- Returns plain text format\n- Uses AI agent output: `{{ $json.output }}`\n- Sends response back to original requester\n- Completes the HTTP request cycle\n\n**Response Format:**\nPlain text containing the AI's answer with any URLs if search was used.",
+        "height": 400,
+        "width": 280
+      },
+      "id": "b28ac64c-53b1-499e-8f24-8c772e8ee0e0",
+      "name": "Sticky Note - Response",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        380,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🧠 LANGUAGE MODEL\n\n**OpenAI GPT-4o-mini**\n- Primary reasoning engine\n- Connected to AI Agent\n- Uses OpenAI API credentials\n- Cost-effective model choice\n\n**Configuration:**\n- Model: gpt-4o-mini\n- Credential ID: 1NYcjHdurohDfhOk\n- Standard options enabled",
+        "height": 360,
+        "width": 280
+      },
+      "id": "e9192599-0fc1-428b-8362-25cd08f2dc4b",
+      "name": "Sticky Note - LLM",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -440,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🌐 INTERNET SEARCH TOOL\n\n**Ares API Integration:**\n- Endpoint: api-ares.traversaal.ai\n- Method: POST with JSON body\n- Requires x-api-key header\n\n**Dual Configuration:**\n- Query parameter for AI agent use\n- JSON body with webhook query\n- Returns search results with URLs\n\n**Security Note:**\nReplace \"--key--\" with actual Traversaal API key",
+        "height": 400,
+        "width": 300
+      },
+      "id": "49dfa0f6-16ac-45fa-ab37-4ae886dcbcd2",
+      "name": "Sticky Note - Search",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        240,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 💾 CONVERSATION MEMORY\n\n**User-Specific Memory:**\n- Buffer window type\n- Session key: username from webhook\n- Maintains conversation context\n- Separate memory per user\n\n**How it works:**\n- Uses `{{ $('Webhook').item.json.body.username }}`\n- Each username gets isolated memory\n- Enables personalized conversations\n- Remembers previous interactions",
+        "height": 420,
+        "width": 300
+      },
+      "id": "46bd48a1-2444-4efd-8eb5-dfec8ccb93ef",
+      "name": "Sticky Note - Memory",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🔄 DATA FLOW\n\n**1.** POST request → Webhook\n**2.** Extract query & username\n**3.** AI Agent processes with:\n   - GPT-4o-mini reasoning\n   - User-specific memory\n   - Internet search (if needed)\n**4.** Response sent back via webhook\n\n**Key Variables:**\n- `$json.body.query` - User question\n- `$json.body.username` - User ID\n- `$json.output` - AI response",
+        "height": 400,
+        "width": 300
+      },
+      "id": "ae8bf535-9729-40c1-bc4e-9c6ef7637e2e",
+      "name": "Sticky Note - Flow",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -760,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ce08af64-8da6-4297-9eef-5efe7a9b972e",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -560,
+        340
+      ],
+      "id": "9572c4f5-845d-439e-85a8-96c91145087e",
+      "name": "Webhook",
+      "webhookId": "ce08af64-8da6-4297-9eef-5efe7a9b972e"
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.output }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.3,
+      "position": [
+        140,
+        340
+      ],
+      "id": "067bd887-8278-4b95-8ac5-f0ec57209ff5",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Please respond to the following user query:{{ $json.body.query }}\n\nIf you use the Internet Search tool please return url links",
+        "options": {
+          "systemMessage": "You are a helpful assistant"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        340
+      ],
+      "id": "d2443981-59e6-4474-873b-b52375f69832",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -340,
+        600
+      ],
+      "id": "a7c58192-54bd-47ba-a9fb-e075c2a744d4",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "1NYcjHdurohDfhOk",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Does Internet Search",
+        "method": "POST",
+        "url": "https://api-ares.traversaal.ai/live/predict",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters0_Value', `google search style text, should be in [\" \"] format`, 'string') }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "--key--"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"query\": [\n    \"{{ $('Webhook').item.json.body.query }}\"\n  ]\n} ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        200,
+        540
+      ],
+      "id": "2c2f1afa-83c8-4bad-8e92-ca56806f5991",
+      "name": "Internet Search"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Webhook').item.json.body.username }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -200,
+        560
+      ],
+      "id": "c9857c00-0e4c-4200-ab53-bc60aa1da655",
+      "name": "Simple Memory"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Internet Search": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "965c64c0-98ac-4874-adae-8934cc810d5c",
+  "meta": {
+    "instanceId": "1725aaf255f271a2cb370b9051de0a61864aaf0b262c35ad3f624929f92bfcff"
+  },
+  "id": "HTGBdVgrMUHFFGIy",
+  "tags": []
+}
