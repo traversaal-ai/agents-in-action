@@ -11,7 +11,7 @@ My name is [Hamza](https://www.linkedin.com/in/hamzafarooq/), and I am so excite
 
 In these 7 sessions we will uncover all we can about Agents, what they are, how they work and the what’s really behind all this hype?
 
-In Day 1 of the course [Agents are here and they are staying](link), we explored what makes agents different from GenAI chatbots. We saw how vertical agents are domain-specific, tool-using, and memory-augmented digital workers. One critical layer to add to this recipe of vertical agents is: **how do agents actually think?**
+In Day 1 of the course **Agents are here and they are staying**, we explored what makes agents different from GenAI chatbots. We saw how vertical agents are domain-specific, tool-using, and memory-augmented digital workers. One critical layer to add to this recipe of vertical agents is: **how do agents actually think?**
 
 Not from a philosophic standpoint but from an architectural standpoint.
 

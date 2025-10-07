@@ -13,11 +13,11 @@ In these 7 sessions we will uncover all we can about Agents, what they are, how 
 
 In the first three days, we moved from big picture to architecture.
 
-[Day 1](link) clarified what sets agents apart from GenAI,
+**Day 1** clarified what sets agents apart from GenAI,
 
-[Day 2](link) dug into how agents think and
+**Day 2** dug into how agents think and
 
-[Day 3](link) explored memory and how agents remember.
+**Day 3** explored memory and how agents remember.
 
 Together, these layers lay the foundation for what comes next: **retrieval-augmented generation**, or RAG - the key to making agents both smart and informed.
 

@@ -11,18 +11,6 @@ My name is [Hamza](https://www.linkedin.com/in/hamzafarooq/), and I am so excite
 
 In these 7 sessions we will uncover all we can about Agents, what they are, how they work and the what’s really behind all this hype?
 
-Read: [Day 1](link)
-
-Read: [Day 2](link)
-
-Before we dive in — **We’ve got a bonus live session** coming up to help you apply what you’re learning in this series. If you're curious about building real-world agents that go beyond the hype, this is for you.
-
-Sign up here: [Design Vertical AI Agents that Deliver Results, Beyond Hype](https://maven.com/p/075022/design-vertical-ai-agents-that-deliver-results?utm_source=instructor&utm_medium=ll_share_link&ajs_uid=18166)
-
-![Develop Enterprise AI Agents](images/develop-enterprise-ai-agents.png)
-
-**Back to Day 3 of the course….**
-
 In Day 2 of the course **How Agents Think - Types, Behaviors & Design Patterns**, we explored how agents think - from reactive responders to planning strategists and reflective troubleshooters. But there's one critical ingredient those agents need to truly evolve: memory.
 
 An agent that forgets everything it did five seconds ago can’t grow. It can’t personalize. It can’t even hold a conversation properly.

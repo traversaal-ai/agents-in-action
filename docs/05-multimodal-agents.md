@@ -9,13 +9,7 @@ My name is [Hamza](https://www.linkedin.com/in/hamzafarooq/) and I’m excited t
 
 In these 7 sessions we will uncover all we can about Agents, what they are, how they work and the what’s really behind all this hype?
 
-Read: [Day 1](link)
-
-Read: [Day 2](link)
-
-Read: [Day 3](link)
-
-In [Day 4 RAG – Powering Agents with Real-World Knowledge](link), we discussed how retrieval lets agents access external knowledge from databases, APIs, or document stores, making them more grounded and flexible. Retrieval-Augmented Generation (RAG) systems and multimodal large language models (LLMs) are evolving rapidly, finding applications in everything from enhancing search experiences to generating complex content. These methods are constantly being refined to expand the boundaries of what AI can achieve.
+In **Day 4 RAG – Powering Agents with Real-World Knowledge**, we discussed how retrieval lets agents access external knowledge from databases, APIs, or document stores, making them more grounded and flexible. Retrieval-Augmented Generation (RAG) systems and multimodal large language models (LLMs) are evolving rapidly, finding applications in everything from enhancing search experiences to generating complex content. These methods are constantly being refined to expand the boundaries of what AI can achieve.
 
 But what happens when that knowledge isn’t in plain text?
 
