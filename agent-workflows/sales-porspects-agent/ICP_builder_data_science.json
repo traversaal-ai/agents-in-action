@@ -1,0 +1,298 @@
+{
+  "name": "Minimal-ICP-Data-Science",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        9020,
+        1240
+      ],
+      "id": "bd8af0ef-dfaa-48a1-b1a6-e84c09277320",
+      "name": "When clicking 'Test workflow'"
+    },
+    {
+      "parameters": {
+        "url": "https://remotive.com/remote-jobs/feed/data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        9200,
+        1240
+      ],
+      "id": "75363676-7211-4657-8786-a52d89231a5c",
+      "name": "Get Remotive Data Jobs RSS feed",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const dataRoles = [];\nconst dataKeywords = [\n  'data science', 'data analyst', 'machine learning', 'analytics', \n  'data engineer', 'business intelligence', 'bi analyst', \n  'statistician', 'quantitative analyst', 'research scientist',\n  'ml engineer', 'ai engineer', 'data architect', 'python',\n  'sql', 'tableau', 'power bi', 'data mining', 'big data',\n  'bigquery', 'spark', 'hadoop', 'etl', 'data warehouse',\n  'pandas', 'numpy', 'scikit', 'tensorflow', 'pytorch',\n  'snowflake', 'databricks', 'looker', 'qlik', 'sas'\n];\n\nfor (const item of $input.all()) {\n  const title = (item.json.title || '').toLowerCase();\n  const description = (item.json.description || '').toLowerCase();\n  const company = item.json['dc:creator'] || '';\n  \n  const isDataRole = dataKeywords.some(keyword => \n    title.includes(keyword) || description.includes(keyword)\n  );\n  \n  if (isDataRole && company) {\n    // Clean up and organize the data\n    item.json.company = company;\n    item.json.job_title = item.json.title;\n    item.json.job_description = item.json.description;\n    item.json.published_date = item.json.pubDate;\n    item.json.job_link = item.json.link;\n    \n    // Extract all possible info from the RSS description\n    const desc = item.json.description || '';\n    \n    // Extract location if mentioned\n    const locationMatch = desc.match(/(?:Location:|📍\\s*Location:|📍Location:|Location\\s*:|🌍|🗺️)\\s*([^\\n\\.\\,]{1,50})/i);\n    if (locationMatch) {\n      item.json.location = locationMatch[1].trim().replace(/[\"\\(\\)]/g, '');\n    }\n    \n    // Check for remote work\n    const remoteKeywords = ['remote', 'distributed', 'work from home', 'wfh', 'anywhere', 'global', 'worldwide'];\n    const isRemote = remoteKeywords.some(keyword => \n      desc.toLowerCase().includes(keyword) || title.toLowerCase().includes('remote')\n    );\n    item.json.is_remote = isRemote;\n    \n    // Extract salary if mentioned\n    const salaryRegex = /\\$[\\d,]+(?:-\\$[\\d,]+)?|€[\\d,]+(?:-€[\\d,]+)?|£[\\d,]+(?:-£[\\d,]+)?|\\d+k\\s*-\\s*\\d+k/gi;\n    const salaryMatches = desc.match(salaryRegex);\n    if (salaryMatches) {\n      item.json.salary_mentioned = salaryMatches.slice(0, 2).join(', ');\n    }\n    \n    // Extract tech stack\n    const techKeywords = [\n      'python', 'r', 'sql', 'tableau', 'power bi', 'pandas', 'numpy', \n      'scikit-learn', 'tensorflow', 'pytorch', 'spark', 'hadoop', \n      'aws', 'azure', 'gcp', 'bigquery', 'dataform', 'snowflake', \n      'databricks', 'looker', 'qlik', 'sas', 'spss', 'stata',\n      'jupyter', 'docker', 'kubernetes', 'airflow', 'dbt',\n      'redshift', 'postgresql', 'mysql', 'mongodb', 'elasticsearch'\n    ];\n    const mentionedTech = techKeywords.filter(tech => \n      desc.toLowerCase().includes(tech)\n    );\n    if (mentionedTech.length > 0) {\n      item.json.tech_stack = mentionedTech.slice(0, 8).join(', '); // Limit to 8 most relevant\n    }\n    \n    // Extract company type/industry hints from description\n    const industryKeywords = {\n      'fintech': ['finance', 'financial', 'banking', 'payment', 'crypto', 'blockchain'],\n      'healthcare': ['health', 'medical', 'pharma', 'biotech', 'clinical'],\n      'ecommerce': ['ecommerce', 'e-commerce', 'retail', 'marketplace', 'shopping'],\n      'saas': ['saas', 'software', 'platform', 'cloud', 'api'],\n      'energy': ['energy', 'utility', 'power', 'renewable', 'solar'],\n      'media': ['media', 'entertainment', 'streaming', 'content', 'publishing'],\n      'logistics': ['logistics', 'supply chain', 'shipping', 'delivery', 'transportation']\n    };\n    \n    for (const [industry, keywords] of Object.entries(industryKeywords)) {\n      if (keywords.some(keyword => desc.toLowerCase().includes(keyword))) {\n        item.json.industry_hint = industry;\n        break;\n      }\n    }\n    \n    // Extract company size hints\n    const sizeHints = {\n      'startup': ['startup', 'early stage', 'seed', 'series a'],\n      'growth': ['series b', 'series c', 'scale up', 'growing fast'],\n      'enterprise': ['enterprise', 'fortune', 'global', 'multinational', 'public company'],\n      'unicorn': ['unicorn', 'billion', 'ipo', 'nasdaq', 'nyse']\n    };\n    \n    for (const [size, keywords] of Object.entries(sizeHints)) {\n      if (keywords.some(keyword => desc.toLowerCase().includes(keyword))) {\n        item.json.size_hint = size;\n        break;\n      }\n    }\n    \n    console.log('✅ Adding data role:', item.json.title);\n    console.log('   Company:', company);\n    console.log('   Location:', item.json.location || 'Not specified');\n    console.log('   Remote:', item.json.is_remote);\n    console.log('   Tech:', item.json.tech_stack || 'Not specified');\n    console.log('   Industry hint:', item.json.industry_hint || 'Unknown');\n    \n    dataRoles.push(item);\n  }\n}\n\nconsole.log(`\\n🎯 Found ${dataRoles.length} data science/analyst roles`);\nreturn dataRoles;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        9380,
+        1240
+      ],
+      "id": "fdd5336b-d8fc-4258-a799-23829a59f7ec",
+      "name": "Filter & Extract Data Science Roles"
+    },
+    {
+      "parameters": {
+        "maxItems": 20
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        9580,
+        1240
+      ],
+      "id": "9af4f512-eaa1-43bf-803e-07fb60b25502",
+      "name": "Limit"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        9800,
+        1240
+      ],
+      "id": "5924ee6a-545e-4b76-b5cb-c8868aa3076c",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "gpt-4o"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        10120,
+        1260
+      ],
+      "id": "d95a10f8-e001-432a-8db5-74a56917bc95",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "2TquM2rI5d0wQeOG",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n      \"company_name\": {\n            \"type\": \"string\",\n            \"description\": \"Company Name\"\n        },\n\n      \"company_link\": {\n            \"type\": \"url\",\n            \"description\": \"job url\"\n        },\n\n      \"tech_stack\": {\n            \"type\": \"string\",\n            \"description\": \"detailed overview of the tech stack\"\n        },\n       \"job_title\": {\n            \"type\": \"string\",\n            \"description\": \"Job title\"\n        },\n      \n        \"company_summary\": {\n            \"type\": \"string\",\n            \"description\": \"Detailed summary of what the company likely does based on job posting\"\n        },\n        \"company_industry\": {\n            \"type\": \"string\",\n            \"description\": \"Primary industry sector based on job description clues\"\n        },\n        \"company_size_estimate\": {\n            \"type\": \"string\",\n            \"description\": \"Estimated company size (startup/small/medium/large/enterprise)\"\n        },\n        \"data_team_needs\": {\n            \"type\": \"string\",\n            \"description\": \"Detailed analysis of their data needs from the job posting, as extensive as possible\"\n        },\n        \"specific_data_challenges\": {\n            \"type\": \"string\",\n            \"description\": \"Specific data challenges mentioned in the job description\"\n        },\n        \"why_perfect_for_ai_agents\": {\n            \"type\": \"string\",\n            \"description\": \"Specific reasons why our AI agents would be valuable for their use case\"\n        },\n        \"recommended_pitch\": {\n            \"type\": \"string\",\n            \"description\": \"Tailored pitch strategy based on their specific needs\"\n        },\n        \"urgency_level\": {\n            \"type\": \"string\",\n            \"enum\": [\"High\", \"Medium\", \"Low\"],\n            \"description\": \"Priority level for outreach\"\n        },\n        \"key_talking_points\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"string\"\n            },\n            \"description\": \"5 specific talking points for outreach\"\n        },\n        \"budget_estimate\": {\n            \"type\": \"string\",\n            \"description\": \"Estimated budget capacity based on company indicators\"\n        }\n    },\n    \"required\": [\n        \"company_summary\",\n        \"company_industry\",\n        \"company_size_estimate\",\n        \"data_team_needs\",\n        \"specific_data_challenges\",\n        \"why_perfect_for_ai_agents\",\n        \"recommended_pitch\",\n        \"urgency_level\",\n        \"key_talking_points\",\n        \"budget_estimate\"\n    ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        10320,
+        1260
+      ],
+      "id": "516d07c3-8445-4ba5-aab5-0bcb669a7769",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=<Instructions>\nYou are an expert at analyzing companies that are hiring for data science roles. Our company offers AI Data Science Agents and AI Data Analyst Agents that work as intelligent copilots to augment existing data teams.\n\n**Our AI Agents Capabilities:**\n• Answer complex data questions through simple text queries\n• Generate insights and visualizations automatically  \n• Perform statistical analysis and machine learning tasks\n• Handle data cleaning, processing, and exploration\n• Automate routine analytics workflows\n• Provide 24/7 data support to existing teams\n• Scale analytics capabilities without additional headcount\n• Work with existing tools and data infrastructure\n• Reduce time-to-insight from days to minutes\n\n**Key Value Propositions:**\n• Augment existing data teams (not replace them)\n• Cost-effective compared to hiring additional staff ($5k-50k/month vs $150k+ salary)\n• Immediate deployment, no onboarding time\n• Handle routine queries so human analysts focus on strategy\n• ROI typically seen within 30 days\n• Works with Python, SQL, R, and most data tools\n\nAnalyze this job posting thoroughly and create a comprehensive prospect assessment.\n</Instructions>\n\n<Job_Posting_Data>\n**Company:** {{ $json.creator }}\n**Position:** {{ $json.title }}\n**Location:** {{ $json.location || 'Not specified' }}\n**Remote Work:** {{ $json.is_remote ? 'Yes' : 'No' }}\n**Tech Stack:** {{ $json.content || 'Not specified' }}\n**Salary Range:** {{ $json.salary_mentioned || 'Not specified' }}\n**Industry Hint:** {{ $json.industry_hint || 'Unknown' }}\n**Size Hint:** {{ $json.size_hint || 'Unknown' }}\n**Posted:** {{ $json.published_date }}\n**Job URL:** {{ $json.link }}\n\n**Complete Job Description:**\n{{ $json.content }}\n</Job_Posting_Data>\n\n<Analysis_Framework>\n**Your Task:** Analyze this job posting data to understand:\n\n0. **Company Overview:**\n- Company and and role title and link\n- tech stack in detail\n\n1. **Company Intelligence:** \n   - Infer what the company does based on job description context\n   - Determine industry from job requirements and company mentions\n   - Estimate company size from role scope and tech stack complexity\n   - Identify growth stage from hiring urgency and role seniority\n\n2. **Data Team Assessment:**\n   - What specific data challenges are they trying to solve?\n   - What's their current data maturity level?\n   - Are they building a new team or expanding existing?\n   - What skills gaps are they trying to fill?\n\n3. **AI Agent Fit Analysis:**\n   - Which of our AI capabilities directly address their needs?\n   - How could our agents augment their planned hire?\n   - What specific workflows could we automate for them?\n   - What's the potential ROI for them?\n\n4. **Strategic Positioning:**\n   - What's the best angle to approach them?\n   - What pain points should we focus on?\n   - How urgent is their need?\n   - What's their likely budget range?\n\n**Important:** Base your analysis entirely on the job posting content. Use context clues, mentioned technologies, role requirements, and company descriptions to make informed inferences about the company and their needs.\n</Analysis_Framework>",
+        "hasOutputParser": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        10160,
+        800
+      ],
+      "id": "4c995341-10d4-4aba-8e5f-03182d0f1fd0",
+      "name": "Analyze Data Science Prospect",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "sendTo": "hamza@traversaal.ai",
+        "subject": "=🎯 {{ $json.output.urgency_level }} Priority Data Science Agent Prospect: {{ $json.output.company_name}}",
+        "message": "=<div style=\"font-family: Arial, sans-serif; max-width: 800px; line-height: 1.6;\">\n\n<h1 style=\"color: #2c3e50; margin-bottom: 5px;\">🏢 {{ $json.output.company_name }}</h1>\n<p style=\"color: #7f8c8d; font-size: 16px; margin-top: 0; margin-bottom: 20px;\">{{ $json.output.company_industry }} • {{ $json.output.company_size_estimate }}</p>\n\n<div style=\"background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; margin: 20px 0;\">\n<h2 style=\"margin: 0; color: white; font-size: 24px;\">🎯 {{ $json.output.urgency_level }} Priority Prospect</h2>\n<p style=\"margin: 10px 0 5px 0; font-size: 18px; font-weight: bold;\">{{ $json.output.job_title }}</p>\n<p style=\"margin: 0; font-size: 14px; opacity: 0.9;\">💰 Budget Estimate: {{ $json.output.budget_estimate }}</p>\n</div>\n\n\n<div style=\"background-color: #e8f5e8; padding: 15px; border-radius: 8px; border-left: 4px solid #28a745;\">\n<h3 style=\"color: #28a745; margin-top: 0; font-size: 16px;\">⚙️ Tech Stack</h3>\n<p style=\"margin: 5px 0; font-size: 14px;\">{{ $json.output.tech_stack || 'Not specified in posting' }}</p>\n<br>\n<p style=\"margin: 5px 0; font-size: 14px;\"><strong>Industry:</strong> {{ $json.output.company_industry || 'To be determined' }}</p>\n</div>\n</div>\n\n<div style=\"background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; margin: 20px 0; border-radius: 8px;\">\n<h3 style=\"color: #856404; margin-top: 0;\">🏢 Company Overview</h3>\n<p style=\"margin-bottom: 0;\">{{ $json.output.company_summary }}</p>\n</div>\n\n<div style=\"background-color: #d4edda; border-left: 4px solid #28a745; padding: 20px; margin: 20px 0; border-radius: 8px;\">\n<h3 style=\"color: #155724; margin-top: 0;\">📊 Their Data Team Needs</h3>\n<p style=\"margin-bottom: 10px;\">{{ $json.output.data_team_needs }}</p>\n<div style=\"background-color: rgba(255,255,255,0.7); padding: 10px; border-radius: 5px; margin-top: 10px;\">\n<strong>Specific Challenges:</strong><br>\n{{ $json.output.specific_data_challenges }}\n</div>\n</div>\n\n<div style=\"background-color: #cce5ff; border-left: 4px solid #007bff; padding: 20px; margin: 20px 0; border-radius: 8px;\">\n<h3 style=\"color: #004085; margin-top: 0;\">🤖 Why Our AI Agents Are Perfect</h3>\n<p style=\"margin-bottom: 0;\">{{ $json.output.why_perfect_for_ai_agents }}</p>\n</div>\n\n<div style=\"background-color: #f8d7da; border-left: 4px solid #dc3545; padding: 20px; margin: 20px 0; border-radius: 8px;\">\n<h3 style=\"color: #721c24; margin-top: 0;\">🎯 Recommended Pitch Strategy</h3>\n<p style=\"margin-bottom: 0;\">{{ $json.output.recommended_pitch }}</p>\n</div>\n\n<div style=\"background-color: #e2e3e5; padding: 20px; border-radius: 8px; margin: 20px 0;\">\n<h3 style=\"color: #383d41; margin-top: 0;\">💡 Key Talking Points</h3>\n<ol style=\"margin: 0; padding-left: 20px;\">\n{{ $json.output.key_talking_points.map(point => `<li style=\"margin: 8px 0; font-size: 14px;\"><strong>${point}</strong></li>`).join('') }}\n</ol>\n</div>\n\n<div style=\"background-color: #17a2b8; color: white; padding: 20px; border-radius: 8px; margin: 20px 0;\">\n<h3 style=\"color: white; margin-top: 0;\">🔗 Next Steps</h3>\n<p style=\"margin: 8px 0;\">📝 <a href=\"{{ $json.output.company_link }}\" style=\"color: #fff; text-decoration: underline;\">Review Full Job Posting</a></p>\n<p style=\"margin: 8px 0;\">⏰ <strong>Action Timeline:</strong> {{ $json.output.urgency_level === 'High' ? 'Reach out within 24 hours' : $json.output.urgency_level === 'Medium' ? 'Reach out within 3 days' : 'Add to pipeline for next week' }}</p>\n<p style=\"margin: 8px 0;\">🎯 <strong>Focus:</strong> Position AI agents as team augmentation, not replacement</p>\n<p style=\"margin: 8px 0;\">💼 <strong>Decision Maker:</strong> Likely Head of Data/Analytics or CTO</p>\n</div>\n\n<hr style=\"margin: 30px 0; border: none; border-top: 1px solid #dee2e6;\">\n<p style=\"text-align: center; color: #6c757d; font-style: italic; margin: 0;\">📈 Auto-identified from active data science job posting • Immediate team expansion opportunity</p>\n\n</div>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        10600,
+        1240
+      ],
+      "id": "82b70865-85b0-4f3c-a5b9-86c2de8f9220",
+      "name": "Send Prospect Email",
+      "webhookId": "169b0a22-48f1-43a9-9cd3-046aca3f495c",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "sJUDcSpEX8X6cPkg",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        10780,
+        1240
+      ],
+      "id": "61e9d8fe-61fa-47f7-b284-6a10a9bc74b9",
+      "name": "Wait 5s",
+      "webhookId": "f9fa67c6-75d9-4f82-951b-df26219f580f"
+    },
+    {
+      "parameters": {
+        "content": "Read job descriptions "
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        9060,
+        980
+      ],
+      "typeVersion": 1,
+      "id": "ab1ecf56-df62-4eb2-96b8-e9451b295ccf",
+      "name": "Sticky Note"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking 'Test workflow'": {
+      "main": [
+        [
+          {
+            "node": "Get Remotive Data Jobs RSS feed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Remotive Data Jobs RSS feed": {
+      "main": [
+        [
+          {
+            "node": "Filter & Extract Data Science Roles",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter & Extract Data Science Roles": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Analyze Data Science Prospect",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze Data Science Prospect": {
+      "main": [
+        [
+          {
+            "node": "Send Prospect Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Prospect Email": {
+      "main": [
+        [
+          {
+            "node": "Wait 5s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 5s": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Analyze Data Science Prospect",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Analyze Data Science Prospect",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "3800d151-9538-410e-ae9d-23e5226259ac",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ae91b28a8f4e9bf3712ba616e250324dd1f03e323957d7ae95720d8312894a06"
+  },
+  "id": "BoPZJXhNF5y3maix",
+  "tags": []
+}
