@@ -13,7 +13,7 @@ If you like this series, we’d love you to have you in our course for AI Agents
 
 Now back to the course:
 
-Over the last five days, we’ve set the foundation. We explored how agents evolved from GenAI ([Day 1](link)), how they think and reason ([Day 2](link)), how they remember through different types of memory ([Day 3](link)), how they access real-time knowledge via retrieval ([Day 4](link)), and how they extend their intelligence beyond text through multimodality ([Day 5](link)).
+Over the last five days, we’ve set the foundation. We explored how agents evolved from GenAI **Day 1**, how they think and reason **Day 2**, how they remember through different types of memory **Day 3**, how they access real-time knowledge via retrieval **Day 4**, and how they extend their intelligence beyond text through multimodality **Day 5**.
 
 But agents don’t live in isolation. In the real world, they need to talk to other agents, access external tools, and operate safely at scale.
 
