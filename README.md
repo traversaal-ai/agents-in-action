@@ -58,6 +58,8 @@ If you use my course material, content, or research in your work, please credit 
 
 🔹 Proper citation format:
 
+Farooq, H. (2025). *AI Bootcamp: Generative AI Beyond the Hype*
+
 📌 Tagging & mentions are always appreciated! 😊
 
 ## 📅 Course Syllabus
