@@ -95,13 +95,13 @@ If you use my course material, content, or research in your work, please credit 
 ---
 
 ## ⭐ What Students Are Saying
-"Hamza was incredibly available and supportive throughout the course. His guidance on the capstone kept me focused and his framework for thinking about agentic AI use cases is something I’ve already started applying in my day-to-day work. Highly recommend."
+*"Hamza was incredibly available and supportive throughout the course. His guidance on the capstone kept me focused and his framework for thinking about agentic AI use cases is something I’ve already started applying in my day-to-day work. Highly recommend."*
 – Valisha, Head of Product Strategy
 
-"This course really stands out from all the agentic courses out there. Most courses focus on learning theories, or building prototypes, but with this course I can build agentic systems serving my daily life and 10X my productivity - from travel planning, optimizing my PM workflow...the creativity is boundless! And Hamza is a very engaging instructor. I love how he explains technical concepts in a very intuitive way that even non-technical audience can understand very well, but at the same time he can go very deep for the technical audience. Truly unique course not to be missed!"
+*"This course really stands out from all the agentic courses out there. Most courses focus on learning theories, or building prototypes, but with this course I can build agentic systems serving my daily life and 10X my productivity."*
 – Chilann, Product Manager
 
-"Having taken several of Hamza's courses (including his LLM Agentic RAG Developer's Edition), I came to this No-Code/Low-Code course eager to expand my toolkit — and it absolutely delivered! This course was simply eye-opening for someone accustomed to traditional build processes. The game-changer: Learning to achieve "Visual Confirmation" with stakeholders in hours, not weeks. Being able to rapidly prototype AI agents and show working demos to peers transforms how we communicate ideas. Those one-off agentic workflows that would have taken days to build? Now they're afternoon projects. The ability to go from concept to working prototype at this speed is genuinely impressive. Hamza masterfully demonstrates when and how to leverage these tools for maximum impact. Whether you're building quick proof-of-concepts or need to validate ideas before committing to full development, the techniques are immediately applicable. The course doesn't just teach tools — it reveals an entirely new way of working that complements traditional development beautifully. For anyone wanting to accelerate their AI development workflow or needing to rapidly demonstrate value to stakeholders, this course is transformative. Hamza's teaching makes complex concepts accessible while maintaining depth. Much appreciated and highly recommended!"
+*"Having taken several of Hamza's courses (including his LLM Agentic RAG Developer's Edition), I came to this No-Code/Low-Code course eager to expand my toolkit — and it absolutely delivered! This course was simply eye-opening for someone accustomed to traditional build processes. The game-changer: Learning to achieve "Visual Confirmation" with stakeholders in hours, not weeks."*
 – Kurt, Co-Founder
 
 ## 🔥 Why Take This Course?
