@@ -293,11 +293,5 @@ Today, you've built something that goes far beyond simple automation. Your YouTu
 This agent doesn't just save time—it enables consistency at scale, which is the foundation of building authority and trust in your industry. The compound effect of consistent, quality content will transform your professional presence over the coming months.
 
 But we're just getting started. The principles you've learned today—multi-stage processing, human-AI collaboration, and performance feedback loops—will apply to every sophisticated agent you build going forward.
+
 ---
-
-# **🎓 Ready to Build Production-Grade Agent Systems?**
-Join me in our free comprehensive hands-on workshop where we'll build enterprise-ready multi-agent systems with advanced reasoning capabilities! You'll learn production deployment, scaling strategies, and advanced AI integration techniques.
-
-![Build Sales Prospect Agent With Me](images/sales-prospect-agent.png)
-
-🚀 Join Our Live Session: [Build a Sales Prospect Agent With Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-agent-with-me-no-code-tool)
