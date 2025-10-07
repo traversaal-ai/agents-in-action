@@ -96,13 +96,16 @@ If you use my course material, content, or research in your work, please credit 
 
 ## ⭐ What Students Are Saying
 *"Hamza was incredibly available and supportive throughout the course. His guidance on the capstone kept me focused and his framework for thinking about agentic AI use cases is something I’ve already started applying in my day-to-day work. Highly recommend."*
-– Valisha, Head of Product Strategy
+
+**Valisha**, *Head of Product Strategy*
 
 *"This course really stands out from all the agentic courses out there. Most courses focus on learning theories, or building prototypes, but with this course I can build agentic systems serving my daily life and 10X my productivity."*
-– Chilann, Product Manager
+
+**Chilann**, *Product Manager*
 
 *"Having taken several of Hamza's courses (including his LLM Agentic RAG Developer's Edition), I came to this No-Code/Low-Code course eager to expand my toolkit — and it absolutely delivered! This course was simply eye-opening for someone accustomed to traditional build processes. The game-changer: Learning to achieve "Visual Confirmation" with stakeholders in hours, not weeks."*
-– Kurt, Co-Founder
+
+**Kurt**, *Co-Founder*
 
 ## 🔥 Why Take This Course?
 Unlike most AI courses, this course teaches you how to solve a real-world problem usng AI agents with no-code/low-code approach and launch your own startup.
