@@ -84,6 +84,8 @@ Storing information outside the immediate context window—via specialized tools
 
 By combining offloading with RAG and pruning, AI systems can maintain a balance between context richness and manageable input size.
 
+![Context Management Strategies](images/context-management.png)
+
 ## Practical Implications and Future Directions
 Context engineering is rapidly becoming a foundational skill for developers working with LLMs, especially in Agentic AI and complex workflows. While it builds on prompt engineering, it emphasizes system-level design, dynamic context adaptation, and sophisticated information management.
 
