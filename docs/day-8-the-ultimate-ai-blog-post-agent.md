@@ -5,21 +5,7 @@
 
 Welcome back to Day 8 of our AI Agents in Action!
 
-If you've missed the previous days, you can access them here: [Day 1](link) | [Day 2](link) | [Day 3](link) | [Day 4](link) | [Day 5](link) | [Day 6](link) | [Day 7](link)
-
 I'm [Hamza](https://www.linkedin.com/in/hamzafarooq/) and joining me is [Bhavna](https://www.linkedin.com/in/bhavna-s-jain/). Today, we're diving into one of the most sought-after applications of AI agents: **intelligent content creation and automated blog writing**!
-
-But before that, have you registered for our free class?
-
-**🏆 Tune in: Fortune 100 GenAI Transformation Workshop!**
-
-![Fortune 100 Playbook](images/fortune-100-playbook.png)
-
-Learn how Fortune 100 companies are actually deploying AI agents at enterprise scale. Join my exclusive live session **"Fortune 100 Playbook: GenAI Transformation"** this **Wednesday, October 1st at 9AM PDT**.
-
-**What You'll Master**: Discover how leading enterprises identify high-ROI AI use cases, architect multi-agent systems that actually scale, and deploy production-ready solutions that go beyond impressive demos. We'll unpack real transformation playbooks, examine why most AI projects fail in production, and show you the frameworks Fortune 100 companies use to achieve measurable business impact.
-
-🚀 **Join Our Free Live Session - [Fortune 100 Playbook](https://maven.com/p/8ffde9/fortune-100-playbook-gen-ai-transformation)** and join 1000+ enterprise professionals who are implementing AI transformation the right way. No hype, just proven strategies from companies who've cracked the code on GenAI at scale! 🚀
 
 ---
 
