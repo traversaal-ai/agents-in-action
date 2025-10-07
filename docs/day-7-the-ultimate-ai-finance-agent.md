@@ -5,21 +5,9 @@
 
 Welcome back to Day 7 of our AI Agents in Action!
 
-If you've missed the previous days, you can access them here: [Day 1](link) | [Day 2](link) | [Day 3](link) | [Day 4](link) | [Day 5](link) | [Day 6](link)
-
 I'm [Hamza](https://www.linkedin.com/in/hamzafarooq/) and joining me is [Bhavna](https://www.linkedin.com/in/bhavna-s-jain/). Today, we're diving into one of the most impactful applications of AI agents: intelligent financial analysis and real-time market research!
 
-But, before we dive in, have you signed up for my free session yet?
-
-![Agent With Memory](images/agent-with-memory.png)
-
-Ready to move beyond basic chatbots and build AI agents that actually work in enterprise environments? I'm hosting an exclusive live workshop **"Build an AI Agent with Memory, Internet and Document Search" this Friday, September 5th at 9AM PDT.**
-
-In this hands-on session, we'll construct a sophisticated Sales AI agent from scratch that combines three critical capabilities: conversational memory for context retention, real-time internet search for current information, and document retrieval for accessing your knowledge base. You'll learn the architecture behind multi-agent systems, master enterprise RAG implementation, and discover deployment strategies that work in production.
-
-**🚀 Join Our Free Live Session - [Build an AI Agent with Memory, Internet and Document Search](https://maven.com/p/373e26/build-an-ai-agent-with-memory-internet-and-document-search)**
-
-Back to our session for today. Previously, you built research assistants, sales agents, and the unofficial Airbnb agent. Today, we're exploring how AI agents can revolutionize financial analysis by combining expert market knowledge with real-time internet research to provide comprehensive investment insights.
+Previously, you built research assistants, sales agents, and the unofficial Airbnb agent. Today, we're exploring how AI agents can revolutionize financial analysis by combining expert market knowledge with real-time internet research to provide comprehensive investment insights.
 
 ![Finance Agent](images/FA_1.gif)
 
