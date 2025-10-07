@@ -38,11 +38,17 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 
 ## 📚 What’s Included?
 ✅ 6 in-depth modules covering Ai agents and their practical application
+
 ✅ 5 tutorials to get started with n8n
+
 ✅ 12 real-world AI agents with code and documentation
+
 ✅ Interactive live sessions and direct instructor access
+
 ✅ Guided feedback & reflection
+
 ✅ Private community of peers
+
 ✅ Certificate upon completion
 
 ---
@@ -111,5 +117,7 @@ If you use my course material, content, or research in your work, please credit 
 Unlike most AI courses, this course teaches you how to solve a real-world problem usng AI agents with no-code/low-code approach and launch your own startup.
 
 By the end, you’ll be able to:
+
 ✅ Build highly Agentic AI applications
+
 ✅ Deploy cost-efficient and scalable AI solutions
