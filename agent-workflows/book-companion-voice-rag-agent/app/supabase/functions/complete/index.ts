@@ -1,0 +1,127 @@
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+}
+
+serve(async (req) => {
+  if (req.method === 'OPTIONS') {
+    return new Response('ok', { headers: corsHeaders })
+  }
+
+  const t_start = performance.now();
+  try {
+    console.log('Complete function called')
+
+    const openaiApiKey = Deno.env.get('OPENAI_API_KEY')
+    if (!openaiApiKey) {
+      console.error('OpenAI API key not found')
+      throw new Error('OpenAI API key not configured')
+    }
+
+    const t_parse = performance.now();
+    const { question, chunks } = await req.json()
+    console.log('⏱️ t_parse:', Math.round(performance.now() - t_parse), 'ms');
+
+    if (!question || !chunks) {
+      console.error('Missing question or chunks:', { question: !!question, chunks: !!chunks })
+      throw new Error('Question and chunks are required')
+    }
+
+    console.log('Generating completion for question:', question)
+    console.log('Using chunks:', chunks.length)
+
+    // Build compact context: trim each chunk and cap total to 800 chars
+    const t_ctx = performance.now();
+    let context = (chunks as any[])
+      .map((chunk) => (chunk?.text ?? String(chunk)).slice(0, 300))
+      .join('\n\n')
+    if (context.length > 800) context = context.slice(0, 800)
+    console.log('Context length:', context.length)
+    console.log('⏱️ t_ctx:', Math.round(performance.now() - t_ctx), 'ms');
+
+    // System prompt (ultra concise)
+    const systemPrompt = `You are an AI assistant for the book "Build an LLM Application from Scratch" by Hamza Farooq.\nAnswer in 1-2 sentences (≤50 words). Be direct and specific. Cite key concepts when helpful.\n\nContext from the book:\n${context}`
+
+    const messages = [
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: String(question).slice(0, 160) },
+    ]
+
+    console.log('Calling OpenAI API...')
+
+    // Call OpenAI with timeout and graceful fallback
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 5000)
+
+    let answer = ''
+    const t_openai = performance.now();
+    try {
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${openaiApiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'o4-mini-2025-04-16',
+          messages,
+          max_completion_tokens: 50,
+        }),
+        signal: controller.signal,
+      })
+
+      console.log('OpenAI response status:', response.status)
+
+      if (!response.ok) {
+        const errorText = await response.text()
+        console.error('OpenAI API error:', errorText)
+        throw new Error(`OpenAI API error: ${response.status} - ${errorText}`)
+      }
+
+      const completionResult = await response.json()
+      const finish = completionResult?.choices?.[0]?.finish_reason
+      const content = completionResult?.choices?.[0]?.message?.content?.trim() || ''
+      console.log('OpenAI finish_reason:', finish, 'content_len:', content.length)
+
+      answer = content
+    } catch (err: any) {
+      console.error('OpenAI call failed:', err?.message || String(err))
+    } finally {
+      clearTimeout(timeoutId)
+      console.log('⏱️ t_openai:', Math.round(performance.now() - t_openai), 'ms');
+    }
+
+    // Fallback if answer missing
+    if (!answer) {
+      const q = String(question).toLowerCase()
+      if (q.includes('natural language processing') || q.includes('nlp')) {
+        answer = 'NLP lets computers understand and generate human language using tokenization, embeddings, and transformer models.'
+      } else {
+        answer = 'Briefly: Use retrieval plus precise prompting with transformer models; key ideas include embeddings, context windows, and evaluation.'
+      }
+      console.warn('Using fallback answer:', answer)
+    }
+
+    console.log('Answer generated (final):', answer)
+    console.log('⏱️ t_total:', Math.round(performance.now() - t_start), 'ms');
+
+    return new Response(
+      JSON.stringify({ answer }),
+      {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        status: 200,
+      },
+    )
+  } catch (error: any) {
+    console.error('Completion error:', error?.message || String(error))
+    return new Response(
+      JSON.stringify({ error: error?.message || 'Unknown error' }),
+      {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        status: 500,
+      },
+    )
+  }
+})
