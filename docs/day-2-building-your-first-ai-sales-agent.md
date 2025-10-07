@@ -244,10 +244,3 @@ Today marks a major milestone in your AI agent journey. You've moved from unders
 But this is just the beginning. The patterns and principles you've learned with n8n will apply to every agent you build going forward. You now understand how to connect systems, process data intelligently, and create automated workflows that add real business value.
 
 ---
-
-# **🎓 Ready to Master Advanced Agent Patterns?**
-Join me in our free comprehensive hands-on workshop where we'll build enterprise-grade multi-agent systems together! You'll learn advanced patterns, scaling strategies, and production deployment techniques.
-
-![Build a Sales and Finance Agent With Me](images/sales-prospect-agent.png)
-
-🚀 Join Our Live Session: [Build a Sales Prospect Agent With Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-agent-with-me-no-code-tool)
