@@ -1,5 +1,5 @@
 # Agents in Action
-🚀 **8Build AI Agents Like a Pro!**
+🚀 **Build AI Agents Like a Pro!**
 
 Welcome to the Open Sourced version of my course on AI Agents.
 
