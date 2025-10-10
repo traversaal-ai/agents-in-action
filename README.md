@@ -10,28 +10,34 @@ Unlike most courses, this course teaches you how to think about solving real-wor
 ---
 
 ## 📌 Learning Outcomes
-Gain a comprehensive understanding of Large Language Models (LLMs)
-Understand the applications of GenAI in organizations
-Learn about AI Product Life Cycle
-Understand AI Agents and Levels of Agentic Architecture
-Prompt Engineering and Context Engineering
-Tools deep dive: n8n and no-code workflows
-Integrating frontend interfaces with n8n
-Construct and deploy real-world applications using No-code tools
-Model Context Protocol (MCP)
-Building full-stack AI Agents with MCP
-Understanding reasoning agents that can think and plan
-Learn about Guardrails and fine-tuning
+- Gain a comprehensive understanding of Large Language Models (LLMs)
+- Understand the applications of GenAI in organizations
+- Learn about AI Product Life Cycle
+- Understand AI Agents and Levels of Agentic Architecture
+- Prompt Engineering and Context Engineering
+- Tools deep dive: n8n and no-code workflows
+- Integrating frontend interfaces with n8n
+- Construct and deploy real-world applications using No-code tools
+- Model Context Protocol (MCP)
+- Building full-stack AI Agents with MCP
+- Understanding reasoning agents that can think and plan
+- Learn about Guardrails and fine-tuning
 
 ---
 
 ## 📢 Who is This Course For?
 This course has no prerequisites. It is for everyone who is willing to learn about AI Agents and wants to build and deploy their own AI products.
-📌 What You’ll Learn
+
+📌 What You’ll Learn:
+
 ✔ Agents and levels of agentic architecture 
+
 ✔ Applications of GenAI in organizations
+
 ✔ Use of no-code tools including n8n
+
 ✔ Deploy you own AI agents and solutions 
+
 ✔ Address safety and security in AI applications 
 
 ---
