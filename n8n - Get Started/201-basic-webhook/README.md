@@ -1,7 +1,7 @@
-# 🪝 201 — Basic Webhook → OpenAI
+# 🪝 201 — Basic Webhook → OpenRouter
 
 This folder contains the **Basic Webhook workflow** for n8n.
-It shows the simplest “**HTTP in → AI out**” pattern using a **Webhook**, **AI Agent**, **OpenAI**, and **Memory**.
+It shows the simplest “**HTTP in → AI out**” pattern using a **Webhook**, **AI Agent**, **OpenRouter**, and **Memory**.
 
 ---
 
@@ -17,7 +17,7 @@ You can also try with `curl` or Postman.
 
 - 🌐 **Webhook Trigger** — receive a JSON payload over HTTP (POST).
 - 🧠 **AI Agent** — enforces simple, consistent response rules.
-- 🤖 **OpenAI Chat Model** — generates replies (e.g. `gpt-4o-mini`).
+- 🤖 **OpenRouter Chat Model** — generates replies (e.g. `deepseek-chat`).
 - 🗂️ **Memory** — per-user conversation via `username` (session key).
 
 ---
@@ -27,14 +27,14 @@ You can also try with `curl` or Postman.
 ```mermaid
 graph LR
   A["🌐 Webhook (POST)"] --> B["🧠 AI Agent"]
-  B --> C["🤖 OpenAI Chat Model"]
+  B --> C["🤖 OpenRouter Chat Model"]
   B <--> D["🗂️ Memory (sessionKey = username)"]
   B --> E["↩️ Respond to Webhook"]
 ```
 
 1. Client sends `POST` JSON → **Webhook**.
 2. **AI Agent** reads the prompt and rules.
-3. **OpenAI** generates a short reply.
+3. **OpenRouter** generates a short reply.
 4. **Memory** uses `username` to keep per-user context.
 5. The workflow **responds** to the HTTP request.
 
@@ -65,7 +65,7 @@ graph LR
 ## ⚙️ Setup
 
 1. **Import** `201-basic.json` into your n8n Cloud workspace.
-2. **Credentials** → configure **OpenAI** (API key).
+2. **Credentials** → configure **OpenRouter** (API key).
 3. Open the **Webhook** node and **Activate** the workflow (top-right).
 4. Copy the **Production Webhook URL** (not the Test URL).
 

@@ -78,7 +78,6 @@ Type these messages in chat and compare how the AI adjusts:
 ## 💡 Why OpenRouter?
 
 OpenRouter is an open gateway that lets you access multiple AI models (like Anthropic, Mistral, DeepSeek, etc.) with a single API key.
-In this demo, we’ve switched from `gpt-4o-mini` (OpenAI) to **`deepseek/deepseek-chat`** for lower-cost, comparable results.
 
 **Benefits:**
 
