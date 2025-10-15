@@ -33,7 +33,7 @@
     },
     {
       "parameters": {
-        "content": "# Start Here — AI Chat Trigger\n\n💬 **Chat Trigger**\n- Entry point: type directly in n8n’s chat UI\n- No setup beyond OpenRouter credentials\n- Perfect for “Hello World” demo\n\n🧠 **AI Agent**\n- Follows simple rules: short, clear answers\n- Highlights how vague vs. specific prompts change replies\n\n🤖 **OpenAI Model**\n- Model: deepseek-chat\n- Fast + inexpensive\n- Generates responses based on the chat message\n\n🗂️ **Memory**\n- Keeps track of previous messages during chat\n- Makes conversation feel continuous\n\n✨ **What to Notice**\n- General prompt = general answer\n- Specific prompt = tailored answer\n- First step before connecting apps or webhooks\n",
+        "content": "# Start Here — AI Chat Trigger\n\n💬 **Chat Trigger**\n- Entry point: type directly in n8n’s chat UI\n- No setup beyond OpenRouter credentials\n- Perfect for “Hello World” demo\n\n🧠 **AI Agent**\n- Follows simple rules: short, clear answers\n- Highlights how vague vs. specific prompts change replies\n\n🤖 **OpenRouter Model**\n- Model: deepseek-chat\n- Fast + inexpensive\n- Generates responses based on the chat message\n\n🗂️ **Memory**\n- Keeps track of previous messages during chat\n- Makes conversation feel continuous\n\n✨ **What to Notice**\n- General prompt = general answer\n- Specific prompt = tailored answer\n- First step before connecting apps or webhooks\n",
         "height": 576,
         "width": 1120,
         "color": 7
