@@ -26,10 +26,13 @@ nav:
   - Chapter 08 - Agentic RAG:
     - Agentic RAG Ecosystem: 8a-agentic-rag-ecosystem.md
     - n8n - RAG: 8b-webhook-rag.md
-    - n8n - RAG with Internet Search: 8c-webhook-rag-with-internet-search.md
+    - RAG with Internet Search: 8c-webhook-rag-with-internet-search.md
+    - RAG with Memory: 8d-supabase-rag-with-memory.md
+    - Voice RAG Agent: 8e-book-companion-voice-rag-agent.md
   - Chapter 09 - Content Automation:
     - YouTube to LinkedIn Agent: 9a-youtube-to-linkedin-agent.md
-    - Blog Post Agent: 9b-the-ultimate-ai-blog-post-agent.md
+    - LinkedIn Human in the Loop Agent: 9b-linkedin-post-human-in-the-loop.md
+    - Blog Post Agent: 9c-the-ultimate-ai-blog-post-agent.md
   - Chapter 10 - Multimodal Agents: 
     - Multimodal Agents: 10a-multimodal-agents.md
   - Chapter 11 - Scaling Agents:
@@ -40,3 +43,5 @@ nav:
     - Dual Search - The Ultimate AI Research Assistant: 13a-the-ultimate-ai-research-assistant.md
   - Chapter 14 - Inverstment Intelligence:
     - The Ultimate AI Finance Agent: 14a-the ultimate-ai-finance-agent.md
+  - Chapter 15 - Workflow Automation:
+    - Workflow Creator Agent: 15a-workflow-creator.md 
