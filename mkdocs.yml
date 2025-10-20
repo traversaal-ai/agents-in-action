@@ -6,34 +6,37 @@ nav:
   - Chapter 01 - What are Agents?:
     - Agents are Here and They are Staying: 1a-agents-are-here-and-they-are-staying.md
     - From LLMs to AI Agents: 1b-from-llms-to-ai-agents.md
-  - Chapter 02 - Prompt vs Context Engineering:
-    - Writing Effective Prompts: 2a-writing-effective-prompts.md
-    - Understanding Context Engineering: 2b-understanding-context-engineering.md
-  - Chapter 03 - Building No-Code Workflows:
-    - Agents vs Workflows: 3a-agents-vs-workflows.md 
-    - n8n - Getting Started: 3b-n8n-getting-started.md
-    - Build Your First Sales Agent: 3c-build-your-first-sales-agent.md
-  - Chapter 04 - How Agents Think?: 
-    - How Agents Think - Agentic Design Patterns: 4a-how-agents-think.md
-  - Chapter 05 - Full Stack Agents:
-    - Webhook - Connecting the Dots: 5a-basic-webhook.md
-    - Developing Full Stack Agents: 5b-developing-full-stack-agents.md
-  - Chapter 06 - Memory:
-    - Memory - The Agent's Brain: 6a-memory-the-agents-brain.md
-  - Chapter 07 - Agentic RAG:
-    - Agentic RAG Ecosystem: 7a-agentic-rag-ecosystem.md
-    - n8n - RAG: 7b-webhook-rag.md
-    - n8n - RAG with Internet Search: 7c-webhook-rag-with-internet-search.md
-  - Chapter 08 - Content Automation:
-    - YouTube to LinkedIn Agent: 8a-youtube-to-linkedin-agent.md
-    - Blog Post Agent: 8b-the-ultimate-ai-blog-post-agent.md
-  - Chapter 09 - Multimodal Agents: 
-    - Multimodal Agents: 9a-multimodal-agents.md
-  - Chapter 10 - Scaling Agents:
-    - Architectures with Google ADk, A2A, and MCP: 10a-architectures-with-google-adk-a2a-and-mcp.md
-  - Chapter 11 - Fully Functional Agent Loop:
-    - Travel Agent: 11a-travel-agent.md
-  - Chapter 12 - Intelligent Research:
-    - Dual Search - The Ultimate AI Research Assistant: 12a-the-ultimate-ai-research-assistant.md
-  - Chapter 13 - Inverstment Intelligence:
-    - The Ultimate AI Finance Agent: 13a-the ultimate-ai-finance-agent.md
+  - Chapter 02 - Problem-First-Approach:
+    - Solve a Real World Problem: 2a-solve-a-real-world-problem.md
+    - Lovable - From Idea to Prototype: 2b-lovable-from-idea-to-prototype.md
+  - Chapter 03 - Prompt vs Context Engineering:
+    - Writing Effective Prompts: 3a-writing-effective-prompts.md
+    - Understanding Context Engineering: 3b-understanding-context-engineering.md
+  - Chapter 04 - Building No-Code Workflows:
+    - Agents vs Workflows: 4a-agents-vs-workflows.md 
+    - n8n - Getting Started: 4b-n8n-getting-started.md
+    - Build Your First Sales Agent: 4c-build-your-first-sales-agent.md
+  - Chapter 05 - How Agents Think?: 
+    - How Agents Think - Agentic Design Patterns: 5a-how-agents-think.md
+  - Chapter 06 - Full Stack Agents:
+    - Webhook - Connecting the Dots: 6a-basic-webhook.md
+    - Developing Full Stack Agents: 6b-developing-full-stack-agents.md
+  - Chapter 07 - Memory:
+    - Memory - The Agent's Brain: 7a-memory-the-agents-brain.md
+  - Chapter 08 - Agentic RAG:
+    - Agentic RAG Ecosystem: 8a-agentic-rag-ecosystem.md
+    - n8n - RAG: 8b-webhook-rag.md
+    - n8n - RAG with Internet Search: 8c-webhook-rag-with-internet-search.md
+  - Chapter 09 - Content Automation:
+    - YouTube to LinkedIn Agent: 9a-youtube-to-linkedin-agent.md
+    - Blog Post Agent: 9b-the-ultimate-ai-blog-post-agent.md
+  - Chapter 10 - Multimodal Agents: 
+    - Multimodal Agents: 10a-multimodal-agents.md
+  - Chapter 11 - Scaling Agents:
+    - Architectures with Google ADk, A2A, and MCP: 11a-architectures-with-google-adk-a2a-and-mcp.md
+  - Chapter 12 - Fully Functional Agent Loop:
+    - Travel Agent: 12a-travel-agent.md
+  - Chapter 13 - Intelligent Research:
+    - Dual Search - The Ultimate AI Research Assistant: 13a-the-ultimate-ai-research-assistant.md
+  - Chapter 14 - Inverstment Intelligence:
+    - The Ultimate AI Finance Agent: 14a-the ultimate-ai-finance-agent.md
