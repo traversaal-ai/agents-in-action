@@ -3,7 +3,8 @@ theme:
   name: material
 nav:
   - Home: index.md
-  - 01 - Agents are Here and They are Staying: 01-agents-are-here-and-they-are-staying.md
+  - Chapter 01:
+    - Agents are Here and They are Staying: 01-agents-are-here-and-they-are-staying.md
   - 02 - Writing Effective Prompts: 02-writing-effective-prompts.md
   - 03 - Understanding Context Engineering: 03-understanding-context-engineering.md
   - 04 - n8n - Getting Started with No-Code Workflows: 04-n8n-getting-started-with-no-code-workflows.md
