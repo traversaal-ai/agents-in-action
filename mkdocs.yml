@@ -6,17 +6,17 @@ nav:
   - Chapter 01 - Agents are Here and They are Staying: agents-are-here-and-they-are-staying.md
   - Chapter 02 - From LLMs to AI Agents: from-llms-to-ai-agents.md
   - Chapter 03 - n8n - Building No-Code Workflows: n8n-building-no-code-workflows.md
-  - Chapter 04 - n8n - Start Here: 101-start-here.md
-  - Chapter 05 - Basic Webhook: 201-basic-webhook.md
-  - Chapter 06 - Build Your First Sales Agent: build-your-first-sales-agent.md
-  - Chapter 07 - Build a RAG Agent with Webhook: webhook-rag.md
-  - Chapter 08 - RAG with Internet Search: webhook-rag-with-internet-search.md
-  - Chapter 09 - RAG with Memory: supabase-rag-with-memory.md
-  - Chapter 10 - Voice RAG Agent: book-companion-voice-rag-agent.md
-  - Chapter 11 - Content Automation - YouTube to LinkedIn Agent: youtube-to-linkedin-agent.md
-  - Chapter 12 - LinkedIn Human in the Loop Agent: linkedin-post-human-in-the-loop.md
-  - Chapter 13 - Content Generation - Blog Post Agent: the-ultimate-ai-blog-post-agent.md
-  - Chapter 14 - Fully Functional Agent Loop - Travel-Agent: travel-agent.md
-  - Chapter 15 - Intelligent Research - The Ultimate AI Research Assistant: the-ultimate-ai-research-assistant.md
-  - Chapter 16 - Inverstment Intelligence - The Ultimate AI Finance Agent: the ultimate-ai-finance-agent.md
-  - Chapter 17 - Workflow Creation Agent: workflow-creator.md 
+    - Start Here: 101-start-here.md
+    - Basic Webhook: 201-basic-webhook.md
+  - Chapter 04 - Build Your First Sales Agent: build-your-first-sales-agent.md
+  - Chapter 05 - Build a RAG Agent with Webhook: 301-webhook-rag.md
+  - Chapter 06 - RAG with Internet Search: 401-webhook-rag-with-internet-search.md
+  - Chapter 07 - RAG with Memory: supabase-rag-with-memory.md
+  - Chapter 08 - Voice RAG Agent: book-companion-voice-rag-agent.md
+  - Chapter 09 - Content Automation - YouTube to LinkedIn Agent: youtube-to-linkedin-agent.md
+  - Chapter 10 - LinkedIn Human in the Loop Agent: linkedin-post-human-in-the-loop.md
+  - Chapter 11 - Content Generation - Blog Post Agent: the-ultimate-ai-blog-post-agent.md
+  - Chapter 12 - Fully Functional Agent Loop - Travel-Agent: travel-agent.md
+  - Chapter 13 - Intelligent Research - The Ultimate AI Research Assistant: the-ultimate-ai-research-assistant.md
+  - Chapter 14 - Inverstment Intelligence - The Ultimate AI Finance Agent: the ultimate-ai-finance-agent.md
+  - Chapter 15 - Workflow Creation Agent: workflow-creator.md 
