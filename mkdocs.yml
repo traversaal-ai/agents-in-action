@@ -3,10 +3,13 @@ theme:
   name: material
 nav:
   - Home: index.md
-  - Chapter 01:
-    - Agents are Here and They are Staying: 01-agents-are-here-and-they-are-staying.md
-  - 02 - Writing Effective Prompts: 02-writing-effective-prompts.md
-  - 03 - Understanding Context Engineering: 03-understanding-context-engineering.md
+  - Chapter 01: Agents
+    - Agents are Here and They are Staying: 1a-agents-are-here-and-they-are-staying.md
+    - From LLMs to AI Agents: 1b-from-llms-to-ai-agents.md
+  - Chapter 02: Prompts vs Context
+    - Writing Effective Prompts: 2a-writing-effective-prompts.md
+    - Understanding Context Engineering: 2b-understanding-context-engineering.md
+  - Chapter 03: n8n - No-Code Workflows
   - 04 - n8n - Getting Started with No-Code Workflows: 04-n8n-getting-started-with-no-code-workflows.md
   - 05 - Build Your First Sales Agent: 05-build-your-first-sales-agent.md
   - 06 - How Agents Think - Agentic Design Patterns: 06-how-agents-think.md
