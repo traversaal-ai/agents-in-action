@@ -3,21 +3,35 @@ theme:
   name: material
 nav:
   - Home: index.md
-  - 7-Day Agents in Action Series:
-    - Day 01 - Agents are here and they are staying: 01-agents-are-here-and-they-are-staying.md
-    - Day 02 - How Agents Think: 02-how-agents-think.md
-    - Day 03 - Memory - The Agent's Brain: 03-memory-the-agents-brain.md
-    - Day 04 - Agentic RAG Ecosystem: 04-agentic-rag-ecosystem.md
-    - Day 05 - Multimodal Agents: 05-multimodal-agents.md
-    - Day 06 - Scaling Agents - Architectures with Google ADK, A2A, and MCP: 06-scaling-agents-architectures-with-google-adk-a2a-and-mcp.md
-    - Day 07 - Fully Functional Agent Loop: 07-fully-functional-agent-loop.md
-  - 10-Day Agents in Action Series:
-    - Day 01 - From LLMs to AI Agents: day-1-from-llms-to-ai-agents.md
-    - Day 02 - Building Your First AI Sales Agent: day-2-building-your-first-ai-sales-agent.md
-    - Day 03 - An Agent that Builds LinkedIn Posts Directly from YouTube Videos: day-3-linkedin-to-youtube-agent.md
-    - Day 04 - The Unofficial Airbnb AI Agent: day-4-the-unofficial-airbnb-ai-agent.md
-    - Day 05 - Build a Sales Prospect and A Deep Research Finance Agent: day-5-sales-prospect-and-deep-research-finance-agent.md
-    - Day 06 - The Ultimate AI Research Assistant: day-6-the-ultimate-ai-research-assistant.md
-    - Day 07 - The Ultimate AI Finance Agent: day-7-the-ultimate-ai-finance-agent.md
-    - Day 08 - The Ultimate AI Blog Post Agent: day-8-the-ultimate-ai-blog-post-agent.md
+  - 01-Agents are Here and They are Staying: 01-agents-are-here-and-they-are-staying.md
+  - 02-Writing Effective Prompts: 02-writing-effective-prompts.md
+  - 03-Understanding Context Engineering: 03-understanding-context-engineering.md
+  - 04-n8n - Getting Started with No-Code Workflows: 04-n8n-getting-started-with-no-code-workflows.md
+  - 05-Build Your First Sales Agent: 05-build-your-first-sales-agent.md
+  - 06-How Agents Think - Agentic Design Patterns: 06-how-agents-think.md
+  - 07-Webhook - Developing Full Stack Agents: 07-webhook-developing-full-stack-agents.md
+  - 08-Memory - The Agent's Brain: 08-memory-the-agents-brain.md
+  - 09-Agentic RAG Ecosystem: 09-agentic-rag-ecosystem.md
+  - 10-Advanced n8n Workflows: 10-advanced-n8n-workflows.md
+  - 11-Content Automation - YouTube to LinkedIn Agent: 11-content-automation-youtube-to-linkedin-agent.md
+  - 12-Multimodal Agents: 12-multimodal-agents.md
+  - 13-Scaling Agents - Architectures with Google ADk, A2A, and MCP: 13-scaling-agents-architectures-with-google-adk-a2a-and-mcp.md
+  - 14-Fully Functional Agent Loop - Travel Agent: 14-fully-functional-agent-loop-travel-agent.md
+  - 15-Intelligent Research with Dual Search - The Ultimate AI Research Assistant: 15-the-ultimate-ai-research-assistant.md
+  - 16-Market Research and Investment Intelligence - The Ultimate AI Finance Agent: 16-the ultimate-ai-finance-agent.md
+  - 17-Content Generation - The Ultimate AI Blog Post Agent: 17-the-ultimate-ai-blog-post-agent.md
+  - Day 02 - How Agents Think: 02-how-agents-think.md
+  - Day 03 - Memory - The Agent's Brain: 03-memory-the-agents-brain.md
+  - Day 04 - Agentic RAG Ecosystem: 04-agentic-rag-ecosystem.md
+  - Day 05 - Multimodal Agents: 05-multimodal-agents.md
+  - Day 06 - Scaling Agents - Architectures with Google ADK, A2A, and MCP: 06-scaling-agents-architectures-with-google-adk-a2a-and-mcp.md
+  - Day 07 - Fully Functional Agent Loop: 07-fully-functional-agent-loop.md
+  - Day 01 - From LLMs to AI Agents: day-1-from-llms-to-ai-agents.md
+  - Day 02 - Building Your First AI Sales Agent: day-2-building-your-first-ai-sales-agent.md
+  - Day 03 - An Agent that Builds LinkedIn Posts Directly from YouTube Videos: day-3-linkedin-to-youtube-agent.md
+  - Day 04 - The Unofficial Airbnb AI Agent: day-4-the-unofficial-airbnb-ai-agent.md
+  - Day 05 - Build a Sales Prospect and A Deep Research Finance Agent: day-5-sales-prospect-and-deep-research-finance-agent.md
+  - Day 06 - The Ultimate AI Research Assistant: day-6-the-ultimate-ai-research-assistant.md
+  - Day 07 - The Ultimate AI Finance Agent: day-7-the-ultimate-ai-finance-agent.md
+  - Day 08 - The Ultimate AI Blog Post Agent: day-8-the-ultimate-ai-blog-post-agent.md
   - Context-Engineering: context-engineering.md
