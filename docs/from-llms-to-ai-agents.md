@@ -1,13 +1,5 @@
-# Day 1: 🚀 Agents in Action: From LLMs to AI Agents
+# 🚀 From LLMs to AI Agents
 ### The rise of Agents from mere LLMs!
-
-[Hamza Farooq](https://github.com/hamzafarooq) and Bhavna Jain
-
-Hi there!
-
-My name is [Hamza](https://www.linkedin.com/in/hamzafarooq/), and I am so excited to welcome you to our transformative 10-day course on AI agents! Joining me throughout this journey is my cohort [Bhavna](https://www.linkedin.com/in/bhavna-s-jain/), our resident AI expert at [Traversaal.ai](https://traversaal.ai/)
-
-In these 10 sessions, we'll uncover everything about AI agents—what they truly are, how they actually work, and what's really behind all this hype. We'll move beyond the buzzwords and build practical, enterprise-ready AI agents that can work alongside humans as genuine digital colleagues.
 
 ## 🎯 **What You'll Master Today**
 By the end of today's lesson, you'll have a comprehensive understanding of:
