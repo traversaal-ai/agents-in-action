@@ -5,18 +5,18 @@ nav:
   - Home: index.md
   - Chapter 01 - From LLMs to AI Agents: from-llms-to-ai-agents.md
   - Chapter 02 - Agents are Here and They are Staying: agents-are-here-and-they-are-staying.md
-  - Chapter 03 - n8n - Building No-Code Workflows:
+  - Chapter 03 - n8n - Build Your First Agent Workflow:
     - Start Here: 101-start-here.md
     - Basic Webhook: 201-basic-webhook.md
-  - Chapter 04 - Build Your First Sales Agent: build-your-first-sales-agent.md
+  - Chapter 04 - Sales Agent to Find the Right Customer: sales-agent-to-find-the-right-customer.md
   - Chapter 05 - Build a RAG Agent with Webhook: 301-webhook-rag.md
-  - Chapter 06 - RAG with Internet Search: 401-webhook-rag-with-internet-search.md
-  - Chapter 07 - RAG with Memory: supabase-rag-with-memory.md
+  - Chapter 06 - Connecting Your Agent with RAG and Internet Search: 401-webhook-rag-with-internet-search.md
+  - Chapter 07 - RAG with Memory Agent: supabase-rag-with-memory.md
   - Chapter 08 - Voice RAG Agent: book-companion-voice-rag-agent.md
-  - Chapter 09 - Content Automation - YouTube to LinkedIn Agent: youtube-to-linkedin-agent.md
+  - Chapter 09 - Automate Your Content - YouTube to LinkedIn Agent: youtube-to-linkedin-agent.md
   - Chapter 10 - LinkedIn Human in the Loop Agent: linkedin-post-human-in-the-loop.md
-  - Chapter 11 - Content Generation - Blog Post Agent: the-ultimate-ai-blog-post-agent.md
+  - Chapter 11 - The Ultimate Blog Post Agent: the-ultimate-ai-blog-post-agent.md
   - Chapter 12 - Fully Functional Agent Loop - Travel-Agent: travel-agent.md
   - Chapter 13 - Intelligent Research - The Ultimate AI Research Assistant: the-ultimate-ai-research-assistant.md
   - Chapter 14 - Investment Intelligence - The Ultimate AI Finance Agent: the ultimate-ai-finance-agent.md
-  - Chapter 15 - Workflow Creation Agent: workflow-creator.md
+  - Chapter 15 - Agent that Creates Other Agents: workflow-creator.md
