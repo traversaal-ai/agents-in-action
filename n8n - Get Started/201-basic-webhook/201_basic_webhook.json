@@ -5,7 +5,7 @@
         "promptType": "define",
         "text": "={{ $json.body.query }}",
         "options": {
-          "systemMessage": "You are a simple AI for demonstrating how wording in a prompt changes the response.\n\nRules:\n- Keep replies short (2–3 sentences).\n- Use clear, everyday language.\n- If the request is vague, give a general answer and point out that adding detail would improve it.\n- If the request is more specific, show how the answer becomes more tailored.\n\nExamples:\nUser: \"Tell me about Paris\"\nAI: \"Paris is a city in France, known for landmarks like the Eiffel Tower.\"\nAI note: \"That was general because the prompt was general.\"\n\nUser: \"Tell me about Paris as a foodie\"\nAI: \"Paris is famous for bakeries, cafés, and Michelin-starred restaurants.\"\nAI note: \"The extra detail shaped the answer.\"\n\nUser: \"I have eggs and rice\"\nAI: \"You could make a quick fried rice by scrambling the eggs with rice and vegetables.\"\nAI note: \"Listing ingredients helps me suggest something specific.\"\n"
+          "systemMessage": "You are an **AI Agent** for demonstrating how wording in a prompt changes the response.\n\nRules:\n- Keep replies short (2–3 sentences).\n- Use clear, everyday language.\n- If the request is vague, give a general answer and point out that adding detail would improve it.\n- If the request is more specific, show how the answer becomes more tailored.\n- Prefer using AWS-related examples when relevant.\n\nExamples:\nUser: \"Tell me about the cloud\"\nAI: \"Cloud computing means using servers on the internet for storage and compute instead of running everything yourself.\"\nAI note: \"That was general because the prompt was general.\"\n\nUser: \"Tell me about AWS storage\"\nAI: \"AWS offers storage services like S3 for objects, EBS for block storage, and Glacier for archiving.\"\nAI note: \"Adding 'AWS storage' narrowed the focus.\"\n\nUser: \"Tell me about S3 storage classes\"\nAI: \"Amazon S3 has classes like Standard, Infrequent Access, and Glacier, each optimized for different cost and access needs.\"\nAI note: \"The extra detail about S3 storage classes shaped the answer.\"\n"
         }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -16,33 +16,12 @@
     },
     {
       "parameters": {
-        "model": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gpt-4o-mini"
-        },
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1.2,
-      "position": [-88, 192],
-      "id": "52a31245-e139-4ef5-a768-778cfc0e9998",
-      "name": "OpenAI Chat Model",
-      "credentials": {
-        "openAiApi": {
-          "id": "AC6qDxlfvN76eReA",
-          "name": "OpenAi account"
-        }
-      }
-    },
-    {
-      "parameters": {
         "sessionIdType": "customKey",
         "sessionKey": "={{ $json.body.username }}"
       },
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3,
-      "position": [64, 192],
+      "position": [16, 176],
       "id": "6fbf4dd6-51a0-4872-bf97-1f93e32042d2",
       "name": "Simple Memory"
     },
@@ -96,7 +75,7 @@
     },
     {
       "parameters": {
-        "content": "🧠 AI AGENT (rules)\n- Short replies (2–3 sentences)\n- Plain language\n- If vague → general answer + suggest adding detail\n- If specific → tailor the answer\n",
+        "content": "🧠 AI AGENT\n- Shows how wording changes the response\n- Vague → general cloud/AWS answer\n- Specific → tailored AWS/S3 answer\n- Keeps replies short, clear, 2–3 sentences\n",
         "height": 184,
         "width": 304,
         "color": 4
@@ -122,20 +101,20 @@
     },
     {
       "parameters": {
-        "content": "🤖 OPENAI CHAT MODEL\nModel: gpt-4o-mini\n- Fast & cost-effective\n- Temperature ~0.2 for consistency\n",
+        "content": "🤖 OPENROUTER CHAT MODEL\nModel: deepseek-chat\n- Fast & Free Tier\n- Temperature ~0.2 for consistency\n",
         "height": 104,
         "width": 288,
         "color": 5
       },
       "type": "n8n-nodes-base.stickyNote",
-      "position": [-400, 160],
+      "position": [-464, 160],
       "typeVersion": 1,
       "id": "4798a68e-da80-449c-bac9-29f137cc0fca",
       "name": "Overview Explanation5"
     },
     {
       "parameters": {
-        "content": "# Basic Webhook → OpenAI (with Memory)\n\n🔌 **Entry Point**\n- Client sends **POST JSON** to the n8n **Webhook**\n- Reads `body.query` (required) and `body.username` (recommended)\n- Workflow must be **Active** → use the **Production URL**\n\n🧠 **AI Agent**\n- Short, plain-English replies (2–3 sentences)\n- If vague → general answer + suggest adding detail\n- If specific → tailor the answer\n\n🤖 **OpenAI Model**\n- Model: `gpt-4o-mini` (fast, cost-effective)\n- Tip: temperature ≈ **0.2** for consistency\n\n🗂️ **Memory**\n- `sessionKey = body.username`\n- Same username → shared context across calls\n- Different username → fresh session\n\n↩️ **Response**\n- Returns the AI reply to the caller (plain text or small JSON)\n\n🧪 **Test Quickly**\n- cURL / Postman / Colab (make a copy → paste **Production** Webhook URL into `url`/`WEBHOOK_URL`)\n\n🔐 **Notes**\n- Don’t send secrets in `query`\n- Ensure `Content-Type: application/json`\n- Rate limiting / auth can be added in later levels\n",
+        "content": "# Basic Webhook → OpenRouter (with Memory)\n\n🔌 **Entry Point**\n- Client sends **POST JSON** to the n8n **Webhook**\n- Reads `body.query` (required) and `body.username` (recommended)\n- Workflow must be **Active** → use the **Production URL**\n\n🧠 AI Agent\n- Short, plain-English replies (2–3 sentences)\n- If vague → general cloud/AWS answer + suggest adding detail\n- If specific → provide a more tailored AWS/S3-focused answer\n\n🤖 **OpenRouter**\n- Model: deepseek-chat\n- Fast and Free Tier\n- Tip: temperature ≈ **0.2** for consistency\n\n🗂️ **Memory**\n- `sessionKey = body.username`\n- Same username → shared context across calls\n- Different username → fresh session\n\n↩️ **Response**\n- Returns the AI reply to the caller (plain text or small JSON)\n\n🧪 **Test Quickly**\n- cURL / Postman / Colab (make a copy → paste **Production** Webhook URL into `url`/`WEBHOOK_URL`)\n\n🔐 **Notes**\n- Don’t send secrets in `query`\n- Ensure `Content-Type: application/json`\n- Rate limiting / auth can be added in later levels\n",
         "height": 736,
         "width": 1216,
         "color": 7
@@ -145,6 +124,23 @@
       "typeVersion": 1,
       "id": "fd254bd8-c607-4cbe-973d-0cc19c939034",
       "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "model": "deepseek/deepseek-chat",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [-144, 176],
+      "id": "806e6a5c-4aa4-4bab-a1c2-2bc687a14448",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "xAg3fMfhFLtzi6jZ",
+          "name": "OpenRouter account"
+        }
+      }
     }
   ],
   "connections": {
@@ -154,17 +150,6 @@
           {
             "node": "Respond to Webhook",
             "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "OpenAI Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "AI Agent",
-            "type": "ai_languageModel",
             "index": 0
           }
         ]
@@ -191,10 +176,22 @@
           }
         ]
       ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "pinData": {},
   "meta": {
+    "templateCredsSetupCompleted": true,
     "instanceId": "52f3ea1091e7549d03d6d6af8d10ffb0eb258a70b8ac87a64741364349b14adc"
   }
 }

@@ -1,4 +1,4 @@
-# Day 7: Fully Functional Agent Loop
+# Day 7: MCP Travel Agent
 ### Build a Fully Functional ReAct Travel Agent using n8n
 
 [**Hamza Farooq**](https://github.com/hamzafarooq) and [**Jaya Rajwani**](https://github.com/JayaRajwani)

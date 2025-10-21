@@ -1,18 +1,19 @@
-# 🪣 301 — Webhook + RAG (AWS Agent)
+# 💬 301 — Webhook + RAG (OpenRouter + Product Management Agent)
 
-This folder contains the **Webhook + Retrieval-Augmented Generation (RAG)** workflow for n8n.
-It introduces **document retrieval** into the loop: the agent first checks an **S3 knowledge base** for answers, then falls back to the model for other AWS topics.
+This folder contains the **Webhook + Retrieval-Augmented Generation (RAG)** workflow for **n8n**, powered by **OpenRouter**’s _deepseek-chat_ model.
+It demonstrates how prompt wording and topic specificity change the AI’s response — while adding a **RAG tool for Product Management insights**.
 
 ---
 
 ## ✨ Overview
 
-This workflow expands on the **201-basic** pattern by adding **document loading, text splitting, embeddings, and a vector store**.
-It creates an **AWS Agent** that:
+This workflow expands the **201-basic** pattern by introducing **memory**, **OpenRouter free-tier LLM**, and a **RAG API tool** for contextual answers.
+It creates a **Product Management AI Agent** that:
 
-- 📂 Uses RAG for **Amazon S3 questions**
-- 🤖 Uses the LLM for **other AWS questions**
-- 🙅 Politely refuses **non-AWS questions**
+- 🧠 Uses **RAG** for **Product Management questions**
+- 💬 Uses the **LLM (deepseek-chat)** for **general or AWS-related questions**
+- 🙅 Politely declines **out-of-scope or non-relevant questions**
+- 🧍 Keeps short, simple replies (2–3 sentences), emphasizing clarity and prompt impact
 
 ---
 
@@ -20,42 +21,37 @@ It creates an **AWS Agent** that:
 
 ```mermaid
 graph LR
-  J["🖱️ Manual Trigger (Test)"] --> I["⬇️ Download File (Google Drive)"]
-  I --> H["📂 Data Loader"]
-  H --> G["📄 Text Splitter"]
-  G --> F["🔤 Embeddings"]
-  F --> E["📚 Vector Store (S3 Knowledge Base)"]
-
-  A["🌐 Webhook (POST)"] --> B["🧠 AWS Agent"]
-  B --> C["🤖 OpenAI Chat Model"]
-  B <--> D["🗂️ Memory (sessionKey = username)"]
-  B --> K["↩️ Respond to Webhook"]
-  B -->|RAG tool| E
+  A["🌐 Webhook (POST)"] --> B["🧠 AI Agent"]
+  B --> C["🤖 OpenRouter Chat Model (deepseek-chat)"]
+  B --> D["🛠️ RAG Tool (Product Management API)"]
+  B <--> E["🗂️ Memory (sessionKey = username)"]
+  B --> F["↩️ Respond to Webhook"]
 ```
 
-1. **Webhook** receives a POST request (`query`, `username`).
-2. **AWS Agent** decides:
+1. **Webhook** receives JSON (`query`, `username`).
+2. **AI Agent** decides how to respond:
 
-   - If S3-related → query the **Vector Store** (RAG).
-   - If another AWS service → use the model’s own knowledge.
-   - If not AWS → politely refuse.
+   - If the topic involves **Product Management** → call the **RAG Tool**.
+   - Otherwise → use the **deepseek-chat** model directly.
+   - For vague questions → respond generally and guide users to be more specific.
 
-3. **Vector Store** is built from documents: downloaded → split → embedded.
-4. **Memory** keeps per-username context.
-5. **Respond to Webhook** returns the reply.
+3. **Memory Buffer (Window)** stores short-term conversation context by username.
+4. **Response Node** returns the generated reply to the client.
 
 ---
 
 ## 🛂 Inputs (JSON Body)
 
-- `query` _(string, required)_ → User’s question.
-- `username` _(string, recommended)_ → Stable ID for memory context.
+| Field      | Type   | Required       | Description                           |
+| ---------- | ------ | -------------- | ------------------------------------- |
+| `query`    | string | ✅             | User’s input message                  |
+| `username` | string | 🟢 Recommended | Session key for conversational memory |
 
 **Example**
 
 ```json
 {
-  "query": "How do I create an S3 bucket policy for public read?",
+  "query": "What are best practices for Product Managers when prioritizing features?",
   "username": "demo-user-1"
 }
 ```
@@ -64,93 +60,104 @@ graph LR
 
 ## 📤 Output
 
-- HTTP 200 with the agent’s reply.
-- Responses indicate which knowledge source was used:
+- **HTTP 200 OK** with a short AI reply.
+- Reply style examples:
 
-  - **(Answer based on S3 knowledge base)**
-  - **(Answer based on model knowledge)**
+  - “(Answer from Product Management knowledge base)” — via RAG Tool
+  - “(General or AWS-based answer)” — via model
+  - “(Out-of-scope polite refusal)” — for unrelated queries
 
 ---
 
 ## ⚙️ Setup
 
-1. **Import** `301-webhook-rag.json` into your n8n Cloud workspace.
-2. **Credentials** → configure:
+1. **Import** `301-webhook-rag.json` into your **n8n Cloud** workspace.
+2. **Credentials → Configure:**
 
-   - 🔑 OpenAI API
-   - 🔑 Google Drive (for file download)
+   - 🔑 **OpenRouter API** (create a free account at [openrouter.ai](https://openrouter.ai))
+   - 🔑 Optional: API key for the **Traversaal Product Docs API** (used by the RAG Tool)
 
-3. **Activate** the workflow to get the **Production Webhook URL**.
-4. Update the **Download File** node’s `fileId` to point to your own AWS S3 reference doc in Google Drive.
+3. **In the “RAG Tool” node**, replace:
+
+   ```bash
+   Authorization: your_traversaal_api_auth_brearer_token_here
+   ```
+
+   with your actual bearer token.
+
+4. **Activate** the workflow and copy the **Production Webhook URL** (from the Webhook node).
+5. Optionally adjust the `systemMessage` inside the AI Agent node to modify tone or domain focus.
 
 ---
 
 ## 🧪 Try It
 
-### Option A — **Google Colab (Recommended)**
+### Option A — Google Colab (Recommended)
 
-1. Open the instructor’s Colab:
+1. Open the instructor’s Colab notebook:
    **[301 Webhook + RAG — Client (Colab)](https://colab.research.google.com/drive/1o66IjJDEQZ404gs5MNiItm2WqxcU2bzx?usp=sharing)**
-2. Click **Copy to Drive** (or **File → Save a copy in Drive**) to make an editable copy.
-3. In n8n, **activate** this workflow and copy the **Production Webhook URL** (from the Webhook node, not the Test URL).
-4. In your Colab copy, find the webhook URL variable (`url` or `WEBHOOK_URL`) and **replace it with your Production Webhook URL**.
-5. Run all cells. Try prompts like:
+2. Click **File → Save a copy in Drive**.
+3. Replace `WEBHOOK_URL` with your **Production Webhook URL** from n8n.
+4. Run all cells and test:
 
-   - **S3 (RAG expected):** “How do I enable S3 versioning?”
-   - **Other AWS (model expected):** “How do I resize an EC2 instance?”
-   - **Non-AWS (refusal expected):** “Tell me about Paris.”
+   - 🧠 “What are best practices for Product Managers?”
+   - ☁️ “Tell me about AWS S3 buckets.”
+   - 🏙️ “What is the capital of France?”
 
-> 💡 Use the same `username` value in the payload to see memory continuity; change it to start a fresh session.
+> 💡 Use the same `username` to maintain context; new names start fresh sessions.
+
+---
 
 ### Option B — cURL
 
 ```bash
-WEBHOOK_URL="https://<your-n8n>/webhook/<id>"   # Paste the Production URL
+WEBHOOK_URL="https://<your-n8n>/webhook/<id>"   # Use Production URL
 curl -X POST "$WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d '{"query":"How do I enable S3 versioning?","username":"demo-user-1"}'
+  -d '{"query":"List key principles of Product Management","username":"demo-user-1"}'
 ```
 
 ### Option C — Postman
 
-1. Create a new **POST** request to your **Production Webhook URL**.
-
-2. Body → **raw** → **JSON**:
+1. Create a **POST** request → `Production Webhook URL`
+2. Body → Raw → JSON:
 
    ```json
    {
-     "query": "How do I enable S3 versioning?",
+     "query": "How can I improve sprint planning as a Product Manager?",
      "username": "demo-user-1"
    }
    ```
 
-3. Send → See the reply.
+3. Click **Send** → view AI reply.
 
 ---
 
 ## 🧠 What to Notice (Teaching Points)
 
-- Learners see how **retrieval changes answers** (RAG vs model).
-- Workflow demonstrates **conditional tool use** inside the Agent.
-- Introduces **document ingestion** (Download → Split → Embed → Store).
-- Shows clear refusal logic for out-of-scope questions.
+- Demonstrates **how prompt wording changes the model’s specificity**.
+- Shows **AI tool routing** (LLM vs RAG) within a single workflow.
+- Highlights the benefit of **contextual memory** via `sessionKey`.
+- Provides a **budget-friendly OpenRouter setup** (deepseek-chat is free tier).
+- Encourages experimentation with tone and system instructions.
 
 ---
 
 ## 📚 References
 
-- 📖 [Amazon S3 Getting Started Guide](https://cdn2.hubspot.net/hubfs/4423734/marketing/vendor%20insights/AWS/White%20papers/S3-Getting%20Started%20Guide.pdf)
-- 📖 [n8n — Simple Vector Store node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/)
-- 📖 [n8n — RAG in n8n](https://docs.n8n.io/advanced-ai/rag-in-n8n/)
+- 📖 [Traversaal Product Management Docs API](https://pro-documents.traversaal-api.com/)
+- 📖 [OpenRouter — deepseek-chat model](https://openrouter.ai/models/deepseek/deepseek-chat)
+- 📖 [n8n — AI Agent node](https://docs.n8n.io/ai/agents/)
+- 📖 [n8n — HTTP Request Tool](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
+- 📖 [n8n — Memory Buffer Window](https://docs.n8n.io/ai/memory/)
 
 ---
 
 ## 🎓 Learn More
 
-Ready to go deeper?  
-Check out these courses:
+Want to go deeper into AI workflows and agents?
 
-- [AI Bootcamp: _For Leaders & Managers_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
-- [Agent Engineering Bootcamp: _For Developers & Engineers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+- [**AI Bootcamp: Generative AI Beyond the Hype**](https://maven.com/boring-bot/ml-system-design) — for leaders & builders.
+- [**Agent Engineering Bootcamp**](https://maven.com/boring-bot/advanced-llm) — for developers scaling real AI systems.
 
-👉 These resources expand on the workflows here and show how to apply AI + n8n in real projects.
+> 🪄 Learn how to chain OpenRouter, RAG, and custom APIs in your own workflows — the same pattern used here.

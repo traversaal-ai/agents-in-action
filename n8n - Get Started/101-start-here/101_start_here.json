@@ -13,27 +13,6 @@
       "name": "AI Agent"
     },
     {
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gpt-4o-mini"
-        },
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1.2,
-      "position": [-304, 64],
-      "id": "01765d8c-7ea2-4845-afe2-c3d0685a0367",
-      "name": "OpenAI Chat Model",
-      "credentials": {
-        "openAiApi": {
-          "id": "AC6qDxlfvN76eReA",
-          "name": "OpenAi account"
-        }
-      }
-    },
-    {
       "parameters": {},
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3,
@@ -54,7 +33,7 @@
     },
     {
       "parameters": {
-        "content": "# Start Here — AI Chat Trigger\n\n💬 **Chat Trigger**\n- Entry point: type directly in n8n’s chat UI\n- No setup beyond OpenAI credentials\n- Perfect for “Hello World” demo\n\n🧠 **AI Agent**\n- Follows simple rules: short, clear answers\n- Highlights how vague vs. specific prompts change replies\n\n🤖 **OpenAI Model**\n- Model: gpt-4o-mini\n- Fast + inexpensive\n- Generates responses based on the chat message\n\n🗂️ **Memory**\n- Keeps track of previous messages during chat\n- Makes conversation feel continuous\n\n✨ **What to Notice**\n- General prompt = general answer\n- Specific prompt = tailored answer\n- First step before connecting apps or webhooks\n",
+        "content": "# Start Here — AI Chat Trigger\n\n💬 **Chat Trigger**\n- Entry point: type directly in n8n’s chat UI\n- No setup beyond OpenRouter credentials\n- Perfect for “Hello World” demo\n\n🧠 **AI Agent**\n- Follows simple rules: short, clear answers\n- Highlights how vague vs. specific prompts change replies\n\n🤖 **OpenRouter Model**\n- Model: deepseek-chat\n- Fast + inexpensive\n- Generates responses based on the chat message\n\n🗂️ **Memory**\n- Keeps track of previous messages during chat\n- Makes conversation feel continuous\n\n✨ **What to Notice**\n- General prompt = general answer\n- Specific prompt = tailored answer\n- First step before connecting apps or webhooks\n",
         "height": 576,
         "width": 1120,
         "color": 7
@@ -105,7 +84,7 @@
     },
     {
       "parameters": {
-        "content": "🤖 OPENAI CHAT MODEL\n- Model: gpt-4o-mini\n- Generates answers from your chat prompts\n",
+        "content": "🤖 OpenRouter CHAT MODEL\n- Model: deepseek-chat\n- Generates answers from your chat prompts\n",
         "height": 104,
         "width": 288,
         "color": 5
@@ -115,22 +94,28 @@
       "typeVersion": 1,
       "id": "23508109-f717-475e-b596-fad4bd534979",
       "name": "Overview Explanation5"
+    },
+    {
+      "parameters": {
+        "model": "deepseek/deepseek-chat",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [-272, 64],
+      "id": "5cc54d5b-bdc6-48bb-87e4-cdbc9044054b",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "xAg3fMfhFLtzi6jZ",
+          "name": "OpenRouter account"
+        }
+      }
     }
   ],
   "connections": {
     "AI Agent": {
       "main": [[]]
-    },
-    "OpenAI Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "AI Agent",
-            "type": "ai_languageModel",
-            "index": 0
-          }
-        ]
-      ]
     },
     "Simple Memory": {
       "ai_memory": [
@@ -149,6 +134,17 @@
           {
             "node": "AI Agent",
             "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
             "index": 0
           }
         ]
