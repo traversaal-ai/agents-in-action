@@ -3,8 +3,8 @@ theme:
   name: material
 nav:
   - Home: index.md
-  - Chapter 01 - Agents are Here and They are Staying: agents-are-here-and-they-are-staying.md
-  - Chapter 02 - From LLMs to AI Agents: from-llms-to-ai-agents.md
+  - Chapter 01 - From LLMs to AI Agents: from-llms-to-ai-agents.md
+  - Chapter 02 - Agents are Here and They are Staying: agents-are-here-and-they-are-staying.md
   - Chapter 03 - n8n - Building No-Code Workflows:
     - Start Here: 101-start-here.md
     - Basic Webhook: 201-basic-webhook.md
