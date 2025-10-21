@@ -1,17 +1,5 @@
-# Day 1: Agents are here and they are staying
+# Agents are here and they are staying
 ### A Shift from Answers to Actions
-
-[**Hamza Farooq**](https://github.com/hamzafarooq) and [**Jaya Rajwani**](https://github.com/JayaRajwani)
-
-## Welcome to Day 1 of the 7-Day Agents in Action Series.
-
-Hi!
-
-My name is [Hamza](https://www.linkedin.com/in/hamzafarooq/), and I am so excited to welcome you our new course. Joining me is [Jaya](https://www.linkedin.com/in/jayarajwani/), who is a ninja in Agents!
-
-In these 7 sessions we will uncover all we can about Agents, what they are, how they work and the what’s really behind all this hype?
-
-Let’s get started!
 
 ## **The Advent of Agents**
 
