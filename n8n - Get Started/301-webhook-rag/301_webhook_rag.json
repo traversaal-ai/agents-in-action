@@ -2,225 +2,29 @@
   "nodes": [
     {
       "parameters": {
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
-      "typeVersion": 1.2,
-      "position": [-480, 768],
-      "id": "44ae273b-38e9-4c25-bfa6-5c2566a596df",
-      "name": "Embeddings OpenAI",
-      "credentials": {
-        "openAiApi": {
-          "id": "AC6qDxlfvN76eReA",
-          "name": "OpenAi account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "dataType": "binary",
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
-      "typeVersion": 1,
-      "position": [-240, 768],
-      "id": "104edfe9-6a27-4702-831c-32eda4a44e77",
-      "name": "Default Data Loader"
-    },
-    {
-      "parameters": {
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
-      "typeVersion": 1,
-      "position": [-192, 960],
-      "id": "79d6ea7d-ec65-487a-b372-dc6b9eda9e87",
-      "name": "Recursive Character Text Splitter"
-    },
-    {
-      "parameters": {},
-      "type": "n8n-nodes-base.manualTrigger",
-      "typeVersion": 1,
-      "position": [-928, 544],
-      "id": "45c3ef41-9e76-452f-8fe0-384fa4dd1e7a",
-      "name": "When clicking 'Test workflow'"
-    },
-    {
-      "parameters": {
-        "operation": "download",
-        "fileId": {
-          "__rl": true,
-          "value": "1JdGsDWP8F7K8i8D_MRdPMZSCbPg4fzZR",
-          "mode": "id"
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3,
-      "position": [-704, 544],
-      "id": "76bf715f-5ca6-484c-963a-fb036f103868",
-      "name": "Download File",
-      "credentials": {
-        "googleDriveOAuth2Api": {
-          "id": "hh8J4NGtlm06CbHd",
-          "name": "Google Drive account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "mode": "insert",
-        "memoryKey": {
-          "__rl": true,
-          "mode": "list",
-          "value": "vector_store_key"
-        }
-      },
-      "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
-      "typeVersion": 1.3,
-      "position": [-448, 544],
-      "id": "7e07c6e9-81cd-4e9c-b1e2-200bd5e239d6",
-      "name": "Simple Vector Store"
-    },
-    {
-      "parameters": {
         "promptType": "define",
         "text": "={{ $json.body.query }}",
         "options": {
-          "systemMessage": "You are **AWS Agent**.\n\nBEHAVIOR\n- You answer questions about **Amazon Web Services (AWS)**.\n- For **Amazon S3 topics** (buckets, objects, storage classes, lifecycle, replication, encryption, presigned URLs, policies, events, pricing, troubleshooting), you MUST first use the **S3 RAG knowledge base** (vector store tool).\n- For other AWS services (EC2, Lambda, DynamoDB, VPC, IAM, etc.), use your own model knowledge to provide concise answers.\n- If the question is NOT about AWS, politely refuse and suggest AWS-related topics the user could ask.\n\nANSWERING STYLE\n- Plain English. Concise and clear.\n- 2–3 sentences + optional bullet points for clarity.\n- If you used RAG, say:  \n  **“(Answer based on S3 knowledge base)”**\n- If you used the model for non-S3 AWS topics, say:  \n  **“(Answer based on model knowledge)”**\n- If you refused, say:  \n  **“I can only answer questions about Amazon Web Services.”**  \n  Then give 2–3 example AWS topics.\n\nREFUSAL POLICY\n- Non-AWS topics (e.g., Paris, cooking, sports):  \n  → Respectfully decline:  \n  “I can only answer questions about Amazon Web Services. For example, you could ask me about S3 storage classes, EC2 instances, or IAM policies.”\n\nSAFETY\n- Do not provide secrets, credentials, or destructive commands.\n- Mention that AWS limits/pricing can change, and users should confirm with the official AWS docs.\n\nEXAMPLES\nUser: “How do I make an S3 bucket public?”  \nAssistant:  \n**You can apply a bucket policy that allows `s3:GetObject` for all users. (Answer based on S3 knowledge base)**  \n- Use `Principal: \"*\"` with caution  \n- Prefer presigned URLs for temporary public access\n\nUser: “How do I resize an EC2 instance?”  \nAssistant:  \n**You can stop the instance, change the instance type in the console, and restart it. (Answer based on model knowledge)**\n\nUser: “Tell me about Paris.”  \nAssistant:  \n**I can only answer questions about Amazon Web Services. For example, you could ask about S3 lifecycle policies, Lambda triggers, or DynamoDB throughput.**\n"
+          "systemMessage": "You are an **AI Agent** for demonstrating how wording in a prompt changes the response.\n\nRules:\n- Keep replies short (2–3 sentences).\n- Use clear, everyday language.\n- If the request is vague, give a general answer and point out that adding detail would improve it.\n- If the request is more specific, show how the answer becomes more tailored.\n- Prefer using AWS-related examples when relevant.\n\nExamples:\nUser: \"Tell me about the cloud\"\nAI: \"Cloud computing means using servers on the internet for storage and compute instead of running everything yourself.\"\nAI note: \"That was general because the prompt was general.\"\n\nUser: \"Tell me about AWS storage\"\nAI: \"AWS offers storage services like S3 for objects, EBS for block storage, and Glacier for archiving.\"\nAI note: \"Adding 'AWS storage' narrowed the focus.\"\n\nUser: \"Tell me about S3 storage classes\"\nAI: \"Amazon S3 has classes like Standard, Infrequent Access, and Glacier, each optimized for different cost and access needs.\"\nAI note: \"The extra detail about S3 storage classes shaped the answer.\"\n\nYou have access to a RAG tool to answer questions about Product Management, make sure to always use it when asked any question about product management\n"
         }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2,
-      "position": [-752, -736],
-      "id": "cc3e4d0e-99d5-491d-9f6a-1b2ff301759f",
+      "position": [896, 320],
+      "id": "0217f0b3-7f2a-4c87-9233-a983349ade15",
       "name": "AI Agent"
     },
     {
       "parameters": {
-        "model": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gpt-4o-mini"
-        },
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1.2,
-      "position": [-992, -512],
-      "id": "4917536e-60b5-4f8b-b93a-b56021fefecf",
-      "name": "OpenAI Chat Model",
-      "credentials": {
-        "openAiApi": {
-          "id": "AC6qDxlfvN76eReA",
-          "name": "OpenAi account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "sessionIdType": "customKey",
-        "sessionKey": "={{ $json.body.username }}"
-      },
-      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
-      "typeVersion": 1.3,
-      "position": [-704, -512],
-      "id": "7d7784e8-3b52-4e81-8bf2-2136149cf889",
-      "name": "Simple Memory"
-    },
-    {
-      "parameters": {
-        "httpMethod": "POST",
-        "path": "d07234fb-2723-4a87-bb36-5503e89213b6",
-        "responseMode": "responseNode",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.webhook",
-      "typeVersion": 2.1,
-      "position": [-1344, -528],
-      "id": "5bc7c967-49f0-4ea9-9d3b-81b16c8a42d8",
-      "name": "Webhook",
-      "webhookId": "d07234fb-2723-4a87-bb36-5503e89213b6"
-    },
-    {
-      "parameters": {
-        "mode": "retrieve-as-tool",
-        "toolDescription": "Use this tool to search for information about Amazon S3 (Simple Storage Service). This contains details about S3 concepts, buckets, objects, permissions, pricing, and basic usage. Query this first before searching the web for AWS S3 related questions.",
-        "memoryKey": {
-          "__rl": true,
-          "mode": "list",
-          "value": "vector_store_key"
-        }
-      },
-      "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
-      "typeVersion": 1.3,
-      "position": [-400, -512],
-      "id": "061040b6-133c-4ab9-9e9a-f9502baa3862",
-      "name": "Simple Vector Store1"
-    },
-    {
-      "parameters": {
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
-      "typeVersion": 1.2,
-      "position": [-400, -352],
-      "id": "9ad6e269-242e-47a9-8452-6bcf4c5b4988",
-      "name": "Embeddings",
-      "credentials": {
-        "openAiApi": {
-          "id": "AC6qDxlfvN76eReA",
-          "name": "OpenAi account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "options": {}
-      },
-      "type": "n8n-nodes-base.respondToWebhook",
-      "typeVersion": 1.4,
-      "position": [160, -528],
-      "id": "056c36f9-6dcb-4caf-9c1d-ad345308657a",
-      "name": "Respond to Webhook"
-    },
-    {
-      "parameters": {
-        "content": "# 301 — Webhook + RAG (AWS Agent)\n\n🌐 User sends POST → Webhook\n🧠 AWS Agent decides:\n   • S3 → query Vector Store (RAG)\n   • Other AWS → use model knowledge\n   • Non-AWS → polite refusal\n↩️ Responds back to caller\n\n📂 Knowledge Base:\n- Drive File → Loader → Splitter → Embeddings → Vector Store\n",
-        "height": 736,
-        "width": 1216,
-        "color": 7
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [-1984, -960],
-      "typeVersion": 1,
-      "id": "3b3ba362-07ed-43c8-87f3-a49571d5a26e",
-      "name": "Sticky Note1"
-    },
-    {
-      "parameters": {
-        "content": "🌐 WEBHOOK (POST)\n- Input: { query, username }\n- Use Production URL (workflow Active)\n- username = session key for memory\n",
-        "height": 136,
+        "content": "🌐 WEBHOOK (POST)\nReads JSON under body.*\n\nExpected keys:\n- query (string, required)\n- username (string, recommended) → session key\n\nExample body:\n{\n  \"query\": \"Two fun facts about Sydney\",\n  \"username\": \"demo-user-1\"\n}\n",
+        "height": 200,
         "width": 288
       },
       "type": "n8n-nodes-base.stickyNote",
-      "position": [-1456, -688],
+      "position": [608, 112],
       "typeVersion": 1,
-      "id": "9fce3fb2-4997-422c-9947-fd6f3a6c4131",
+      "id": "c070c8e8-251e-426a-86f1-de0edb7d8ffb",
       "name": "Overview Explanation1"
-    },
-    {
-      "parameters": {
-        "content": "🧠 AI AGENT\n- S3 → RAG tool\n- Other AWS → model\n- Non-AWS → refuse politely\n",
-        "height": 120,
-        "width": 272,
-        "color": 4
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [-784, -880],
-      "typeVersion": 1,
-      "id": "a9c802fe-470d-4dd9-a9ce-57e7bca6a052",
-      "name": "Overview Explanation3"
     },
     {
       "parameters": {
@@ -229,200 +33,158 @@
         "width": 288
       },
       "type": "n8n-nodes-base.stickyNote",
-      "position": [96, -672],
+      "position": [1376, 208],
       "typeVersion": 1,
-      "id": "4977f038-9b02-4c73-9ac4-cfe0f0abf81b",
+      "id": "2761aaf2-6373-473c-938c-7bd4b99e1432",
       "name": "Overview Explanation2"
     },
     {
       "parameters": {
-        "content": "🗂️ MEMORY\n- sessionKey = username\n- Same user → shared context\n- Different user → fresh session\n",
-        "height": 120,
+        "content": "🧠 AI AGENT\n- Shows how wording changes the response\n- Vague → general cloud/AWS answer\n- Specific → tailored AWS/S3 answer\n- Keeps replies short, clear, 2–3 sentences\n",
+        "height": 184,
+        "width": 304,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [960, 128],
+      "typeVersion": 1,
+      "id": "c7050881-7bee-4185-9d3b-cdadc29efc06",
+      "name": "Overview Explanation3"
+    },
+    {
+      "parameters": {
+        "content": "🗂️ MEMORY (window)\nsessionKey = body.username\n- Same username → shared context across calls\n- Different username → fresh session\n",
+        "height": 136,
         "width": 288,
         "color": 5
       },
       "type": "n8n-nodes-base.stickyNote",
-      "position": [-784, -400],
+      "position": [1264, 688],
       "typeVersion": 1,
-      "id": "00d2682c-732b-426a-bf41-af3df0028516",
+      "id": "d689185c-6ffb-480b-b0b5-796cb96055e5",
       "name": "Overview Explanation4"
     },
     {
       "parameters": {
-        "content": "🤖 OPENAI CHAT MODEL\n- Model: gpt-4o-mini\n- Fast + cost-effective\n- Used for non-S3 AWS answers\n",
+        "content": "🤖 OPENROUTER CHAT MODEL\nModel: deepseek-chat\n- Fast & Free Tier\n- Temperature ~0.2 for consistency\n",
         "height": 104,
         "width": 288,
         "color": 5
       },
       "type": "n8n-nodes-base.stickyNote",
-      "position": [-1104, -400],
+      "position": [528, 528],
       "typeVersion": 1,
-      "id": "dfe7803d-1893-4404-b2c8-65c322a1d23c",
+      "id": "24d803be-d4c1-4662-80f1-9a01b6a96ad8",
       "name": "Overview Explanation5"
     },
     {
       "parameters": {
-        "content": "🤖 OPENAI CHAT MODEL\nModel: gpt-4o-mini\n- Fast & cost-effective\n📚 VECTOR STORE (S3 KB)\n- Holds embedded S3 doc chunks\n- Queried when user asks S3 questions\n- Provides grounded answers\n",
-        "height": 184,
-        "width": 336,
-        "color": 5
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [-272, -384],
-      "typeVersion": 1,
-      "id": "c20a0d6f-45e0-4b2c-a27d-fa01560ce82b",
-      "name": "Overview Explanation"
-    },
-    {
-      "parameters": {
-        "content": "# 301 — Webhook + RAG (AWS Agent)\n\n##  Document → Vector Store Ingestion Flow\n\n📋 Flow\nManual Trigger → Download File → Data Loader → Text Splitter → Embeddings → Vector Store\n\nResult:\nS3 knowledge base (vector store) is ready for the Agent to query\n\n",
+        "content": "# Basic Webhook → OpenRouter (with Memory)\n\n🔌 **Entry Point**\n- Client sends **POST JSON** to the n8n **Webhook**\n- Reads `body.query` (required) and `body.username` (recommended)\n- Workflow must be **Active** → use the **Production URL**\n\n🧠 AI Agent\n- Short, plain-English replies (2–3 sentences)\n- If vague → general cloud/AWS answer + suggest adding detail\n- If specific → provide a more tailored AWS/S3-focused answer\n\n🤖 **OpenRouter**\n- Model: deepseek-chat\n- Fast and Free Tier\n- Tip: temperature ≈ **0.2** for consistency\n\n🗂️ **Memory**\n- `sessionKey = body.username`\n- Same username → shared context across calls\n- Different username → fresh session\n\n↩️ **Response**\n- Returns the AI reply to the caller (plain text or small JSON)\n\n🧪 **Test Quickly**\n- cURL / Postman / Colab (make a copy → paste **Production** Webhook URL into `url`/`WEBHOOK_URL`)\n\n🔐 **Notes**\n- Don’t send secrets in `query`\n- Ensure `Content-Type: application/json`\n- Rate limiting / auth can be added in later levels\n",
         "height": 736,
         "width": 1216,
         "color": 7
       },
       "type": "n8n-nodes-base.stickyNote",
-      "position": [-1440, 256],
+      "position": [-64, -240],
       "typeVersion": 1,
-      "id": "35d635d6-a097-44de-99f7-d67a8fcf6089",
-      "name": "Sticky Note"
+      "id": "cf999038-e91a-407b-aa28-6fdeb21571c9",
+      "name": "Sticky Note1"
     },
     {
       "parameters": {
-        "content": "⬇️ DOWNLOAD FILE (Google Drive)\n- Pulls source doc from Drive by file ID\n- Replace with your own AWS/S3 doc\n- Triggered manually for ingestion\n",
-        "height": 136,
-        "width": 288,
-        "color": 3
+        "httpMethod": "POST",
+        "path": "cc748180-1392-4012-bdb8-48453dcb87dd",
+        "responseMode": "responseNode",
+        "options": {}
       },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [-768, 400],
-      "typeVersion": 1,
-      "id": "202150b3-cd43-4528-a916-683caf8e9ca2",
-      "name": "Overview Explanation6"
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [688, 384],
+      "id": "a7a19a17-caee-4302-b7a0-f24329ba1f73",
+      "name": "Webhook",
+      "webhookId": "cc748180-1392-4012-bdb8-48453dcb87dd"
     },
     {
       "parameters": {
-        "content": "📂 DATA LOADER\n- Reads file contents into n8n\n- Converts into doc format for splitting\n",
-        "height": 104,
-        "width": 256,
-        "color": 3
+        "options": {}
       },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [32, 736],
-      "typeVersion": 1,
-      "id": "7845057d-9406-4d1e-9759-52ee13719872",
-      "name": "Overview Explanation7"
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.3,
+      "position": [1264, 352],
+      "id": "222bf8b3-1f88-4f19-bea8-362593cca7da",
+      "name": "Respond to Webhook"
     },
     {
       "parameters": {
-        "content": "📄 TEXT SPLITTER\n- Breaks doc into smaller chunks\n- Keeps semantic meaning per chunk\n",
-        "height": 104,
-        "width": 288,
-        "color": 3
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Webhook').item.json.body.username }}"
       },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [-32, 960],
-      "typeVersion": 1,
-      "id": "dd6c1be1-a1c8-48a0-961f-684a3ac18469",
-      "name": "Overview Explanation8"
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [1008, 544],
+      "id": "5367bff4-cb16-41a0-9878-87be850f154c",
+      "name": "Simple Memory"
     },
     {
       "parameters": {
-        "content": "🔤 EMBEDDINGS + 📚 VECTOR STORE\n- Embeddings: convert text chunks → vectors\n- Vector Store: holds all chunks as searchable knowledge base\n- Used later by AWS Agent for S3 answers\n",
-        "height": 168,
-        "width": 288,
-        "color": 5
+        "toolDescription": "A RAG tool to get learnings about best practices for Product Management",
+        "method": "POST",
+        "url": "https://pro-documents.traversaal-api.com/documents/search",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "your_traversaal_api_auth_brearer_token_here"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters0_Value', `What are best practices for PM role?`, 'string') }}"
+            },
+            {
+              "name": "generation",
+              "value": "false"
+            }
+          ]
+        },
+        "options": {}
       },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [-832, 736],
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [1168, 544],
+      "id": "598953a6-99ed-49e2-b073-859361c68143",
+      "name": "RAG Tool"
+    },
+    {
+      "parameters": {
+        "model": "deepseek/deepseek-chat",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
       "typeVersion": 1,
-      "id": "6e2439df-66da-41f4-8826-f714ea89b804",
-      "name": "Overview Explanation9"
+      "position": [864, 544],
+      "id": "e528fae6-6451-41f1-8c7c-db43add733f7",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "xAg3fMfhFLtzi6jZ",
+          "name": "OpenRouter account"
+        }
+      }
     }
   ],
   "connections": {
-    "Embeddings OpenAI": {
-      "ai_embedding": [
-        [
-          {
-            "node": "Simple Vector Store",
-            "type": "ai_embedding",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Default Data Loader": {
-      "ai_document": [
-        [
-          {
-            "node": "Simple Vector Store",
-            "type": "ai_document",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Recursive Character Text Splitter": {
-      "ai_textSplitter": [
-        [
-          {
-            "node": "Default Data Loader",
-            "type": "ai_textSplitter",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "When clicking 'Test workflow'": {
-      "main": [
-        [
-          {
-            "node": "Download File",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Download File": {
-      "main": [
-        [
-          {
-            "node": "Simple Vector Store",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "AI Agent": {
       "main": [
         [
           {
             "node": "Respond to Webhook",
             "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "OpenAI Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "AI Agent",
-            "type": "ai_languageModel",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Simple Memory": {
-      "ai_memory": [
-        [
-          {
-            "node": "AI Agent",
-            "type": "ai_memory",
             "index": 0
           }
         ]
@@ -439,7 +201,18 @@
         ]
       ]
     },
-    "Simple Vector Store1": {
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RAG Tool": {
       "ai_tool": [
         [
           {
@@ -450,12 +223,12 @@
         ]
       ]
     },
-    "Embeddings": {
-      "ai_embedding": [
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
         [
           {
-            "node": "Simple Vector Store1",
-            "type": "ai_embedding",
+            "node": "AI Agent",
+            "type": "ai_languageModel",
             "index": 0
           }
         ]
