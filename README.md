@@ -63,7 +63,9 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 |---------|-------|-------------|
 | 1 | [From LLMs to AI Agents](https://aminajavaid30.github.io/agents-in-action/from-llms-to-ai-agents/) | To be added |
 | 2 | [Agents are Here and They are Staying](https://aminajavaid30.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | To be added |
-| 3 | n8n - Build Your First Agent Workflow \ a. [Start Here](https://aminajavaid30.github.io/agents-in-action/101-start-here/) \ b. [Basic Webhook](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) | To be added |
+| 3 | n8n - Build Your First Agent Workflow | To be added |
+|  | a. [Start Here](https://aminajavaid30.github.io/agents-in-action/101-start-here/) |  |
+|  | b. [Basic Webhook](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) |  |
 | 4 | [Sales Agent to Find the Right Customer](https://aminajavaid30.github.io/agents-in-action/sales-agent-to-find-the-right-customer/) | To be added |
 | 5 | [Build a RAG Agent with Webhook](https://aminajavaid30.github.io/agents-in-action/301-webhook-rag/) | To be added |
 | 6 | [Connecting Your Agent with RAG and Internet Search](https://aminajavaid30.github.io/agents-in-action/401-webhook-rag-with-internet-search/) | To be added |
@@ -118,6 +120,15 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 
 ---
 
+## 🔥 Why Take This Course?
+Unlike most AI courses, this course teaches you how to solve a real-world problem usng AI agents with no-code/low-code approach and launch your own startup.
+
+By the end, you’ll be able to:
+
+✅ Build highly effective Agentic AI applications
+
+✅ Deploy cost-efficient and scalable AI solutions
+
 ## ⭐ What Students Are Saying
 *"Hamza was incredibly available and supportive throughout the course. His guidance on the capstone kept me focused and his framework for thinking about agentic AI use cases is something I’ve already started applying in my day-to-day work. Highly recommend."*
 
@@ -130,15 +141,6 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 *"Having taken several of Hamza's courses (including his LLM Agentic RAG Developer's Edition), I came to this No-Code/Low-Code course eager to expand my toolkit — and it absolutely delivered! This course was simply eye-opening for someone accustomed to traditional build processes. The game-changer: Learning to achieve "Visual Confirmation" with stakeholders in hours, not weeks."*
 
 **Kurt**, *Co-Founder*
-
-## 🔥 Why Take This Course?
-Unlike most AI courses, this course teaches you how to solve a real-world problem usng AI agents with no-code/low-code approach and launch your own startup.
-
-By the end, you’ll be able to:
-
-✅ Build highly effective Agentic AI applications
-
-✅ Deploy cost-efficient and scalable AI solutions
 
 ## 📢 Attribution & Credits
 If you use my course material, content, or research in your work, please credit me and the respective contributors.
