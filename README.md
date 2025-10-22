@@ -43,9 +43,7 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 ---
 
 ## 📚 What’s Included?
-✅ 6 in-depth modules covering Ai agents and their practical application
-
-✅ 5 tutorials to get started with n8n
+✅ 6 in-depth modules covering AI agents and their practical application
 
 ✅ 12 real-world AI agents with code and documentation
 
@@ -68,25 +66,27 @@ Farooq, H. (2025). *AI Bootcamp: Generative AI Beyond the Hype*
 
 📌 Tagging & mentions are always appreciated! 😊
 
-## 📅 Course Syllabus
+## 📅 Reading Material
 
 | Chapter# | Title | Description |
 |---------|-------|-------------|
-| 01 | [From LLMs to AI Agents](https://aminajavaid30.github.io/agents-in-action/from-llms-to-ai-agents/) | To be added |
-| 02 | [Agents are Here and They are Staying](https://aminajavaid30.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | To be added |
-| 03 | n8n - Build Your First Agent Workflow \ a. [Start Here](https://aminajavaid30.github.io/agents-in-action/101-start-here/) \ b. [Basic Webhook](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) | To be added |
-| 04 | [Sales Agent to Find the Right Customer](https://aminajavaid30.github.io/agents-in-action/sales-agent-to-find-the-right-customer/) | To be added |
-| 05 | [Build a RAG Agent with Webhook](https://aminajavaid30.github.io/agents-in-action/301-webhook-rag/) | To be added |
-| 06 | [Connecting Your Agent with RAG and Internet Search](https://aminajavaid30.github.io/agents-in-action/401-webhook-rag-with-internet-search/) | To be added |
-| 07 | [Connecting Your RAG Agent with Memory](https://aminajavaid30.github.io/agents-in-action/supabase-rag-with-memory/) | To be added |
-| 08 | [Voice RAG Agent](https://aminajavaid30.github.io/agents-in-action/book-companion-voice-rag-agent/)| To be added |
-| 09 | [Automate Your Content - YouTube to LinkedIn Agent](https://aminajavaid30.github.io/agents-in-action/youtube-to-linkedin-agent/) | To be added |
+| 1 | [From LLMs to AI Agents](https://aminajavaid30.github.io/agents-in-action/from-llms-to-ai-agents/) | To be added |
+| 2 | [Agents are Here and They are Staying](https://aminajavaid30.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | To be added |
+| 3 | n8n - Build Your First Agent Workflow \ a. [Start Here](https://aminajavaid30.github.io/agents-in-action/101-start-here/) \ b. [Basic Webhook](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) | To be added |
+| 4 | [Sales Agent to Find the Right Customer](https://aminajavaid30.github.io/agents-in-action/sales-agent-to-find-the-right-customer/) | To be added |
+| 5 | [Build a RAG Agent with Webhook](https://aminajavaid30.github.io/agents-in-action/301-webhook-rag/) | To be added |
+| 6 | [Connecting Your Agent with RAG and Internet Search](https://aminajavaid30.github.io/agents-in-action/401-webhook-rag-with-internet-search/) | To be added |
+| 7 | [Connecting Your RAG Agent with Memory](https://aminajavaid30.github.io/agents-in-action/supabase-rag-with-memory/) | To be added |
+| 8 | [Voice RAG Agent](https://aminajavaid30.github.io/agents-in-action/book-companion-voice-rag-agent/)| To be added |
+| 9 | [Automate Your Content - YouTube to LinkedIn Agent](https://aminajavaid30.github.io/agents-in-action/youtube-to-linkedin-agent/) | To be added |
 | 10 | [LinkedIn Human in the Loop Agent](https://aminajavaid30.github.io/agents-in-action/linkedin-post-human-in-the-loop/) | To be added |
 | 11 | [The Ultimate AI Blog Post Agent](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-blog-post-agent/) | To be added |
 | 12 | [Fully Functional Agent Loop - Travel Agent](https://aminajavaid30.github.io/agents-in-action/travel-agent/) | To be added |
 | 13 | [Intelligent Research - The Ultimate AI Resaerch Assistant](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-research-assistant/) | To be added |
 | 14 | [Investment Intelligence - The Ultimate AI Finance Agent](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-finance-agent/) | To be added |
 | 15 | [Agent that Creates Other Agents](https://aminajavaid30.github.io/agents-in-action/workflow-creator/) | To be added |
+
+## 📅 Course Syllabus
 
 ### Week 1: Building Agents from Scratch
 - The GenAI revolution
@@ -112,8 +112,8 @@ Farooq, H. (2025). *AI Bootcamp: Generative AI Beyond the Hype*
 - Integrate APIs for Internet Search and RAG
 - Understanding Reasoning Agents that can Think and Plan
 - Build Agents with Memory
-### Week 5: Building Agents with Safety and Securityvs RAG
-- implementing Guardrails
+### Week 5: Building Agents with Safety and Security
+- Implementing Guardrails
 - Compare Fine-tuning vs RAG
 - Deep dive into a Traversaal Case Study
 - Start Thinking about Your Capstone Project
@@ -145,6 +145,6 @@ Unlike most AI courses, this course teaches you how to solve a real-world proble
 
 By the end, you’ll be able to:
 
-✅ Build highly Agentic AI applications
+✅ Build highly effective Agentic AI applications
 
 ✅ Deploy cost-efficient and scalable AI solutions
