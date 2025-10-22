@@ -14,9 +14,10 @@ nav:
   - Chapter 07 - Connecting Your RAG Agent with Memory: supabase-rag-with-memory.md
   - Chapter 08 - Voice RAG Agent: book-companion-voice-rag-agent.md
   - Chapter 09 - Automate Your Content - YouTube to LinkedIn Agent: youtube-to-linkedin-agent.md
-  - Chapter 10 - LinkedIn Human in the Loop Agent: linkedin-post-human-in-the-loop.md
-  - Chapter 11 - The Ultimate AI Blog Post Agent: the-ultimate-ai-blog-post-agent.md
-  - Chapter 12 - Fully Functional Agent Loop - Travel-Agent: travel-agent.md
-  - Chapter 13 - Intelligent Research - The Ultimate AI Research Assistant: the-ultimate-ai-research-assistant.md
-  - Chapter 14 - Investment Intelligence - The Ultimate AI Finance Agent: the-ultimate-ai-finance-agent.md
-  - Chapter 15 - Agent that Creates Other Agents: workflow-creator.md
+  - Chapter 10 - The Unofficial AirBnb AI Agent: the-unofficial-airbnb-ai-agent.md
+  - Chapter 11 - LinkedIn Human in the Loop Agent: linkedin-post-human-in-the-loop.md
+  - Chapter 12 - The Ultimate AI Blog Post Agent: the-ultimate-ai-blog-post-agent.md
+  - Chapter 13 - Fully Functional Agent Loop - Travel-Agent: travel-agent.md
+  - Chapter 14 - Intelligent Research - The Ultimate AI Research Assistant: the-ultimate-ai-research-assistant.md
+  - Chapter 15 - Investment Intelligence - The Ultimate AI Finance Agent: the-ultimate-ai-finance-agent.md
+  - Chapter 16 - Agent that Creates Other Agents: workflow-creator.md
