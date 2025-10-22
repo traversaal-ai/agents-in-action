@@ -24,7 +24,7 @@ Whether you're building a Sales Prospecting Agent, a Research Assistant, or a Kn
 |---------|-------|-------------|
 | 01 | [From LLMs to AI Agents](https://aminajavaid30.github.io/agents-in-action/from-llms-to-ai-agents/) | To be added |
 | 02 | [Agents are Here and They are Staying](https://aminajavaid30.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | To be added |
-| 03 | n8n - Build Your First Agent Workflow \ a. [Start Here](https://aminajavaid30.github.io/agents-in-action/101-start-here/) \ b. [Basic Webhook](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) | To be added |
+| 03 | n8n - Build Your First Agent Workflow\ a. [Start Here](https://aminajavaid30.github.io/agents-in-action/101-start-here/)\ b. [Basic Webhook](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) | To be added |
 | 04 | [Sales Agent to Find the Right Customer](https://aminajavaid30.github.io/agents-in-action/sales-agent-to-find-the-right-customer/) | To be added |
 | 05 | [Build a RAG Agent with Webhook](https://aminajavaid30.github.io/agents-in-action/301-webhook-rag/) | To be added |
 | 06 | [Connecting Your Agent with RAG and Internet Search](https://aminajavaid30.github.io/agents-in-action/401-webhook-rag-with-internet-search/) | To be added |
