@@ -20,6 +20,24 @@ Whether you're building a Sales Prospecting Agent, a Research Assistant, or a Kn
 
 ## 🧩 What's Inside?
 
+| Chapter# | Title | Description |
+|---------|-------|-------------|
+| 01 | [From LLMs to AI Agents](https://aminajavaid30.github.io/agents-in-action/from-llms-to-ai-agents/) | To be added |
+| 02 | [Agents are Here and They are Staying](https://aminajavaid30.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | To be added |
+| 03 | n8n - Build Your First Agent Workflow \ a. [Start Here](https://aminajavaid30.github.io/agents-in-action/101-start-here/) \ b. [Basic Webhook](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) | To be added |
+| 04 | [Sales Agent to Find the Right Customer](https://aminajavaid30.github.io/agents-in-action/sales-agent-to-find-the-right-customer/) | To be added |
+| 05 | [Build a RAG Agent with Webhook](https://aminajavaid30.github.io/agents-in-action/301-webhook-rag/) | To be added |
+| 06 | [Connecting Your Agent with RAG and Internet Search](https://aminajavaid30.github.io/agents-in-action/401-webhook-rag-with-internet-search/) | To be added |
+| 07 | [Connecting Your RAG Agent with Memory](https://aminajavaid30.github.io/agents-in-action/supabase-rag-with-memory/) | To be added |
+| 08 | [Voice RAG Agent](https://aminajavaid30.github.io/agents-in-action/book-companion-voice-rag-agent/)| To be added |
+| 09 | [Automate Your Content - YouTube to LinkedIn Agent](https://aminajavaid30.github.io/agents-in-action/youtube-to-linkedin-agent/) | To be added |
+| 10 | [LinkedIn Human in the Loop Agent](https://aminajavaid30.github.io/agents-in-action/linkedin-post-human-in-the-loop/) | To be added |
+| 11 | [The Ultimate AI Blog Post Agent](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-blog-post-agent/) | To be added |
+| 12 | [Fully Functional Agent Loop - Travel Agent](https://aminajavaid30.github.io/agents-in-action/travel-agent/) | To be added |
+| 13 | [Intelligent Research - The Ultimate AI Resaerch Assistant](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-research-assistant/) | To be added |
+| 14 | [Investment Intelligence - The Ultimate AI Finance Agent](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-finance-agent/) | To be added |
+| 15 | [Agent that Creates Other Agents](https://aminajavaid30.github.io/agents-in-action/workflow-creator/) | To be added |
+
 | Project | Stack | Description |
 |---------|-------|-------------|
 | `101-start-here/` | n8n | Your first workflow in n8n |
