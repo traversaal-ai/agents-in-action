@@ -11,7 +11,7 @@ nav:
   - Chapter 04 - Sales Agent to Find the Right Customer: sales-agent-to-find-the-right-customer.md
   - Chapter 05 - Build a RAG Agent with Webhook: 301-webhook-rag.md
   - Chapter 06 - Connecting Your Agent with RAG and Internet Search: 401-webhook-rag-with-internet-search.md
-  - Chapter 07 - RAG with Memory Agent: supabase-rag-with-memory.md
+  - Chapter 07 - Connecting Your RAG Agent with Memory: supabase-rag-with-memory.md
   - Chapter 08 - Voice RAG Agent: book-companion-voice-rag-agent.md
   - Chapter 09 - Automate Your Content - YouTube to LinkedIn Agent: youtube-to-linkedin-agent.md
   - Chapter 10 - LinkedIn Human in the Loop Agent: linkedin-post-human-in-the-loop.md
