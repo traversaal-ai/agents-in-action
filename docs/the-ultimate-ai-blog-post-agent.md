@@ -1,11 +1,7 @@
-# Day 8: The Ultimate AI Blog Post Agent
+# The Ultimate AI Blog Post Agent
 ### Your AI Content Creator with Deep Research and Professional Publishing Pipeline
 
-[Hamza Farooq](https://github.com/hamzafarooq) and Bhavna Jain
-
-Welcome back to Day 8 of our AI Agents in Action!
-
-I'm [Hamza](https://www.linkedin.com/in/hamzafarooq/) and joining me is [Bhavna](https://www.linkedin.com/in/bhavna-s-jain/). Today, we're diving into one of the most sought-after applications of AI agents: **intelligent content creation and automated blog writing**!
+Today, we're diving into one of the most sought-after applications of AI agents: **intelligent content creation and automated blog writing**!
 
 ---
 
