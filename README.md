@@ -128,13 +128,15 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 
 This repository is organized as follows:
 
-|-- .github/workflows/ \
-|-- docs/ \
-|-- n8n-workflows/ \
-|-- .gitignore \
-|-- LICENSE \
-|-- README.md \
-|-- mkdocs.yml
+📦 root/
+├── .github/
+│ └── workflows/ # GitHub Actions for CI/CD and automation
+├── docs/ # Documentation files for GitHub Pages
+├── n8n-workflows/ # Agent workflows built using n8n
+├── .gitignore # Ignored files and folders for Git
+├── LICENSE # Open-source license information
+├── README.md # Main project documentation
+└── mkdocs.yml # MkDocs configuration for documentation site
 
 ### Folder & File Overview
 
