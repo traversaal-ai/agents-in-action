@@ -1,11 +1,7 @@
-# Day 3: LinkedIn to YouTube Agent
+# YouTube to LinkedIn Agent
 ### Automated Content Generation
 
-[Hamza Farooq](https://github.com/hamzafarooq) and Bhavna Jain
-
-Welcome back to Day 3 of our AI Agents in Action!
-
-I'm [Hamza](https://www.linkedin.com/in/hamzafarooq/), and joining me is [Bhavna](https://www.linkedin.com/in/bhavna-s-jain/). Today, we're taking your agent-building skills to the next level! In the previous session, you built your first AI sales prospecting agent that automatically finds and qualifies leads.
+Today, we're taking your agent-building skills to the next level! In the previous session, you built your first AI sales prospecting agent that automatically finds and qualifies leads.
 
 Today, we're exploring content automation, one of the most powerful applications of AI agents in marketing and personal branding.
 
