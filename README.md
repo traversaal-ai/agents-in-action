@@ -59,13 +59,16 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 
 ## 📅 Reading Material
 
-| Chapter# | Title | Description | Code |
+| Chapter# | Title | Description | n8n Workflow |
 |---------|-------|-------------|------| 
 | 1 | [From LLMs to AI Agents](https://aminajavaid30.github.io/agents-in-action/from-llms-to-ai-agents/) | To be added |  |
 | 2 | [Agents are Here and They are Staying](https://aminajavaid30.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | To be added |  |
-| 3 | n8n - Build Your First Agent Workflow | To be added |
-|  | a. [Start Here](https://aminajavaid30.github.io/agents-in-action/101-start-here/) |  | Code Link |
-|  | b. [Basic Webhook](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) |  | Code Link |
+| 3 | n8n - Build Your First Agent Workflow | To be added |  |
+|  | 3a. [Start Here](https://aminajavaid30.github.io/agents-in-action/101-start-here/) |  | Code Link |
+|  | 3b. [Basic Webhook](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) |  | Code Link |
+| 4 | Lovable - Your Agents Frontend |  |
+|  | 4a. [Interact with Your Agents](https://aminajavaid30.github.io/agents-in-action/411-agents-chat-frontend/) |  | Code Link |
+|  | 4b. [Webhook Chat Interface](https://aminajavaid30.github.io/agents-in-action/direct-agent-chat/) |  | Code Link |
 | 4 | [Sales Agent to Find the Right Customer](https://aminajavaid30.github.io/agents-in-action/sales-agent-to-find-the-right-customer/) | To be added | Code Link |
 | 5 | [Build a RAG Agent with Webhook](https://aminajavaid30.github.io/agents-in-action/301-webhook-rag/) | To be added | Code Link |
 | 6 | [Connecting Your Agent with RAG and Internet Search](https://aminajavaid30.github.io/agents-in-action/401-webhook-rag-with-internet-search/) | To be added | Code Link |
