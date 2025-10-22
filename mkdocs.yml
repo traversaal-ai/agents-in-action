@@ -2,7 +2,7 @@ site_name: Agents in Action
 theme:
   name: material
 nav:
-  - Home: index.md
+  - Introduction: index.md
   - Chapter 01 - From LLMs to AI Agents: from-llms-to-ai-agents.md
   - Chapter 02 - Agents are Here and They are Staying: agents-are-here-and-they-are-staying.md
   - Chapter 03 - n8n - Build Your First Agent Workflow:
