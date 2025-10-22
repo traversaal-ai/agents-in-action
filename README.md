@@ -129,11 +129,17 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 This repository is organized as follows:
 
 .github/workflows/
+
 docs/
+
 n8n-workflows/
+
 .gitignore
+
 LICENSE
+
 README.md
+
 mkdocs.yml
 
 ### Folder & File Overview
