@@ -1,42 +1,6 @@
 # Day 7: MCP Travel Agent
 ### Build a Fully Functional ReAct Travel Agent using n8n
 
-[**Hamza Farooq**](https://github.com/hamzafarooq) and [**Jaya Rajwani**](https://github.com/JayaRajwani)
-
-## Welcome to Day 7 of the 7-Day Agents in Action Series.
-
-Hi again!
-
-It’s [Hamza](https://www.linkedin.com/in/hamzafarooq/) and [Jaya](https://www.linkedin.com/in/jayarajwani/), and you’ve officially made it to the final day of our 7-part journey into the world of intelligent agents.
-
-If you’ve followed along since **Day 1**, you now understand how agents think, plan, retrieve, and interact. Here’s a quick recap of what we've covered:
-
-**Day 1: Agents are here and they are staying**
-
-We explored the rise of agents from basic GenAI capabilities to autonomous systems. Why just prompt a model when you can give it goals?
-
-**Day 2: How agents think**
-
-We dug into planning and reasoning: how agents break tasks into subtasks, choose actions, and reason step-by-step.
-
-**Day 3: Memory - the agent's brain**
-
-We covered short-term and long-term memory, vector stores, and how agents remember and reflect across tasks.
-
-**Day 4: Agentic RAG Ecosystem**
-
-We explored Retrieval-Augmented Generation (RAG) for agents to access real-time knowledge through document and database search.
-
-**Day 5: Multimodal agents**
-
-We saw how agents can go beyond text — interpreting images, audio, PDFs, and more.
-
-**Day 6: Scaling agents with ADK, A2A, and MCP**
-
-We explored how Google’s ADK, A2A protocol, and MCP create scalable agentic infrastructure. From single-agent demos to real-world deployable systems.
-
-For this finale, we’re going from theory to reality: building a working travel agent using only the concepts and tools we covered over the past week.
-
 ![AI Travel Assistant Workflow](images/travel-assistant.png)
 
 This workflow was built using [n8n](https://n8n.io/), a no-code/low-code automation tool that allows you to visually connect agents, tools, and APIs.
