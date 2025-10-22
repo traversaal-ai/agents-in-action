@@ -1,4 +1,4 @@
-# Day 2: Building Your First AI Sales Agent
+# Sales Agent to Find the Right Customer
 ### Learn how to build an AI Agent that finds you the right customers for your product
 
 [Hamza Farooq](https://github.com/hamzafarooq) and Bhavna Jain
