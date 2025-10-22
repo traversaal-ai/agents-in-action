@@ -1,11 +1,7 @@
-# Day 5: Sales Prospect and Deep Research Finance Agent 
+# Sales Prospect and Deep Research Finance Agent 
 ### Agents in Action - From Theory to Production
 
-[Hamza Farooq](https://github.com/hamzafarooq) and Bhavna Jain
-
-Welcome back to Day 5 of our AI Agents in Action!
-
-I'm [Hamza](https://www.linkedin.com/in/hamzafarooq/), and joining me is [Bhavna](https://www.linkedin.com/in/bhavna-s-jain/). On August 15th, we conducted our live MAVEN session on **"Building Production-Ready AI Agents"** and the response was incredible! Over 250 participants joined us as we built two complete agent systems from scratch.
+On August 15th, 2025, we conducted our live MAVEN session on **"Building Production-Ready AI Agents"** and the response was incredible! Over 250 participants joined us as we built two complete agent systems from scratch.
 
 # **🛠️ What We Built Together**
 
