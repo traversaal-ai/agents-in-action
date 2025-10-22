@@ -1,11 +1,7 @@
-# Day 7: The Ultimate AI Finance Agent
+# The Ultimate AI Finance Agent
 ### Your AI Financial Analyst for Real-Time Market Research and Investment Intelligence
 
-[Hamza Farooq](https://github.com/hamzafarooq) and Bhavna Jain
-
-Welcome back to Day 7 of our AI Agents in Action!
-
-I'm [Hamza](https://www.linkedin.com/in/hamzafarooq/) and joining me is [Bhavna](https://www.linkedin.com/in/bhavna-s-jain/). Today, we're diving into one of the most impactful applications of AI agents: intelligent financial analysis and real-time market research!
+Today, we're diving into one of the most impactful applications of AI agents: intelligent financial analysis and real-time market research!
 
 Previously, you built research assistants, sales agents, and the unofficial Airbnb agent. Today, we're exploring how AI agents can revolutionize financial analysis by combining expert market knowledge with real-time internet research to provide comprehensive investment insights.
 
