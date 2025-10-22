@@ -124,6 +124,36 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 
 ---
 
+## 📁 Repository Structure
+
+This repository is organized as follows:
+
+.github/workflows/
+docs/
+n8n-workflows/
+.gitignore
+LICENSE
+README.md
+mkdocs.yml
+
+### Folder & File Overview
+
+| Path | Description |
+|------|--------------|
+| **.github/workflows/** | Contains GitHub Actions workflows for automating tasks such as deployment, testing, or CI/CD. |
+| **docs/** | Includes documentation files used to build the project’s GitHub Pages site. |
+| **n8n-workflows/** | Houses all the agent workflows built using **n8n**, representing various automation and AI agent implementations. |
+| **.gitignore** | Lists files and directories that Git should ignore. |
+| **LICENSE** | Contains the open-source license governing the usage of this repository. |
+| **README.md** | The main documentation file providing an overview of the project. |
+| **mkdocs.yml** | Configuration file for **MkDocs**, defining the structure and theme for the documentation site. |
+
+---
+
+This structure keeps workflows, documentation, and automation agents neatly separated for easier maintenance and scalability.
+
+---
+
 ## 🔥 Why Take This Course?
 Unlike most AI courses, this course teaches you how to solve a real-world problem usng AI agents with no-code/low-code approach and launch your own startup.
 
