@@ -33,7 +33,8 @@ Whether you're building a Sales Prospecting Agent, a Research Assistant, or a Kn
 | 07 | [Connecting Your RAG Agent with Memory](https://aminajavaid30.github.io/agents-in-action/supabase-rag-with-memory/) | To be added |
 | 08 | [Voice RAG Agent](https://aminajavaid30.github.io/agents-in-action/book-companion-voice-rag-agent/)| To be added |
 | 09 | [Automate Your Content - YouTube to LinkedIn Agent](https://aminajavaid30.github.io/agents-in-action/youtube-to-linkedin-agent/) | To be added |
-| 10 | [LinkedIn Human in the Loop Agent](https://aminajavaid30.github.io/agents-in-action/linkedin-post-human-in-the-loop/) | To be added |
+| 10 | [The Unofficial AirBnb AI Agent](https://aminajavaid30.github.io/agents-in-action/the-unofficial-airbnb-ai-agent/) | To be added |
+| 11 | [LinkedIn Human in the Loop Agent](https://aminajavaid30.github.io/agents-in-action/linkedin-post-human-in-the-loop/) | To be added |
 | 11 | [The Ultimate AI Blog Post Agent](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-blog-post-agent/) | To be added |
 | 12 | [Fully Functional Agent Loop - Travel Agent](https://aminajavaid30.github.io/agents-in-action/travel-agent/) | To be added |
 | 13 | [Intelligent Research - The Ultimate AI Resaerch Assistant](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-research-assistant/) | To be added |
