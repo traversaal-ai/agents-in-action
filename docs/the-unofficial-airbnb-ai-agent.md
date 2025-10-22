@@ -1,11 +1,7 @@
-# Day 4: The Unofficial Airbnb AI Agent
+# The Unofficial Airbnb AI Agent
 ### The missing component of Airbnb connected with MCP
 
-[Hamza Farooq](https://github.com/hamzafarooq) and Bhavna Jain
-
-Welcome back to Day 4 of our AI Agents in Action!
-
-I'm [Hamza](https://www.linkedin.com/in/hamzafarooq/), (let’s connect on LinkedIn) and joining me is [Bhavna](https://www.linkedin.com/in/bhavna-s-jain/). Today, we're diving into one of the most exciting applications of AI agents, **intelligent search and recommendation systems**!
+Today, we're diving into one of the most exciting applications of AI agents, **intelligent search and recommendation systems**!
 
 In our previous sessions, you built a sales prospecting agent and a content automation system. Today, we're exploring how AI agents can revolutionize the way we search and interact with complex datasets.
 
