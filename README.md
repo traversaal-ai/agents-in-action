@@ -57,15 +57,6 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 
 ---
 
-## 📢 Attribution & Credits
-If you use my course material, content, or research in your work, please credit me and the respective contributors.
-
-🔹 Proper citation format:
-
-Farooq, H. (2025). *AI Bootcamp: Generative AI Beyond the Hype*
-
-📌 Tagging & mentions are always appreciated! 😊
-
 ## 📅 Reading Material
 
 | Chapter# | Title | Description |
@@ -148,3 +139,12 @@ By the end, you’ll be able to:
 ✅ Build highly effective Agentic AI applications
 
 ✅ Deploy cost-efficient and scalable AI solutions
+
+## 📢 Attribution & Credits
+If you use my course material, content, or research in your work, please credit me and the respective contributors.
+
+🔹 Proper citation format:
+
+Farooq, H. (2025). *AI Bootcamp: Generative AI Beyond the Hype*
+
+📌 Tagging & mentions are always appreciated! 😊
