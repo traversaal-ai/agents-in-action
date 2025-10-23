@@ -66,22 +66,22 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 | 3 | Welcome to n8n - AI Workflow Automation Platform | To be added |  |
 |  | 3a. [n8n - Your No-Code Platform for Building AI Agents](https://aminajavaid30.github.io/agents-in-action/meet-n8n/) | To be added |  |
 |  | 3b. [Hello n8n - Your First Agent Workflow](https://aminajavaid30.github.io/agents-in-action/101-hello-n8n/) |  | Code Link |
-|  | 3c. [Webhook - The Super Tool to Connect Your Backend and Frontend](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) |  | Code Link |
+|  | 3c. [Webhook - The Superpower that Connects Your Backend and Frontend](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) |  | Code Link |
 |  | 3d. [Connect n8n to Lovable using Webhooks](https://aminajavaid30.github.io/agents-in-action/301-lovable-webhook-n8n/) |  | Code Link |
-|  | 3e. [Your Ultimate Lovable for Any Workflow](https://aminajavaid30.github.io/agents-in-action/direct-agent-chat/) |  | Code Link |
+|  | 3e. [Your All-in-One Lovable for Any Workflow](https://aminajavaid30.github.io/agents-in-action/direct-agent-chat/) |  | Code Link |
 |  | 3f. [Chat with Your Agents using Webhooks](https://aminajavaid30.github.io/agents-in-action/411-agents-chat-frontend/) |  | Code Link |
-| 4 | [Sales Agent to Find the Right Customer](https://aminajavaid30.github.io/agents-in-action/sales-agent-to-find-the-right-customer/) | To be added | Code Link |
-| 5 | [Build a Chatbot to Access Your Documents](https://aminajavaid30.github.io/agents-in-action/301-webhook-rag/) | To be added | Code Link |
-| 6 | [Build a Perplexity Clone](https://aminajavaid30.github.io/agents-in-action/401-webhook-rag-with-internet-search/) | To be added | Code Link |
+| 4 | [Sales Agent to Find the Right Customer with AI](https://aminajavaid30.github.io/agents-in-action/sales-agent-to-find-the-right-customer/) | To be added | Code Link |
+| 5 | [Build a Chatbot that Knows Your Documents](https://aminajavaid30.github.io/agents-in-action/301-webhook-rag/) | To be added | Code Link |
+| 6 | [Build Your Own Perplexity Clone](https://aminajavaid30.github.io/agents-in-action/401-webhook-rag-with-internet-search/) | To be added | Code Link |
 | 7 | [Teach your RAG Agent to Remember](https://aminajavaid30.github.io/agents-in-action/supabase-rag-with-memory/) | To be added | Code Link |
-| 8 | [Voice Assistant for Your Book](https://aminajavaid30.github.io/agents-in-action/book-companion-voice-rag-agent/)| To be added | Code Link |
-| 9 | [Automate Your Content - YouTube to LinkedIn Agent](https://aminajavaid30.github.io/agents-in-action/youtube-to-linkedin-agent/) | To be added | Code Link |
+| 8 | [Give Your Book a Voice - The AI Assistant Edition](https://aminajavaid30.github.io/agents-in-action/book-companion-voice-rag-agent/)| To be added | Code Link |
+| 9 | [Automate Your Content - YouTube to LinkedIn with AI](https://aminajavaid30.github.io/agents-in-action/youtube-to-linkedin-agent/) | To be added | Code Link |
 | 10 | [The Unofficial AirBnb AI Agent](https://aminajavaid30.github.io/agents-in-action/the-unofficial-airbnb-ai-agent/) | To be added | Code Link | 
-| 11 | [LinkedIn Human in the Loop Agent](https://aminajavaid30.github.io/agents-in-action/linkedin-post-human-in-the-loop/) | To be added | Code Link |
+| 11 | [LinkedIn Human-in-the-Loop Agent](https://aminajavaid30.github.io/agents-in-action/linkedin-post-human-in-the-loop/) | To be added | Code Link |
 | 12 | [The Ultimate AI Blog Post Agent](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-blog-post-agent/) | To be added | Code Link |
-| 13 | [Fully Functional Agent Loop - Travel Agent](https://aminajavaid30.github.io/agents-in-action/travel-agent/) | To be added | Code Link |
-| 14 | [Intelligent Research - The Ultimate AI Research Assistant](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-research-assistant/) | To be added | Code Link |
-| 15 | [Investment Intelligence - The Ultimate AI Finance Agent](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-finance-agent/) | To be added | Code Link |
+| 13 | [Fully Functional Agent Loop - The Travel Agent](https://aminajavaid30.github.io/agents-in-action/travel-agent/) | To be added | Code Link |
+| 14 | [Intelligent Research - Build The Ultimate AI Research Assistant](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-research-assistant/) | To be added | Code Link |
+| 15 | [Investment Intelligence - Build The Ultimate AI Finance Agent](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-finance-agent/) | To be added | Code Link |
 | 16 | [An Agent that Creates Other Agents](https://aminajavaid30.github.io/agents-in-action/workflow-creator/) | To be added | Code Link |
 
 ---
