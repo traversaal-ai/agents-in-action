@@ -64,7 +64,7 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 | 1 | [From LLMs to AI Agents](https://aminajavaid30.github.io/agents-in-action/from-llms-to-ai-agents/) | To be added |  |
 | 2 | [Agents are Here and They are Staying](https://aminajavaid30.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | To be added |  |
 | 3 | Welcome to n8n - AI Workflow Automation Platform | To be added |  |
-|  | 3a. [Meet n8n - Your No-Code Platform for Building AI Agents](https://aminajavaid30.github.io/agents-in-action/meet-n8n/) | To be added |  |
+|  | 3a. [n8n - Your No-Code Platform for Building AI Agents](https://aminajavaid30.github.io/agents-in-action/meet-n8n/) | To be added |  |
 |  | 3b. [Hello n8n - Your First Agent Workflow](https://aminajavaid30.github.io/agents-in-action/101-hello-n8n/) |  | Code Link |
 |  | 3c. [Webhook - The Super Tool to Connect Your Backend and Frontend](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) |  | Code Link |
 |  | 3d. [Connect n8n to Lovable using Webhooks](https://aminajavaid30.github.io/agents-in-action/301-lovable-webhook-n8n/) |  | Code Link |
