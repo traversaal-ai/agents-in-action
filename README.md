@@ -80,9 +80,9 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 | 11 | [LinkedIn Human in the Loop Agent](https://aminajavaid30.github.io/agents-in-action/linkedin-post-human-in-the-loop/) | To be added | Code Link |
 | 12 | [The Ultimate AI Blog Post Agent](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-blog-post-agent/) | To be added | Code Link |
 | 13 | [Fully Functional Agent Loop - Travel Agent](https://aminajavaid30.github.io/agents-in-action/travel-agent/) | To be added | Code Link |
-| 14 | [Intelligent Research - The Ultimate AI Resaerch Assistant](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-research-assistant/) | To be added | Code Link |
+| 14 | [Intelligent Research - The Ultimate AI Research Assistant](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-research-assistant/) | To be added | Code Link |
 | 15 | [Investment Intelligence - The Ultimate AI Finance Agent](https://aminajavaid30.github.io/agents-in-action/the-ultimate-ai-finance-agent/) | To be added | Code Link |
-| 16 | [Agent that Creates Other Agents](https://aminajavaid30.github.io/agents-in-action/workflow-creator/) | To be added | Code Link |
+| 16 | [An Agent that Creates Other Agents](https://aminajavaid30.github.io/agents-in-action/workflow-creator/) | To be added | Code Link |
 
 ---
 
