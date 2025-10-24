@@ -61,6 +61,7 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 
 | Chapter# | Title | Description | n8n Workflow |
 |---------|-------|-------------|------| 
+| 0 | [Introduction](https://aminajavaid30.github.io/agents-in-action/) | | |
 | 1 | [From LLMs to AI Agents](https://aminajavaid30.github.io/agents-in-action/from-llms-to-ai-agents/) | To be added |  |
 | 2 | [Agents are Here and They are Staying](https://aminajavaid30.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | To be added |  |
 | 3 | Welcome to n8n - AI Workflow Automation Platform | To be added |  |
