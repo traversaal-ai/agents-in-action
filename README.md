@@ -61,16 +61,16 @@ This course has no prerequisites. It is for everyone who is willing to learn abo
 
 | Chapter# | Title | Description | n8n Workflow |
 |---------|-------|-------------|------| 
-| 0 | [Introduction](https://aminajavaid30.github.io/agents-in-action/) | | |
-| 1 | [From LLMs to AI Agents](https://aminajavaid30.github.io/agents-in-action/from-llms-to-ai-agents/) | To be added |  |
-| 2 | [Agents are Here and They are Staying](https://aminajavaid30.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | To be added |  |
-| 3 | Welcome to n8n - AI Workflow Automation Platform | To be added |  |
-|  | 3a. [n8n - Your No-Code Platform for Building AI Agents](https://aminajavaid30.github.io/agents-in-action/meet-n8n/) | To be added |  |
-|  | 3b. [Hello n8n - Your First Agent Workflow](https://aminajavaid30.github.io/agents-in-action/101-hello-n8n/) |  | Code Link |
-|  | 3c. [Webhook - The Superpower that Connects Your Backend and Frontend](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) |  | Code Link |
-|  | 3d. [Connect n8n to Lovable using Webhooks](https://aminajavaid30.github.io/agents-in-action/301-lovable-webhook-n8n/) |  | Code Link |
-|  | 3e. [Your All-in-One Lovable for Any Workflow](https://aminajavaid30.github.io/agents-in-action/direct-agent-chat/) |  | Code Link |
-|  | 3f. [Chat with Your Agents using Webhooks](https://aminajavaid30.github.io/agents-in-action/411-agents-chat-frontend/) |  | Code Link |
+| 0 | [Introduction](https://aminajavaid30.github.io/agents-in-action/) | Welcome to Agents in Action — your open-source hub for building, learning, and experimenting with full-stack AI agents using n8n, webhooks, and real-world automation workflows. Dive in to explore hands-on projects, tutorials, and community-built agent systems. |  |
+| 1 | [From LLMs to AI Agents](https://aminajavaid30.github.io/agents-in-action/from-llms-to-ai-agents/) | Discover how Large Language Models evolve into fully functional AI agents. Learn the core pillars—memory, tools, and planning loops—that transform passive chatbots into proactive, autonomous digital workers capable of thinking, acting, and learning. |  |
+| 2 | [Agents are Here and They are Staying](https://aminajavaid30.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | Explore how AI is evolving from generating answers to taking actions — marking the dawn of intelligent, tool-using agents that think, plan, and execute real-world tasks. |  |
+| 3 | Welcome to n8n - AI Workflow Automation Platform | Get to know n8n, the open-source automation platform that powers your AI workflows. Understand its interface, triggers, nodes, and how it becomes the perfect no-code playground for building your first AI agent. |  |
+|  | 3a. [n8n - Your No-Code Platform for Building AI Agents](https://aminajavaid30.github.io/agents-in-action/meet-n8n/) | Set up and explore n8n as your no-code environment for building AI agents. Learn how to integrate APIs, connect services, and visualize workflows — all without writing a single line of code. |  |
+|  | 3b. [Hello n8n - Your First Agent Workflow](https://aminajavaid30.github.io/agents-in-action/101-hello-n8n/) | Build your very first agent workflow in n8n! This hands-on guide walks you through triggers, logic, and actions — giving you a feel for how agents think and respond automatically. | Code Link |
+|  | 3c. [Webhook - The Superpower that Connects Your Backend and Frontend](https://aminajavaid30.github.io/agents-in-action/201-basic-webhook/) | Learn how webhooks act as the bridge between your agent’s backend and user-facing frontend. You’ll set up a real-time communication channel that powers interactive AI experiences. | Code Link |
+|  | 3d. [Connect n8n to Lovable using Webhooks](https://aminajavaid30.github.io/agents-in-action/301-lovable-webhook-n8n/) | Integrate your n8n agent with Lovable, a lightweight frontend for AI chats. You’ll connect the two via webhooks to make your agent conversational and user-friendly. | Code Link |
+|  | 3e. [Your All-in-One Lovable for Any Workflow](https://aminajavaid30.github.io/agents-in-action/direct-agent-chat/) | Transform Lovable into a reusable interface for any AI workflow. Learn how to extend its capabilities, personalize UI behavior, and make it the universal chat front for your agents. | Code Link |
+|  | 3f. [Chat with Your Agents using Webhooks](https://aminajavaid30.github.io/agents-in-action/411-agents-chat-frontend/) | Enable two-way chat between users and agents directly in your workflow. This module ties together everything you’ve built so far into a real-time, interactive AI experience. | Code Link |
 | 4 | [Sales Agent to Find the Right Customer with AI](https://aminajavaid30.github.io/agents-in-action/sales-agent-to-find-the-right-customer/) | To be added | Code Link |
 | 5 | [Build a Chatbot that Knows Your Documents](https://aminajavaid30.github.io/agents-in-action/301-webhook-rag/) | To be added | Code Link |
 | 6 | [Build Your Own Perplexity Clone](https://aminajavaid30.github.io/agents-in-action/401-webhook-rag-with-internet-search/) | To be added | Code Link |
