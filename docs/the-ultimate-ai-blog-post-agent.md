@@ -1,4 +1,5 @@
 # The Ultimate AI Blog Post Agent
+## 🔀 Workflow: [Blog Post Agent](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/blog_post_agent)
 ### Your AI Content Creator with Deep Research and Professional Publishing Pipeline
 
 Today, we're diving into one of the most sought-after applications of AI agents: **intelligent content creation and automated blog writing**!
