@@ -1,7 +1,7 @@
 # 💬 Chatbot that Knows Your Documents (OpenRouter + Product Management Agent)
 ## 🔀 Workflow: [Chatbot with RAG](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/chatbot-that-knows-your-documents)
 
-This folder contains the **Webhook + Retrieval-Augmented Generation (RAG)** workflow for **n8n**, powered by **OpenRouter**’s _deepseek-chat_ model.
+This blog contains the **Webhook + Retrieval-Augmented Generation (RAG)** workflow for **n8n**, powered by **OpenRouter**’s _deepseek-chat_ model.
 It demonstrates how prompt wording and topic specificity change the AI’s response — while adding a **RAG tool for Product Management insights**.
 
 ---
