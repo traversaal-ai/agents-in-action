@@ -1,4 +1,5 @@
 # The Ultimate AI Research Assistant
+## 🔀 Workflow: [Research Assistant]()
 ### The missing component of intelligent research with dual-search capabilities 
 
 Today, we're diving into one of the most powerful applications of AI agents: intelligent research and information retrieval!
