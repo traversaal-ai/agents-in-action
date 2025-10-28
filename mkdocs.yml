@@ -6,6 +6,7 @@ nav:
   - Chapter 01 - From LLMs to AI Agents: from-llms-to-ai-agents.md
   - Chapter 02 - Agents are Here and They are Staying: agents-are-here-and-they-are-staying.md
   - Chapter 03 - n8n - Build Your First Agent Workflow:
+    - n8n - Your No-Code Platform for Building AI Agents: meet-n8n.md
     - Hello n8n - Your First Agent Workflow: 101-hello-n8n.md
     - Webhook - The Superpower that Connects Your Backend and Frontend: 201-basic-webhook.md
     - Connect n8n to Lovable using Webhooks: 301-lovable-webhook-n8n.md
