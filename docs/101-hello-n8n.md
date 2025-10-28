@@ -1,5 +1,5 @@
 # 💬 Hello n8n — Your First AI Workflow in n8n
-## 🔀 Workflow Link: [Hello n8n](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/101-hello-n8n) 
+## 🔀 Workflow: [Hello n8n](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/101-hello-n8n) 
 
 This folder contains the **“Hello World” AI Workflow** for n8n — now updated to use **OpenRouter** instead of OpenAI.
 It’s the simplest way to see how n8n can connect to a free or low-cost AI model and respond to your messages.
