@@ -1,4 +1,5 @@
 # 🎙️🤖🔎 Book Companion Voice RAG Agent
+### 🔀 Workflow: [Your Book's Voice](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/book-companion-voice-rag-agent)
 
 ## Building an LLM Application (from Scratch)
 
