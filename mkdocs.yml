@@ -13,10 +13,10 @@ nav:
     - Your All in One Lovable for Any Workflow: 401-all-in-one-lovable.md
     - Chat with Your Agents using Webhooks: 411-agents-chat-frontend.md
   - Chapter 04 - Sales Agent to Find the Right Customer: sales-agent-to-find-the-right-customer.md
-  - Chapter 05 - Build a RAG Agent with Webhook: chatbot-that-knows-your-docs.md
-  - Chapter 06 - Connecting Your Agent with RAG and Internet Search: your-own-perplexity-clone.md
-  - Chapter 07 - Connecting Your RAG Agent with Memory: supabase-rag-with-memory.md
-  - Chapter 08 - Voice RAG Agent: book-companion-voice-rag-agent.md
+  - Chapter 05 - Build a Chatbot that Knows Your Documents: chatbot-that-knows-your-docs.md
+  - Chapter 06 - Build Your Own Perplexity Clone: your-own-perplexity-clone.md
+  - Chapter 07 - Teach Your RAG Agent to Remember: supabase-rag-with-memory.md
+  - Chapter 08 - Give Your Book A Voice - The AI Assisted Edition: book-companion-voice-rag-agent.md
   - Chapter 09 - Automate Your Content - YouTube to LinkedIn Agent: youtube-to-linkedin-agent.md
   - Chapter 10 - The Unofficial AirBnb AI Agent: the-unofficial-airbnb-ai-agent.md
   - Chapter 11 - LinkedIn Human in the Loop Agent: linkedin-post-human-in-the-loop.md
