@@ -8,8 +8,6 @@ Today, we're diving into one of the most sought-after applications of AI agents:
 
 # **✍️ What Is an AI Blog Post Agent?**
 
-**Here's the GitHub [link](https://github.com/traversaal-ai/agents-in-action/tree/main/blog_post_agent)**
-
 The AI Blog Post Agent represents the future of research-driven content marketing, a sophisticated system that transforms how content teams create authoritative, well-researched articles at scale.
 
 Unlike simple text generators, this agent follows a systematic seven-step process: gathering strategic bookmarks from various sources, intelligently filtering for the most relevant and authoritative content, scraping and analyzing source material for key insights, conducting deep research to fill gaps and provide unique perspectives, generating comprehensive articles with research-backed insights, managing text length and chunking for optimal readability, and finally publishing to platforms like Notion with proper formatting and team notifications.
