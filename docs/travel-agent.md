@@ -1,5 +1,6 @@
-# Day 7: MCP Travel Agent
-### Build a Fully Functional ReAct Travel Agent using n8n
+# Fully Functional Agent Loop - The Travel Agent
+## 🔀 Workflow: [Travel Agent](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/travel-agent)
+### Build a Fully Functional ReAct Travel Agent with MCP using n8n
 
 ![AI Travel Assistant Workflow](images/travel-assistant.png)
 
