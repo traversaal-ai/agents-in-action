@@ -2,13 +2,7 @@
 ## Workflow: [Sales Prospects Agent](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/sales-porspects-agent)
 ### Learn how to build an AI Agent that finds you the right customers for your product
 
-[Hamza Farooq](https://github.com/hamzafarooq) and Bhavna Jain
-
-Welcome back to Day 2 of our AI agents journey!
-
-I'm [Hamza](https://www.linkedin.com/in/hamzafarooq/), and I'm thrilled to guide you from theory to practice today. Yesterday, we explored the fascinating world of AI agents and their four evolutionary levels. Today, we're rolling up our sleeves and building something real.
-
-In today's session, we'll dive deep into **n8n**—the workflow automation platform that will become your secret weapon for creating Level 2 agents. By the end of this lesson, you'll have built and deployed your very first working sales prospect agent that can automatically research leads, qualify them, and populate your CRM.
+In today's lesson, we'll dive deep into **n8n**—the workflow automation platform that will become your secret weapon for creating Level 2 agents. By the end of this lesson, you'll have built and deployed your very first working sales prospect agent that can automatically research leads, qualify them, and populate your CRM.
 
 This is an important tool, as we’ve used this very tool to help us land customers!
 
@@ -17,12 +11,12 @@ This is an important tool, as we’ve used this very tool to help us land custom
 
 By the end of today's lesson, you'll have hands-on experience with:
 
-- 🔧 n8n Fundamentals: Understanding the platform that powers thousands of automated workflows
-- 🏗️ Workflow Architecture: How to design reliable, scalable agent workflows
-- 🎣 Sales Prospecting: Building an agent that finds and qualifies leads automatically
-- 🔗 API Integration: Connecting your agent to real-world systems like LinkedIn, CRMs, and databases
-- 📊 Data Processing: Teaching your agent to analyze and score prospects
-- 🚀 Deployment: Making your agent live and accessible
+- 🔧 **n8n Fundamentals**: Understanding the platform that powers thousands of automated workflows
+- 🏗️ **Workflow Architecture**: How to design reliable, scalable agent workflows
+- 🎣 **Sales Prospecting**: Building an agent that finds and qualifies leads automatically
+- 🔗 **API Integration**: Connecting your agent to real-world systems like LinkedIn, CRMs, and databases
+- 📊 **Data Processing**: Teaching your agent to analyze and score prospects
+- 🚀 **Deployment**: Making your agent live and accessible
 
 ---
 
