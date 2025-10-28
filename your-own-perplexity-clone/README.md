@@ -1,4 +1,4 @@
-# 🛰️ 401 — Webhook + RAG + Internet Search (AWS Knowledge Agent)
+# 🛰️ Build Your Own Perplexity Clone - Webhook + RAG + Internet Search (AWS Knowledge Agent)
 
 This folder contains the **Webhook + RAG + Internet Search** workflow for n8n.
 It extends `301` by adding a **web search fallback** for **non-S3 AWS** questions, while still using a **vector store (RAG)** for **S3** queries, and politely refusing **non-AWS** topics.
