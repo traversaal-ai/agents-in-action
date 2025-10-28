@@ -13,8 +13,8 @@ nav:
     - Your All in One Lovable for Any Workflow: 401-all-in-one-lovable.md
     - Chat with Your Agents using Webhooks: 411-agents-chat-frontend.md
   - Chapter 04 - Sales Agent to Find the Right Customer: sales-agent-to-find-the-right-customer.md
-  - Chapter 05 - Build a RAG Agent with Webhook: 301-webhook-rag.md
-  - Chapter 06 - Connecting Your Agent with RAG and Internet Search: 401-webhook-rag-with-internet-search.md
+  - Chapter 05 - Build a RAG Agent with Webhook: chatbot-that-knows-your-docs.md
+  - Chapter 06 - Connecting Your Agent with RAG and Internet Search: your-own-perplexity-clone.md
   - Chapter 07 - Connecting Your RAG Agent with Memory: supabase-rag-with-memory.md
   - Chapter 08 - Voice RAG Agent: book-companion-voice-rag-agent.md
   - Chapter 09 - Automate Your Content - YouTube to LinkedIn Agent: youtube-to-linkedin-agent.md
