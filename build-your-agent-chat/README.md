@@ -48,14 +48,11 @@ export const WEBHOOK_URL = "https://n8n.yourdomain.com/webhook/ai-chat";
 
 ---
 
-### 4️⃣ Run the App
+### 4️⃣ Paste it into 💖 Loveable!
 
-```bash
-npm install
-npm run dev
-```
+Paste the entire updated prompt to your Loveable and enjoy the magic!
 
-Then open [http://localhost:5173](http://localhost:5173)
+---
 
 ✨ **Every reload = a new color theme!**
 No other setup required.
