@@ -1,4 +1,5 @@
 # 🛰️ Build Your Own Perplexity Clone
+## 🔀 Workflow: [Perplexity-Clone](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/your-own-perplexity-clone)
 
 This folder contains the **Webhook + RAG + Internet Search** workflow for n8n.
 It extends `301` by adding a **web search fallback** for **non-S3 AWS** questions, while still using a **vector store (RAG)** for **S3** queries, and politely refusing **non-AWS** topics.
