@@ -1,6 +1,6 @@
 # ✍️ LinkedIn Post Human-in-the-Loop Agent
 ## 🔀 Workflow: [LinkedIn Post](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/linkedpost-human-in-the-loop)
-This folder contains workflows and configurations for **semi-automated LinkedIn post generation and publishing** using n8n and AI.
+This blog contains workflows and configurations for **semi-automated LinkedIn post generation and publishing** using n8n and AI.
 
 ---
 
