@@ -1,5 +1,3 @@
-<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmtjYmpyaHdiYncwcXVjc21kOWNheGdsZHI2NnF3YTI1ZGZtZjE1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zUwHGTclRb7W/giphy.gif" alt="Workflow Creator" style="width:100%;height:600px;object-fit:cover;border-radius:12px;" />
-
 # 🛠️ Workflow Creator
 
 This folder contains the **Workflow Creator Agent** for n8n and automation projects.
