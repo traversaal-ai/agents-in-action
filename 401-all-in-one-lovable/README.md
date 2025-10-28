@@ -91,3 +91,15 @@ npm install
 # Start development server
 npm run dev
 ```
+
+---
+
+## 🎓 Learn More
+
+Ready to go deeper?  
+Check out these courses:
+
+- [AI Bootcamp: _For Leaders & Managers_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- [Agent Engineering Bootcamp: _For Developers & Engineers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+
+👉 These resources expand on the workflows here and show how to apply AI + n8n in real projects.
