@@ -1,4 +1,4 @@
-# 💬 301 — Webhook + RAG (OpenRouter + Product Management Agent)
+# 💬 Chatbot that Knows Your Documents (OpenRouter + Product Management Agent)
 
 This folder contains the **Webhook + Retrieval-Augmented Generation (RAG)** workflow for **n8n**, powered by **OpenRouter**’s _deepseek-chat_ model.
 It demonstrates how prompt wording and topic specificity change the AI’s response — while adding a **RAG tool for Product Management insights**.
