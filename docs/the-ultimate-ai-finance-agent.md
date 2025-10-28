@@ -1,4 +1,5 @@
 # The Ultimate AI Finance Agent
+## 🔀 Workflow: [Finance Agent](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/finance-agent)
 ### Your AI Financial Analyst for Real-Time Market Research and Investment Intelligence
 
 Today, we're diving into one of the most impactful applications of AI agents: intelligent financial analysis and real-time market research!
