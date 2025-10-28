@@ -1,4 +1,5 @@
 # YouTube to LinkedIn Agent
+## 🔀 Workflow: [YouTube to LinkedIn](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/youtube-to-linkedin)
 ### Automated Content Generation
 
 Today, we're taking your agent-building skills to the next level! In the previous session, you built your first AI sales prospecting agent that automatically finds and qualifies leads.
