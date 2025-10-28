@@ -1,4 +1,5 @@
 # Your All in One Lovable for Any Workflow - AI Webhook Chat Interface
+## 🔀 Workflow: [All in One Lovable](https://github.com/aminajavaid30/agents-in-action/blob/substack-blogs/docs/401-all-in-one-lovable.md) 
 
 A lightweight, customizable chat interface that connects to any webhook-based AI service or chatbot backend. Perfect for developers who want a ready-to-use frontend for their AI APIs.
 
