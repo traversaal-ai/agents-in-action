@@ -1,7 +1,7 @@
 # 🪝 Webhook - The Superpower that Connects Your Backend and Frontend  
 ## 🔀 Workflow: [Basic Webhook](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/201-basic-webhook) 
 
-This folder contains the **Basic Webhook workflow** for n8n.
+This blog contains the **Basic Webhook workflow** for n8n.
 It shows the simplest “**HTTP in → AI out**” pattern using a **Webhook**, **AI Agent**, **OpenRouter**, and **Memory**.
 
 ---
