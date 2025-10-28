@@ -1,4 +1,4 @@
-# 💬 Hello n8n — Your First AI Workflow in n8n
+# 💬 Hello n8n — Your First Agent Workflow
 ## 🔀 Workflow: [Hello n8n](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/101-hello-n8n) 
 
 This folder contains the **“Hello World” AI Workflow** for n8n — now updated to use **OpenRouter** instead of OpenAI.
