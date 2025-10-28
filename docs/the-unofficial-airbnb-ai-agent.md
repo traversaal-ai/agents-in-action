@@ -1,4 +1,5 @@
 # The Unofficial Airbnb AI Agent
+## 🔀 Workflow: [Airbnb Agent](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/airbnb-agent)
 ### The missing component of Airbnb connected with MCP
 
 Today, we're diving into one of the most exciting applications of AI agents, **intelligent search and recommendation systems**!
