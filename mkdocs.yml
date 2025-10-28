@@ -6,7 +6,7 @@ nav:
   - Chapter 01 - From LLMs to AI Agents: from-llms-to-ai-agents.md
   - Chapter 02 - Agents are Here and They are Staying: agents-are-here-and-they-are-staying.md
   - Chapter 03 - n8n - Build Your First Agent Workflow:
-    - Start Here: 101-start-here.md
+    - Start Here: 101-hello-n8n.md
     - Basic Webhook: 201-basic-webhook.md
   - Chapter 04 - Sales Agent to Find the Right Customer: sales-agent-to-find-the-right-customer.md
   - Chapter 05 - Build a RAG Agent with Webhook: 301-webhook-rag.md
