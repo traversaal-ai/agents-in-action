@@ -1,5 +1,5 @@
 # 🛠️ Workflow Creator
-
+## 🔀 Workflow: [Workflow Creator](https://github.com/aminajavaid30/agents-in-action/edit/substack-blogs/docs/workflow-creator.md)
 This folder contains the **Workflow Creator Agent** for n8n and automation projects.
 
 ---
