@@ -1,0 +1,243 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.query }}",
+        "options": {
+          "systemMessage": "You are an **AI Agent** for demonstrating how wording in a prompt changes the response.\n\nRules:\n- Keep replies short (2–3 sentences).\n- Use clear, everyday language.\n- If the request is vague, give a general answer and point out that adding detail would improve it.\n- If the request is more specific, show how the answer becomes more tailored.\n- Prefer using AWS-related examples when relevant.\n\nExamples:\nUser: \"Tell me about the cloud\"\nAI: \"Cloud computing means using servers on the internet for storage and compute instead of running everything yourself.\"\nAI note: \"That was general because the prompt was general.\"\n\nUser: \"Tell me about AWS storage\"\nAI: \"AWS offers storage services like S3 for objects, EBS for block storage, and Glacier for archiving.\"\nAI note: \"Adding 'AWS storage' narrowed the focus.\"\n\nUser: \"Tell me about S3 storage classes\"\nAI: \"Amazon S3 has classes like Standard, Infrequent Access, and Glacier, each optimized for different cost and access needs.\"\nAI note: \"The extra detail about S3 storage classes shaped the answer.\"\n\nYou have access to a RAG tool to answer questions about Product Management, make sure to always use it when asked any question about product management\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [896, 320],
+      "id": "0217f0b3-7f2a-4c87-9233-a983349ade15",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "content": "🌐 WEBHOOK (POST)\nReads JSON under body.*\n\nExpected keys:\n- query (string, required)\n- username (string, recommended) → session key\n\nExample body:\n{\n  \"query\": \"Two fun facts about Sydney\",\n  \"username\": \"demo-user-1\"\n}\n",
+        "height": 200,
+        "width": 288
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [608, 112],
+      "typeVersion": 1,
+      "id": "c070c8e8-251e-426a-86f1-de0edb7d8ffb",
+      "name": "Overview Explanation1"
+    },
+    {
+      "parameters": {
+        "content": "↩️ RESPOND TO WEBHOOK\nReturns AI reply to the caller\n- Plain text or small JSON (config)\n- Keep it simple for this level\n",
+        "height": 120,
+        "width": 288
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [1376, 208],
+      "typeVersion": 1,
+      "id": "2761aaf2-6373-473c-938c-7bd4b99e1432",
+      "name": "Overview Explanation2"
+    },
+    {
+      "parameters": {
+        "content": "🧠 AI AGENT\n- Shows how wording changes the response\n- Vague → general cloud/AWS answer\n- Specific → tailored AWS/S3 answer\n- Keeps replies short, clear, 2–3 sentences\n",
+        "height": 184,
+        "width": 304,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [960, 128],
+      "typeVersion": 1,
+      "id": "c7050881-7bee-4185-9d3b-cdadc29efc06",
+      "name": "Overview Explanation3"
+    },
+    {
+      "parameters": {
+        "content": "🗂️ MEMORY (window)\nsessionKey = body.username\n- Same username → shared context across calls\n- Different username → fresh session\n",
+        "height": 136,
+        "width": 288,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [1264, 688],
+      "typeVersion": 1,
+      "id": "d689185c-6ffb-480b-b0b5-796cb96055e5",
+      "name": "Overview Explanation4"
+    },
+    {
+      "parameters": {
+        "content": "🤖 OPENROUTER CHAT MODEL\nModel: deepseek-chat\n- Fast & Free Tier\n- Temperature ~0.2 for consistency\n",
+        "height": 104,
+        "width": 288,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [528, 528],
+      "typeVersion": 1,
+      "id": "24d803be-d4c1-4662-80f1-9a01b6a96ad8",
+      "name": "Overview Explanation5"
+    },
+    {
+      "parameters": {
+        "content": "# Basic Webhook → OpenRouter (with Memory)\n\n🔌 **Entry Point**\n- Client sends **POST JSON** to the n8n **Webhook**\n- Reads `body.query` (required) and `body.username` (recommended)\n- Workflow must be **Active** → use the **Production URL**\n\n🧠 AI Agent\n- Short, plain-English replies (2–3 sentences)\n- If vague → general cloud/AWS answer + suggest adding detail\n- If specific → provide a more tailored AWS/S3-focused answer\n\n🤖 **OpenRouter**\n- Model: deepseek-chat\n- Fast and Free Tier\n- Tip: temperature ≈ **0.2** for consistency\n\n🗂️ **Memory**\n- `sessionKey = body.username`\n- Same username → shared context across calls\n- Different username → fresh session\n\n↩️ **Response**\n- Returns the AI reply to the caller (plain text or small JSON)\n\n🧪 **Test Quickly**\n- cURL / Postman / Colab (make a copy → paste **Production** Webhook URL into `url`/`WEBHOOK_URL`)\n\n🔐 **Notes**\n- Don’t send secrets in `query`\n- Ensure `Content-Type: application/json`\n- Rate limiting / auth can be added in later levels\n",
+        "height": 736,
+        "width": 1216,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [-64, -240],
+      "typeVersion": 1,
+      "id": "cf999038-e91a-407b-aa28-6fdeb21571c9",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "cc748180-1392-4012-bdb8-48453dcb87dd",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [688, 384],
+      "id": "a7a19a17-caee-4302-b7a0-f24329ba1f73",
+      "name": "Webhook",
+      "webhookId": "cc748180-1392-4012-bdb8-48453dcb87dd"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.3,
+      "position": [1264, 352],
+      "id": "222bf8b3-1f88-4f19-bea8-362593cca7da",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Webhook').item.json.body.username }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [1008, 544],
+      "id": "5367bff4-cb16-41a0-9878-87be850f154c",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "toolDescription": "A RAG tool to get learnings about best practices for Product Management",
+        "method": "POST",
+        "url": "https://pro-documents.traversaal-api.com/documents/search",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "your_traversaal_api_auth_brearer_token_here"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters0_Value', `What are best practices for PM role?`, 'string') }}"
+            },
+            {
+              "name": "generation",
+              "value": "false"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [1168, 544],
+      "id": "598953a6-99ed-49e2-b073-859361c68143",
+      "name": "RAG Tool"
+    },
+    {
+      "parameters": {
+        "model": "deepseek/deepseek-chat",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [864, 544],
+      "id": "e528fae6-6451-41f1-8c7c-db43add733f7",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "xAg3fMfhFLtzi6jZ",
+          "name": "OpenRouter account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RAG Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "52f3ea1091e7549d03d6d6af8d10ffb0eb258a70b8ac87a64741364349b14adc"
+  }
+}
