@@ -137,6 +137,28 @@ Farooq, H. (2025). *Agentic AI System Design for PMs*
 
 📌 Tagging & mentions are always appreciated! 😊
 
+## 🧠 Contribute
+
+We welcome community builds! If you've worked on an interesting agent, automation, or frontend workflow:
+- Fork this repo
+- Submit a pull request with a new project folder
+- Add clear README + `n8n` file + code/demo
+
+Let’s build the agentic internet — together.
+
+---
+
+## 📬 Stay in the Loop
+
+Follow [@hamzafarooq](https://www.linkedin.com/in/hamzafarooq/) on LinkedIn
+📬 Subscribe to the **Agents in Action** newsletter → [Join here](https://boringbot.substack.com)
+
+---
+
+## License
+
+APACHE 2.0 License — use, remix, and deploy freely (with attribution)
+
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
 - 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
