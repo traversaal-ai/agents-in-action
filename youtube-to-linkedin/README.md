@@ -52,11 +52,10 @@ This workflow automates the process of turning YouTube videos into LinkedIn post
 ## 📚 References
 - 📝 For help, see the sticky notes in the workflow or contact the creator listed in the workflow metadata.
 
-## 🎓 Learn More
-Want to build and customize more AI agents like this?\
-🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
-💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)\
-📂 [GitHub: Agents in Action](https://github.com/traversaal-ai/agents-in-action)
+## 🎓 Ready to Level-Up?
+Join our courses on Maven and never stop learning:
+- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
+- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
 
 <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnhxcHZkNXVrbmk4Y3Fxazk0aHFqbHplbDZueWRtMXUxNGFxNXF2bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ASH5ovgLK95jIKRSYy/giphy.gif" alt="YouTube to LinkedIn Automation" style="width:100vw;height:700px;object-fit:contain;border-radius:12px;" />
 
