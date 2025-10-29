@@ -1,59 +1,75 @@
 # Agents in Action
 🚀 **Build AI Agents Like a Pro!**
 
-Welcome to the Open Sourced version of my course on AI Agents.
+Welcome to my course on AI Agents.
 
-This course is one of the top-rated courses on building AI Agents using no-code/low-code tools. So far, I’ve taught this course to over 1500 professionals, at MAVEN, Stanford, UCLA and University of Minnesota, helping them gain a deep understanding of the levels of agentic architecture, enterprise-grade Retrieval Augmented Generation (RAG), and open source agentic products deployment.
+This course is one of the top-rated courses on building AI Agents using no-code/low-code tools. So far, I’ve taught this course to over 1500 professionals, at MAVEN, Stanford Continuing Studies, UCLA and University of Minnesota, helping them gain a deep understanding of the levels of agentic architecture, enterprise-grade Retrieval Augmented Generation (RAG), and open source agentic products deployment.
 
 Unlike most courses, this course teaches you how to think about solving real-world problems using agentic AI combined with no-code tools and enabling you to design, build, and deploy your own custom AI products and solutions.
 
 ---
 
 ## 📌 Learning Outcomes
-- Gain a comprehensive understanding of Large Language Models (LLMs)
-- Understand the applications of GenAI in organizations
-- Learn about AI Product Life Cycle
-- Understand AI Agents and Levels of Agentic Architecture
-- Prompt Engineering and Context Engineering
-- Tools deep dive: n8n and no-code workflows
-- Integrating frontend interfaces with n8n
-- Construct and deploy real-world applications using No-code tools
-- Model Context Protocol (MCP)
-- Building full-stack AI Agents with MCP
-- Understanding reasoning agents that can think and plan
-- Learn about Guardrails and fine-tuning
+By the end of this series, you will be able to:
+1. **Understand the evolution of AI agents** — from Large Language Models (LLMs) to autonomous, tool-using systems capable of reasoning, memory, and planning.
+2. **Master n8n as a no-code AI automation platform**, learning to build, connect, and orchestrate intelligent workflows visually.
+3. **Use webhooks to connect frontends and backends**, enabling real-time, two-way communication between users and AI systems.
+4. **Design and deploy full-stack AI agents for real-world applications** — including chatbots, sales assistants, research tools, and content automation systems.
+5. **Implement Retrieval-Augmented Generation (RAG)** for document-aware chatbots and knowledge-driven agents.
+6. **Add long-term memory and context retention to AI workflows** using databases like Supabase for personalization and persistence.
+7. **Integrate voice, UI, and API tools** to create multimodal, interactive AI experiences that go beyond text-based interaction.
+8. **Automate real-world processes** (e.g., lead generation, content publishing, research synthesis) with AI-human collaboration loops.
+9. **Build and evaluate advanced agentic** systems that combine reasoning loops, internet search, and multi-tool orchestration.
+10. **Create a meta-agent that builds other agents**, gaining the ability to auto-generate, configure, and deploy intelligent workflows from within n8n itself.
 
 ---
 
 ## 📢 Who is This Course For?
-This course has no prerequisites. It is for everyone who is willing to learn about AI Agents and wants to build and deploy their own AI products.
+No prerequisites. Just curiosity.
+
+Agents in Action is for anyone who wants to learn, build, and launch AI agents — without writing complex code.
+
+You’ll discover how LLMs evolve into full AI agents, use n8n to automate workflows, connect webhooks and APIs, and deploy real-world systems — from chatbots and sales agents to voice assistants and research tools.
+
+Build confidently, think agentically, and bring your own AI products to life.
+
+Whether you’re a developer, product manager, researcher, or simply an AI enthusiast — Agents in Action will take you from understanding the basics of LLMs to creating full-stack, production-ready AI workflows.
 
 📌 What You’ll Learn:
 
-✔ Agents and levels of agentic architecture 
+✔ The evolution of **AI Agents** — from LLMs to autonomous, tool-using systems
 
-✔ Applications of GenAI in organizations
+✔ Core concepts of **agentic architecture** — memory, planning, and tool integration
 
-✔ Use of no-code tools including n8n
+✔ Real-world **GenAI applications** across sales, research, content, and automation
 
-✔ Deploy you own AI agents and solutions 
+✔ Building intelligent workflows with **no-code tools** like n8n and Lovable
 
-✔ Address safety and security in AI applications 
+✔ Using **webhooks and APIs** to connect backends and frontends
+
+✔ Designing **RAG-powered chatbots** and voice-enabled agents
+
+✔ Implementing **memory, reasoning, and human-in-the-loop** systems
+
+✔ Deploying and scaling your own **AI products and solutions**
+
+✔ Ensuring **safety, security, and reliability** in agentic AI applications
 
 ---
 
 ## 📚 What’s Included?
-✅ 6 in-depth modules covering AI agents and their practical application
+✅ **16 hands-on chapters** — from AI fundamentals to full-stack agent deployment
 
-✅ 12 real-world AI agents with code and documentation
+✅ **Step-by-step projects covering real-world AI agents**:
+Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow Builders
 
-✅ Interactive live sessions and direct instructor access
+✅ **Ready-to-run n8n workflows** with complete documentation and GitHub repos
 
-✅ Guided feedback & reflection
+✅ **No-code + low-code tutorials** to help you connect APIs, webhooks, and frontends
 
-✅ Private community of peers
+✅ **Community support** to share ideas, troubleshoot, and collaborate
 
-✅ Certificate upon completion
+✅ **Certificate of completion** showcasing your applied AI and automation skills
 
 ---
 
@@ -117,3 +133,8 @@ If you use my course material, content, or research in your work, please credit 
 Farooq, H. (2025). *AI Bootcamp: Generative AI Beyond the Hype*
 
 📌 Tagging & mentions are always appreciated! 😊
+
+## 🎓 Ready to Level-Up: 
+Join our courses on Maven and never stop learning:\
+🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)\
+💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
