@@ -1,15 +1,16 @@
 site_name: Agents in Action
 theme:
   name: material
+
 nav:
   - Why we built this course: index.md
   - Chapter 01 - From LLMs to AI Agents: from-llms-to-ai-agents.md
   - Chapter 02 - Agents are Here and They are Staying: agents-are-here-and-they-are-staying.md
   - Chapter 03 - n8n - Build Your First End-to-End Agent:
       - 3a. Introducing Lovable: lovable.md
-      - 3b. Intoducing n8n and Building Your First Workflow: meet-n8n.md
+      - 3b. Introducing n8n and Building Your First Workflow: meet-n8n.md
       - 3c. Connecting n8n and Lovable via Webhooks: lovable-webhook-n8n.md
-    Chapter 04 - Sales Agent to Find the Right Customer: sales-agent-to-find-the-right-customer.md
+  - Chapter 04 - Sales Agent to Find the Right Customer: sales-agent-to-find-the-right-customer.md
   - Chapter 05 - Build a Chatbot that Knows Your Documents: chatbot-that-knows-your-docs.md
   - Chapter 06 - Build Your Own Perplexity Clone: your-own-perplexity-clone.md
   - Chapter 07 - Teach Your RAG Agent to Remember: supabase-rag-with-memory.md
