@@ -77,7 +77,7 @@ Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow B
 
 | Chapter# | Title | Description | n8n Workflow |
 |---------|-------|-------------|------| 
-| 0 | [Why we built this course?](https://aminajavaid30.github.io/agents-in-action/) | Agents in Action has been created to demystify AI agents and show that anyone, not just developers, can build, understand, and deploy intelligent systems using simple, no-code tools like n8n and Lovable. |  |
+| 0 | [Why we built this course?](https://aminajavaid30.github.io/agents-in-action/) | We built **Agents in Action** to demystify AI agents and show that anyone, not just developers, can build, understand, and deploy intelligent systems using simple, no-code tools like n8n and Lovable. |  |
 | 1 | [From LLMs to AI Agents](https://aminajavaid30.github.io/agents-in-action/from-llms-to-ai-agents/) | Discover how Large Language Models evolve into fully functional AI agents. Learn the core pillars—memory, tools, and planning loops—that transform passive chatbots into proactive, autonomous digital workers capable of thinking, acting, and learning. |  |
 | 2 | [Agents are Here and They are Staying](https://aminajavaid30.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | Explore how AI is evolving from generating answers to taking actions — marking the dawn of intelligent, tool-using agents that think, plan, and execute real-world tasks. |  |
 | 3 | Build Your First End-to-End Agent |  |  |
