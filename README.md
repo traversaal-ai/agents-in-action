@@ -130,7 +130,7 @@ If you use my course material, content, or research in your work, please credit 
 
 🔹 Proper citation format:
 
-Farooq, H. (2025). *AI Bootcamp: Generative AI Beyond the Hype*
+Farooq, H. (2025). *Agentic AI System Design for PMs*
 
 📌 Tagging & mentions are always appreciated! 😊
 
