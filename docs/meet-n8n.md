@@ -82,8 +82,7 @@ It gives you:
 
 Whether you’re automating reports, coordinating agents, or running production-grade RAG pipelines — **n8n is your starting point for AI-native workflows**.
 
-## 🎓 Learn More
-Want to learn and build using n8n? These are the best resources you could look into.\ 
-🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
-💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)\
-📂 [GitHub: Agents in Action](https://github.com/traversaal-ai/agents-in-action)
+## 🎓 Ready to Level-Up?
+Join our courses on Maven and never stop learning:
+- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
+- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
