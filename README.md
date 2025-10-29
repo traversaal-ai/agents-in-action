@@ -112,7 +112,7 @@ Unlike most AI courses, this course teaches you how to solve a real-world proble
 By the end, you’ll be able to:
 
 ✅ Build highly effective Agentic AI applications
-
+https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs
 ✅ Deploy cost-efficient and scalable AI solutions
 
 ## ⭐ What Students Are Saying
