@@ -2,7 +2,7 @@
 
 As you begin building AI agents with n8n, you’ll soon want a way to **interact with them in real time** — to chat, test ideas, and experience your workflows as a user would. That’s where **Lovable** comes in.
 
-💡 What is Lovable?
+## 💡 What is Lovable?
 
 Lovable is a lightweight, open-source frontend designed to make your AI workflows **feel alive**. Think of it as a simple chat interface that connects directly to your backend via **webhooks** — allowing you to send prompts, receive responses, and visualize agent behavior instantly.
 
