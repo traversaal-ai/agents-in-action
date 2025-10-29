@@ -1,0 +1,358 @@
+{
+  "name": "webhook-rag-internet-v2",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.query }}",
+        "options": {
+          "systemMessage": "You are an **AI Agent** for demonstrating how wording in a prompt changes the response.\n\nRules:\n- Keep replies detailed as received from tools\n- Use clear, everyday language.\n- If the request is vague, give a general answer and point out that adding detail would improve it.\n- If the request is more specific, show how the answer becomes more tailored.\n\n\nExamples:\nUser: \"Tell me about the cloud\"\nAI: \"Cloud computing means using servers on the internet for storage and compute instead of running everything yourself.\"\nAI note: \"That was general because the prompt was general.\"\n\nUser: \"Tell me about AWS storage\"\nAI: \"AWS offers storage services like S3 for objects, EBS for block storage, and Glacier for archiving.\"\nAI note: \"Adding 'AWS storage' narrowed the focus.\"\n\nUser: \"Tell me about S3 storage classes\"\nAI: \"Amazon S3 has classes like Standard, Infrequent Access, and Glacier, each optimized for different cost and access needs.\"\nAI note: \"The extra detail about S3 storage classes shaped the answer.\"\n\nYou have access to a RAG tool to answer questions about Product Management, make sure to always use it when asked any question about product management\n\nYou also have access to Internet Search, make sure to use when you are asked non Product Management Related questions\n\nFor answers returned using Internet Search or RAG, please return all the URLs"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        880,
+        580
+      ],
+      "id": "9f6ecd43-7f41-4b18-9463-afffe912638a",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "content": "🌐 WEBHOOK (POST)\nReads JSON under body.*\n\nExpected keys:\n- query (string, required)\n- username (string, recommended) → session key\n\nExample body:\n{\n  \"query\": \"Two fun facts about Sydney\",\n  \"username\": \"demo-user-1\"\n}\n",
+        "height": 200,
+        "width": 288
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        580,
+        360
+      ],
+      "typeVersion": 1,
+      "id": "90c34a66-97a7-4fc5-9d71-b3077b2d0aae",
+      "name": "Overview Explanation1"
+    },
+    {
+      "parameters": {
+        "content": "↩️ RESPOND TO WEBHOOK\nReturns AI reply to the caller\n- Plain text or small JSON (config)\n- Keep it simple for this level\n",
+        "height": 120,
+        "width": 288
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1360,
+        460
+      ],
+      "typeVersion": 1,
+      "id": "0cb6bc10-c83d-428f-bff7-da8d55b468aa",
+      "name": "Overview Explanation2"
+    },
+    {
+      "parameters": {
+        "content": "🧠 AI AGENT\n- Shows how wording changes the response\n- Vague → general cloud/AWS answer\n- Specific → tailored AWS/S3 answer\n- Keeps replies short, clear, 2–3 sentences\n",
+        "height": 184,
+        "width": 304,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        940,
+        380
+      ],
+      "typeVersion": 1,
+      "id": "dcfc9553-a6d2-4372-858a-6c2855d6b0ca",
+      "name": "Overview Explanation3"
+    },
+    {
+      "parameters": {
+        "content": "🗂️ MEMORY (window)\nsessionKey = body.username\n- Same username → shared context across calls\n- Different username → fresh session\n",
+        "height": 136,
+        "width": 288,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1040,
+        1040
+      ],
+      "typeVersion": 1,
+      "id": "ab62cf2b-f0fe-44f4-93e4-0c4d3a79ee24",
+      "name": "Overview Explanation4"
+    },
+    {
+      "parameters": {
+        "content": "🤖 OPENROUTER CHAT MODEL\nModel: deepseek-chat\n- Fast & Free Tier\n- Temperature ~0.2 for consistency\n",
+        "height": 104,
+        "width": 288,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        500,
+        780
+      ],
+      "typeVersion": 1,
+      "id": "957315d7-3e8c-4a4d-ba01-60f6ada21c6a",
+      "name": "Overview Explanation5"
+    },
+    {
+      "parameters": {
+        "content": "# Basic Webhook → OpenRouter (with Memory)\n\n🔌 **Entry Point**\n- Client sends **POST JSON** to the n8n **Webhook**\n- Reads `body.query` (required) and `body.username` (recommended)\n- Workflow must be **Active** → use the **Production URL**\n\n🧠 AI Agent\n- Short, plain-English replies (2–3 sentences)\n- If vague → general cloud/AWS answer + suggest adding detail\n- If specific → provide a more tailored AWS/S3-focused answer\n\n🤖 **OpenRouter**\n- Model: deepseek-chat\n- Fast and Free Tier\n- Tip: temperature ≈ **0.2** for consistency\n\n🗂️ **Memory**\n- `sessionKey = body.username`\n- Same username → shared context across calls\n- Different username → fresh session\n\n↩️ **Response**\n- Returns the AI reply to the caller (plain text or small JSON)\n\n🧪 **Test Quickly**\n- cURL / Postman / Colab (make a copy → paste **Production** Webhook URL into `url`/`WEBHOOK_URL`)\n\n🔐 **Notes**\n- Don’t send secrets in `query`\n- Ensure `Content-Type: application/json`\n- Rate limiting / auth can be added in later levels\n",
+        "height": 736,
+        "width": 1216,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -80,
+        20
+      ],
+      "typeVersion": 1,
+      "id": "d35d9bab-6864-4478-986a-6c31ee8867e6",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        500,
+        560
+      ],
+      "id": "895f7c49-2354-45c5-9dfe-6860c32c51c5",
+      "name": "When chat message received",
+      "webhookId": "f2f9090e-307a-4511-94c6-c76a8a02a88e"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "cc748180-1392-4012-bdb8-48453dcb87dd",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        660,
+        640
+      ],
+      "id": "acf0f2f9-46ac-4cc3-9492-068b65cb33ba",
+      "name": "Webhook",
+      "webhookId": "cc748180-1392-4012-bdb8-48453dcb87dd"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.3,
+      "position": [
+        1240,
+        600
+      ],
+      "id": "26b47ebf-6882-417b-b3d9-c8caae9e00fb",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Webhook').item.json.body.username }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        980,
+        800
+      ],
+      "id": "d4dd9572-e6e8-416e-b3e1-3c503ba58a9e",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "toolDescription": "A RAG tool to get learnings about best practices for Product Management",
+        "method": "POST",
+        "url": "https://pro-documents.traversaal-api.com/documents/search",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJudEUxQ3BWcEhJT0RMZE1kNDF4MEl3TXRnbiIsImlhdCI6MTc2MDY1Nzg5NSwidXNlcklkIjoidXNlcl8ybnRFMUNwVnBISU9ETGRNZDQxeDBJd010Z24iLCJvcmdhbmlzYXRpb25JZCI6Im9yZ18ybndUU001VjFYeGtGcFlkT29oQU40ZTU0OXkiLCJwcm9qZWN0SWRzIjpbImNtYXZqMW5lazAwMDF1OW5hdzM5c3lxOGkiXX0.WUlDWmQ87iwNJ4vnHK8TDk2hiWiFfP7BZqgfOBhoKPCoiQ7uKYrIUHSChe3S6Yw5rf2Y7U7-hHUaxY56PjzB9-iPDa0t2VS2Vve8jj0s3e85nVBQRwkJcSZvoaTZrWLOwdIlmp15WfoUT1X8DCsPsYkMFrp58Gs2UNzhlV7rgnUlbJBcREtLcckXiVvuQrvWx76jvEy0Zk_T2ffiLUssZ8KwWH--vNzca3vSbu7Gk_8MmZ65bokqAeAvvjyKwpoNTnmCCA-vBogS4rxVEMaqckBeDEQCTPY1TPtiFai6u1M_yCg8G8Xx-1OAFd5cgdKX8iwv9y188vtymObE7NzZew"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters0_Value', `What are best practices for PM role?`, 'string') }}"
+            },
+            {
+              "name": "generation",
+              "value": "false"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        1160,
+        900
+      ],
+      "id": "7df1bed1-36c8-4d47-8dba-df39d60edd7a",
+      "name": "RAG Tool"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {
+          "maxTokens": 2500
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        860,
+        860
+      ],
+      "id": "57fc1ce8-4063-46fd-bce5-8fcb52c4f37e",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "1NYcjHdurohDfhOk",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Returns internet search",
+        "method": "POST",
+        "url": "https://api-ares.traversaal.ai/live/predict",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "ares_6f3b6c6e6de6210b0c24af89d6786fbbfd300e3b16805a28af54c964fda6a5a5"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters0_Value', ``, 'string') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        1460,
+        800
+      ],
+      "id": "6fe4f96b-3a59-47f1-9777-522856e6a71b",
+      "name": "Internet Search"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        []
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RAG Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Internet Search": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "04f1f300-17a2-4cb5-990a-f1237011b79e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1725aaf255f271a2cb370b9051de0a61864aaf0b262c35ad3f624929f92bfcff"
+  },
+  "id": "fHrpSOG0rNsUkqJi",
+  "tags": []
+}
