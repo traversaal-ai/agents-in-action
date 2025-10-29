@@ -101,7 +101,7 @@ Create a new workflow in the n8n editor.
 - Add a Chat Trigger node to receive input.
 - Add an AI Agent node and connect your OpenAI or Anthropic model.
 - Link the trigger to the AI node, then click Execute Workflow.
-- 
+
 Now, when you say “Hello,” the AI replies — your first agentic workflow is alive!
 
 It’s simple but introduces a key pattern: trigger → AI reasoning → response.
