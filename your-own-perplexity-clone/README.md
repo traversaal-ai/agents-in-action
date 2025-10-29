@@ -163,12 +163,9 @@ curl -X POST "$WEBHOOK_URL" \
 
 ---
 
-## 🎓 Learn More
-
-Ready to go deeper?  
-Check out these courses:
-
-- [AI Bootcamp: _For Leaders & Managers_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
-- [Agent Engineering Bootcamp: _For Developers & Engineers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+## 🎓 Ready to Level-Up?
+Join our courses on Maven and never stop learning:
+- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
+- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
 
 👉 These resources expand on the workflows here and show how to apply AI + n8n in real projects.
