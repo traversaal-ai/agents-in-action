@@ -154,11 +154,10 @@ curl -X POST https://your-n8n-domain/webhook/ce08af64-8da6-4297-9eef-5efe7a9b972
 
 ---
 
-## 🎓 Learn More
-Want to build and customize more AI agents like this?\
-🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
-💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)\
-📂 [GitHub: Agents in Action](https://github.com/traversaal-ai/agents-in-action)
+## 🎓 Ready to Level-Up?
+Join our courses on Maven and never stop learning:
+- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
+- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
 
 ## Contribute
 Open to contributions! Fork, modify, and raise issues.
