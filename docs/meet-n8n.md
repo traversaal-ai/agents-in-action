@@ -48,7 +48,7 @@ Once running, you’ll see the n8n Canvas, where you drag, drop, and connect nod
 
 needed
 
-🧱 Core Building Blocks
+## 🧱 Core Building Blocks
 
 Every n8n workflow is built from a few simple yet powerful components:
 
