@@ -1,94 +1,92 @@
-# 🪩 Agents In Action — AI Webhook Chat App
-
-A beautiful, ready-to-use **React + TypeScript** chat interface that connects directly to your **n8n workflow webhook**.
-Every time you reload, the app automatically generates a fresh, modern color theme — no setup required.
+Here’s a **friendly, simple README** in the same “loveable” style and tone — ready for your repo 👇
 
 ---
 
-## 🎨 Recreate in Lovable
+# 💬 Build a Perplexity-Style AI Chat App
 
-Copy the complete prompt from **[prompt.md](prompt.md)** and paste it into [Lovable](https://lovable.dev).
-It will generate the full project structure and code instantly.
-
----
-
-## ✨ Features
-
-- 🌈 **Auto-Generated Theme** — new color palette on every load
-- 💬 **Chat UI** — smooth animations, timestamps, and “thinking…” loader
-- 🧠 **n8n Integration** — connects to any **Production Webhook URL** (no auth needed)
-- 💾 **Local Storage** — remembers your display name between sessions
-- 🧹 **Clear Chat** — one click to start fresh anytime
-- 📱 **Responsive Design** — works beautifully on desktop and mobile
+A beautiful, minimal chat interface that connects directly to your **n8n workflow**.
+Every message you send goes straight to your AI workflow — and comes back as an instant, smart reply 🤖✨
 
 ---
 
-## 🚀 Quick Start
+## 🚀 What You’ll Build
 
-### 1️⃣ Activate Your Workflow
-
-Make sure your **n8n workflow** is active and ready to receive messages.
-
----
-
-### 2️⃣ Copy the Production Webhook URL
-
-In n8n, open your workflow → click on the **Webhook node** → copy the **Production URL**
-(example: `https://n8n.yourdomain.com/webhook/ai-chat`)
+- 🏠 **Setup Page:** User enters their name
+- 💬 **Chat Page:** Type messages → get AI responses from n8n
+- 💾 **Local History:** Messages stay even after refresh
+- 🧹 **Clear Chat:** Start fresh anytime
+- ⏳ **“Thinking…” Loader:** See when AI is working
+- ⚡ **Error Handling:** Friendly toasts if something goes wrong
 
 ---
 
-### 3️⃣ Paste It into the Config in [prompt.md](/build-your-agent-chat/prompt.md)
+## 🔗 Connect Your n8n Workflow
 
-Open `src/config.ts` and replace the placeholder with your webhook:
+1. **Activate** your n8n workflow
+2. Copy the **Production Webhook URL** (⚠️ _not the test one!_)
+3. Open the project → go to `src/config.ts`
+4. Replace the placeholder:
 
-```typescript
-export const WEBHOOK_URL = "https://n8n.yourdomain.com/webhook/ai-chat";
+   ```ts
+   export const WEBHOOK_URL = ">>YOUR_PRODUCTION_WEBHOOK_URL<<";
+   ```
+
+5. Run the app — that’s it 🎉
+
+---
+
+## 📦 Data Flow
+
+### 📨 Request (sent to n8n)
+
+```json
+{
+  "query": "user's question",
+  "username": "username"
+}
 ```
 
----
+### 📬 Response (from n8n)
 
-### 4️⃣ Paste it into 💖 Loveable!
+n8n can reply with either:
 
-Paste the entire updated prompt to your Loveable and enjoy the magic!
+```json
+{
+  "output": "AI assistant's answer"
+}
+```
 
----
+or
 
-✨ **Every reload = a new color theme!**
-No other setup required.
+```json
+[
+  {
+    "output": "AI assistant's answer"
+  }
+]
+```
 
----
-
-## 🧭 How It Works
-
-1. You enter your **name** → saved in browser storage.
-2. You type a message → sent via `POST` to your n8n webhook.
-3. n8n returns the response → shown as the assistant’s reply.
-4. All chat history stays local until cleared.
-
----
-
-## 🪄 Tips
-
-If you don’t see a response:
-
-- Double-check that your **workflow is active**
-- Make sure you used the **Production**, not Test, webhook URL
-- Check your browser console for errors
+💡 Make sure your app handles both — and ignores empty or invalid replies gracefully.
 
 ---
 
-## 💡 Built With
+## ❤️ Built-in Goodness
 
-- React + TypeScript
-- Tailwind CSS + shadcn/ui
-- lucide-react icons
-- sonner toasts
-- Vite dev server
+- Smart response parsing 🧠
+- Local storage for chats 💾
+- Auto-refresh themes 🎨
+- No extra setup — just plug in your webhook and go 🚀
 
 ---
 
-## 🧑‍💻 Learn More
+### 🧠 Tips
 
-Want to learn how this was built step-by-step?
-Join the **AI Agents Bootcamp** → [maven.com/boring-bot](https://maven.com/boring-bot)
+If you see “thinking…” for too long, check:
+
+- Your n8n workflow is active ✅
+- You’re using the **Production Webhook URL** 🌐
+- The workflow actually returns `output` in its JSON 🧾
+
+---
+
+Would you like me to add a short **PR description** (for your `frontend/build-your-agent-chat` branch) to go with this README — matching the repo’s tone and emoji style?
