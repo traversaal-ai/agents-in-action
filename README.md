@@ -136,5 +136,5 @@ Farooq, H. (2025). *AI Bootcamp: Generative AI Beyond the Hype*
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:\
-🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)\
-💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+1. 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)\
+2. 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
