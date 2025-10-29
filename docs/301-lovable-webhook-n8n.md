@@ -51,7 +51,7 @@ If you added a **Respond to Webhook** node, make sure it’s placed after the pr
 - Common issue: Lovable UI expects a prompt response within a timeout. If your n8n workflow takes too long, Lovable may throw an error. Indeed users report this: “workflow … took between 40-75 secs … front-end returned ‘Error communicating with AI agent. Load failed’” when too slow. 
 - Also ensure your webhook URL is correct and accessible (HTTPS, no firewall) and if you’re using a reverse proxy that you’ve set WEBHOOK_URL in n8n config. 
 
-## Bonus: Sample mini-workflow
+## Working Sample: Mini-Workflow (n8n + Lovable) 
 
 Here’s a simple workflow you might build:
 
