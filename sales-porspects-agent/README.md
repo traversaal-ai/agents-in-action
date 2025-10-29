@@ -38,11 +38,10 @@ The Sales Prospects Agent automates the process of defining, collecting, and man
 - `ICP_builder_webhook.json` — Webhook automation workflow
 - `info.txt` — Additional information or documentation
 
-## 🎓 Learn More
-Want to build and customize more AI agents like this?\
-🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
-💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)\
-📂 [GitHub: Agents in Action](https://github.com/traversaal-ai/agents-in-action) 
+## 🎓 Ready to Level-Up?
+Join our courses on Maven and never stop learning:
+- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
+- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
 
 <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdyY3F6N29zNHQ2b21lMTJxb201bDhrYnNmZG4ybXV4YnpyZGRsbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cjudSgwvgj8tqmTwN9/giphy.gif" alt="Sales Automation" style="width:100%;height:600px;object-fit:cover;border-radius:12px;" />
 
