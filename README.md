@@ -29,13 +29,13 @@ No prerequisites. Just curiosity.
 
 Agents in Action is for anyone who wants to learn, build, and launch AI agents — without writing complex code.
 
-You’ll discover how LLMs evolve into full AI agents, use n8n to automate workflows, connect webhooks and APIs, and deploy real-world systems — from chatbots and sales agents to voice assistants and research tools.
+You’ll discover how LLMs evolve into full AI agents, use Lovable to create frontends, use n8n to automate workflows, connect webhooks and APIs, and deploy real-world systems — from chatbots and sales agents to voice assistants and research tools.
 
-Build confidently, think agentically, and bring your own AI products to life.
+`Build confidently, think agentically, and bring your own AI products to life.`
 
 Whether you’re a developer, product manager, researcher, or simply an AI enthusiast — Agents in Action will take you from understanding the basics of LLMs to creating full-stack, production-ready AI workflows.
 
-📌 What You’ll Learn:
+### 📌 What You’ll Learn:
 
 ✔ The evolution of **AI Agents** — from LLMs to autonomous, tool-using systems
 
@@ -134,7 +134,7 @@ Farooq, H. (2025). *AI Bootcamp: Generative AI Beyond the Hype*
 
 📌 Tagging & mentions are always appreciated! 😊
 
-## 🎓 Ready to Level-Up: 
+## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:\
 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)\
 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
