@@ -37,7 +37,6 @@ All projects here are part of the following courses on Maven:
 
 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
 
-These are hands-on, code-first/no-code programs where 10,000+ learners have already joined us to:
-- Build autonomous, multi-agent systems using n8n and Lovable
+These are hands-on, code-first/no-code programs where 10,000+ learners have already joined us to build autonomous, multi-agent systems using n8n and Lovable.
 
 ---
