@@ -154,11 +154,10 @@ curl -X POST "$WEBHOOK_URL" \
 
 ---
 
-## 🎓 Learn More
-
-Want to go deeper into AI workflows and agents?
-
-- [**AI Bootcamp: Generative AI Beyond the Hype**](https://maven.com/boring-bot/ml-system-design) — for leaders & builders.
-- [**Agent Engineering Bootcamp**](https://maven.com/boring-bot/advanced-llm) — for developers scaling real AI systems.
-
 > 🪄 Learn how to chain OpenRouter, RAG, and custom APIs in your own workflows — the same pattern used here.
+
+---
+
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+
+![AI Bootcamp](images/ai-bootcamp.png)
