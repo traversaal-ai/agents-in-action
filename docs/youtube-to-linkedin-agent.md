@@ -292,3 +292,7 @@ This agent doesn't just save time—it enables consistency at scale, which is th
 But we're just getting started. The principles you've learned today—multi-stage processing, human-AI collaboration, and performance feedback loops—will apply to every sophisticated agent you build going forward.
 
 ---
+
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+
+![AI Bootcamp](images/ai-bootcamp.png)
