@@ -305,3 +305,7 @@ This isn't just about finding information faster—it's about combining the brea
 The compound effect of better research capabilities drives decision quality, competitive advantage, and organizational learning. You've just built the foundation for next-generation knowledge management systems.
 
 ---
+
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+
+![AI Bootcamp](images/ai-bootcamp.png)
