@@ -207,18 +207,6 @@ But, and this is crucial, most organizations are still building simple chatbots 
 
 ---
 
-## **🚀 Next Session’s Deep Dive**
-On **Day 2**, we'll get hands-on with **n8n**, the workflow automation platform that will serve as our foundation for building Level 2 agents. You'll learn to:
-
-- Set up automated workflows that connect multiple systems
-- Create your first tool-enabled agent that can interact with real APIs
-- Understand the architecture patterns that make agents reliable and scalable
-- **Build and deploy your first working Level 2 agent**
-
-We'll move from theory to practice, giving you a working agent you can immediately use and expand upon.
-
----
-
 ## **💪 Your Agent Journey Starts Here**
 Remember, the goal isn't just to understand AI agents, it's to build systems that can genuinely augment human intelligence and productivity. Over the next 9 days, we'll progressively build more sophisticated agents, culminating in a multi-agent system that can handle complex, real-world workflows.
 
