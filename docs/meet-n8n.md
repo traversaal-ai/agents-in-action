@@ -76,17 +76,17 @@ Start workflows automatically:
 
 ### 🤖 AI & Logic Nodes
 
-- Message a Model — send a prompt to an LLM (OpenAI, Anthropic, etc.)
-- AI Agent — create an autonomous agent with memory and tools
-- If / Switch / Merge — control logic and branches
-- Loop / Sub-workflow — iterate or modularize logic
+- **Model** — send a prompt to an LLM (OpenAI, Anthropic, etc.)
+- **AI Agent** — create an autonomous agent with memory and tools
+- **If / Switch / Merge** — control logic and branches
+- **Loop / Sub-workflow** — iterate or modularize logic
 
 ### ⚙️ Integration & Utility Nodes
 
-- HTTP Request — call any API
-- Google Sheets / Notion / Slack / Supabase / Airtable
-- Code Node — run JavaScript/Python snippets
-- Wait — manage flow timing
+- **HTTP Request** — call any API
+- **Google Sheets** / Notion / Slack / Supabase / Airtable
+- **Code Node** — run JavaScript/Python snippets
+- **Wait** — manage flow timing
 
 ### 💬 Human-in-the-loop
 Pause the workflow and wait for a human decision (approval or input) before continuing — a key pattern for AI-assisted automation.
