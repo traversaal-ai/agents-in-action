@@ -25,3 +25,9 @@ Lovable acts as the **bridge between your backend logic and the user experience*
 By combining Lovable with n8n, you’ll transform static automation flows into **living, conversational systems** — agents that don’t just act intelligently but also feel intelligent to the user.
 
 **Lovable makes your agents lovable — intuitive, interactive, and ready to talk.**
+
+---
+
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+
+![AI Bootcamp](images/ai-bootcamp.png)
