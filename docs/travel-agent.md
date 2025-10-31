@@ -155,9 +155,8 @@ When reasoning becomes a service?
 
 The future of AI isn’t just smarter models — it’s systems that work together, adapt, and solve. You now know how to build them.
 
-## **Want to build your next big idea?**
-Check out my AI Agents for Enterprise course on Maven and be a part of something bigger and join hundreds of builders to develop enterprise level agents.
+---
+
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
 ![AI Bootcamp](images/ai-bootcamp.png)
-
-
