@@ -91,18 +91,16 @@ Start workflows automatically:
 ### 💬 Human-in-the-loop
 Pause the workflow and wait for a human decision (approval or input) before continuing — a key pattern for AI-assisted automation.
 
-## 👋 Build Your First Workflow
-
+## 💬 Hello n8n — Your First Agent Workflow
 Let’s build your first automation to see n8n in action.
 
-# 💬 Hello n8n — Your First Agent Workflow
-## ✨ Overview
+### ✨ Overview
 
 This workflow demonstrates how a **chat message** can trigger an n8n workflow that talks to an **AI model via OpenRouter** and shows how prompt wording changes the response.
 
 ---
 
-## 🚀 Key Features
+### 🚀 Key Features
 
 - 💬 **Chat Trigger** — starts when you send a message in n8n chat.
 - 🧠 **AI Agent** — the “brain” that follows simple communication rules.
@@ -111,7 +109,7 @@ This workflow demonstrates how a **chat message** can trigger an n8n workflow th
 
 ---
 
-## 🔄 How It Works
+### 🔄 How It Works
 
 ```mermaid
 flowchart LR
@@ -127,7 +125,7 @@ flowchart LR
 3. 🤖 **OpenRouter**’s `deepseek/deepseek-chat` model generates a reply.
 4. 🗂️ **Memory** retains recent chat turns so it feels continuous.
 
-## ⚙️ Setup
+### ⚙️ Setup
 
 1. 🗃️ Import **`start-here.json`** into your **n8n Cloud** or self-hosted workspace.
 2. 🔑 Create an **OpenRouter API key** (free tier available) → [https://openrouter.ai/keys](https://openrouter.ai/keys)
@@ -138,8 +136,7 @@ flowchart LR
 
 4. 🚀 Open the **Chat view** in n8n, and start typing to talk to your workflow.
 
-
-## 🧩 Node Summary
+### 🧩 Node Summary
 
 | Node                         | Purpose                                       | Notes                                             |
 | ---------------------------- | --------------------------------------------- | ------------------------------------------------- |
@@ -150,7 +147,7 @@ flowchart LR
 
 ---
 
-## 📝 Try It Yourself
+### 📝 Try It Yourself
 
 Type these messages in chat and compare how the AI adjusts:
 
@@ -161,7 +158,7 @@ Type these messages in chat and compare how the AI adjusts:
 👉 Notice how the **specificity** of your prompt changes the **depth and tone** of the response.
 👉 This is the foundation of understanding how **prompt engineering** affects output.
 
-## 💡 Why OpenRouter?
+### 💡 Why OpenRouter?
 
 OpenRouter is an open gateway that lets you access multiple AI models (like Anthropic, Mistral, DeepSeek, etc.) with a single API key.
 
