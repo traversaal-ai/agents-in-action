@@ -208,7 +208,7 @@ But, and this is crucial, most organizations are still building simple chatbots 
 ---
 
 ## **💪 Your Agent Journey Starts Here**
-Remember, the goal isn't just to understand AI agents, it's to build systems that can genuinely augment human intelligence and productivity. Over the next 9 days, we'll progressively build more sophisticated agents, culminating in a multi-agent system that can handle complex, real-world workflows.
+Remember, the goal isn't just to understand AI agents, it's to build systems that can genuinely augment human intelligence and productivity. In this course, we'll progressively build more sophisticated agents, culminating in a multi-agent system that can handle complex, real-world workflows.
 
 This is your opportunity to get ahead of the curve, to become one of the practitioners who truly understands how to harness this technology effectively. The future belongs to those who can collaborate with AI agents as seamlessly as they do with human colleagues.
 
