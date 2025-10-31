@@ -2,7 +2,9 @@
 
 ## Why connect Lovable → n8n
 
-**Lovable** gives you a front-end app builder (forms, UI, etc) and you can trigger backend logic via webhooks. **n8n** gives you the automation/orchestration engine with triggers, nodes, AI, integrations. 
+**Lovable** gives you a front-end app builder (forms, UI, etc) and you can trigger backend logic via webhooks. 
+
+**n8n** gives you the automation/orchestration engine with triggers, nodes, AI, and integrations. 
 
 Together you can:
 - Capture user input in Lovable → send it to n8n for processing (AI model, data lookup, etc)
@@ -39,7 +41,7 @@ Before you begin, you MUST have:
 ## Step 3: Handle the data in n8n
 
 Once Lovable hits the webhook, n8n receives the payload. Inside your workflow you can:
-  - Inspect incoming data ($json["fieldName"])\
+  - Inspect incoming data ($json["fieldName"])
   - Use an AI node, e.g., send the input to a ChatGPT model
   - Store results in Google Sheets, Supabase, Airtable, etc (via integration nodes)
   - Send back a response to Lovable with summary or next step
@@ -50,8 +52,8 @@ If you added a **Respond to Webhook** node, make sure it’s placed after the pr
 - Fill out the form in Lovable → check that the workflow in n8n triggers (check Executions tab).
 - In the Webhook node in n8n you can view the “Test URL” mode to listen for the event.
 - If something fails: check the payload structure, HTTP method, and response status.
-- Common issue: Lovable UI expects a prompt response within a timeout. If your n8n workflow takes too long, Lovable may throw an error. Indeed users report this: “workflow … took between 40-75 secs … front-end returned ‘Error communicating with AI agent. Load failed’” when too slow. 
-- Also ensure your webhook URL is correct and accessible (HTTPS, no firewall) and if you’re using a reverse proxy that you’ve set WEBHOOK_URL in n8n config. 
+- Common issue: Lovable UI expects a prompt response within a timeout. If your n8n workflow takes too long, Lovable may throw an error.
+- Also ensure your webhook URL is correct and accessible.
 
 ## Working Sample: Mini-Workflow (n8n + Lovable) 
 
@@ -72,3 +74,9 @@ Here’s a simple workflow you might build:
 
 ## Takeaways
 Connecting Lovable and n8n via webhooks gives you a powerful, no-code stack: Lovable for UI/frontend, n8n for backend logic & automation. With just a form in Lovable and a webhook trigger in n8n you can build real-time AI workflows, logging, integrations, and return results to users. Once you’ve done it once, you’ll be amazed how many product flows you can build this way.
+
+---
+
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+
+![AI Bootcamp](images/ai-bootcamp.png)
