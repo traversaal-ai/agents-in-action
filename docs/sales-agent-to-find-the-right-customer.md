@@ -239,3 +239,7 @@ Today marks a major milestone in your AI agent journey. You've moved from unders
 But this is just the beginning. The patterns and principles you've learned with n8n will apply to every agent you build going forward. You now understand how to connect systems, process data intelligently, and create automated workflows that add real business value.
 
 ---
+
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+
+![AI Bootcamp](images/ai-bootcamp.png)
