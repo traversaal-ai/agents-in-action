@@ -71,10 +71,6 @@ Rewrites the draft to align with your personal writing style.
 
 ---
 
-## 🎓 Learn More
-Want to build and customize more AI agents like this?\
-🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)\
-💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)\
-📂 [GitHub: Agents in Action](https://github.com/traversaal-ai/agents-in-action)
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
----
+![AI Bootcamp](images/ai-bootcamp.png)
