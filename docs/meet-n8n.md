@@ -42,13 +42,11 @@ With n8n, you can:
 
 You can use n8n in three main ways:
 
-1. n8n Cloud (SaaS) — simplest way to start, hosted by n8n.io
-2. Self-host via Docker (recommended)
-3. VPS Hosting — for 24/7 uptime and full control (For example: Hostinger)
+1. **n8n Cloud** (SaaS) — simplest way to start, hosted by n8n.io
+2. **Self-host** via Docker (recommended)
+3. **VPS Hosting** — for 24/7 uptime and full control (For example: Hostinger)
 
 Once running, you’ll see the n8n Canvas, where you drag, drop, and connect nodes visually.
-
-needed
 
 ## 🧱 Core Building Blocks
 
