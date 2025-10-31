@@ -159,7 +159,7 @@ That’s what we mean when we say "SaaS is dead."
 
 ![Vertical AI Agents](images/vertical-ai-agents.png)
 
-Imagine a world, where didn’t need to write code, introducing, the concept of vibe coding
+Imagine a world, where we didn’t need to write code, introducing, the concept of vibe coding
 
 ![Idea to App](images/idea-to-app.gif)
 
@@ -171,12 +171,6 @@ The key takeaway? The most impactful AI agents aren’t the ones that can do eve
 
 We cut through the noise of flashy AI demos and focus on what truly matters—building practical, robust, and scalable AI agents that solve real business challenges.
 
-Next up: How Agents Think
-
-We’ll dive deeper into the types of agents, from reactive to planning-based, and explore the core design patterns like ReAct, MRKL, and Plan-Act-Reflect.
-
-You’ll start to see how agent behavior emerges from the structures we give them.
-
-Don’t forget to check out my AI Agents for Enterprise course on Maven if you are interested to be a part of something bigger.
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
 ![AI Bootcamp](images/ai-bootcamp.png)
