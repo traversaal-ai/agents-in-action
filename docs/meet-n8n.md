@@ -58,6 +58,7 @@ Every n8n workflow is built from a few simple yet powerful components:
 - **Workflows**: The overall blueprint tying everything together.
 
 n8n includes nodes for almost every scenario:
+
 - **Trigger Nodes**: Start processes automatically (e.g., schedule, webhook, or form submission).
 - **Action Nodes**: Execute tasks like sending messages or creating records.
 - **AI Nodes**: Run prompts, call chat models, or manage AI agents.
@@ -68,10 +69,10 @@ n8n includes nodes for almost every scenario:
 ### 🔔 Trigger Nodes
 
 Start workflows automatically:
-- Schedule Trigger — run daily, weekly, hourly, etc.
-- Webhook Trigger — start when an API call hits your endpoint
-- Manual Trigger — for testing
-- App Triggers — e.g., “When new email arrives in Gmail”
+
+- **Schedule Trigger** — run daily, weekly, hourly, etc.
+- **Webhook Trigger** — start when an API call hits your endpoint
+- **Manual Trigger** — start manually for testing
 
 ### 🤖 AI & Logic Nodes
 
@@ -85,7 +86,7 @@ Start workflows automatically:
 - HTTP Request — call any API
 - Google Sheets / Notion / Slack / Supabase / Airtable
 - Code Node — run JavaScript/Python snippets
-- Wait, Delay, or No Operation — manage flow timing
+- Wait — manage flow timing
 
 ### 💬 Human-in-the-loop
 Pause the workflow and wait for a human decision (approval or input) before continuing — a key pattern for AI-assisted automation.
