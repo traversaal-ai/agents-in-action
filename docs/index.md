@@ -14,9 +14,13 @@ That’s where **Agents in Action** comes in.
 We wanted to **bridge the gap between AI theory and real-world application** — giving you not just the concepts, but also the workflows, integrations, and hands-on projects to bring intelligent systems to life.
 
 This course takes you step-by-step through the evolution of AI agents — from understanding how LLMs reason, to building full-fledged agents that can
+
 - perform deep research,
+  
 - generate useful content,
+  
 - find prospecting customers, and
+  
 - build other agents.
 
 Every chapter is designed with **accessibility and actionability** in mind:
