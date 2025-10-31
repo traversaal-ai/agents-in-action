@@ -95,17 +95,86 @@ Pause the workflow and wait for a human decision (approval or input) before cont
 
 Let’s build your first automation to see n8n in action.
 
-### 🧩 Workflow 1: “Hello AI”
+# 💬 Hello n8n — Your First Agent Workflow
+## ✨ Overview
 
-Create a new workflow in the n8n editor.
+This workflow demonstrates how a **chat message** can trigger an n8n workflow that talks to an **AI model via OpenRouter** and shows how prompt wording changes the response.
 
-- Add a Chat Trigger node to receive input.
-- Add an AI Agent node and connect your OpenAI or Anthropic model.
-- Link the trigger to the AI node, then click Execute Workflow.
+---
 
-Now, when you say “Hello,” the AI replies — your first agentic workflow is alive!
+## 🚀 Key Features
 
-It’s simple but introduces a key pattern: trigger → AI reasoning → response.
+- 💬 **Chat Trigger** — starts when you send a message in n8n chat.
+- 🧠 **AI Agent** — the “brain” that follows simple communication rules.
+- 🤖 **OpenRouter Model** — generates replies using the `deepseek/deepseek-chat` model.
+- 🗂️ **Memory** — keeps short-term context for smoother, natural conversation flow.
+
+---
+
+## 🔄 How It Works
+
+```mermaid
+flowchart LR
+    A["💬 Chat Trigger"] --> B["🧠 AI Agent"]
+    B --> C["🤖 OpenRouter Model (deepseek/deepseek-chat)"]
+    B --> D["🗂️ Memory Buffer"]
+    C --> B
+    D --> B
+```
+
+1. 💬 You send a message in n8n’s built-in Chat view.
+2. 🧠 The **AI Agent** applies short, clear response rules.
+3. 🤖 **OpenRouter**’s `deepseek/deepseek-chat` model generates a reply.
+4. 🗂️ **Memory** retains recent chat turns so it feels continuous.
+
+## ⚙️ Setup
+
+1. 🗃️ Import **`start-here.json`** into your **n8n Cloud** or self-hosted workspace.
+2. 🔑 Create an **OpenRouter API key** (free tier available) → [https://openrouter.ai/keys](https://openrouter.ai/keys)
+3. In **n8n Credentials**, add:
+
+   - **Credential Type:** `OpenRouter API`
+   - **API Key:** paste your key
+
+4. 🚀 Open the **Chat view** in n8n, and start typing to talk to your workflow.
+
+
+## 🧩 Node Summary
+
+| Node                         | Purpose                                       | Notes                                             |
+| ---------------------------- | --------------------------------------------- | ------------------------------------------------- |
+| 💬 **Chat Trigger**          | Starts when a message is received in n8n chat | No external trigger needed                        |
+| 🧠 **AI Agent**              | Applies demo rules: short, simple, clear      | Highlights how prompt specificity changes answers |
+| 🤖 **OpenRouter Chat Model** | Uses `deepseek/deepseek-chat`                 | Fast, inexpensive, OpenAI-compatible              |
+| 🗂️ **Simple Memory**         | Keeps short conversation history              | Makes chat flow naturally                         |
+
+---
+
+## 📝 Try It Yourself
+
+Type these messages in chat and compare how the AI adjusts:
+
+- `Tell me about Paris`
+- `Tell me about Paris as a foodie`
+- `I have eggs and rice`
+
+👉 Notice how the **specificity** of your prompt changes the **depth and tone** of the response.
+👉 This is the foundation of understanding how **prompt engineering** affects output.
+
+## 💡 Why OpenRouter?
+
+OpenRouter is an open gateway that lets you access multiple AI models (like Anthropic, Mistral, DeepSeek, etc.) with a single API key.
+
+**Benefits:**
+
+- 🪙 Often free or cheaper per request
+- 🔄 OpenAI-compatible API (drop-in replacement)
+- 🧩 Works with n8n’s existing AI Agent node out of the box
+
+✅ **You’ve now built your first AI workflow using OpenRouter!**
+From here, you can connect it to external APIs, RAG pipelines, or webhooks to power real applications.
+
+---
 
 ## Wrapping Up
 n8n isn’t just another automation tool — it’s a bridge between AI and orchestration.
