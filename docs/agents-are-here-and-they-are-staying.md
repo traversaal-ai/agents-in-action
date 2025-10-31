@@ -89,6 +89,7 @@ You don’t need an agent that does everything. You need one that knows your wor
 These agents are trained and designed to work within a narrow context - say, finance, healthcare, compliance, or ops. They are not jack of all trades but within their domain they can outperform general-purpose models by a mile.
 
 Let’s take a real-world view of vertical agents:
+
 1. A compliance agent that reads contracts, flags risk, and drafts corrections.
 2. A healthcare agent that updates charts, recommends follow-ups, and ensures HIPAA compliance.
 3. A sales agent that knows your CRM schema, tracks conversions, and drafts custom follow-up emails.
