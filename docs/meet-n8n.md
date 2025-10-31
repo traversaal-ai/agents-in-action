@@ -92,6 +92,8 @@ Start workflows automatically:
 Pause the workflow and wait for a human decision (approval or input) before continuing — a key pattern for AI-assisted automation.
 
 ## 💬 Hello n8n — Your First Agent Workflow
+## 🔀 Workflow: [Hello n8n](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/101-hello-n8n) 
+
 Let’s build your first automation to see n8n in action.
 
 ### ✨ Overview
