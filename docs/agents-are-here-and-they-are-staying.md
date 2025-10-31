@@ -124,6 +124,7 @@ You ask:
 # ***"Show me churn trends for enterprise customers in Q1."***
 
 Here’s what your data analyst agent does:
+
 1. Looks up the right database
 2. Writes SQL based on your schema
 3. Checks for gaps or anomalies
@@ -143,6 +144,7 @@ You don’t need to go to your BI tool and run a query. You say:
 **"Tell me how signups looked across EU vs US last week. Flag anything weird."**
 
 The agent does it all:
+
 - Interprets your intent
 - Writes and runs SQL
 - Builds a chart
