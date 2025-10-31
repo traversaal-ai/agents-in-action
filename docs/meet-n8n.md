@@ -5,6 +5,8 @@ In a world full of no-code tools, n8n stands out as the open-source platform whe
 
 You can automate repetitive tasks, experiment with AI agents, or even coordinate full-scale production systems — all without managing complex infrastructure.
 
+![n8n-logo](images/n8n.png)
+
 ## 🧠 What is n8n?
 
 n8n (short for nodemation) combines “node” — for its modular Node.js foundation — and “mation” — for automation, its core purpose.
