@@ -329,3 +329,7 @@ This isn't just about faster market research—it's about democratizing access t
 The compound effect of better financial intelligence drives smarter investment decisions, improved risk management, and long-term wealth building. You've just built the foundation for next-generation financial advisory services.
 
 ---
+
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+
+![AI Bootcamp](images/ai-bootcamp.png)
