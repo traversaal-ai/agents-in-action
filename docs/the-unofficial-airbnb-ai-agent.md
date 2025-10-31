@@ -295,3 +295,9 @@ Today, you've built something that fundamentally changes how users interact with
 This isn't just about finding accommodations, it's about creating experiences that understand context, learn from interactions, and provide genuinely helpful recommendations. The patterns you've learned apply to any search or recommendation system: e-commerce, job platforms, dating apps, or business directories.
 
 The compound effect of better search experiences drives user satisfaction, conversion rates, and platform loyalty. You've just built the foundation for next-generation user interfaces.
+
+---
+
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+
+![AI Bootcamp](images/ai-bootcamp.png)
