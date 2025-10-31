@@ -110,8 +110,9 @@ Companies adopting vertical agents are reporting 2–5x productivity boosts. Som
 Businesses often struggle with extracting insights from large datasets. A human analyst can take hours or days to clean data, run queries, and generate reports. A well-designed Data Analyst Agent can automate and augment this process, working alongside humans to accelerate decision-making.
 
 Here is the full-stack design of the Data Analyst Agent:
+
 1. **Data Ingestion** – The agent integrates with databases (SQL, Snowflake, BigQuery) and ingests data for analysis.
-2. **Preprocessing and Query Understanding** – Uses an LLM-powered query interpreter to translate natural language requests into structured SQL queries
+2. **Preprocessing and Query Understanding** – Uses an LLM-powered query interpreter to translate natural language requests into structured SQL queries.
 3. **RAG for Contextual Insights** – Retrieves relevant context (past reports, definitions) to generate more accurate insights.
 4. **Guardrails and Verification** – Implements validation layers to ensure query accuracy and prevent hallucinations.
 5. **Report Generation and Visualization** – Outputs clear, structured reports, either as text summaries or interactive dashboards.
