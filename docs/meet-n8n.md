@@ -5,7 +5,7 @@ In a world full of no-code tools, n8n stands out as the open-source platform whe
 
 You can automate repetitive tasks, experiment with AI agents, or even coordinate full-scale production systems — all without managing complex infrastructure.
 
-![n8n-logo](images/n8n.png)
+![n8n-logo](images/n8n-logo.png)
 
 ## 🧠 What is n8n?
 
@@ -117,7 +117,8 @@ It gives you:
 
 Whether you’re automating reports, coordinating agents, or running production-grade RAG pipelines — **n8n is your starting point for AI-native workflows**.
 
-## 🎓 Ready to Level-Up?
-Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
-- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+---
+
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+
+![AI Bootcamp](images/ai-bootcamp.png)
