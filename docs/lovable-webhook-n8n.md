@@ -9,6 +9,8 @@ Together you can:
 - n8n does logic, maybe calls an LLM, maybe writes to database, then returns result to Lovable
 - You end up with a connected stack: UI (Lovable) + logic/automation (n8n) with no full backend required
 
+![Lovable-n8n](images/webhook.png)
+
 ## Pre-requisites
 
 Before you begin, you MUST have:
