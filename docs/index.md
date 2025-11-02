@@ -1,89 +1,49 @@
 # 🤖 Agents in Action
+## 💡 Why We Built This Course
 
-Welcome to **Agents in Action** — the central open-source playground for building full-stack AI Agents 🚀
+Artificial Intelligence is changing faster than ever but most people still experience it passively, through chatbots and demos. We built **Agents in Action** to change that.
 
-This repo is where we share **real, working agent projects** from our live courses and workshops, including:
+This course was born out of a simple belief:
 
-- 🔗 Frontend interfaces
+`You shouldn’t need a technical background and years of coding experience to build something intelligent and useful with AI.`
+
+Today, **Large Language Models (LLMs)** have evolved into **AI agents** — systems that can think, plan, and take real-world actions. Yet, most existing resources stop at the “chat” level. They explain prompts and APIs but rarely show how to connect models with tools, data, and automation to create something that actually works.
+
+That’s where **Agents in Action** comes in.
+
+We wanted to **bridge the gap between AI theory and real-world application** — giving you not just the concepts, but also the workflows, integrations, and hands-on projects to bring intelligent systems to life.
+
+This course takes you step-by-step through the evolution of AI agents — from understanding how LLMs reason, to building full-fledged agents that can
+
+- perform deep research,
   
-- ⚙️ Backend logic
+- generate useful content,
+  
+- find prospecting customers, and
+  
+- build other agents.
 
-- 🔁 Automation flows using **n8n**
+Every chapter is designed with **accessibility and actionability** in mind:
 
-- 📦 MCP server + webhooks
+- You’ll use **n8n**, a powerful no-code automation platform, to visualize agent logic.
+- You'll learn how to develop interactive frontend for your agents using **Lovable**.
+- You’ll connect **webhooks, APIs, and tools** to make your agents truly interactive.
+- You’ll learn to build **chatbots, RAG systems, research assistants, and more** — all without heavy coding.
 
-- 🛠️ Example datasets, prompts, and use-case templates
+We built this course because we believe the next wave of AI innovation will come not from tech giants, but from **makers, creators, and problem-solvers** like you — people who can think creatively and use simple tools to build meaningful, intelligent solutions.
 
-Whether you're building a Sales Prospecting Agent, a Research Assistant, or a Knowledge Graph-powered Analyst — this is your go-to lab.
+So whether you’re a student, a startup founder, a researcher, or just curious about where AI is headed — this is your invitation to dive in, build your first agent, and become part of the **agentic future**.
 
----
-
-## 🧩 What's Inside?
-
-| Project | Stack | Description |
-|---------|-------|-------------|
-| `101-start-here/` | n8n | Your first workflow in n8n |
-| `201-basic-webhook/` | n8n | Basic webhook using OpenAI |
-| `301-webhook-rag/` | n8n + RAG | Webhook & Retrieval Augmented Generation (RAG) workflow |
-| `401-webhook-rag-with-internet-search/` | n8n + RAG + Search | Webhook with RAG and internet search workflow |
-| `511-agents-chat-frontend/` | Lovable | Agents chat frontend for workflows: 201, 301, 401 |
-| `airbnb-agent/` | React + n8n | Search for your perfect Airbnb stay using AI and automation |
-| `blog_post_agent/` | n8n + AI | Automated blog post generation with deep research sub-workflow |
-| `book-companion-voice-rag-agent/` | n8n + AI + RAG | Voice-enabled book companion for "Building an LLM Application (from Scratch)" |
-| `finance-agent/` | n8n + AI | AI financial analyst workflow |
-| `linkedpost-human-in-the-loop/` | n8n + AI | Human in the loop LinkedIn post generation workflow |
-| `sales-porspects-agent/` | n8n + AI | Build Ideal Customer Profiles and automate sales prospecting |
-| `simplest-rag-internet-serach/` | n8n + AI | AI Research Assistant with Ares internet search & Traversaal Pro RAG |
-| `supabase-rag/` | n8n + AI + RAG | RAG agent with memory |
-| `travel-agent/` | n8n + AI + MCP | AI Travel Assistant with MCP |
-| `webhook-with-memory/` | n8n + Ares | Webhook back and forth with Ares internet search |
-| `workflow-creator/` | n8n | Visual workflow creator and manager for automation projects |
-| `youtube-to-linkedin/` | n8n + React | Turn YouTube videos into LinkedIn posts with human review |
-
-> 💡 Each folder contains frontend code, backend logic, prompt structure, and ready-to-import n8n flows (`.json` files)
-
----
+**Build, connect, and deploy your own AI agents — one workflow at a time.**
 
 ## 📚 Learn While You Build
 
 All projects here are part of the following courses on Maven:
 
-🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)
+🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
 
 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
 
-These are hands-on, code-first/no-code programs where 10,000+ learners have already joined us to:
-- Build autonomous, multi-agent systems
-- Learn MCP, ADK, and Agent-to-Agent (A2A) orchestration
-- Deploy private LLMs & quantized models
-- Construct knowledge graphs & semantic pipelines
-
-### 🔥 **New Cohorts Starting Soon**
-
-- **For Leaders & Managers**: 🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)
-
-- **For Developers & Engineers** 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+These are hands-on, code-first/no-code programs where 10,000+ learners have already joined us to build autonomous, multi-agent systems using n8n and Lovable.
 
 ---
-
-## 🧠 Contribute
-
-We welcome community builds! If you've worked on an interesting agent, automation, or frontend workflow:
-- Fork this repo
-- Submit a pull request with a new project folder
-- Add clear README + `n8n` file + code/demo
-
-Let’s build the agentic internet — together.
-
----
-
-## 📬 Stay in the Loop
-
-Follow [@hamzafarooq](https://www.linkedin.com/in/hamzafarooq/) on LinkedIn
-📬 Subscribe to the **Agents in Action** newsletter → [Join here](https://boringbot.substack.com)
-
----
-
-## License
-
-APACHE 2.0 License — use, remix, and deploy freely (with attribution)
