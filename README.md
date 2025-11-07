@@ -1,5 +1,5 @@
 # Agents in Action
-[🔗 View the website →](https://USERNAME.github.io/REPO)
+## [🔗 View the website →](https://aminajavaid30.github.io/agents-in-action)
 🚀 **Build AI Agents Like a Pro!**
 
 Welcome to my course on AI Agents.
@@ -102,7 +102,7 @@ Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow B
 ---
 
 ## 🔥 Why Take This Course?
-Unlike most AI courses, this course teaches you how to solve a real-world problem usng AI agents with no-code/low-code approach and launch your own startup.
+Unlike most AI courses, this course teaches you how to solve a real-world problem using AI agents with no-code/low-code approach and launch your own startup.
 
 By the end, you’ll be able to:
 
