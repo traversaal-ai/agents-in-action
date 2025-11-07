@@ -1,5 +1,5 @@
 # Agents in Action
-## [🔗 View the website →](https://aminajavaid30.github.io/agents-in-action)
+## [🔗 View the website](https://aminajavaid30.github.io/agents-in-action)
 🚀 **Build AI Agents Like a Pro!**
 
 Welcome to my course on AI Agents.
