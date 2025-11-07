@@ -11,6 +11,7 @@ Unlike most courses, this course teaches you how to think about solving real-wor
 
 ## 📌 Learning Outcomes
 By the end of this series, you will be able to:
+
 1. **Understand the evolution of AI agents** — from Large Language Models (LLMs) to autonomous, tool-using systems capable of reasoning, memory, and planning.
 2. **Master n8n as a no-code AI automation platform**, learning to build, connect, and orchestrate intelligent workflows visually.
 3. **Use webhooks to connect frontends and backends**, enabling real-time, two-way communication between users and AI systems.
@@ -131,14 +132,13 @@ Farooq, H. (2025). *Agentic AI System Design for PMs*
 
 📌 Tagging & mentions are always appreciated! 😊
 
-## Contributors
+## 🧑‍💻 Contributors
 - [Jaya Rajwani](https://github.com/JayaRajwani)
 - [Bhavna Jain](https://substack.com/@bhavnajain)
 - [Yousuf Alvi](https://github.com/yousuf-alvi)
 - [Amina Javaid](https://github.com/aminajavaid30)
 
 ## 🧠 Contribute
-
 We welcome community builds! If you've worked on an interesting agent, automation, or frontend workflow:
 - Fork this repo
 - Submit a pull request with a new project folder
@@ -149,17 +149,16 @@ Let’s build the agentic internet — together.
 ---
 
 ## 📬 Stay in the Loop
-
 Follow [@hamzafarooq](https://www.linkedin.com/in/hamzafarooq/) on LinkedIn
 📬 Subscribe to the **Agents in Action** newsletter → [Join here](https://boringbot.substack.com)
 
 ---
 
 ## License
-
 APACHE 2.0 License — use, remix, and deploy freely (with attribution)
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
+
 - 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
 - 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
