@@ -69,10 +69,6 @@ Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow B
 
 ✅ **No-code + low-code tutorials** to help you connect APIs, webhooks, and frontends
 
-✅ **Community support** to share ideas, troubleshoot, and collaborate
-
-✅ **Certificate of completion** showcasing your applied AI and automation skills
-
 ---
 
 ## 📅 Course Syllabus
