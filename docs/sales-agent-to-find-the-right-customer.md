@@ -242,4 +242,4 @@ But this is just the beginning. The patterns and principles you've learned with 
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design)
