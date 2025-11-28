@@ -1,7 +1,3 @@
-Here’s a **friendly, simple README** in the same “loveable” style and tone — ready for your repo 👇
-
----
-
 # 💬 Build a Perplexity-Style AI Chat App
 
 A beautiful, minimal chat interface that connects directly to your **n8n workflow**.
