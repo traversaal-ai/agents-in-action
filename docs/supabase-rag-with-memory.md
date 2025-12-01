@@ -16,6 +16,8 @@ A powerful Retrieval-Augmented Generation (RAG) chatbot built using **n8n**, com
 
 ## 🏗️ Architecture
 
+![Supabase RAG Architecture](images/supabase-rag-architecture.png)
+
 This workflow has two main pipelines:
 
 ### 1. Document Processing (Setup)
