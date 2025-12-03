@@ -132,6 +132,7 @@ Farooq, H. (2025). *Agentic AI System Design for PMs*
 ## 🧑‍💻 Contributors
 - [Jaya Rajwani](https://github.com/JayaRajwani)
 - [Bhavna Jain](https://substack.com/@bhavnajain)
+- [Taha Hussain](https://github.com/Taha-Traversaal)
 - [Yousuf Alvi](https://github.com/yousuf-alvi)
 - [Amina Javaid](https://github.com/aminajavaid30)
 
