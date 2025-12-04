@@ -1,4 +1,4 @@
-# ✍️ Blog Post Agent
+# ✍️ Apollo - Your Ultimate Blog Post Agent
 
 This folder contains workflows and configurations for automated blog post generation using n8n and AI.
 
