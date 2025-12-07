@@ -1,5 +1,6 @@
 # The Ultimate AI Blog Post Agent
-## 🔀 Workflow: [Blog Post Agent](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/blog_post_agent)
+## 🔀 Workflow: [Apollo - Blog Post Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/Apollo-your-blog-agent)
+## ▶️ Video Walkthrough: [Newsletter Generator Agent](https://www.loom.com/share/9518f88cb6a542b89edead0419c1225d)
 ### Your AI Content Creator with Deep Research and Professional Publishing Pipeline
 
 Today, we're diving into one of the most sought-after applications of AI agents: **intelligent content creation and automated blog writing**!
