@@ -93,7 +93,7 @@ OpenRouter is an open gateway that lets you access multiple AI models (like Anth
 ## 📚 References
 
 - 📘 [OpenRouter API Docs](https://openrouter.ai/docs)
-- 🧩 [n8n LangChain Nodes Overview](https://docs.n8n.io/integrations/builtin/ai/langchain/)
+- 🧩 [n8n Nodes Overview](https://docs.n8n.io/workflows/components/nodes/)
 - 🧠 [DeepSeek-Chat Model Card](https://openrouter.ai/models/deepseek/deepseek-chat)
 
 ---
