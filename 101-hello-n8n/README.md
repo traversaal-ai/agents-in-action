@@ -103,8 +103,8 @@ OpenRouter is an open gateway that lets you access multiple AI models (like Anth
 Want to go beyond “Hello World”?
 Check out:
 
-- [Agentic AI System Design for PMs — _For Leaders & Managers_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
-- [Agent Engineering Bootcamp: Developers Edition — _For Developers & Engineers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+- [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 👉 These courses expand on this workflow and teach you how to build **production-grade AI agents** and **connect them to real data and APIs** using n8n.
 
