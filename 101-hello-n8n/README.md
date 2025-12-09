@@ -38,9 +38,12 @@ flowchart LR
 
 ---
 
+## Architecture
+![Hello n8n](images/hello-n8n.png)
+
 ## ⚙️ Setup
 
-1. 🗃️ Import **`start-here.json`** into your **n8n Cloud** or self-hosted workspace.
+1. 🗃️ Import **`101-hello-n8n.json`** into your **n8n Cloud** or self-hosted workspace.
 2. 🔑 Create an **OpenRouter API key** (free tier available) → [https://openrouter.ai/keys](https://openrouter.ai/keys)
 3. In **n8n Credentials**, add:
 
