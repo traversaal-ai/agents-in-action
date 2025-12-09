@@ -38,7 +38,7 @@ flowchart LR
 
 ---
 
-## Architecture
+## 🏛️ Architecture
 ![Hello n8n](images/hello-n8n.png)
 
 ## ⚙️ Setup
