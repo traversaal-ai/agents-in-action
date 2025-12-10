@@ -8,7 +8,7 @@ It shows the simplest “**HTTP in → AI out**” pattern using a **Webhook**, 
 ## ✨ Overview
 
 Send a POST request to an n8n **Webhook**, pass a prompt, and get a short AI answer back.
-Best tested with the provided **Google Colab notebook**.
+Best tested with the provided **Google Colab notebook** *n8n_test_webhook.ipynb*.
 You can also try with `curl` or Postman.
 
 ---
@@ -64,7 +64,7 @@ graph LR
 
 ## ⚙️ Setup
 
-1. **Import** `201-basic.json` into your n8n Cloud workspace.
+1. **Import** `201_basic_webhook.json` into your n8n Cloud workspace.
 2. **Credentials** → configure **OpenRouter** (API key).
 3. Open the **Webhook** node and **Activate** the workflow (top-right).
 4. Copy the **Production Webhook URL** (not the Test URL).
