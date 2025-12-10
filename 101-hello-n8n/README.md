@@ -38,9 +38,12 @@ flowchart LR
 
 ---
 
+## 🏛️ Architecture
+![Hello n8n](images/hello-n8n.png)
+
 ## ⚙️ Setup
 
-1. 🗃️ Import **`start-here.json`** into your **n8n Cloud** or self-hosted workspace.
+1. 🗃️ Import **`101_hello_n8n.json`** into your **n8n Cloud** or self-hosted workspace.
 2. 🔑 Create an **OpenRouter API key** (free tier available) → [https://openrouter.ai/keys](https://openrouter.ai/keys)
 3. In **n8n Credentials**, add:
 
@@ -90,7 +93,7 @@ OpenRouter is an open gateway that lets you access multiple AI models (like Anth
 ## 📚 References
 
 - 📘 [OpenRouter API Docs](https://openrouter.ai/docs)
-- 🧩 [n8n LangChain Nodes Overview](https://docs.n8n.io/integrations/builtin/ai/langchain/)
+- 🧩 [n8n Nodes Overview](https://docs.n8n.io/workflows/components/nodes/)
 - 🧠 [DeepSeek-Chat Model Card](https://openrouter.ai/models/deepseek/deepseek-chat)
 
 ---
@@ -100,8 +103,8 @@ OpenRouter is an open gateway that lets you access multiple AI models (like Anth
 Want to go beyond “Hello World”?
 Check out:
 
-- [AI Bootcamp — _For Leaders & Managers_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
-- [Agent Engineering Bootcamp — _For Developers & Engineers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+- [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 👉 These courses expand on this workflow and teach you how to build **production-grade AI agents** and **connect them to real data and APIs** using n8n.
 
