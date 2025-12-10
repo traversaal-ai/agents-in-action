@@ -40,6 +40,11 @@ graph LR
 
 ---
 
+## 🏛️ Architecture
+![Basic Webhook](images/basic-webhook.png)
+
+---
+
 ## 🛂 Inputs (JSON Body)
 
 - `query` _(string, required)_ → the user’s prompt/message.
