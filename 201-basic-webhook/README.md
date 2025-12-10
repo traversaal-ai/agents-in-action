@@ -8,7 +8,7 @@ It shows the simplest “**HTTP in → AI out**” pattern using a **Webhook**, 
 ## ✨ Overview
 
 Send a POST request to an n8n **Webhook**, pass a prompt, and get a short AI answer back.
-Best tested with the provided **Google Colab notebook** *n8n_test_webhook.ipynb*.
+Best tested with the provided **Google Colab notebook**.
 You can also try with `curl` or Postman.
 
 ---
@@ -98,7 +98,7 @@ graph LR
   - Click **Runtime → Run all** (or run cells one by one).
   - You should see the HTTP status and the AI’s reply printed.
  
-- **Note:** A Jupyter notebook with detailed comments is present in this folder for reference.
+- **Note:** A Jupyter notebook *n8n_test_webhook.ipynb* with detailed comments is present in this folder for reference.
 
 ---
 
