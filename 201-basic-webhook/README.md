@@ -97,6 +97,8 @@ graph LR
 
   - Click **Runtime → Run all** (or run cells one by one).
   - You should see the HTTP status and the AI’s reply printed.
+ 
+- **Note:** A Jupyter notebook with detailed comments is present in this folder for reference.
 
 ---
 
