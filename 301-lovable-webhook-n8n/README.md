@@ -16,6 +16,16 @@ Every message you send goes straight to your AI workflow — and comes back as a
 
 ---
 
+## Lovable Chat Interface
+
+Use the prompt in _prompt.md_ to build the interface of your chat application. 
+
+Here is what your interface would look like!
+
+![Lovable Chat Interface](images/lovable-chat-interface.png)
+
+---
+
 ## 🔗 Connect Your n8n Workflow
 
 1. **Activate** your n8n workflow
