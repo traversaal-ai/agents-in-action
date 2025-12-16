@@ -12,7 +12,7 @@ Want to build this project from scratch in Lovable? The complete prompt to recre
 
 Here's what the interface to this lovable application would look like!
 
-![All In One Lovable](images/all-in-love-lovable.png)
+![All In One Lovable](images/all-in-one-lovable.png)
 
 ---
 
