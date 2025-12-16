@@ -84,3 +84,14 @@ If you see “thinking…” for too long, check:
 - The workflow actually returns `output` in its JSON 🧾
 
 ---
+
+## 🎓 Learn More
+
+Ready to go deeper?  
+Check out these courses:
+
+- [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+
+👉 These resources expand on the workflows here and show how to apply AI + n8n in real projects.
+
