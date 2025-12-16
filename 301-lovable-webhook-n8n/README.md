@@ -22,7 +22,7 @@ Use the prompt in _prompt.md_ to build the interface of your chat application.
 
 Here is what your interface would look like!
 
-![Lovable Chat Interface](images/lovable-chat-interface.png)
+![Lovable Chat Interface](images/lovable-webhook-n8n-speed.gif)
 
 ---
 
