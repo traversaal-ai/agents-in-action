@@ -16,7 +16,7 @@ Every message you send goes straight to your AI workflow — and comes back as a
 
 ---
 
-## Lovable Chat Interface
+## 💗 Lovable Chat Interface
 
 Use the prompt in _prompt.md_ to build the interface of your chat application. 
 
