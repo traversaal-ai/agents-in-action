@@ -18,13 +18,13 @@ The Blog Post Agent automates the process of generating high-quality blog posts.
 The architecture of **Apollo** consists of a main *orchestrator* and two *sub-workflows* within the main workflow.
 
 ### Apollo - The Main Orchestrator
-![Apollo](blog-post-agent.png)
+![Apollo](images/blog-post-agent.png)
 
 ### Scraper
-![Scraper](scraper.png)
+![Scraper](images/scraper.png)
 
 ### Deep Researcher
-![Deep Researcher](deep-researcher.png)
+![Deep Researcher](images/deep-researcher.png)
 
 ---
 
