@@ -26,7 +26,7 @@ The architecture of **Blog Post Agent** consists of a main *orchestrator* and tw
 ![Scrape Link](images/scrape-link.png)
 
 ### Deep Researcher
-![Deep Researcher](images/deep-researcher.png)
+![Deep Researcher](images/deep-research.png)
 
 ---
 
