@@ -34,7 +34,7 @@ graph TD
 
 ## 🏛️ Architecture
 
-![LISA - Your First Agent](images/lisa-architecture.png)
+![LISA - Your First Agent](images/lisa-first-agent.png)
 
 ---
 
