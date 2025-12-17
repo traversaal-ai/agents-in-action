@@ -50,7 +50,7 @@ graph TD
 
 **For Ares Internet Search:**
 
-* Sign up at [Traversaal](https://api.traversaal.ai)
+* Sign up at [Traversaal Ares API](https://api.traversaal.ai)
 * Navigate to API section and generate an API key
 * Copy the API key for configuration
 
@@ -81,7 +81,7 @@ In the **"Internet Search"** node:
 ```json
 {
   "name": "x-api-key",
-  "value": "your_traversaal_api_key_here"
+  "value": "your_ares_api_key_here"
 }
 ```
 
