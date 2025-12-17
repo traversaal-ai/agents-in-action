@@ -7,7 +7,7 @@
             {
               "id": "5c28393f-6e8b-425b-babb-22eac9ad7238",
               "name": "API_KEY",
-              "value": "ares_a79c77acc353d13a751f576e5ebccef9fd49a002d8b5365a15f104ea760afe43",
+              "value": "your-ares-api-key",
               "type": "string"
             },
             {
@@ -35,10 +35,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -3540,
-        -240
+        -1568,
+        -256
       ],
-      "id": "c8481234-6c42-4105-9cc7-15d68c55b7ba",
+      "id": "09c2b361-df1a-4b47-8e63-c12c1ebc39b6",
       "name": "configuration"
     },
     {
@@ -49,10 +49,10 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        -2980,
+        -1008,
         80
       ],
-      "id": "febd25c4-f56f-436e-9180-e4bdb242f0d7",
+      "id": "1130d18a-75ab-49a1-8105-5e63ffa5c72d",
       "name": "Structured Output Parser"
     },
     {
@@ -67,14 +67,14 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -1480,
-        280
+        496,
+        272
       ],
-      "id": "a310137f-3a37-4550-907f-7d8a53894054",
+      "id": "efa28fab-dd49-4011-a862-20a036d18ea7",
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
-          "id": "1NYcjHdurohDfhOk",
+          "id": "bEv5BFbvv9wAxSoe",
           "name": "OpenAi account"
         }
       }
@@ -87,10 +87,10 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        -2840,
-        -240
+        -864,
+        -256
       ],
-      "id": "a6cb97f7-0839-4cb1-b178-f05c8eb8e80d",
+      "id": "e6cacbc1-9414-4ba5-9b56-6a1c7cd745e6",
       "name": "Split Out"
     },
     {
@@ -101,10 +101,10 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        -2420,
-        -240
+        -448,
+        -256
       ],
-      "id": "33fb3353-dc75-4a47-98dd-a1adfb7ce58b",
+      "id": "d81c080b-5ebb-44f2-abf7-594f3defd170",
       "name": "Split Out1"
     },
     {
@@ -124,10 +124,10 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        -1320,
-        -240
+        656,
+        -256
       ],
-      "id": "6b3e3a8d-8903-4110-808f-298ae3b7550b",
+      "id": "1e455365-6490-4474-83bc-4e01d25dfde8",
       "name": "HTML"
     },
     {
@@ -138,10 +138,10 @@
       "type": "n8n-nodes-base.markdown",
       "typeVersion": 1,
       "position": [
-        -1080,
-        -240
+        896,
+        -256
       ],
-      "id": "144eb6a0-6ea0-4235-8775-ab3afff170a9",
+      "id": "c438ed8c-4e2c-4a39-9264-917080dd9ef3",
       "name": "Markdown"
     },
     {
@@ -152,10 +152,10 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        -360,
-        140
+        1616,
+        144
       ],
-      "id": "0b6954e2-6423-4a82-9d41-90e026967d1f",
+      "id": "11660238-cd4d-4db9-8d4b-ef48639d0396",
       "name": "Structured Output Parser1"
     },
     {
@@ -166,10 +166,10 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        40,
-        120
+        2016,
+        112
       ],
-      "id": "a98370ad-db15-4f71-b762-e51d6ec76a4e",
+      "id": "e5639ca1-8abd-4180-9f2e-92822b11840f",
       "name": "Structured Output Parser2"
     },
     {
@@ -181,10 +181,10 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        740,
-        -240
+        2720,
+        -256
       ],
-      "id": "1ba17311-5f48-4ad8-8c0d-17e103451c19",
+      "id": "b28edf02-59d7-4d77-944b-1441ebf08cab",
       "name": "Aggregate"
     },
     {
@@ -208,10 +208,10 @@
       "type": "n8n-nodes-base.executeWorkflowTrigger",
       "typeVersion": 1.1,
       "position": [
-        -3860,
-        -240
+        -1888,
+        -256
       ],
-      "id": "76d31859-f39d-42f1-857f-ab5f4f4e0f0c",
+      "id": "8173ebc4-915b-44cc-be8d-5d352146d377",
       "name": "When Executed by Another Workflow"
     },
     {
@@ -223,10 +223,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -3580,
-        -420
+        -1616,
+        -432
       ],
-      "id": "4a8dff83-341e-41b8-b282-88980ec265d6",
+      "id": "15212f41-65f1-4ce4-bb66-fb6690985ead",
       "name": "Sticky Note"
     },
     {
@@ -238,10 +238,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2540,
-        -980
+        -576,
+        -992
       ],
-      "id": "55fc4a34-bfc9-4b22-9a89-bb226446e0cb",
+      "id": "db9f5172-963f-4ad6-bd34-50f757b58a31",
       "name": "Sticky Note2"
     },
     {
@@ -253,10 +253,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
       "position": [
-        -3220,
-        -240
+        -1248,
+        -256
       ],
-      "id": "81c0ac26-c250-4dd9-9202-9e3572c5efc1",
+      "id": "1c404443-9387-4c9a-9452-878332190a4f",
       "name": "create search terms"
     },
     {
@@ -281,7 +281,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "={{ [$json['output.search_terms']] }}"
+              "value": "={{ $json['output.search_terms'] }}"
             }
           ]
         },
@@ -290,10 +290,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        -2640,
-        -240
+        -672,
+        -256
       ],
-      "id": "8a6af563-1dcf-4a66-9ab0-3457fde5c008",
+      "id": "136edc3c-6cf0-4c4c-9480-e982fbfef373",
       "name": "search on Custom API",
       "retryOnFail": true
     },
@@ -314,10 +314,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        -1900,
-        -240
+        80,
+        -256
       ],
-      "id": "8e3fdaf8-b742-4449-94f3-36de299f3dc9",
+      "id": "091b6c1f-73b7-4085-b603-8b34938b9d02",
       "name": "get the content of the link",
       "retryOnFail": false,
       "onError": "continueErrorOutput"
@@ -360,10 +360,10 @@
       "type": "n8n-nodes-base.filter",
       "typeVersion": 2.2,
       "position": [
-        -1540,
-        -240
+        432,
+        -256
       ],
-      "id": "dd1113f8-31b2-425b-9610-7c34f2cda82d",
+      "id": "bcc31668-c70e-4450-89d9-e5dd06f35a72",
       "name": "filter out the errors"
     },
     {
@@ -394,10 +394,10 @@
       "type": "n8n-nodes-base.filter",
       "typeVersion": 2.2,
       "position": [
-        -860,
-        -240
+        1120,
+        -256
       ],
-      "id": "88e3f807-ea3e-4b65-9d1b-b184d60a19d0",
+      "id": "f7a100d5-c52a-4499-822c-926f523549c4",
       "name": "filter empty results"
     },
     {
@@ -407,10 +407,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -660,
-        -240
+        1312,
+        -256
       ],
-      "id": "79d008d2-fbbc-44e1-9d40-fb5ece47a8d1",
+      "id": "15cb296f-c1a6-4e70-94db-52f62f538006",
       "name": "cleanup the markdown"
     },
     {
@@ -422,10 +422,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
       "position": [
-        -60,
-        -240
+        1920,
+        -256
       ],
-      "id": "1e92ed3e-b658-4141-adc3-4a3e47513795",
+      "id": "85f7414e-9d53-46d5-91a4-f0b1a057b243",
       "name": "is it relevant?",
       "retryOnFail": true
     },
@@ -438,10 +438,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
       "position": [
-        -440,
-        -240
+        1536,
+        -256
       ],
-      "id": "f01acb37-7873-4d55-81dc-828d415af06f",
+      "id": "2871ef36-2ba3-41db-92bf-b7a70c3d115d",
       "name": "summarize",
       "retryOnFail": true
     },
@@ -473,10 +473,10 @@
       "type": "n8n-nodes-base.filter",
       "typeVersion": 2.2,
       "position": [
-        280,
-        -240
+        2256,
+        -256
       ],
-      "id": "03487b10-05b8-46eb-b628-f1a5d8d922af",
+      "id": "b318b495-a4c5-4af0-9911-caa8b3ea56e7",
       "name": "filter irrelevant"
     },
     {
@@ -514,10 +514,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        520,
-        -240
+        2496,
+        -256
       ],
-      "id": "127044db-0ff9-47aa-bc65-e1f253a50bac",
+      "id": "a3c1cd5c-5529-4300-afbf-66b07d867c05",
       "name": "set fields to return"
     },
     {
@@ -529,10 +529,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1840,
-        120
+        144,
+        112
       ],
-      "id": "cdf4d931-2468-4209-b879-ab4501e6c947",
+      "id": "ab1dcf90-b168-470e-acdb-0629454873a3",
       "name": "Sticky Note1"
     },
     {
@@ -542,10 +542,10 @@
       "type": "n8n-nodes-base.limit",
       "typeVersion": 1,
       "position": [
-        -2200,
-        -240
+        -224,
+        -256
       ],
-      "id": "71e78ff5-de83-4334-bab2-914f9b876547",
+      "id": "edd206e1-93b6-4b3a-8518-8828dfd52c9d",
       "name": "Limit"
     },
     {
@@ -557,10 +557,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -3240,
-        -460
+        -1264,
+        -464
       ],
-      "id": "f9866a5c-503d-45de-8bbc-1adbb73c7bf7",
+      "id": "5a29ce9f-e646-4ffb-ae5f-856ef22e4f2d",
       "name": "Search Terms Note"
     },
     {
@@ -572,10 +572,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2640,
-        -520
+        -672,
+        -528
       ],
-      "id": "99069861-347c-4ec1-9599-df26ec961226",
+      "id": "f68e684b-6a46-44f6-a065-3d02def2b0b1",
       "name": "Web Search Note"
     },
     {
@@ -588,10 +588,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1360,
-        -520
+        624,
+        -528
       ],
-      "id": "538e555e-094d-4400-882c-10b6f3c6de9a",
+      "id": "536eb54c-65d5-43a4-a097-de88e02290fe",
       "name": "Content Processing Note"
     },
     {
@@ -604,10 +604,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -200,
-        -520
+        1776,
+        -528
       ],
-      "id": "234a5843-0289-49c3-9793-c45e49a50809",
+      "id": "57e67dea-af0c-4b0d-a087-53e36d158082",
       "name": "Quality Control Note"
     },
     {
@@ -620,10 +620,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        440,
-        -600
+        2416,
+        -608
       ],
-      "id": "4ab1476f-5469-4a7c-a060-7388917662a5",
+      "id": "5aa72546-77f5-41ee-a6cc-0e59ca491025",
       "name": "Output Assembly Note"
     },
     {
@@ -635,10 +635,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -4120,
-        -580
+        -2144,
+        -592
       ],
-      "id": "b791fd93-3234-4e4a-8b1b-d0485a0b1d0a",
+      "id": "a28404a2-24b6-4a26-949c-21406fdcd372",
       "name": "Workflow Input Note"
     }
   ],
@@ -888,6 +888,6 @@
   "pinData": {},
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "1725aaf255f271a2cb370b9051de0a61864aaf0b262c35ad3f624929f92bfcff"
+    "instanceId": "a4ecec9555f5b06310e132d91f5a9064adeb061b91678daae338206fdb263b04"
   }
 }
