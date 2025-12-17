@@ -26,6 +26,12 @@ This workflow automates the process of searching Airbnb listings based on user q
 
 ---
 
+## 🏛️ Architecture
+
+![Airbnb Agent](images/airbnb-agent.png)
+
+---
+
 ## 🛂 Inputs
 - 🏖️ `query`: Description of the desired Airbnb stay (location, features, dates, etc.)
 - 📧 `email`: User's email address (for results delivery)
