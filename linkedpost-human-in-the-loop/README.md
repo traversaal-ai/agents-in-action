@@ -28,21 +28,15 @@ It continuously gathers articles from AI news feeds, selects the most relevant d
 ## 🧩 Workflow Structure
 
 The workflow is composed of several connected steps:
-
-1. **Article Gathering**
-  - Fetches the latest articles from a chosen RSS feed.
-2. **Article Selection**
-AI filters for highly technical, practitioner-focused content (avoiding hype/introductory pieces).
-3. **Content Extraction**
-Downloads and parses article details for deeper insights.
-4. **Post Drafting**
-Generates a structured LinkedIn draft optimized for AI developers.
-5. **Style Matching**
-Rewrites the draft to align with your personal writing style.
-6. **Approval Process**
-- Sends the draft to your email for approval or revision requests.
-- If approved → posts directly to LinkedIn.
-- If rejected → applies requested changes and resends for approval.
+  1. **Article Gathering** - Fetches the latest articles from a chosen RSS feed.
+  2. **Article Selection** - AI filters for highly technical, practitioner-focused content (avoiding hype/introductory pieces).
+  3. **Content Extraction** - Downloads and parses article details for deeper insights.
+  4. **Post Drafting** - Generates a structured LinkedIn draft optimized for AI developers.
+  5. **Style Matching** - Rewrites the draft to align with your personal writing style.
+  6. **Approval Process**
+      - Sends the draft to your email for approval or revision requests.
+      - If approved → posts directly to LinkedIn.
+      - If rejected → applies requested changes and resends for approval.
 
 ---
 
@@ -61,14 +55,14 @@ Rewrites the draft to align with your personal writing style.
 ## 🚦 Usage
 1. ▶️ Trigger the workflow manually or set up a schedule.
 2. 🔄 Workflow will:
-  - Fetch new AI articles
-  - Pick one technical piece
-  - Generate a LinkedIn post draft
-  - Rewrite in your personal style
-  - Send for approval via email
+    - Fetch new AI articles
+    - Pick one technical piece
+    - Generate a LinkedIn post draft
+    - Rewrite in your personal style
+    - Send for approval via email
 3. ✅ Approve → Auto-published on LinkedIn
    ❌ Request changes → AI applies edits, resends for approval
-
+   
 ---
 
 ## 📁 Files
