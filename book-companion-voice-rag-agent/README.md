@@ -25,7 +25,7 @@ This system combines multiple components for a complete voice AI experience:
 
 ![System Architecture](diagrams/system-architecture.svg)
 
-### 🔀 n8n-workflow
+### 🔀 n8n-Workflow
 
 ![Book Companion Voice Agent](diagrams/book-companion.png)
 
