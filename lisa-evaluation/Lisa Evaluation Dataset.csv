@@ -1,0 +1,11 @@
+username,query,ground_truth,actual_answer
+user_1,What is Amazon S3 and what is it used for?,"S3 is a fast, scalable, and durable object-storage service used to store and retrieve any type and any amount of data.",
+user_2,What are the different S3 storage classes?,"S3 provides the storage classes Standard, Intelligent-Tiering, Standard Infrequent-access, and Glacier.",
+user_3,How do I create an S3 bucket using AWS CLI?,You can create an S3 bucket with the CLI command aws s3 mb s3://bucket-name.,
+user_4,What is AWS Lambda and when should I use it?,AWS Lambda lets developers run their code in the cloud without hosting servers and is used to execute functions in response to events.,
+user_5,What is the maximum execution time for Lambda functions?,The maximum execution time for a Lambda function is 15 minutes.,
+user_6,What is Lambda's maximum memory limit?,The maximum memory allowed for a Lambda function is 3008 MB.,
+user_7,What is SQS visibility timeout?,"SQS visibility timeout is a configurable period when a received message is protected from other consumers, with a default of 30 seconds.",
+user_8,What is the difference between Standard and FIFO SQS queues?,Standard queues provide best-effort ordering whereas FIFO queues provide first-in first-out delivery.,
+user_9,What is DynamoDB's primary key?,A DynamoDB primary key is a unique identifier that can be a partition key or a composite key.,
+user_10,What are DynamoDB secondary indexes used for?,Secondary indexes provide the ability to query a table without using the primary key.,

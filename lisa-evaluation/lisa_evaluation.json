@@ -1,0 +1,370 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.username }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        1872,
+        1328
+      ],
+      "id": "f90ae169-fc5c-4e1a-bebe-fe8297d9e27b",
+      "name": "Simple Memory1"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Does internet search",
+        "method": "POST",
+        "url": "https://api-ares.traversaal.ai/live/predict",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters0_Value', ``, 'string') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        2240,
+        1312
+      ],
+      "id": "f6f90339-533b-43d9-96cd-63022d41cf6e",
+      "name": "Internet Search1"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Answers questions from AWS documentation",
+        "method": "POST",
+        "url": "https://pro-documents.traversaal-api.com/documents/search",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters0_Value', ``, 'string') }}"
+            },
+            {
+              "name": "generation",
+              "value": "False"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        2048,
+        1328
+      ],
+      "id": "2c2ada56-aeb5-4807-9d62-e1ef2f590f24",
+      "name": "Traversaal Pro1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.query }}",
+        "options": {
+          "systemMessage": "You are a helpful assistant. Answer the question in just one short sentence."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        1744,
+        960
+      ],
+      "id": "a49e855e-f083-4a87-822d-210477ec1fd4",
+      "name": "Lisa1"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1680,
+        1328
+      ],
+      "id": "3d8f576e-99b1-4826-908e-8046e183796e",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "bEv5BFbvv9wAxSoe",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1ZkaS1zdsxlE_0Of0ytRNCtmSa7GSUnCTfrLbh3MXJkE",
+          "mode": "list",
+          "cachedResultName": "Lisa Evaluation Dataset",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZkaS1zdsxlE_0Of0ytRNCtmSa7GSUnCTfrLbh3MXJkE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZkaS1zdsxlE_0Of0ytRNCtmSa7GSUnCTfrLbh3MXJkE/edit#gid=0"
+        }
+      },
+      "type": "n8n-nodes-base.evaluationTrigger",
+      "typeVersion": 4.6,
+      "position": [
+        1280,
+        960
+      ],
+      "id": "86e5e63a-f6a7-4c50-8624-7e9bb4fb6d1e",
+      "name": "When fetching a dataset row1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "paX4rSrYKmRAQ3WJ",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "setInputs",
+        "inputs": {
+          "values": [
+            {
+              "inputName": "question",
+              "inputValue": "={{ $json.question }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.evaluation",
+      "typeVersion": 4.7,
+      "position": [
+        1488,
+        960
+      ],
+      "id": "417455f6-1acc-432a-8a46-333039603961",
+      "name": "Set Inputs1"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1ZkaS1zdsxlE_0Of0ytRNCtmSa7GSUnCTfrLbh3MXJkE",
+          "mode": "list",
+          "cachedResultName": "Lisa Evaluation Dataset",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZkaS1zdsxlE_0Of0ytRNCtmSa7GSUnCTfrLbh3MXJkE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZkaS1zdsxlE_0Of0ytRNCtmSa7GSUnCTfrLbh3MXJkE/edit#gid=0"
+        },
+        "outputs": {
+          "values": [
+            {
+              "outputName": "actual_answer",
+              "outputValue": "={{ $json.output }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.evaluation",
+      "typeVersion": 4.7,
+      "position": [
+        2304,
+        960
+      ],
+      "id": "d5838c4c-adaa-4358-ac70-ec8e9180fede",
+      "name": "Set Outputs1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "paX4rSrYKmRAQ3WJ",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "setMetrics",
+        "expectedAnswer": "={{ $('Set Inputs1').item.json.ground_truth }}",
+        "actualAnswer": "={{ $('Set Inputs1').item.json.actual_answer }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.evaluation",
+      "typeVersion": 4.7,
+      "position": [
+        2544,
+        960
+      ],
+      "id": "603cd098-8d68-418b-b284-341e145c3f7e",
+      "name": "Set Metrics1"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        2624,
+        1184
+      ],
+      "id": "c8456c6c-7e4c-4c47-8e71-1893971b7b9e",
+      "name": "gpt-4.1-mini1",
+      "credentials": {
+        "openAiApi": {
+          "id": "bEv5BFbvv9wAxSoe",
+          "name": "OpenAi account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Simple Memory1": {
+      "ai_memory": [
+        [
+          {
+            "node": "Lisa1",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Internet Search1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Lisa1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Traversaal Pro1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Lisa1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lisa1": {
+      "main": [
+        [
+          {
+            "node": "Set Outputs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Lisa1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When fetching a dataset row1": {
+      "main": [
+        [
+          {
+            "node": "Set Inputs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Inputs1": {
+      "main": [
+        [
+          {
+            "node": "Lisa1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Outputs1": {
+      "main": [
+        [
+          {
+            "node": "Set Metrics1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "gpt-4.1-mini1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Set Metrics1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a4ecec9555f5b06310e132d91f5a9064adeb061b91678daae338206fdb263b04"
+  }
+}
