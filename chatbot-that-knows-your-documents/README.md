@@ -95,7 +95,7 @@ graph LR
 ### Option A — Google Colab (Recommended)
 
 1. Open the instructor’s Colab notebook:
-   **[301 Webhook + RAG — Client (Colab)](https://colab.research.google.com/drive/1o66IjJDEQZ404gs5MNiItm2WqxcU2bzx?usp=sharing)**
+   **[Chatbot that Knows Your Documents — Client (Colab)](https://colab.research.google.com/drive/1o66IjJDEQZ404gs5MNiItm2WqxcU2bzx?usp=sharing)**
 2. Click **File → Save a copy in Drive**.
 3. Replace `WEBHOOK_URL` with your **Production Webhook URL** from n8n.
 4. Run all cells and test:
@@ -147,9 +147,9 @@ curl -X POST "$WEBHOOK_URL" \
 
 - 📖 [Traversaal Product Management Docs API](https://pro-documents.traversaal-api.com/)
 - 📖 [OpenRouter — deepseek-chat model](https://openrouter.ai/models/deepseek/deepseek-chat)
-- 📖 [n8n — AI Agent node](https://docs.n8n.io/ai/agents/)
+- 📖 [n8n — AI Agent node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)
 - 📖 [n8n — HTTP Request Tool](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
-- 📖 [n8n — Memory Buffer Window](https://docs.n8n.io/ai/memory/)
+- 📖 [n8n — Memory Buffer Window](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/)
 
 ---
 
