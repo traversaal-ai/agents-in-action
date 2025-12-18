@@ -61,6 +61,7 @@ The workflow is composed of several connected steps:
     - Rewrite in your personal style
     - Send for approval via email
 3. ✅ Approve → Auto-published on LinkedIn
+   
    ❌ Request changes → AI applies edits, resends for approval
    
 ---
