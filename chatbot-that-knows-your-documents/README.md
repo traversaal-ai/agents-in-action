@@ -40,6 +40,12 @@ graph LR
 
 ---
 
+## 🏛️ Architecture
+
+![Chatbot that Knows Your Documents](images/chat-with-docs.png)
+
+---
+
 ## 🛂 Inputs (JSON Body)
 
 | Field      | Type   | Required       | Description                           |
