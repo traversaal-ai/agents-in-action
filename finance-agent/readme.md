@@ -58,6 +58,12 @@ It combines:
 
 ---
 
+## 🏛️ Architecture
+
+![Finance Agent](images/finance-agent.png)
+
+---
+
 ## 🚀 Setup Instructions
 
 1. **Install n8n**
