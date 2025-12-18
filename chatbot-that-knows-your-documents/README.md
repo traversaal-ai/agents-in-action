@@ -71,7 +71,7 @@ graph LR
 
 ## ⚙️ Setup
 
-1. **Import** `301-webhook-rag.json` into your **n8n Cloud** workspace.
+1. **Import** `chat-with-docs.json` into your **n8n Cloud** workspace.
 2. **Credentials → Configure:**
 
    - 🔑 **OpenRouter API** (create a free account at [openrouter.ai](https://openrouter.ai))
