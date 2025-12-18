@@ -192,7 +192,7 @@ The complete voice interaction follows this sequence:
 ## 📚 Resources
 
 - 📖 [n8n Docs](https://docs.n8n.io/)
-- 🧠 [LangChain Node Integration](https://docs.n8n.io/integrations/langchain/)
+- 🧠 [LangChain Node Integration](https://docs.n8n.io/advanced-ai/langchain/langchain-n8n/)
 - 🔍 [Supabase Vector Guide](https://supabase.com/docs/guides/ai)
 - 🤖 [OpenAI Embeddings API](https://platform.openai.com/docs/guides/embeddings)
 
