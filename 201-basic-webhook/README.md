@@ -40,6 +40,11 @@ graph LR
 
 ---
 
+## 🏛️ Architecture
+![Basic Webhook](images/basic-webhook.png)
+
+---
+
 ## 🛂 Inputs (JSON Body)
 
 - `query` _(string, required)_ → the user’s prompt/message.
@@ -64,7 +69,7 @@ graph LR
 
 ## ⚙️ Setup
 
-1. **Import** `201-basic.json` into your n8n Cloud workspace.
+1. **Import** `201_basic_webhook.json` into your n8n Cloud workspace.
 2. **Credentials** → configure **OpenRouter** (API key).
 3. Open the **Webhook** node and **Activate** the workflow (top-right).
 4. Copy the **Production Webhook URL** (not the Test URL).
@@ -92,6 +97,8 @@ graph LR
 
   - Click **Runtime → Run all** (or run cells one by one).
   - You should see the HTTP status and the AI’s reply printed.
+ 
+- **Note:** A Jupyter notebook *n8n_test_webhook.ipynb* with detailed comments is present in this folder for reference.
 
 ---
 
@@ -149,7 +156,7 @@ curl -X POST "$WEBHOOK_URL" \
 Ready to go deeper?  
 Check out these courses:
 
-- [AI Bootcamp: _For Leaders & Managers_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
-- [Agent Engineering Bootcamp: _For Developers & Engineers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+- [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 👉 These resources expand on the workflows here and show how to apply AI + n8n in real projects.

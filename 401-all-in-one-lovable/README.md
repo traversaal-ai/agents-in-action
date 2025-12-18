@@ -8,6 +8,14 @@ A lightweight, customizable chat interface that connects to any webhook-based AI
 
 Want to build this project from scratch in Lovable? The complete prompt to recreate this entire application can be found in **[prompt.md](prompt.md)**. Simply copy the prompt and paste it into [Lovable](https://lovable.dev) to generate this project instantly.
 
+## 💗 Lovable Chat Interface
+
+Here's what the interface to this lovable application would look like!
+
+![All In One Lovable](images/all-in-one-lovable.png)
+
+---
+
 ## ✨ Features
 
 ### 🔌 Universal Webhook Integration
@@ -99,7 +107,7 @@ npm run dev
 Ready to go deeper?  
 Check out these courses:
 
-- [AI Bootcamp: _For Leaders & Managers_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
-- [Agent Engineering Bootcamp: _For Developers & Engineers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+- [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 👉 These resources expand on the workflows here and show how to apply AI + n8n in real projects.

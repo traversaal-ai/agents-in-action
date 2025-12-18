@@ -159,7 +159,7 @@ Chat Trigger → RAG Agent → [Memory + LLM + Vector Search] → Response
 
 - 📹 [Original Tutorial by Nate Herk](https://www.youtube.com/watch?v=nVvHy-gTg8Y)
 - 📖 [n8n Docs](https://docs.n8n.io/)
-- 🧠 [LangChain Node Integration](https://docs.n8n.io/integrations/langchain/)
+- 🧠 [LangChain Node Integration](https://docs.n8n.io/advanced-ai/langchain/langchain-n8n/)
 
 ---
 
@@ -174,8 +174,8 @@ We welcome:
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
-- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+- 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 ---
 
@@ -185,4 +185,4 @@ Provided for educational & practical use. Please comply with TOS of APIs used.
 
 ---
 
-🎓 Special thanks to [Nate Herk](https://www.linkedin.com/in/nateherk/) for the original workflow inspiration.
+🎓 Special thanks to [Nate Herk](https://www.linkedin.com/in/nateherkelman/) for the original workflow inspiration.

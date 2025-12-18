@@ -5,10 +5,10 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -6600,
-        -800
+        -272,
+        592
       ],
-      "id": "422bdc98-ba09-4eaf-a085-f3b75028e219",
+      "id": "48528c53-ec25-488e-86a5-eed1ee374803",
       "name": "When clicking 'Test workflow'"
     },
     {
@@ -20,10 +20,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
       "position": [
-        -2160,
-        -800
+        4176,
+        592
       ],
-      "id": "5965754d-6a5c-4fdc-a138-b0cfe8d2a42d",
+      "id": "da786693-34dc-4e15-91f4-6c7027d34d0c",
       "name": "Basic LLM Chain3"
     },
     {
@@ -35,10 +35,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2600,
-        -1120
+        3712,
+        320
       ],
-      "id": "a3e8d955-0d37-47aa-8014-ac48d6adc22f",
+      "id": "5cc81b84-a2bc-4484-a583-9d3494a2f0b6",
       "name": "Sticky Note5",
       "disabled": true
     },
@@ -50,10 +50,10 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        -1920,
-        -540
+        4416,
+        848
       ],
-      "id": "e1022b63-228c-4724-9a08-5e0b35591201",
+      "id": "2191dc83-6eaf-437a-94ef-401de00d5705",
       "name": "Structured Output Parser3"
     },
     {
@@ -66,32 +66,33 @@
       "type": "n8n-nodes-base.markdown",
       "typeVersion": 1,
       "position": [
-        -1700,
-        -800
+        4640,
+        592
       ],
-      "id": "b3a0b6cf-3a51-4d0f-b8d7-367e1e8717ac",
+      "id": "5aed135d-f8df-4a5e-9968-3f3a98af8313",
       "name": "Markdown"
     },
     {
       "parameters": {
         "model": {
           "__rl": true,
+          "value": "gpt-4.1-mini",
           "mode": "list",
-          "value": "gpt-4o-mini"
+          "cachedResultName": "gpt-4.1-mini"
         },
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -3320,
-        -60
+        3024,
+        1328
       ],
-      "id": "c24e0ce4-375d-48c2-b1a8-a586d04a1799",
+      "id": "963b7261-f803-4075-be5e-0d08c15ac52d",
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
-          "id": "1NYcjHdurohDfhOk",
+          "id": "bEv5BFbvv9wAxSoe",
           "name": "OpenAi account"
         }
       }
@@ -106,10 +107,10 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        -5780,
-        -800
+        560,
+        592
       ],
-      "id": "5c648c5d-4b8c-4225-a69c-7795fdaf4743",
+      "id": "adc94617-ed6b-4da7-b023-6fb8f5ee0791",
       "name": "Split Out"
     },
     {
@@ -121,10 +122,10 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        -5360,
-        -800
+        976,
+        592
       ],
-      "id": "db1515eb-e316-4688-949a-a5b430dc1b47",
+      "id": "b80b7d46-7935-4aad-bf67-289584ffb133",
       "name": "Aggregate"
     },
     {
@@ -135,10 +136,10 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        -4600,
-        -540
+        1744,
+        848
       ],
-      "id": "34d512b0-0dfa-4cb1-a77b-612182a1e22d",
+      "id": "6c53c4d5-145f-4396-b9c0-d03fb83b7fab",
       "name": "Structured Output Parser2"
     },
     {
@@ -149,10 +150,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        -6300,
-        -800
+        48,
+        592
       ],
-      "id": "7cf0a476-628a-4888-b23b-2c4e2409fbef",
+      "id": "120a9448-a881-4457-9438-bf0a9a044802",
       "name": "Get popular bookmarks"
     },
     {
@@ -173,10 +174,10 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        -6040,
-        -800
+        304,
+        592
       ],
-      "id": "d46459ce-e2a8-4b17-bdf6-6781e8e18c3b",
+      "id": "e62aef4d-7449-4ee6-b9b0-cf1fd30395fb",
       "name": "Extract bookmarks"
     },
     {
@@ -202,10 +203,10 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        -5560,
-        -800
+        784,
+        592
       ],
-      "id": "09175d10-2564-4b6b-bc43-fcaa4ec74c11",
+      "id": "47d732ad-7bd3-4bfb-abdd-cea5a7b490d2",
       "name": "Extract bookmark"
     },
     {
@@ -217,10 +218,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
       "position": [
-        -3040,
-        -800
+        3296,
+        592
       ],
-      "id": "7356923b-ed3c-415f-a44e-c5419171f7b4",
+      "id": "4007550c-b7c7-4476-95e8-1d2cca2b58f6",
       "name": "Come up with a topic1",
       "retryOnFail": true
     },
@@ -233,10 +234,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
       "position": [
-        -4880,
-        -800
+        1456,
+        592
       ],
-      "id": "2e8ce4d6-7d55-4a33-8b29-fa4a395d95c1",
+      "id": "bd1be8e9-372c-487d-9199-4f4bd19d2220",
       "name": "Find trending AI bookmarks",
       "retryOnFail": true
     },
@@ -250,10 +251,10 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        -4100,
-        -800
+        2240,
+        592
       ],
-      "id": "36e4c66d-ec35-4194-b552-abbd04f8a1da",
+      "id": "2cee0786-1cd0-4792-b574-c681d455a896",
       "name": "Split Out3"
     },
     {
@@ -265,10 +266,10 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        -3480,
-        -800
+        2864,
+        592
       ],
-      "id": "ac2b5237-55ab-4a77-a510-ff70d7ca79ed",
+      "id": "0d3697ce-e720-474a-a605-ac2fa9d34f4a",
       "name": "Aggregate3"
     },
     {
@@ -300,10 +301,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -3680,
-        -800
+        2656,
+        592
       ],
-      "id": "0d4be5ec-7f9e-4db1-8de7-461d1d528604",
+      "id": "93c978d8-ea3d-46bc-ae9d-eb8c66a5a699",
       "name": "Edit Fields"
     },
     {
@@ -314,10 +315,10 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        -2920,
-        -520
+        3424,
+        864
       ],
-      "id": "f558f435-81f6-41b0-8d79-b27dfa399c1b",
+      "id": "60449790-c3b0-4a96-a36c-056126638bf9",
       "name": "Structured Output Parser1"
     },
     {
@@ -330,19 +331,19 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -6400,
-        -1300
+        -64,
+        80
       ],
-      "id": "cd5688cb-73b6-4ef9-bdae-5820c55e0fe7",
+      "id": "4ba2f85c-3a92-418f-8f17-2e2799e9a5e4",
       "name": "Sticky Note6"
     },
     {
       "parameters": {
         "workflowId": {
           "__rl": true,
-          "value": "Os0leFnDnV2lb0ac",
+          "value": "Tu06eh68svmFCu0U",
           "mode": "list",
-          "cachedResultName": "scrape link"
+          "cachedResultName": "scrape-link"
         },
         "workflowInputs": {
           "mappingMode": "defineBelow",
@@ -371,19 +372,19 @@
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2,
       "position": [
-        -3880,
-        -800
+        2464,
+        592
       ],
-      "id": "d8871ffe-13c9-4b19-9271-ea9afa98c1cb",
+      "id": "c65dd57b-2f4b-4b1c-a668-509a3e8f0cec",
       "name": "Scrape and summarize bookmarks"
     },
     {
       "parameters": {
         "workflowId": {
           "__rl": true,
-          "value": "NVNbw3MAjDEgeEm2",
+          "value": "5dbor7kDHnHVsgt1",
           "mode": "list",
-          "cachedResultName": "deep research"
+          "cachedResultName": "deep-research"
         },
         "workflowInputs": {
           "mappingMode": "defineBelow",
@@ -430,10 +431,10 @@
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2,
       "position": [
-        -2680,
-        -800
+        3664,
+        592
       ],
-      "id": "e43d4ce0-8556-4a57-b870-06d0906f7b10",
+      "id": "014639cf-f7d2-4f93-9d68-51489d440a29",
       "name": "Run deep research"
     },
     {
@@ -445,10 +446,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -6040,
-        -1100
+        304,
+        288
       ],
-      "id": "73e132cf-84a7-4e85-9053-bf3c37771380",
+      "id": "60d012a0-f990-4e7e-a106-5af56d11a472",
       "name": "Sticky Note"
     },
     {
@@ -461,10 +462,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -4880,
-        -1100
+        1456,
+        288
       ],
-      "id": "e65cfe36-4876-4545-8b94-85b07d793801",
+      "id": "11143eed-8944-4f9c-a01f-0c943113745e",
       "name": "Sticky Note1"
     },
     {
@@ -477,10 +478,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -3460,
-        -1140
+        2880,
+        240
       ],
-      "id": "f82cee01-3e68-4d2e-ae20-ac7c5626191d",
+      "id": "c8c663c6-028c-4845-b4c6-3ed58b2a7cd6",
       "name": "Sticky Note2"
     },
     {
@@ -495,26 +496,26 @@
           ]
         }
       },
-      "id": "a73f8156-8177-438d-9f3b-e607982d662d",
+      "id": "5ffc3b2c-4f79-48a0-bbc8-b87c28d6a5d2",
       "name": "IF text longer than 2000 chars",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        -1680,
-        -400
+        4656,
+        992
       ]
     },
     {
       "parameters": {
         "jsCode": "let result = [];\nlet firstBlock = true;\nconst content = $input.first().json.output.content;\nconst targetLength = 1200;\n\nlet startIndex = 0;\n\nwhile (startIndex < content.length) {\n  let endIndex = startIndex + targetLength;\n  \n  // If we're not at the end of the content, find a good break point\n  if (endIndex < content.length) {\n    // First, try to break at end of sentence\n    let sentenceEnd = content.lastIndexOf('.', endIndex);\n    if (sentenceEnd === -1) sentenceEnd = content.lastIndexOf('!', endIndex);\n    if (sentenceEnd === -1) sentenceEnd = content.lastIndexOf('?', endIndex);\n    \n    // If we found a sentence end and it's not too far back (within 50 chars)\n    if (sentenceEnd > startIndex && sentenceEnd > endIndex - 50) {\n      endIndex = sentenceEnd + 1; // Include the punctuation\n    } else {\n      // If no sentence end found, break at last word boundary\n      let lastSpace = content.lastIndexOf(' ', endIndex);\n      if (lastSpace > startIndex) {\n        endIndex = lastSpace;\n      }\n      // If no space found, keep original endIndex (rare edge case)\n    }\n  }\n  \n  const textSubString = content.substring(startIndex, endIndex).trim();\n  \n  // Only add non-empty blocks\n  if (textSubString.length > 0) {\n    result.push({\n      \"textSubString\": textSubString,\n      \"firstBlock\": firstBlock\n    });\n    firstBlock = false;\n  }\n  \n  startIndex = endIndex;\n  \n  // Skip any leading whitespace for next block\n  while (startIndex < content.length && content[startIndex] === ' ') {\n    startIndex++;\n  }\n}\n\nreturn result;"
       },
-      "id": "e0b52397-3d3d-4856-b23d-fbe83773ee3d",
+      "id": "cd79f530-4220-4bd2-9663-483572f6ed1f",
       "name": "Splits text in small chuncks",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1780,
-        -20
+        4560,
+        1360
       ]
     },
     {
@@ -528,13 +529,13 @@
           ]
         }
       },
-      "id": "cdba6589-a2b5-494d-b7b1-1843740b78ee",
+      "id": "9dce3431-b4cb-447a-b11f-0f9a2795f81e",
       "name": "IF2",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        -1220,
-        160
+        5120,
+        1552
       ]
     },
     {
@@ -543,20 +544,20 @@
         "combinationMode": "multiplex",
         "options": {}
       },
-      "id": "debe5f18-1f1a-4a43-a612-15637893ebb5",
+      "id": "c0a5f3a2-2600-47ab-8cce-fa4211049441",
       "name": "Merge1",
       "type": "n8n-nodes-base.merge",
       "typeVersion": 2.1,
       "position": [
-        -80,
-        280
+        6256,
+        1664
       ]
     },
     {
       "parameters": {
         "pageId": {
           "__rl": true,
-          "value": "=https://www.notion.so/traversaal-ai/Automated-Articles-2039a2e5c4a6805eae92c53917f69837",
+          "value": "=your-notion-url-for-automated-articles",
           "mode": "url"
         },
         "title": "={{ $('Markdown').item.json.output.title }}",
@@ -569,18 +570,18 @@
         },
         "options": {}
       },
-      "id": "73a8ff6e-faea-4201-bafe-e78ec09388a4",
+      "id": "ca61219b-0f58-434d-9330-c65ad6d31c3c",
       "name": "Creates the page and adds the first part of text",
       "type": "n8n-nodes-base.notion",
       "typeVersion": 2,
       "position": [
-        -540,
-        -120
+        5808,
+        1264
       ],
       "credentials": {
         "notionApi": {
-          "id": "1SBn5yvUh6eP4yvJ",
-          "name": "Notion account"
+          "id": "4FtTtC6BmEETKaln",
+          "name": "Notion account 2"
         }
       }
     },
@@ -601,18 +602,18 @@
           ]
         }
       },
-      "id": "6c2d289c-949a-45a9-93c9-1cfeff49cfd1",
+      "id": "22221b9a-b5ab-4ec5-ad19-3405730c379d",
       "name": "Adds additional blocks",
       "type": "n8n-nodes-base.notion",
       "typeVersion": 2,
       "position": [
-        100,
-        280
+        6448,
+        1664
       ],
       "credentials": {
         "notionApi": {
-          "id": "1SBn5yvUh6eP4yvJ",
-          "name": "Notion account"
+          "id": "4FtTtC6BmEETKaln",
+          "name": "Notion account 2"
         }
       }
     },
@@ -629,13 +630,13 @@
         "include": "none",
         "options": {}
       },
-      "id": "5f62f66d-aa37-47f9-b505-08db4a361462",
+      "id": "0d0421a7-f746-40e7-9c83-39bdfdb2886f",
       "name": "Edit Fields1",
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.2,
       "position": [
-        -260,
-        100
+        6080,
+        1488
       ]
     },
     {
@@ -648,10 +649,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2160,
-        -1180
+        4192,
+        96
       ],
-      "id": "18285abf-73e6-4f5f-825d-1f9c5c274dfc",
+      "id": "45f8d95e-60e8-4e2f-ad38-0daf5bcfcf65",
       "name": "Sticky Note3"
     },
     {
@@ -661,13 +662,13 @@
         "width": 480,
         "color": 5
       },
-      "id": "337e3c94-7180-4316-b673-22b161450baf",
+      "id": "403b7461-3bbc-4a54-91e0-200bb3c4624c",
       "name": "Sticky Note4",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2240,
-        -80
+        4096,
+        1312
       ]
     },
     {
@@ -677,13 +678,13 @@
         "width": 480,
         "color": 6
       },
-      "id": "29897662-0939-44e4-9f13-6b4195a2ce53",
+      "id": "2f690706-fbf1-4e18-a88e-326e5f392c02",
       "name": "Sticky Note7",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        160,
-        -360
+        6416,
+        976
       ]
     },
     {
@@ -693,32 +694,32 @@
       "type": "n8n-nodes-base.limit",
       "typeVersion": 1,
       "position": [
-        -4320,
-        -800
+        2016,
+        592
       ],
-      "id": "a4293a2c-e6af-43a6-afe5-c5e87c5b0310",
+      "id": "59da6b99-ad1f-4771-a211-6a51ba423b92",
       "name": "Limit"
     },
     {
       "parameters": {
-        "sendTo": "taha@traversaal.ai",
-        "subject": "=You have a new article:  {{ $('Creates the page and adds the first part of text').item.json.properties.title.title[0].text.content }}",
+        "sendTo": "you@example.com",
+        "subject": "=You have a new article:  {{ $('Creates the page and adds the first part of text').item.json.url }}",
         "message": "=Link to article: {{ $('Creates the page and adds the first part of text').item.json.url }}",
         "options": {}
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        260,
-        -160
+        6608,
+        1232
       ],
-      "id": "303141fe-24c7-4fef-920c-7481925c8d3c",
+      "id": "b7306f13-839e-44c4-b3a4-3021e02f3375",
       "name": "Gmail",
       "webhookId": "e5a77619-d7e1-4476-a536-11ce527767a1",
       "credentials": {
         "gmailOAuth2": {
-          "id": "BnsTwPYuY86Hs0hC",
-          "name": "Taha Google-Mail"
+          "id": "dpKzcVBg5lfquwMX",
+          "name": "Gmail account"
         }
       }
     },
@@ -798,15 +799,15 @@
       "type": "n8n-nodes-base.notion",
       "typeVersion": 2.2,
       "position": [
-        600,
-        280
+        6944,
+        1664
       ],
-      "id": "575d2721-bb22-4278-9112-636d8f934eaf",
+      "id": "1da2503f-df67-45c5-b1cd-282f61ad09dc",
       "name": "Notion",
       "credentials": {
         "notionApi": {
-          "id": "1SBn5yvUh6eP4yvJ",
-          "name": "Notion account"
+          "id": "4FtTtC6BmEETKaln",
+          "name": "Notion account 2"
         }
       }
     },
@@ -815,10 +816,10 @@
       "type": "n8n-nodes-base.limit",
       "typeVersion": 1,
       "position": [
-        320,
-        280
+        6656,
+        1664
       ],
-      "id": "6806895b-d81d-4b58-b19d-a25d22b05d61",
+      "id": "3eba5d7d-b037-4429-b782-0bcbb2a91c25",
       "name": "Limit1"
     },
     {
@@ -831,10 +832,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -4000,
-        -1160
+        2336,
+        224
       ],
-      "id": "db68e283-f6a6-4eb2-9810-b622f01240e6",
+      "id": "1c96addf-6161-4e03-ad08-148cec0462cc",
       "name": "Sticky Note Scraping"
     },
     {
@@ -846,10 +847,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1480,
-        -500
+        4864,
+        880
       ],
-      "id": "6dd6b5d4-969b-4460-b693-a6a37450ec75",
+      "id": "26dbc6f2-1396-4519-8084-5708a3d36e7b",
       "name": "Sticky Note Length"
     },
     {
@@ -862,10 +863,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1460,
-        160
+        4928,
+        1696
       ],
-      "id": "df85ae15-6c04-4543-950b-59fba4eecaef",
+      "id": "ca148814-651f-44e7-96d7-9782cd386afa",
       "name": "Sticky Note Chunking"
     },
     {
@@ -878,10 +879,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -760,
-        100
+        5552,
+        1600
       ],
-      "id": "0444a684-dbb8-4f87-b6fa-f2d32aad62f4",
+      "id": "577f9c4a-a7fc-459c-a5e7-1da2c37c22c3",
       "name": "Sticky Note Notion Logic"
     }
   ],
@@ -1220,6 +1221,6 @@
   "pinData": {},
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "1725aaf255f271a2cb370b9051de0a61864aaf0b262c35ad3f624929f92bfcff"
+    "instanceId": "a4ecec9555f5b06310e132d91f5a9064adeb061b91678daae338206fdb263b04"
   }
 }

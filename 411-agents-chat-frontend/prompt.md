@@ -1,5 +1,6 @@
-Here's a comprehensive prompt students can use to recreate this website:
+Here's a comprehensive prompt you can use to recreate this website:
 
+# Prompt
 Create an "Agents in Action" chat application with the following specifications:
 
 ## Core Functionality
@@ -90,4 +91,7 @@ Create an "Agents in Action" chat application with the following specifications:
 - Use consistent spacing and typography scale
 
 Make the interface polished, professional, and suitable for educational demonstrations of AI agent workflows.
-This prompt provides all the necessary details for students to recreate the exact functionality and design without exposing any sensitive information.
+
+---
+
+This prompt provides all the necessary details to recreate the exact functionality and design without exposing any sensitive information.

@@ -450,7 +450,7 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1520,
+        1456,
         208
       ],
       "id": "b267919a-fdac-41ca-b198-d5919b2f38d8",
@@ -545,7 +545,7 @@
       "parameters": {
         "pageId": {
           "__rl": true,
-          "value": "=https://www.notion.so/Automated-Articles-27181d01b6b480459c3ae418b03f5fcc",
+          "value": "=your-notion-url-for-automated-articles",
           "mode": "url"
         },
         "title": "={{ $('Markdown').item.json.output.title }}",
@@ -637,8 +637,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        4240,
-        128
+        4288,
+        -48
       ],
       "id": "f0713da7-c3a9-4687-8508-806ea861b3a4",
       "name": "Sticky Note3"
@@ -672,7 +672,7 @@
       "typeVersion": 1,
       "position": [
         6576,
-        944
+        880
       ]
     },
     {
@@ -690,7 +690,7 @@
     },
     {
       "parameters": {
-        "sendTo": "youremail@gmail.com",
+        "sendTo": "you@example.com",
         "subject": "You have a new article:  {{ $('Creates the page and adds the first part of text').item.json.properties.title.title[0].text.content }}",
         "message": "=Link to article: {{ $('Creates the page and adds the first part of text').item.json.url }}",
         "options": {}
@@ -706,8 +706,8 @@
       "webhookId": "e5a77619-d7e1-4476-a536-11ce527767a1",
       "credentials": {
         "gmailOAuth2": {
-          "id": "7uF79nL2XzAG76Zc",
-          "name": "Gmail account 2"
+          "id": "dpKzcVBg5lfquwMX",
+          "name": "Gmail account"
         }
       }
     },
@@ -851,8 +851,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        4944,
-        1472
+        4976,
+        1616
       ],
       "id": "59227e3d-02cd-43e7-8324-d46300341eb5",
       "name": "Sticky Note Chunking"
@@ -868,7 +868,7 @@
       "typeVersion": 1,
       "position": [
         5648,
-        1408
+        1520
       ],
       "id": "54583ee7-b22f-4868-bcb5-3020330d9daa",
       "name": "Sticky Note Notion Logic"

@@ -14,17 +14,17 @@ The Blog Post Agent automates the process of generating high-quality blog posts.
 
 ---
 
-## Architecture
+## 🏛️ Architecture
 The architecture of **Apollo** consists of a main *orchestrator* and two *sub-workflows* within the main workflow.
 
 ### Apollo - The Main Orchestrator
-![Apollo](blog-post-agent.png)
+![Apollo](images/blog-post-agent.png)
 
 ### Scraper
-![Scraper](scraper.png)
+![Scraper](images/scraper.png)
 
 ### Deep Researcher
-![Deep Researcher](deep-researcher.png)
+![Deep Researcher](images/deep-researcher.png)
 
 ---
 
@@ -59,9 +59,5 @@ The architecture of **Apollo** consists of a main *orchestrator* and two *sub-wo
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
-- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
-
-
-
-
+- 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)

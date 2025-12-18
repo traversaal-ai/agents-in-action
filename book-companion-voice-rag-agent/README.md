@@ -25,6 +25,10 @@ This system combines multiple components for a complete voice AI experience:
 
 ![System Architecture](diagrams/system-architecture.svg)
 
+### 🔀 n8n-Workflow
+
+![Book Companion Voice Agent](diagrams/book-companion.png)
+
 ### Frontend (React)
 
 Browser-based voice interface with real-time audio processing
@@ -192,7 +196,7 @@ The complete voice interaction follows this sequence:
 ## 📚 Resources
 
 - 📖 [n8n Docs](https://docs.n8n.io/)
-- 🧠 [LangChain Node Integration](https://docs.n8n.io/integrations/langchain/)
+- 🧠 [LangChain Node Integration](https://docs.n8n.io/advanced-ai/langchain/langchain-n8n/)
 - 🔍 [Supabase Vector Guide](https://supabase.com/docs/guides/ai)
 - 🤖 [OpenAI Embeddings API](https://platform.openai.com/docs/guides/embeddings)
 
@@ -210,8 +214,8 @@ We welcome:
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
-- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+- 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 ---
 

@@ -16,6 +16,20 @@ The Blog Post Agent automates the process of generating high-quality blog posts.
 
 ---
 
+## 🏛️ Architecture
+The architecture of **Blog Post Agent** consists of a main *orchestrator* and two *sub-workflows* within the main workflow.
+
+### Blog Post Generator - The Main Orchestrator
+![Blog Post Generator](images/blog-post-generator.png)
+
+### Scraper
+![Scrape Link](images/scrape-link.png)
+
+### Deep Researcher
+![Deep Researcher](images/deep-research.png)
+
+---
+
 ## 🧩 Sub-Workflow Requirement
 **To enable deep research and richer content, you should also add the `scrape link` and `deep research` workflows as sub-workflows.**
 - 🛠️ The `scrape_link.json` file extracts and summarizes the content from a link. 
@@ -47,8 +61,5 @@ The Blog Post Agent automates the process of generating high-quality blog posts.
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
-- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
-
-
-
+- 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
