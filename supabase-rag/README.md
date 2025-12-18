@@ -185,4 +185,4 @@ Provided for educational & practical use. Please comply with TOS of APIs used.
 
 ---
 
-🎓 Special thanks to [Nate Herk](https://www.linkedin.com/in/nateherk/) for the original workflow inspiration.
+🎓 Special thanks to [Nate Herk](https://www.linkedin.com/in/nateherkelman/) for the original workflow inspiration.
