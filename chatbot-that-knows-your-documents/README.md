@@ -7,7 +7,7 @@ It demonstrates how prompt wording and topic specificity change the AI’s respo
 
 ## ✨ Overview
 
-This workflow expands the **201-basic** pattern by introducing **memory**, **OpenRouter free-tier LLM**, and a **RAG API tool** for contextual answers.
+This workflow expands the **201-basic-webhook** pattern by introducing **memory**, **OpenRouter free-tier LLM**, and a **RAG API tool** for contextual answers.
 It creates a **Product Management AI Agent** that:
 
 - 🧠 Uses **RAG** for **Product Management questions**
