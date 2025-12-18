@@ -59,13 +59,13 @@ Rewrites the draft to align with your personal writing style.
 ## 🚦 Usage
 1. ▶️ Trigger the workflow manually or set up a schedule.
 2. 🔄 Workflow will:
-- Fetch new AI articles
-- Pick one technical piece
-- Generate a LinkedIn post draft
-- Rewrite in your personal style
-- Send for approval via email
+  - Fetch new AI articles
+  - Pick one technical piece
+  - Generate a LinkedIn post draft
+  - Rewrite in your personal style
+  - Send for approval via email
 3. ✅ Approve → Auto-published on LinkedIn
-❌ Request changes → AI applies edits, resends for approval
+   ❌ Request changes → AI applies edits, resends for approval
 
 ---
 
