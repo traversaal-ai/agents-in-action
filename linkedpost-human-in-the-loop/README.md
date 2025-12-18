@@ -43,9 +43,9 @@ The workflow is composed of several connected steps:
 ## ⚙️ Setup
 1. 📥 Import `linkedin-post-v2.json` into your **n8n instance**.
 2. 🔑 Configure required credentials:
-  - OpenAI (for content generation)
-  - Gmail (for approval workflow)
-  - LinkedIn (for publishing)
+    - OpenAI (for content generation)
+    - Gmail (for approval workflow)
+    - LinkedIn (for publishing)
 3. 🛠️ Customize the RSS feed sources to match your preferred AI news outlets.
 4. 🎨 Adjust the "Writing style" node with an example LinkedIn post in your tone.
 5. ✏️ Modify the prompts to suit your **voice and technical depth**.
