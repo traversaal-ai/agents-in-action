@@ -26,9 +26,11 @@ It continuously gathers articles from AI news feeds, selects the most relevant d
 ![LinkedIn Post - Human in the Loop](images/linkedin-post-hitl.png)
 
 ## 🧩 Workflow Structure
+
 The workflow is composed of several connected steps:
+
 1. **Article Gathering**
-Fetches the latest articles from a chosen RSS feed.
+  - Fetches the latest articles from a chosen RSS feed.
 2. **Article Selection**
 AI filters for highly technical, practitioner-focused content (avoiding hype/introductory pieces).
 3. **Content Extraction**
