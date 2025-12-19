@@ -21,7 +21,7 @@ By the end of this series, you will be able to:
 6. **Add long-term memory and context retention to AI workflows** using databases like Supabase for personalization and persistence.
 7. **Integrate voice, UI, and API tools** to create multimodal, interactive AI experiences that go beyond text-based interaction.
 8. **Automate real-world processes** (e.g., lead generation, content publishing, research synthesis) with AI-human collaboration loops.
-9. **Build and evaluate advanced agentic** systems that combine reasoning loops, internet search, and multi-tool orchestration.
+9. **Build and evaluate advanced agentic systems** that combine reasoning loops, internet search, and multi-tool orchestration.
 10. **Create a meta-agent that builds other agents**, gaining the ability to auto-generate, configure, and deploy intelligent workflows from within n8n itself.
 
 ---
