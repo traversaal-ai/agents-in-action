@@ -83,6 +83,12 @@ Used when additional web context is needed.
 
 ---
 
+## 🏛️ Architecture
+
+![Webhook with Memory](images/webhook-with-memory.png)
+
+---
+
 ## 📤 Output
 
 The response is sent back to the original HTTP request using:
