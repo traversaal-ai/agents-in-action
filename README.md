@@ -1,7 +1,7 @@
 # Agents in Action
 ## 🚀 **Build AI Agents Like a Pro!**
 
-![Agents in Action](resources/agents-in-action-banner.png)
+![Agents in Action](images/agents-in-action-banner.png)
 
 Welcome to my course on AI Agents.
 
