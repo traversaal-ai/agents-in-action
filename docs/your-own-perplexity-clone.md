@@ -48,7 +48,8 @@ graph LR
 
    - If **S3** → query **s3_knowledge_base** (RAG) and answer.
    - If **AWS but not S3** → call **internet_search** and answer from results.
-   - If **non-AWS** → refuse.
+   - If **non-AWS**
+   -  → refuse.
 
 3. **Memory** keeps context per `username`.
 4. **Respond to Webhook** returns the final answer.
