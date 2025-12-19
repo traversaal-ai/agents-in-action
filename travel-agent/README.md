@@ -113,6 +113,8 @@ Once your itinerary is complete, the assistant will:
 
 ## 🔄 Workflow Architecture
 
+![Travel Agent](images/travel-agent.png)
+
 ### Main Components
 - **Chat Trigger:** Handles user input
 - **Travel Agent:** Core AI agent with detailed travel planning prompt
