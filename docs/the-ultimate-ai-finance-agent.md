@@ -1,5 +1,5 @@
 # The Ultimate AI Finance Agent
-## 🔀 Workflow: [Finance Agent](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/finance-agent)
+## 🔀 Workflow: [Finance Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/finance-agent)
 ### Your AI Financial Analyst for Real-Time Market Research and Investment Intelligence
 
 Today, we're diving into one of the most impactful applications of AI agents: intelligent financial analysis and real-time market research!
@@ -332,4 +332,4 @@ The compound effect of better financial intelligence drives smarter investment d
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
