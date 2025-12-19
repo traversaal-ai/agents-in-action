@@ -1,5 +1,5 @@
 # Agents in Action
-## 🚀 **Build AI Agents Like a Pro!** [🌐 Start Here](https://traversaal-ai.github.io/agents-in-action)
+## 🚀 **Build AI Agents Like a Pro!** [🌐Start Here](https://traversaal-ai.github.io/agents-in-action)
 
 ![Agents in Action](images/agents-in-action-banner.png)
 
