@@ -156,6 +156,7 @@ Let’s build the agentic internet — together.
 ## 📬 Stay in the Loop
 
 Follow [@hamzafarooq](https://www.linkedin.com/in/hamzafarooq/) on LinkedIn
+
 📬 Subscribe to the **Agents in Action** newsletter → [Join here](https://boringbot.substack.com)
 
 ---
