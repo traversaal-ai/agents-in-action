@@ -21,10 +21,13 @@ This workflow has two main pipelines:
 ### 1. Document Processing (Setup)
 Manual Trigger → Google Drive Download → Text Splitter → Document Loader → Embeddings → Vector Store
 
+![Supabase RAG Document Processing](images/supabase-rag-document-processing.png)
+
 
 ### 2. Chat Interface (Runtime)
 Chat Trigger → RAG Agent → [Memory + LLM + Vector Search] → Response
 
+![Supabase RAG Chat Interface](images/supabase-rag-chat-interface.png)
 
 ---
 
@@ -157,7 +160,7 @@ Chat Trigger → RAG Agent → [Memory + LLM + Vector Search] → Response
 
 ## 📚 Resources
 
-- 📹 [Original Tutorial by Nate Herk](https://www.youtube.com/watch?v=nVvHy-gTg8Y)
+- 📹 [Original Tutorial by Nate Herk](https://www.youtube.com/watch?v=JjBofKJnYIU)
 - 📖 [n8n Docs](https://docs.n8n.io/)
 - 🧠 [LangChain Node Integration](https://docs.n8n.io/advanced-ai/langchain/langchain-n8n/)
 
