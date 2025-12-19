@@ -51,7 +51,7 @@ The agent receives the input and decides what tools to use.
 
 ### 🌐 Internet Search Tool
 
-* **Tool:** HTTP Request to [Ares API](https://api-ares.traversaal.ai/live/predict)
+* **Tool:** HTTP Request to [Ares API](https://api.traversaal.ai/)
 * **Header Auth:** `x-api-key: --your-key--`
 * **JSON Body:**
 
@@ -80,6 +80,12 @@ Used when additional web context is needed.
    * Simple Memory
    * Ares Search Tool (optional)
 3. 🧾 Responds to user via webhook with AI output
+
+---
+
+## 🏛️ Architecture
+
+![Webhook with Memory](images/webhook-with-memory.png)
 
 ---
 
@@ -161,5 +167,5 @@ Open to contributions! Fork, modify, and raise issues.
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
-- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+- 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)

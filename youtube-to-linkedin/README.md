@@ -27,6 +27,12 @@ This workflow automates the process of turning YouTube videos into LinkedIn post
 
 ---
 
+## 🏛️ Architecture
+
+![YouTube to LinkedIn Post](images/youtube-linkedin.png)
+
+---
+
 ## 🛂 Inputs
 - 🔗 YouTube video link (from Google Sheets or webhook)
 - 🎯 Audience/targeting info (optional)
@@ -54,8 +60,8 @@ This workflow automates the process of turning YouTube videos into LinkedIn post
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
-- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+- 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnhxcHZkNXVrbmk4Y3Fxazk0aHFqbHplbDZueWRtMXUxNGFxNXF2bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ASH5ovgLK95jIKRSYy/giphy.gif" alt="YouTube to LinkedIn Automation" style="width:100vw;height:700px;object-fit:contain;border-radius:12px;" />
 

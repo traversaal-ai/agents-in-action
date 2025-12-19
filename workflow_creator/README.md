@@ -17,6 +17,12 @@ The Workflow Creator helps you design, configure, and manage complex automation 
 
 ---
 
+## 🏛️ Architecture
+
+![workflow-creator](images/workflow-creator.png)
+
+---
+
 ## ⚙️ Setup
 1. 📥 Import `workflow_creator.json` into your n8n instance.
 2. 🔑 Configure any required credentials or integrations as needed.
@@ -36,6 +42,6 @@ The Workflow Creator helps you design, configure, and manage complex automation 
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
-- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+- 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 

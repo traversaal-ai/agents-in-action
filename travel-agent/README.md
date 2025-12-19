@@ -113,6 +113,8 @@ Once your itinerary is complete, the assistant will:
 
 ## 🔄 Workflow Architecture
 
+![Travel Agent](images/travel-agent.png)
+
 ### Main Components
 - **Chat Trigger:** Handles user input
 - **Travel Agent:** Core AI agent with detailed travel planning prompt
@@ -141,5 +143,5 @@ Happy Travels! 🧳✈️ This AI assistant will help make your trip planning se
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
-- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+- 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)

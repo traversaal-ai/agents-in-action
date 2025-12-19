@@ -1,7 +1,7 @@
 # 🛰️ Build Your Own Perplexity Clone - Webhook + RAG + Internet Search (AWS Knowledge Agent)
 
 This folder contains the **Webhook + RAG + Internet Search** workflow for n8n.
-It extends `301` by adding a **web search fallback** for **non-S3 AWS** questions, while still using a **vector store (RAG)** for **S3** queries, and politely refusing **non-AWS** topics.
+It extends `chatbot-that-knows-your-documents` by adding a **web search fallback** for **non-S3 AWS** questions, while still using a **vector store (RAG)** for **S3** queries, and politely refusing **non-AWS** topics.
 
 ---
 
@@ -54,6 +54,14 @@ graph LR
 
 ---
 
+## 🏛️ Architecture
+
+![Perplexity Clone](images/perplexity-clone.png)
+
+![Perplexity Clone Ingestion](images/perplexity-clone-ingestion.png)
+
+---
+
 ## 🛂 Inputs (JSON Body)
 
 - `query` _(string, required)_ — user question.
@@ -83,7 +91,7 @@ graph LR
 
 ## ⚙️ Setup
 
-1. **Import** `401-webhook-rag-search.json` into **n8n Cloud**.
+1. **Import** `perplexity-clone.json` into **n8n Cloud**.
 2. **Credentials**
 
    - 🔑 **OpenAI** (for the Agent’s LLM)
@@ -102,7 +110,7 @@ graph LR
 ### Option A — **Google Colab (Recommended)**
 
 1. Open the instructor’s Colab:
-   **[201/301/401 Webhook Client (Colab)](https://colab.research.google.com/drive/1o66IjJDEQZ404gs5MNiItm2WqxcU2bzx?usp=sharing)**
+   **[Webhook Client (Colab)](https://colab.research.google.com/drive/1o66IjJDEQZ404gs5MNiItm2WqxcU2bzx?usp=sharing)**
 2. Click **Copy to Drive** to make it editable.
 3. In n8n, **Activate** this 401 workflow and copy the **Production Webhook URL** (not the Test URL).
 4. In your Colab copy, replace the webhook variable (`url` or `WEBHOOK_URL`) with the **Production URL**.
@@ -165,7 +173,7 @@ curl -X POST "$WEBHOOK_URL" \
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
-- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+- 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 👉 These resources expand on the workflows here and show how to apply AI + n8n in real projects.
