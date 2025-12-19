@@ -1,4 +1,5 @@
 # Connect n8n to Lovable using Webhooks
+## 🔀 Workflow: [301-Lovable-Webhook-n8n](https://github.com/traversaal-ai/agents-in-action/tree/main/301-lovable-webhook-n8n) 
 
 ## Why connect Lovable → n8n
 
