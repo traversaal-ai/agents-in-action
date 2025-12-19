@@ -1,5 +1,5 @@
 # 🛠️ Workflow Creator
-## 🔀 Workflow: [Workflow Creator](https://github.com/traversaal-ai/agents-in-action/tree/main/workflow-creator.md)
+## 🔀 Workflow: [Workflow Creator](https://github.com/traversaal-ai/agents-in-action/tree/main/workflow-creator)
 This blog contains the **Workflow Creator Agent** for n8n and automation projects.
 
 ---
