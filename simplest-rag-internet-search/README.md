@@ -33,7 +33,7 @@ graph TD
 
 ## 🏛️ Architecture
 
-![Simplest RAG & Internet Search Agent](rag-internet-search.png)
+![Simplest RAG & Internet Search Agent](images/rag-internet-search.png)
 
 ---
 
