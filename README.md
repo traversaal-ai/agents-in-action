@@ -133,6 +133,8 @@ By the end, you’ll be able to:
 
 **Kurt**, *Co-Founder*
 
+---
+
 ## 📢 Attribution & Credits
 If you use my course material, content, or research in your work, please credit me and the respective contributors.
 
@@ -141,6 +143,19 @@ If you use my course material, content, or research in your work, please credit 
 Farooq, H. (2025). *Agentic AI System Design for PMs*
 
 📌 Tagging & mentions are always appreciated! 😊
+
+---
+
+## 🧑‍💻 Contributors
+- [Hamza Farooq](https://github.com/hamzafarooq)
+- [Gabriela de Queiroz](https://github.com/gdequeiroz) 
+- [Jaya Rajwani](https://github.com/JayaRajwani)
+- [Bhavna Jain](https://substack.com/@bhavnajain)
+- [Taha Hussain](https://github.com/Taha-Traversaal)
+- [Yousuf Alvi](https://github.com/yousuf-alvi)
+- [Amina Javaid](https://github.com/aminajavaid30)
+  
+---
 
 ## 🧠 Contribute
 
