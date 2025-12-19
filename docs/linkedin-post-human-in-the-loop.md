@@ -1,5 +1,5 @@
 # ✍️ LinkedIn Post Human-in-the-Loop Agent
-## 🔀 Workflow: [LinkedIn Post](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/linkedpost-human-in-the-loop)
+## 🔀 Workflow: [LinkedIn Post](https://github.com/traversaal-ai/agents-in-action/tree/main/linkedpost-human-in-the-loop)
 This blog contains workflows and configurations for **semi-automated LinkedIn post generation and publishing** using n8n and AI.
 
 ---
@@ -73,4 +73,4 @@ Rewrites the draft to align with your personal writing style.
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)

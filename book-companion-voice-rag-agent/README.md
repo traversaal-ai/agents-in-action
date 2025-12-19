@@ -212,13 +212,12 @@ We welcome:
 
 ---
 
-## 🎓 Ready to Level-Up?
-Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
-- 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
-
----
-
 ## 📄 License
 
 Provided for educational & practical use. Please comply with TOS of APIs used.
+
+Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+
+👉 These resources expand on the workflows here and show how to apply AI + n8n in real projects.

@@ -1,5 +1,5 @@
 # The Unofficial Airbnb AI Agent
-## 🔀 Workflow: [Airbnb Agent](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/airbnb-agent)
+## 🔀 Workflow: [Airbnb Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/airbnb-agent)
 ### The missing component of Airbnb connected with MCP
 
 Today, we're diving into one of the most exciting applications of AI agents, **intelligent search and recommendation systems**!
@@ -300,4 +300,4 @@ The compound effect of better search experiences drives user satisfaction, conve
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)

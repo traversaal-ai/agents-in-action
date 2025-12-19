@@ -95,7 +95,7 @@ Pause the workflow and wait for a human decision (approval or input) before cont
 
 Let’s build your first automation to see n8n in action.
 
-## 🔀 Workflow: [Hello n8n](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/101-hello-n8n) 
+## 🔀 Workflow: [Hello n8n](https://github.com/traversaal-ai/agents-in-action/tree/main/101-hello-n8n) 
 
 ### ✨ Overview
 
@@ -127,6 +127,14 @@ flowchart LR
 2. 🧠 The **AI Agent** applies short, clear response rules.
 3. 🤖 **OpenRouter**’s `deepseek/deepseek-chat` model generates a reply.
 4. 🗂️ **Memory** retains recent chat turns so it feels continuous.
+
+---
+
+### 🏛️ Architecture
+
+![Hello n8n](../101-hello-n8n/images/hello-n8n.png)
+
+---
 
 ### ⚙️ Setup
 
@@ -189,4 +197,4 @@ Whether you’re automating reports, coordinating agents, or running production-
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)

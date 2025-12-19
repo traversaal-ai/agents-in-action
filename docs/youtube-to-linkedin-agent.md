@@ -1,5 +1,5 @@
 # YouTube to LinkedIn Agent
-## 🔀 Workflow: [YouTube to LinkedIn](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/youtube-to-linkedin)
+## 🔀 Workflow: [YouTube to LinkedIn](https://github.com/traversaal-ai/agents-in-action/tree/main/youtube-to-linkedin)
 ### Automated Content Generation
 
 Today, we're taking your agent-building skills to the next level! In the previous session, you built your first AI sales prospecting agent that automatically finds and qualifies leads.
@@ -295,4 +295,4 @@ But we're just getting started. The principles you've learned today—multi-stag
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)

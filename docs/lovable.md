@@ -1,5 +1,5 @@
 # 💗 Introducing Lovable — Your AI Frontend
-## 🔀 Workflow: [All In One Lovable](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/401-all-in-one-lovable) 
+## 🔀 Workflow: [All In One Lovable](https://github.com/traversaal-ai/agents-in-action/tree/main/401-all-in-one-lovable) 
 
 As you begin building AI agents with n8n, you’ll soon want a way to **interact with them in real time** — to chat, test ideas, and experience your workflows as a user would. That’s where **Lovable** comes in.
 
@@ -31,4 +31,4 @@ By combining Lovable with n8n, you’ll transform static automation flows into *
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)

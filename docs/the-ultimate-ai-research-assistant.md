@@ -1,5 +1,5 @@
 # The Ultimate AI Research Assistant
-## 🔀 Workflow: [Research Assistant]()
+## 🔀 Workflow: [Research Assistant](https://github.com/traversaal-ai/agents-in-action/tree/main/simplest-rag-internet-search)
 ### The missing component of intelligent research with dual-search capabilities 
 
 Today, we're diving into one of the most powerful applications of AI agents: intelligent research and information retrieval!
@@ -308,4 +308,4 @@ The compound effect of better research capabilities drives decision quality, com
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
