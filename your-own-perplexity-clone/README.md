@@ -58,6 +58,8 @@ graph LR
 
 ![Perplexity Clone](images/perplexity-clone.png)
 
+![Perplexity Clone Ingestion](images/perplexity-clone-ingestion.png)
+
 ---
 
 ## 🛂 Inputs (JSON Body)
