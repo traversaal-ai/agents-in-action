@@ -157,7 +157,7 @@ Let’s build the agentic internet — together.
 
 Follow [@hamzafarooq](https://www.linkedin.com/in/hamzafarooq/) on LinkedIn
 
-📬 Subscribe to the **Agents in Action** newsletter → [Join here](https://boringbot.substack.com)
+📬 Subscribe to the **Generative AI for Everyone** newsletter → [Join here](https://boringbot.substack.com)
 
 ---
 
