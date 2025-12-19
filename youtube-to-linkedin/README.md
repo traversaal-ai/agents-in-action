@@ -27,6 +27,12 @@ This workflow automates the process of turning YouTube videos into LinkedIn post
 
 ---
 
+## 🏛️ Architecture
+
+![YouTube to LinkedIn Post](images/youtube-linkedin.png)
+
+---
+
 ## 🛂 Inputs
 - 🔗 YouTube video link (from Google Sheets or webhook)
 - 🎯 Audience/targeting info (optional)
