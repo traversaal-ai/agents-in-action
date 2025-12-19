@@ -3,7 +3,8 @@
 
 ![Agents in Action](images/agents-in-action-banner.png)
 
-### 👋 Welcome to my course on AI Agents. [🌐 View the website](https://traversaal-ai.github.io/agents-in-action)
+### 👋 Welcome to my course on AI Agents. 
+#### [🌐 View the website](https://traversaal-ai.github.io/agents-in-action)
 
 This course is one of the top-rated courses on building AI Agents using no-code/low-code tools. So far, I’ve taught this course to over 1500 professionals, at MAVEN, Stanford Continuing Studies, UCLA and University of Minnesota, helping them gain a deep understanding of the levels of agentic architecture, enterprise-grade Retrieval Augmented Generation (RAG), and open source agentic products deployment.
 
