@@ -60,7 +60,7 @@ Whether you’re a developer, product manager, researcher, or simply an AI enthu
 ---
 
 ## 📚 What’s Included?
-✅ **16 hands-on chapters** — from AI fundamentals to full-stack agent deployment
+✅ **20+ hands-on chapters** — from AI fundamentals to full-stack agent deployment
 
 ✅ **Step-by-step projects covering real-world AI agents**:
 Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow Builders
