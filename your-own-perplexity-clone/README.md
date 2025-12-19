@@ -54,6 +54,12 @@ graph LR
 
 ---
 
+## 🏛️ Architecture
+
+![Perplexity Clone](images/perplexity-clone.png)
+
+---
+
 ## 🛂 Inputs (JSON Body)
 
 - `query` _(string, required)_ — user question.
