@@ -186,3 +186,8 @@ Join our courses on Maven and never stop learning:
 - 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 ![Maven Courses](images/course-cta.png)
+
+Watch our Agent Bootcamp Playlist on YouTube:
+- ▶️ [Agent Bootcamp 2025](https://www.youtube.com/playlist?list=PLrfvDRVRE-H4ZoJ5LDzArOC4n9FCVJN-g)
+
+![Agent Bootcamp Playlist](images/agent-bootcamp-playlist.png)
