@@ -184,3 +184,5 @@ APACHE 2.0 License — use, remix, and deploy freely (with attribution)
 Join our courses on Maven and never stop learning:
 - 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
 - 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+
+![Maven Courses](images/course-cta.png)
