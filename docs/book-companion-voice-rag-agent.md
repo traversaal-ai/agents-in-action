@@ -1,5 +1,5 @@
 # 🎙️🤖🔎 Book Companion Voice RAG Agent
-### 🔀 Workflow: [Your Book's Voice](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/book-companion-voice-rag-agent)
+### 🔀 Workflow: [Your Book's Voice](https://github.com/traversaal-ai/agents-in-action/tree/main/book-companion-voice-rag-agent)
 
 ## Building an LLM Application (from Scratch)
 
@@ -24,7 +24,11 @@ A complete voice-enabled book companion system with **n8n** as the core RAG engi
 
 This system combines multiple components for a complete voice AI experience:
 
-![System Architecture](diagrams/system-architecture.svg)
+![System Architecture](../book-companion-voice-rag-agent/diagrams/system-architecture.svg)
+
+### 🔀 n8n-Workflow
+
+![Book Companion Voice Agent](../book-companion-voice-rag-agent/diagrams/book-companion.png)
 
 ### Frontend (React)
 
@@ -217,4 +221,4 @@ Provided for educational & practical use. Please comply with TOS of APIs used.
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
