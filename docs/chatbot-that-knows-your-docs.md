@@ -1,5 +1,5 @@
 # 💬 Chatbot that Knows Your Documents (OpenRouter + Product Management Agent)
-## 🔀 Workflow: [Chatbot with RAG](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/chatbot-that-knows-your-documents)
+## 🔀 Workflow: [Chatbot with RAG](https://github.com/traversaal-ai/agents-in-action/tree/main/chatbot-that-knows-your-documents)
 
 This blog contains the **Webhook + Retrieval-Augmented Generation (RAG)** workflow for **n8n**, powered by **OpenRouter**’s _deepseek-chat_ model.
 It demonstrates how prompt wording and topic specificity change the AI’s response — while adding a **RAG tool for Product Management insights**.
@@ -148,9 +148,9 @@ curl -X POST "$WEBHOOK_URL" \
 
 - 📖 [Traversaal Product Management Docs API](https://pro-documents.traversaal-api.com/)
 - 📖 [OpenRouter — deepseek-chat model](https://openrouter.ai/models/deepseek/deepseek-chat)
-- 📖 [n8n — AI Agent node](https://docs.n8n.io/ai/agents/)
+- 📖 [n8n — AI Agent node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)
 - 📖 [n8n — HTTP Request Tool](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
-- 📖 [n8n — Memory Buffer Window](https://docs.n8n.io/ai/memory/)
+- 📖 [n8n — Memory Buffer Window](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/)
 
 ---
 
@@ -160,4 +160,4 @@ curl -X POST "$WEBHOOK_URL" \
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
