@@ -1,7 +1,9 @@
 # Agents in Action
-🚀 **Build AI Agents Like a Pro!**
+## 🚀 **Build AI Agents Like a Pro!** [🌐 View the website](https://traversaal-ai.github.io/agents-in-action)
 
-Welcome to my course on AI Agents.
+![Agents in Action](images/agents-in-action-banner.png)
+
+### 👋 Welcome to my course on AI Agents. 
 
 This course is one of the top-rated courses on building AI Agents using no-code/low-code tools. So far, I’ve taught this course to over 1500 professionals, at MAVEN, Stanford Continuing Studies, UCLA and University of Minnesota, helping them gain a deep understanding of the levels of agentic architecture, enterprise-grade Retrieval Augmented Generation (RAG), and open source agentic products deployment.
 
@@ -19,7 +21,7 @@ By the end of this series, you will be able to:
 6. **Add long-term memory and context retention to AI workflows** using databases like Supabase for personalization and persistence.
 7. **Integrate voice, UI, and API tools** to create multimodal, interactive AI experiences that go beyond text-based interaction.
 8. **Automate real-world processes** (e.g., lead generation, content publishing, research synthesis) with AI-human collaboration loops.
-9. **Build and evaluate advanced agentic** systems that combine reasoning loops, internet search, and multi-tool orchestration.
+9. **Build and evaluate advanced agentic systems** that combine reasoning loops, internet search, and multi-tool orchestration.
 10. **Create a meta-agent that builds other agents**, gaining the ability to auto-generate, configure, and deploy intelligent workflows from within n8n itself.
 
 ---
@@ -77,26 +79,35 @@ Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow B
 
 | Chapter# | Title | Description | n8n Workflow |
 |---------|-------|-------------|------| 
-| 0 | [Why we built this course?](https://traversaal-ai.github.io/agents-in-action/) | We built **Agents in Action** to demystify AI agents and show that anyone, not just developers, can build, understand, and deploy intelligent systems using simple, no-code tools like n8n and Lovable. |  |
-| 1 | [From LLMs to AI Agents](https://traversaal-ai.github.io/agents-in-action/from-llms-to-ai-agents/) | Discover how Large Language Models evolve into fully functional AI agents. Learn the core pillars—memory, tools, and planning loops—that transform passive chatbots into proactive, autonomous digital workers capable of thinking, acting, and learning. |  |
-| 2 | [Agents are Here and They are Staying](https://traversaal-ai.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | Explore how AI is evolving from generating answers to taking actions — marking the dawn of intelligent, tool-using agents that think, plan, and execute real-world tasks. |  |
+| 0 | [Why we built this course?](https://traversaal-ai.github.io/agents-in-action/) | We built **Agents in Action** to demystify AI agents and show that anyone can build, understand, and deploy intelligent systems. |  |
+| 1 | [From LLMs to AI Agents](https://traversaal-ai.github.io/agents-in-action/from-llms-to-ai-agents/) | Discover how Large Language Models evolve into fully functional AI agents. |  |
+| 2 | [Agents are Here and They are Staying](https://traversaal-ai.github.io/agents-in-action/agents-are-here-and-they-are-staying/) | Explore how AI is evolving from generating answers to taking actions. |  |
 | 3 | Build Your First End-to-End Agent |  |  |
-|  | 3a. [Introducing Lovable](https://traversaal-ai.github.io/agents-in-action/meet-n8n/) | Meet Lovable, a lightweight and customizable frontend that brings your n8n agents to life — enabling real-time, conversational interfaces where users can chat, interact, and experience your AI workflows seamlessly. | [All-In-One-Lovable](https://github.com/traversaal-ai/agents-in-action/tree/main/401-all-in-one-lovable) |
-|  | 3b. [Introducing n8n & Building Your First Workflow](https://traversaal-ai.github.io/agents-in-action/meet-n8n/) | Get to know n8n, the open-source automation platform that powers your AI workflows. Understand its interface, triggers, nodes, and how it becomes the perfect no-code playground for building your first AI agent. | [Hello n8n](https://github.com/traversaal-ai/agents-in-action/tree/main/101-hello-n8n) |
-|  | 3c. [Connecting n8n & Lovable via Webhooks](https://traversaal-ai.github.io/agents-in-action/meet-n8n/) | Learn how to connect Lovable with n8n using webhooks — enabling your no-code frontend apps to seamlessly trigger automated workflows, AI actions, or backend logic with just a single event. | [Basic Webhook](https://github.com/traversaal-ai/agents-in-action/tree/main/201-basic-webhook) | [301-lovable-webhook-n8n](https://github.com/traversaal-ai/agents-in-action/tree/main/301-lovable-webhook-n8n) |
-| 4 | [Sales Agent to Find the Right Customer with AI](https://traversaal-ai.github.io/agents-in-action/sales-agent-to-find-the-right-customer/) | Build your first real-world AI Sales Agent using n8n — an automated system that researches, qualifies, and reaches out to high-potential leads, turning your ICP into actionable sales intelligence. | [Sales Prospects Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/sales-porspects-agent) |
-| 5 | [Build a Chatbot that Knows Your Documents](https://traversaal-ai.github.io/agents-in-action/chatbot-that-knows-your-documents/) | Build a document-aware chatbot using n8n, OpenRouter, and RAG — an intelligent Product Management Agent that retrieves contextual answers, remembers conversations, and adapts responses based on prompt clarity and topic relevance. | [Chatbot that Knows Your Docs](https://github.com/traversaal-ai/agents-in-action/tree/main/chatbot-that-knows-your-documents) |
-| 6 | [Build Your Own Perplexity Clone](https://traversaal-ai.github.io/agents-in-action/build-your-own-perplexity-clone/) | Build your own Perplexity-style AI agent using n8n, combining RAG, Internet Search, and smart tool routing to answer AWS-related questions — retrieving from your S3 knowledge base, searching the web for fresh info, and gracefully declining out-of-scope queries. | [Your Own Perplexity Clone](https://github.com/traversaal-ai/agents-in-action/tree/main/your-own-perplexity-clone) |
-| 7 | [Teach your RAG Agent to Remember](https://traversaal-ai.github.io/agents-in-action/supabase-rag-with-memory/) | Teach your RAG Agent to think, remember, and respond like a pro — this workflow adds persistent memory to your Retrieval-Augmented Generation chatbot, enabling it to recall past conversations while grounding answers in your document knowledge base. | [RAG Agent with Memory](https://github.com/traversaal-ai/agents-in-action/tree/main/supabase-rag) |
-| 8 | [Give Your Book a Voice - The AI Assistant Edition](https://traversaal-ai.github.io/agents-in-action/book-companion-voice-rag-agent/)| Give your book a voice with this AI-powered Voice RAG Agent — a full-stack, speech-to-speech assistant that lets readers talk to your book in real time, combining n8n, Supabase, and React for intelligent, voice-driven knowledge retrieval. | [Your Book's Voice Companion](https://github.com/traversaal-ai/agents-in-action/tree/main/book-companion-voice-rag-agent) |
-| 9 | [Automate Your Content - YouTube to LinkedIn with AI](https://traversaal-ai.github.io/agents-in-action/youtube-to-linkedin-agent/) | Automate your content workflow with a YouTube-to-LinkedIn AI Agent that transforms videos into engaging LinkedIn posts — combining transcription, content generation, human review, and publishing to scale your personal brand effortlessly. | [YouTube to LinkedIn](https://github.com/traversaal-ai/agents-in-action/tree/main/youtube-to-linkedin) |
-| 10 | [The Unofficial AirBnb AI Agent](https://traversaal-ai.github.io/agents-in-action/the-unofficial-airbnb-ai-agent/) | Build the Unofficial Airbnb AI Agent — a conversational, context-aware search system powered by MCP integration, memory, and intelligent recommendations that transforms how users discover and book stays through natural language interactions. | [Airbnb Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/airbnb-agent) | 
-| 11 | [LinkedIn Human-in-the-Loop Agent](https://traversaal-ai.github.io/agents-in-action/linkedin-post-human-in-the-loop/) | Create a Human-in-the-Loop LinkedIn Post Agent that combines AI automation with human review, generating technically precise, style-matched LinkedIn posts from AI news feeds — ensuring every post is both insightful and on-brand before publishing. | [LinkedIn Human in the Loop](https://github.com/traversaal-ai/agents-in-action/tree/main/linkedpost-human-in-the-loop) |
-| 12 | [The Ultimate AI Blog Post Agent](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-blog-post-agent/) | Build the Ultimate AI Blog Post Agent — a research-driven content creation system that automates deep research, article synthesis, and professional publishing, turning scattered sources into authoritative, SEO-optimized blog posts with minimal manual effort. | [Blog Post Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/blog_post_agent) |
-| 13 | [Fully Functional Agent Loop - The Travel Agent](https://traversaal-ai.github.io/agents-in-action/travel-agent/) | Build a ReAct-based AI Travel Agent using n8n and MCP integration that plans complete trips from natural language input — handling flights, hotels, itineraries, calendar events, and email delivery through fully connected intelligent workflows. | [Travel Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/travel-agent) |
-| 14 | [Intelligent Research - Build The Ultimate AI Research Assistant](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-research-assistant/) | Build the Ultimate AI Research Assistant — an intelligent dual-search agent that seamlessly combines real-time internet search with private document RAG retrieval, enabling comprehensive, context-aware research and automated synthesis across multiple knowledge sources. | [Research Assistant]() |
-| 15 | [Investment Intelligence - Build The Ultimate AI Finance Agent](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-finance-agent/) | Build the Ultimate AI Finance Agent — your intelligent financial analyst that combines real-time market research, economic trend analysis, and investment strategy generation to deliver expert, data-driven insights through a conversational interface. | [Finance Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/finance-agent) |
+|  | 3a. [Introducing Lovable](https://traversaal-ai.github.io/agents-in-action/meet-n8n/) | Meet Lovable, a lightweight and customizable frontend that brings your n8n agents to life — enabling real-time, conversational interfaces. | [All-In-One-Lovable](https://github.com/traversaal-ai/agents-in-action/tree/main/401-all-in-one-lovable) |
+|  | 3b. [Introducing n8n & Building Your First Workflow](https://traversaal-ai.github.io/agents-in-action/meet-n8n/) | Get to know n8n, the open-source automation platform that powers your AI workflows. | [Hello n8n](https://github.com/traversaal-ai/agents-in-action/tree/main/101-hello-n8n) |
+|  | 3c. [Connecting n8n & Lovable via Webhooks](https://traversaal-ai.github.io/agents-in-action/meet-n8n/) | Learn how to connect Lovable with n8n using webhooks. | [Basic Webhook](https://github.com/traversaal-ai/agents-in-action/tree/main/201-basic-webhook) | [301-lovable-webhook-n8n](https://github.com/traversaal-ai/agents-in-action/tree/main/301-lovable-webhook-n8n) |
+| 4 | [Sales Agent to Find the Right Customer with AI](https://traversaal-ai.github.io/agents-in-action/sales-agent-to-find-the-right-customer/) | Build your first real-world AI Sales Agent using n8n — an automated system that researches, qualifies, and reaches out to high-potential leads. | [Sales Prospects Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/sales-porspects-agent) |
+| 5 | [Build a Chatbot that Knows Your Documents](https://traversaal-ai.github.io/agents-in-action/chatbot-that-knows-your-documents/) | Build a document-aware chatbot using n8n, OpenRouter, and RAG. | [Chatbot that Knows Your Docs](https://github.com/traversaal-ai/agents-in-action/tree/main/chatbot-that-knows-your-documents) |
+| 6 | [Build Your Own Perplexity Clone](https://traversaal-ai.github.io/agents-in-action/build-your-own-perplexity-clone/) | Build your own Perplexity-style AI agent using n8n, combining RAG, Internet Search, and smart tool routing to answer AWS-related questions, searching the web for fresh info, and gracefully declining out-of-scope queries. | [Your Own Perplexity Clone](https://github.com/traversaal-ai/agents-in-action/tree/main/your-own-perplexity-clone) |
+| 7 | [Teach your RAG Agent to Remember](https://traversaal-ai.github.io/agents-in-action/supabase-rag-with-memory/) | Teach your RAG Agent to think, remember, and respond like a pro — this workflow adds persistent memory to your Retrieval-Augmented Generation chatbot. | [RAG Agent with Memory](https://github.com/traversaal-ai/agents-in-action/tree/main/supabase-rag) |
+| 8 | [Give Your Book a Voice - The AI Assistant Edition](https://traversaal-ai.github.io/agents-in-action/book-companion-voice-rag-agent/)| Give your book a voice with this AI-powered Voice RAG Agent — a full-stack, speech-to-speech assistant that lets readers talk to your book in real time. | [Your Book's Voice Companion](https://github.com/traversaal-ai/agents-in-action/tree/main/book-companion-voice-rag-agent) |
+| 9 | [Automate Your Content - YouTube to LinkedIn with AI](https://traversaal-ai.github.io/agents-in-action/youtube-to-linkedin-agent/) | Automate your content workflow with a YouTube-to-LinkedIn AI Agent that transforms videos into engaging LinkedIn posts. | [YouTube to LinkedIn](https://github.com/traversaal-ai/agents-in-action/tree/main/youtube-to-linkedin) |
+| 10 | [The Unofficial AirBnb AI Agent](https://traversaal-ai.github.io/agents-in-action/the-unofficial-airbnb-ai-agent/) | Build the Unofficial Airbnb AI Agent — a conversational, context-aware search system powered by MCP integration, memory, and intelligent recommendations. | [Airbnb Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/airbnb-agent) | 
+| 11 | [LinkedIn Human-in-the-Loop Agent](https://traversaal-ai.github.io/agents-in-action/linkedin-post-human-in-the-loop/) | Create a Human-in-the-Loop LinkedIn Post Agent that combines AI automation with human review, generating technically precise, style-matched LinkedIn posts from AI news feeds. | [LinkedIn Human in the Loop](https://github.com/traversaal-ai/agents-in-action/tree/main/linkedpost-human-in-the-loop) |
+| 12 | [The Ultimate AI Blog Post Agent](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-blog-post-agent/) | Build the Ultimate AI Blog Post Agent — a research-driven content creation system that automates deep research, article synthesis, and professional publishing. | [Blog Post Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/blog_post_agent) |
+| 13 | [Fully Functional Agent Loop - The Travel Agent](https://traversaal-ai.github.io/agents-in-action/travel-agent/) | Build a ReAct-based AI Travel Agent using n8n and MCP integration that plans complete trips from natural language input — handling flights, hotels, itineraries, calendar events, and email delivery. | [Travel Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/travel-agent) |
+| 14 | [Intelligent Research - Build The Ultimate AI Research Assistant](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-research-assistant/) | Build the Ultimate AI Research Assistant — an intelligent dual-search agent that seamlessly combines real-time internet search with private document RAG retrieval. | [Research Assistant](https://github.com/traversaal-ai/agents-in-action/tree/main/simplest-rag-internet-search) |
+| 15 | [Investment Intelligence - Build The Ultimate AI Finance Agent](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-finance-agent/) | Build the Ultimate AI Finance Agent — your intelligent financial analyst that combines real-time market research, economic trend analysis, and investment strategy. | [Finance Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/finance-agent) |
 | 16 | [An Agent that Creates Other Agents](https://traversaal-ai.github.io/agents-in-action/workflow-creator/) | Build the Workflow Creator Agent — an intelligent automation designer that helps you visually create, configure, and manage complex n8n workflows with modular templates, reusable components, and seamless integrations. | [Workflow Creator](https://github.com/traversaal-ai/agents-in-action/tree/main/workflow_creator) |
+
+---
+
+## Lightning Lessons by **[Hamza Farooq](https://www.linkedin.com/in/hamzafarooq/)**
+- 💡 [Build a Sales Prospect and a Finance Agent with Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me)
+- 💡 [Build an AI Agent with Memory, Internet and Document Search](https://maven.com/p/373e26/build-an-ai-agent-with-memory-internet-and-document-search)
+- 💡 [Design Vertical AI Agents That Deliver Results, Beyond Hype](https://maven.com/p/075022/design-vertical-ai-agents-that-deliver-results-beyond-hype)
+- 💡 [Design Vertical AI Agents that Deliver Results](https://maven.com/p/332c7a/design-vertical-ai-agents-that-deliver-results)
+- 💡 [Build a Sales Prospect and a Finance Agent with Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me)
 
 ---
 
@@ -122,6 +133,8 @@ By the end, you’ll be able to:
 
 **Kurt**, *Co-Founder*
 
+---
+
 ## 📢 Attribution & Credits
 If you use my course material, content, or research in your work, please credit me and the respective contributors.
 
@@ -130,6 +143,19 @@ If you use my course material, content, or research in your work, please credit 
 Farooq, H. (2025). *Agentic AI System Design for PMs*
 
 📌 Tagging & mentions are always appreciated! 😊
+
+---
+
+## 🧑‍💻 Contributors
+- [Hamza Farooq](https://github.com/hamzafarooq)
+- [Gabriela de Queiroz](https://github.com/gdequeiroz) 
+- [Jaya Rajwani](https://github.com/JayaRajwani)
+- [Bhavna Jain](https://substack.com/@bhavnajain)
+- [Taha Hussain](https://github.com/Taha-Traversaal)
+- [Yousuf Alvi](https://github.com/yousuf-alvi)
+- [Amina Javaid](https://github.com/aminajavaid30)
+  
+---
 
 ## 🧠 Contribute
 
@@ -145,7 +171,8 @@ Let’s build the agentic internet — together.
 ## 📬 Stay in the Loop
 
 Follow [@hamzafarooq](https://www.linkedin.com/in/hamzafarooq/) on LinkedIn
-📬 Subscribe to the **Agents in Action** newsletter → [Join here](https://boringbot.substack.com)
+
+📬 Subscribe to the **Generative AI for Everyone** newsletter → [Join here](https://boringbot.substack.com)
 
 ---
 
@@ -155,5 +182,5 @@ APACHE 2.0 License — use, remix, and deploy freely (with attribution)
 
 ## 🎓 Ready to Level-Up?
 Join our courses on Maven and never stop learning:
-- 🤖 [Agentic AI System Design for PMs](https://maven.com/boring-bot/ml-system-design)
-- 💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
+- 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+- 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
