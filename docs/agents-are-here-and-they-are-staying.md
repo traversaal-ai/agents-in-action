@@ -176,3 +176,7 @@ We cut through the noise of flashy AI demos and focus on what truly matters—bu
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
 ![AI Bootcamp](images/ai-bootcamp.png)
+
+---
+
+## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/lovable/)
