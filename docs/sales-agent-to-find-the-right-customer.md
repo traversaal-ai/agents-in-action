@@ -1,5 +1,5 @@
 # Sales Agent to Find the Right Customer
-## Workflow: [Sales Prospects Agent](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/sales-porspects-agent)
+## Workflow: [Sales Prospects Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/sales-porspects-agent)
 ### Learn how to build an AI Agent that finds you the right customers for your product
 
 In today's lesson, we'll dive deep into **n8n**—the workflow automation platform that will become your secret weapon for creating Level 2 agents. By the end of this lesson, you'll have built and deployed your very first working sales prospect agent that can automatically research leads, qualify them, and populate your CRM.
@@ -242,4 +242,4 @@ But this is just the beginning. The patterns and principles you've learned with 
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)

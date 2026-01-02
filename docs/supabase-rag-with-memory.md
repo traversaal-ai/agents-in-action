@@ -1,5 +1,5 @@
 # 🧠 Teach Your RAG Agent to Remember
-## 🔀 Workflow: [RAG with Memory](https://github.com/aminajavaid30/agents-in-action/tree/substack-blogs/supabase-rag)
+## 🔀 Workflow: [RAG with Memory](https://github.com/traversaal-ai/agents-in-action/tree/main/supabase-rag)
 A powerful Retrieval-Augmented Generation (RAG) chatbot built using **n8n**, combining document knowledge with conversational AI and persistent memory.
 
 ---
@@ -194,4 +194,4 @@ Provided for educational & practical use. Please comply with TOS of APIs used.
 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
-![AI Bootcamp](images/ai-bootcamp.png)
+[![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
