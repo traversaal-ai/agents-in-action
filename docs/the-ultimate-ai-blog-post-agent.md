@@ -60,3 +60,6 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 [![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
 
+---
+
+## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/travel-agent/)

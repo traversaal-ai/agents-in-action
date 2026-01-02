@@ -220,3 +220,7 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 ![AI Bootcamp](images/ai-bootcamp.png)
 
+---
+
+## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/agents-are-here-and-they-are-staying/)
+
