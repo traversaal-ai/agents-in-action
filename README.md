@@ -1,5 +1,5 @@
 # Agents in Action
-## 🚀 **Build AI Agents Like a Pro!** [🌐 View the website](https://traversaal-ai.github.io/agents-in-action)
+## 🚀 **Build AI Agents Like a Pro!** [🌐Start Here](https://traversaal-ai.github.io/agents-in-action)
 
 ![Agents in Action](images/agents-in-action-banner.png)
 
@@ -102,12 +102,12 @@ Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow B
 
 ---
 
-## Lightning Lessons by **[Hamza Farooq](https://www.linkedin.com/in/hamzafarooq/)**
-- 💡 [Build a Sales Prospect and a Finance Agent with Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me)
-- 💡 [Build an AI Agent with Memory, Internet and Document Search](https://maven.com/p/373e26/build-an-ai-agent-with-memory-internet-and-document-search)
-- 💡 [Design Vertical AI Agents That Deliver Results, Beyond Hype](https://maven.com/p/075022/design-vertical-ai-agents-that-deliver-results-beyond-hype)
-- 💡 [Design Vertical AI Agents that Deliver Results](https://maven.com/p/332c7a/design-vertical-ai-agents-that-deliver-results)
-- 💡 [Build a Sales Prospect and a Finance Agent with Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me)
+## On Demand Sessions by **[Hamza Farooq](https://www.linkedin.com/in/hamzafarooq/)**
+- 1️⃣ [Build a Sales Prospect and a Finance Agent with Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me)
+- 2️⃣ [Build an AI Agent with Memory, Internet and Document Search](https://maven.com/p/373e26/build-an-ai-agent-with-memory-internet-and-document-search)
+- 3️⃣ [Design Vertical AI Agents That Deliver Results, Beyond Hype](https://maven.com/p/075022/design-vertical-ai-agents-that-deliver-results-beyond-hype)
+- 4️⃣ [Design Vertical AI Agents that Deliver Results](https://maven.com/p/332c7a/design-vertical-ai-agents-that-deliver-results)
+- 5️⃣ [Build a Sales Prospect and a Finance Agent with Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me)
 
 ---
 
@@ -184,3 +184,10 @@ APACHE 2.0 License — use, remix, and deploy freely (with attribution)
 Join our courses on Maven and never stop learning:
 - 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
 - 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+
+![Maven Courses](images/course-cta.png)
+
+Watch our Agent Bootcamp Playlist on YouTube:
+- ▶️ [Agent Bootcamp 2025](https://www.youtube.com/playlist?list=PLrfvDRVRE-H4ZoJ5LDzArOC4n9FCVJN-g)
+
+![Agent Bootcamp Playlist](images/agent-bootcamp-playlist.png)
