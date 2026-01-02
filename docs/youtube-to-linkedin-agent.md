@@ -296,3 +296,7 @@ But we're just getting started. The principles you've learned today—multi-stag
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
 [![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+
+---
+
+## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/the-unofficial-airbnb-ai-agent/)
