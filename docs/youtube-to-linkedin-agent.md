@@ -299,4 +299,8 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 ---
 
-## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/the-unofficial-airbnb-ai-agent/)
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - Give Your Book A Voice](https://traversaal-ai.github.io/agents-in-action/book-companion-voice-rag-agent/)
+
+[➡️ **Next** - The Unofficial Airbnb AI Agent](https://traversaal-ai.github.io/agents-in-action/the-unofficial-airbnb-ai-agent)
