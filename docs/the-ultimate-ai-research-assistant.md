@@ -312,4 +312,8 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 ---
 
-## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-finance-agent/)
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - Travel Agent](https://traversaal-ai.github.io/agents-in-action/travel-agent/)
+
+[➡️ **Next** - The Ultimate Finance Agent](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-finance-agent/)
