@@ -93,10 +93,12 @@ The agent is explicitly instructed to **demonstrate prompt sensitivity**:
 
 ### Example Request
 
-`{
+```json
+{
   "query": "Tell me about AWS S3 storage classes",
   "username": "demo-user-1"
-}`
+}
+```
 
 ---
 
