@@ -210,4 +210,5 @@ These courses go deeper into:
 ---
 
 🚀 **This workflow is a strong foundation for building serious AI products with n8n.**
-   Copy it, extend it, and adapt it to your own use cases.
+
+Copy it, extend it, and adapt it to your own use cases.
