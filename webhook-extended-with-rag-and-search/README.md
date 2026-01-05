@@ -1,10 +1,9 @@
 # 🪝 Webhook Extended → OpenAI (with Memory) + RAG + Internet Search
 
 This folder contains an **extended n8n workflow** that demonstrates a more realistic **AI Agent backend** pattern:
-  `
+
   **HTTP in → AI Agent → Tools (RAG + Internet) → OpenAI → HTTP out**,  
   with **per-user memory** and **prompt sensitivity** built in.
-  `
 
 This workflow is designed as a **production-ready reference** for showing how:
 - Prompt wording changes AI responses
