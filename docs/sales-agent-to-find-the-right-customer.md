@@ -246,4 +246,8 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 ---
 
-## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/chatbot-that-knows-your-docs/)
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - Connect n8n to Lovable using Webhooks](https://traversaal-ai.github.io/agents-in-action/301-lovable-webhook-n8n/)
+
+[➡️ **Next** - Chatbot that Knows Your Documents](https://traversaal-ai.github.io/agents-in-action/chatbot-that-knows-your-docs/)
