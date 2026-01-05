@@ -1,4 +1,9 @@
 # 🤖 Agents in Action
+
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Next**](https://traversaal-ai.github.io/agents-in-action/from-llms-to-ai-agents/)
+
 ## 💡 Why We Built This Course
 
 Artificial Intelligence is changing faster than ever but most people still experience it passively, through chatbots and demos. We built **Agents in Action** to change that.
