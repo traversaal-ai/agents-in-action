@@ -201,4 +201,11 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 ---
 
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - Introducing Lovable]([https://traversaal-ai.github.io/agents-in-action](https://traversaal-ai.github.io/agents-in-action/lovable/)
+
+[➡️ **Next** - Connect n8n to Lovable using Webhooks](https://traversaal-ai.github.io/agents-in-action/301-lovable-webhook-n8n/)
+
+
 ## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/301-lovable-webhook-n8n.md)
