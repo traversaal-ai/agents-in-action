@@ -138,7 +138,7 @@ The Test URL is temporary and will not work for real clients.
 
 ## 🧪 Try It Out
 
-###🔹 Option A — cURL
+### 🔹 Option A — cURL
 
 WEBHOOK_URL="https://<your-n8n>/webhook/cc748180-1392-4012-bdb8-48453dcb87dd"
 
@@ -169,13 +169,13 @@ curl -X POST "$WEBHOOK_URL" \
 
 ## 🧰 Troubleshooting
 
-| - | - |
 | Issue |	Likely Cause |
-| 404 / 405 |	Workflow not active or wrong HTTP method |
-| No response |	Missing query in JSON |
-| Memory not working | username missing or changing |
-| Tool not called |	Prompt not specific enough |
-| Auth errors |	Missing API keys in credentials |
+|------|--------------|
+| 404 / 405 | Workflow not active or wrong HTTP method |
+| No response | Missing `query` in JSON |
+| Memory not working | `username` missing or changing |
+| Tool not called | Prompt not specific enough |
+| Auth errors | Missing API keys in credentials |
 
 ---
 
