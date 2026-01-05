@@ -198,4 +198,8 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 ---
 
-## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/book-companion-voice-rag-agent/)
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - Build Your Own Perplexity Clone](https://traversaal-ai.github.io/agents-in-action/your-own-perplexity-clone/)
+
+[➡️ **Next** - Give Your Book A Voice](https://traversaal-ai.github.io/agents-in-action/book-companion-voice-rag-agent/)
