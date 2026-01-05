@@ -304,4 +304,8 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 ---
 
-## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/linkedin-post-human-in-the-loop/)
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - Automate Your Content](https://traversaal-ai.github.io/agents-in-action/youtube-to-linkedin-agent/)
+
+[➡️ **Next** - Post on LinkedIn with Human in the Loop](https://traversaal-ai.github.io/agents-in-action/linkedin-post-human-in-the-loop)
