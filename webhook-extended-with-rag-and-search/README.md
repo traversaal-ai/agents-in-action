@@ -154,7 +154,7 @@ curl -X POST "$WEBHOOK_URL" \
 ### 🔹 Option B — Postman
 
 1. Method: **POST**
-2. URL: Production Webhook URL
+2. URL: **Production Webhook URL**
 3. Headers:
    - `Content-Type: application/json`
 4. Body → raw → JSON:
