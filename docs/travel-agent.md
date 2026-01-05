@@ -163,4 +163,8 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 ---
 
-## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-research-assistant/) 
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - The Ultimate AI Blog Post Agent](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-blog-post-agent/)
+
+[➡️ **Next** - The Ultimate AI Research Assistant](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-research-assistant/)
