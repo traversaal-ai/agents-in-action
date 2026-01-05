@@ -156,8 +156,9 @@ curl -X POST "$WEBHOOK_URL" \
 1. Method: **POST**
 2. URL: Production Webhook URL
 3. Headers:
-  - `Content-Type: application/json`
+   - `Content-Type: application/json`
 4. Body → raw → JSON:
+
 `
 {
   "query": "Explain AWS S3 in simple terms",
