@@ -173,10 +173,16 @@ curl -X POST "$WEBHOOK_URL" \
 
 ---
 
-## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/supabase-rag-with-memory/)
-
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
 [![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
 
 👉 These resources expand on the workflows here and show how to apply AI + n8n in real projects.
+
+---
+
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - Chatbot that Knows Your Documents](https://traversaal-ai.github.io/agents-in-action/chatbot-that-knows-your-docs/)
+
+[➡️ **Next** - Teach Your RAG Agent to Remember](https://traversaal-ai.github.io/agents-in-action/supabase-rag-with-memory)
