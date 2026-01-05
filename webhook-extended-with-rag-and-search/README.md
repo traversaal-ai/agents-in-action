@@ -47,6 +47,7 @@ graph LR
   B --> E["📚 RAG Tool"]
   B --> F["🔍 Internet Search"]
   B --> G["↩️ Respond to Webhook"]
+```
 
 ---
 
