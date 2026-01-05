@@ -43,7 +43,7 @@ The **SEO Blog Writer Agent** consists of a main *orchestrator workflow* and mul
 ![Writing Pipeline](images/seo-writing.png)
 
 ### Optimization & Upload Pipeline
-![Writing Pipeline](images/seo-optimization.png)
+![Optimization Pipeline](images/seo-optimization.png)
 
 ---
 
