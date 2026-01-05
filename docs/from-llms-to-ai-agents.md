@@ -222,5 +222,9 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 ---
 
-## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/agents-are-here-and-they-are-staying/)
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous**](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Next**](https://traversaal-ai.github.io/agents-in-action/agents-are-here-and-they-are-staying/)
 
