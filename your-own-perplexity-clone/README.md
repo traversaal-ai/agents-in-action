@@ -177,3 +177,12 @@ Join our courses on Maven and never stop learning:
 - 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 👉 These resources expand on the workflows here and show how to apply AI + n8n in real projects.
+
+---
+
+
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - Chatbot that Knows Your Documents](https://traversaal-ai.github.io/agents-in-action/chatbot-that-knows-your-docs/)
+
+[➡️ **Next** - Teach Your RAG Agent to Remember](https://traversaal-ai.github.io/agents-in-action/supabase-rag-with-memory)
