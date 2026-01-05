@@ -67,6 +67,3 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 [➡️ **Previous** - Post on LinkedIn with Human in the Loop](https://traversaal-ai.github.io/agents-in-action/linkedin-post-human-in-the-loop/)
 
 [➡️ **Next** - Travel Agent](https://traversaal-ai.github.io/agents-in-action/travel-agent/)
-
-
-## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/travel-agent/)
