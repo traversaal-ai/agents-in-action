@@ -47,5 +47,6 @@ These are hands-on, code-first/no-code programs where 10,000+ learners have alre
 
 ---
 
-## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/from-llms-to-ai-agents/) 
+### [🏠 Home](https://traversaal-ai.github.io/agents-in-action)
+### [➡️ Next](https://traversaal-ai.github.io/agents-in-action/from-llms-to-ai-agents/) 
 
