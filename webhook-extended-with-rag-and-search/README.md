@@ -53,14 +53,14 @@ graph LR
 
 ### Step-by-step
 
-1. Client sends a POST request with JSON payload.
-2. Webhook extracts body.query and body.username.
-3. AI Agent:
-  - Evaluates prompt specificity
-  - Applies response rules
-  - Calls tools if needed (RAG / Internet)
-4. OpenAI model generates the final response.
-5. Memory preserves context per user.
+1. Client sends a **POST** request with JSON payload.
+2. **Webhook** extracts `body.query` and `body.username`.
+3. **AI Agent**:
+    - Evaluates prompt specificity
+    - Applies response rules
+    - Calls tools if needed (RAG / Internet)
+4. **OpenAI** model generates the final response.
+5. **Memory** preserves context per user.
 6. Response is returned to the caller.
 
 ---
