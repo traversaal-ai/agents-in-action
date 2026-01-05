@@ -1,4 +1,4 @@
-# YouTube to LinkedIn Agent
+# Automate Your Content - YouTube to LinkedIn
 ## 🔀 Workflow: [YouTube to LinkedIn](https://github.com/traversaal-ai/agents-in-action/tree/main/youtube-to-linkedin)
 ### Automated Content Generation
 
