@@ -142,14 +142,12 @@ The Test URL is temporary and will not work for real clients.
 
 WEBHOOK_URL="https://<your-n8n>/webhook/cc748180-1392-4012-bdb8-48453dcb87dd"
 
-`
+```bash
+WEBHOOK_URL="https://<your-n8n>/webhook/<id>"   # Paste the Production URL
 curl -X POST "$WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d '{
-    "query": "What are best practices for a PM role?",
-    "username": "demo-user-1"
-  }'
-`
+  -d '{"query":"What are the best practices for a PM role?","username":"demo-user-1"}'
+```
 
 ### 🔹 Option B — Postman
 
@@ -159,12 +157,12 @@ curl -X POST "$WEBHOOK_URL" \
    - `Content-Type: application/json`
 4. Body → raw → JSON:
 
-`
+```json
 {
   "query": "Explain AWS S3 in simple terms",
   "username": "demo-user-1"
 }
-`
+```
 
 ---
 
