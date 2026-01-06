@@ -109,6 +109,11 @@ Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow B
 - 4️⃣ [Design Vertical AI Agents that Deliver Results](https://maven.com/p/332c7a/design-vertical-ai-agents-that-deliver-results)
 - 5️⃣ [Build a Sales Prospect and a Finance Agent with Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me)
 
+| | |
+|--------|--------|
+| ![Sales Prospect & Finance Agent](images/sales-finance-agent.png) | ![Agent with Memory, Search & RAG](images/memory-search-rag-agent.png) |
+| ![Vertical AI Agents](images/vertical-agents.png) | ![Vertical AI Agents(images/vertical-agents.png) |
+
 ---
 
 ## 🔥 Why Take This Course?
