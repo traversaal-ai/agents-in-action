@@ -109,15 +109,14 @@ Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow B
 - 4️⃣ [Design Vertical AI Agents that Deliver Results](https://maven.com/p/332c7a/design-vertical-ai-agents-that-deliver-results)
 - 5️⃣ [Build a Sales Prospect and a Finance Agent with Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me)
 
-| | |
 |--------|--------|
-| ![Sales Prospect & Finance Agent](images/sales-finance-agent.png) | ![Agent with Memory, Search & RAG](images/memory-search-rag-agent.png) |
-| ![Vertical AI Agents](images/vertical-agents.png) | ![Vertical AI Agents(images/vertical-agents.png) |
+| [![Sales Prospect & Finance Agent](images/sales-and-finance-agent.png)](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me) | [![Agent with Memory, Search & RAG](images/memory-search-rag-agent.png)](https://maven.com/p/373e26/build-an-ai-agent-with-memory-internet-and-document-search) |
+| [![Vertical AI Agents](images/vertical-agents.png)](https://maven.com/p/075022/design-vertical-ai-agents-that-deliver-results-beyond-hype) | [![Vertical AI Agents](images/vertical-agents.png)](https://maven.com/p/332c7a/design-vertical-ai-agents-that-deliver-results) |
 
 ---
 
 ## 🔥 Why Take This Course?
-Unlike most AI courses, this course teaches you how to solve a real-world problem usng AI agents with no-code/low-code approach and launch your own startup.
+Unlike most AI courses, this course teaches you how to solve a real-world problem using AI agents with no-code/low-code approach and launch your own startup.
 
 By the end, you’ll be able to:
 
