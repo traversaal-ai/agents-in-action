@@ -111,7 +111,7 @@ Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow B
 
 |--------|--------|
 | [![Sales Prospect & Finance Agent](images/sales-and-finance-agent.png)](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me) | [![Agent with Memory, Search & RAG](images/memory-search-rag-agent.png)](https://maven.com/p/373e26/build-an-ai-agent-with-memory-internet-and-document-search) |
-| [![Vertical AI Agents](images/vertical-agents.png)](https://maven.com/p/075022/design-vertical-ai-agents-that-deliver-results-beyond-hype) | [![Vertical AI Agents](images/vertical-agents.png)](https://maven.com/p/332c7a/design-vertical-ai-agents-that-deliver-results) |
+| [![Vertical AI Agents](images/vertical-agents-beyond-hype.png)](https://maven.com/p/075022/design-vertical-ai-agents-that-deliver-results-beyond-hype) | [![Vertical AI Agents](images/vertical-agents.png)](https://maven.com/p/332c7a/design-vertical-ai-agents-that-deliver-results) |
 
 ---
 
