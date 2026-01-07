@@ -68,11 +68,6 @@ Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow B
 ✅ **Ready-to-run n8n workflows** with complete documentation and GitHub repos
 
 ✅ **No-code + low-code tutorials** to help you connect APIs, webhooks, and frontends
-
-✅ **Community support** to share ideas, troubleshoot, and collaborate
-
-✅ **Certificate of completion** showcasing your applied AI and automation skills
-
 ---
 
 ## 📅 Course Syllabus
@@ -103,16 +98,15 @@ Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow B
 ---
 
 ## On Demand Sessions by **[Hamza Farooq](https://www.linkedin.com/in/hamzafarooq/)**
-- 1️⃣ [Build a Sales Prospect and a Finance Agent with Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me)
-- 2️⃣ [Build an AI Agent with Memory, Internet and Document Search](https://maven.com/p/373e26/build-an-ai-agent-with-memory-internet-and-document-search)
-- 3️⃣ [Design Vertical AI Agents That Deliver Results, Beyond Hype](https://maven.com/p/075022/design-vertical-ai-agents-that-deliver-results-beyond-hype)
-- 4️⃣ [Design Vertical AI Agents that Deliver Results](https://maven.com/p/332c7a/design-vertical-ai-agents-that-deliver-results)
-- 5️⃣ [Build a Sales Prospect and a Finance Agent with Me](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me)
+|  |  |
+|--------|--------|
+| [![Sales Prospect & Finance Agent](images/sales-and-finance-agent.png)](https://maven.com/p/1fdb6c/build-a-sales-prospect-and-finance-agent-with-me) | [![Agent with Memory, Search & RAG](images/memory-search-rag-agent.png)](https://maven.com/p/373e26/build-an-ai-agent-with-memory-internet-and-document-search) |
+| [![Vertical AI Agents](images/vertical-agents-beyond-hype.png)](https://maven.com/p/075022/design-vertical-ai-agents-that-deliver-results-beyond-hype) | [![Vertical AI Agents](images/vertical-agents.png)](https://maven.com/p/332c7a/design-vertical-ai-agents-that-deliver-results) |
 
 ---
 
 ## 🔥 Why Take This Course?
-Unlike most AI courses, this course teaches you how to solve a real-world problem usng AI agents with no-code/low-code approach and launch your own startup.
+Unlike most AI courses, this course teaches you how to solve a real-world problem using AI agents with no-code/low-code approach and launch your own startup.
 
 By the end, you’ll be able to:
 
