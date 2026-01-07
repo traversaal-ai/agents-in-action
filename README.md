@@ -68,11 +68,6 @@ Chatbots • Sales Agents • Voice Assistants • Research Tools • Workflow B
 ✅ **Ready-to-run n8n workflows** with complete documentation and GitHub repos
 
 ✅ **No-code + low-code tutorials** to help you connect APIs, webhooks, and frontends
-
-✅ **Community support** to share ideas, troubleshoot, and collaborate
-
-✅ **Certificate of completion** showcasing your applied AI and automation skills
-
 ---
 
 ## 📅 Course Syllabus
