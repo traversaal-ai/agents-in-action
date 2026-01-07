@@ -1,4 +1,4 @@
-# 🛠️ Workflow Creator
+# 🛠️ An Agent that Creates Other Agents
 ## 🔀 Workflow: [Workflow Creator](https://github.com/traversaal-ai/agents-in-action/tree/main/workflow_creator)
 This blog contains the **Workflow Creator Agent** for n8n and automation projects.
 
@@ -37,3 +37,10 @@ The Workflow Creator helps you design, configure, and manage complex automation 
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
 [![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+
+---
+
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - The Ultimate AI Finance Agent](https://traversaal-ai.github.io/agents-in-action/the-ultimate-ai-finance-agent/)
+

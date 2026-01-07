@@ -1,6 +1,6 @@
 # The Ultimate AI Blog Post Agent
 ## 🔀 Workflow: [Apollo - Blog Post Agent](https://github.com/traversaal-ai/agents-in-action/tree/main/Apollo-your-blog-agent)
-## ▶️ Video Walkthrough: [Newsletter Generator Agent](https://www.loom.com/share/9518f88cb6a542b89edead0419c1225d)
+## ▶️ Video Walkthrough - [Newsletter Generator Agent](https://www.loom.com/share/9518f88cb6a542b89edead0419c1225d)
 ### Your AI Content Creator with Deep Research and Professional Publishing Pipeline
 
 Today, we're diving into one of the most sought-after applications of AI agents: **intelligent content creation and automated blog writing**!
@@ -60,3 +60,10 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 [![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
 
+---
+
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - Post on LinkedIn with Human in the Loop](https://traversaal-ai.github.io/agents-in-action/linkedin-post-human-in-the-loop/)
+
+[➡️ **Next** - Travel Agent](https://traversaal-ai.github.io/agents-in-action/travel-agent/)

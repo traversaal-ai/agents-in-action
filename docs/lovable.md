@@ -32,3 +32,11 @@ By combining Lovable with n8n, you’ll transform static automation flows into *
 Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
 [![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
+
+---
+
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - Agents are here and they are staying]([https://traversaal-ai.github.io/agents-in-action](https://traversaal-ai.github.io/agents-in-action/agents-are-here-and-they-are-staying/)
+
+[➡️ **Next** - Getting Started with n8n](https://traversaal-ai.github.io/agents-in-action/meet-n8n/)

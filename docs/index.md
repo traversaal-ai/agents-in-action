@@ -46,3 +46,9 @@ All projects here are part of the following courses on Maven:
 These are hands-on, code-first/no-code programs where 10,000+ learners have already joined us to build autonomous, multi-agent systems using n8n and Lovable.
 
 ---
+
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Next** - From LLMs to AI Agents](https://traversaal-ai.github.io/agents-in-action/from-llms-to-ai-agents/)
+
+
