@@ -130,6 +130,12 @@ By the end, you’ll be able to:
 
 ---
 
+## 🙌 Testimonials
+
+![Testimonials](images/testimonials.png)
+
+---
+
 ## 📢 Attribution & Credits
 If you use my course material, content, or research in your work, please credit me and the respective contributors.
 
