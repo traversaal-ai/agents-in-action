@@ -306,7 +306,7 @@ The compound effect of better research capabilities drives decision quality, com
 
 ---
 
-Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+Don’t forget to check out our **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
 [![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
 
