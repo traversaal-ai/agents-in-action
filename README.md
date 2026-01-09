@@ -137,7 +137,7 @@ By the end, you’ll be able to:
 ---
 
 ## 📢 Attribution & Credits
-If you use my course material, content, or research in your work, please credit me and the respective contributors.
+If you use our course material, content, or research in your work, please credit me and the respective contributors.
 
 🔹 Proper citation format:
 
