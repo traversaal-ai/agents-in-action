@@ -62,7 +62,7 @@ Sanitization (Optional)
 
 ## 🏗️ Architecture
 
-![Comprehensive Guardrails](image/guardrails-comprehensive.png)
+![Comprehensive Guardrails](images/guardrails-comprehensive.png)
 
 ---
 
