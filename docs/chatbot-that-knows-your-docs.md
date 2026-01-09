@@ -170,4 +170,8 @@ Don’t forget to check out my **Agentic AI System Design for PMs** course on Ma
 
 ---
 
-## [➡️ Next](https://traversaal-ai.github.io/agents-in-action/your-own-perplexity-clone/)
+[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
+
+[➡️ **Previous** - Sales Agent to find the Right Customer](https://traversaal-ai.github.io/agents-in-action/sales-agent-to-find-the-right-customer/)
+
+[➡️ **Next** - Your Own Perplexity Clone](https://traversaal-ai.github.io/agents-in-action/your-own-perplexity-clone/)
