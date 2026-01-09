@@ -174,14 +174,6 @@ We welcome:
 
 ---
 
-## 🎓 Learn More
-Want to build and customize more AI agents like this?
-🤖 [AI Bootcamp: Generative AI Beyond the Hype](https://maven.com/boring-bot/ml-system-design)
-💻 [Agent Engineering Bootcamp: Developers Edition](https://maven.com/boring-bot/advanced-llm)
-📂 [GitHub: Agents in Action](https://github.com/traversaal-ai/agents-in-action)
-
----
-
 ## 📄 License
 
 Provided for educational & practical use. Please comply with TOS of APIs used.
