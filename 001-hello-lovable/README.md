@@ -51,6 +51,8 @@ This mirrors how **product managers, designers, and frontend engineers** think �
 
 ## ✍️ How the Prompt was Created
 
+The prompt for Lovable was created by giving the following simple idea to `Claude`. This demonstrates how to generate detailed structured prompts through cutting-edge LLMs using your raw ideas.    
+
 ```bash
 I want to create a frontend application "Personal Task Tracker" using Lovable.
 Here is the concept of the application:
@@ -164,7 +166,9 @@ Check out:
 ---
 
 ✅ **You’ve now built your first frontend prototype using Lovable!**
+
 From here, you can evolve this project by refining prompts, adding new UI features, and integrating backend and APIs to turn a simple Lovable prototype into a real world product.
+
 This is your first step towards building production-grade applications. 
 
 ---
