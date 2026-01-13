@@ -165,11 +165,3 @@ curl -X POST "$WEBHOOK_URL" \
 Join our courses on Maven and never stop learning:
 - 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
 - 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
-
----
-
-[🏠 **Home** - Agents in Action](https://traversaal-ai.github.io/agents-in-action)
-
-[➡️ **Previous** - Sales Agent to Find the Right Customer](https://traversaal-ai.github.io/agents-in-action/sales-agent-to-find-the-right-customer/)
-
-[➡️ **Next** - Build Your Own Perplexity Clone](https://traversaal-ai.github.io/agents-in-action/your-own-perplexity-clone/)
