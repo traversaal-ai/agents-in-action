@@ -216,7 +216,7 @@ Welcome to that future. Let's build it together.
 
 ---
 
-Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+Don’t forget to check out our **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
 ![AI Bootcamp](images/ai-bootcamp.png)
 

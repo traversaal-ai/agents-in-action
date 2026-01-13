@@ -157,7 +157,7 @@ The future of AI isn’t just smarter models — it’s systems that work togeth
 
 ---
 
-Don’t forget to check out my **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
+Don’t forget to check out our **Agentic AI System Design for PMs** course on Maven if you are interested to be a part of something bigger.
 
 [![AI Bootcamp](images/ai-bootcamp.png)](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
 
