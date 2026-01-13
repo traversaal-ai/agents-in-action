@@ -137,7 +137,7 @@ By the end, you’ll be able to:
 ---
 
 ## 📢 Attribution & Credits
-If you use my course material, content, or research in your work, please credit me and the respective contributors.
+If you use our course material, content, or research in your work, please credit me and the respective contributors.
 
 🔹 Proper citation format:
 
@@ -171,7 +171,7 @@ Let’s build the agentic internet — together.
 
 ## 📬 Stay in the Loop
 
-Follow [@hamzafarooq](https://www.linkedin.com/in/hamzafarooq/) on LinkedIn
+Follow [@hamzafarooq](https://www.linkedin.com/in/hamzafarooq/) and [@gabrieladequeiroz](https://www.linkedin.com/in/gabrieladequeiroz/) on LinkedIn
 
 📬 Subscribe to the **Generative AI for Everyone** newsletter → [Join here](https://boringbot.substack.com)
 
