@@ -92,6 +92,12 @@ It should clearly define the flow of the application.
 
 ## 🖥️ Frontend Interface Overview
 
+### Main View
+![Task Flow](images/task-flow.png)
+
+### Task View 
+![Task Flow](images/task-flow-tasks-added)
+
 ### 1️⃣ Task Input Section
 - Text input for task name
 - Dropdown to select category
