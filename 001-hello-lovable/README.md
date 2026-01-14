@@ -31,9 +31,7 @@ Instead of writing code first, we **designed the product in natural language**, 
 001-hello-lovable/
 │
 ├── README.md                 # You are here
-├── prompt.md                 # Lovable-ready prompt generated using Claude (prompt engineering step)
-└── personal-task-tracker/    # Generated frontend application
-
+└── prompt.md                 # Lovable-ready prompt generated using Claude (prompt engineering step)
 ```
 
 - 📌 **prompt.md is the key artifact** — it shows how detailed, structured prompts lead to better frontend output.
