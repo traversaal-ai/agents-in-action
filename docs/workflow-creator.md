@@ -155,7 +155,7 @@ These constraints are what turn the agent from _impressive_ into _usable_.
 
 ---
 
-# From JSON to a Live Workflow
+## From JSON to a Live Workflow
 
 Once the workflow JSON is generated, it doesn’t stop there.
 
