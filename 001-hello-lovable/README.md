@@ -96,7 +96,7 @@ It should clearly define the flow of the application.
 ![Task Flow](images/task-flow.png)
 
 ### Task View 
-![Task Flow](images/task-flow-tasks-added)
+![Task Flow](images/task-flow-tasks-added.png)
 
 ### 1️⃣ Task Input Section
 - Text input for task name
