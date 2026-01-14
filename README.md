@@ -5,7 +5,7 @@
 
 ### 👋 Welcome to our course on AI Agents. 
 
-This course is one of the top-rated courses on building AI Agents using no-code/low-code tools. So far, I’ve taught this course to over 1500 professionals, at MAVEN, Stanford Continuing Studies, UCLA and University of Minnesota, helping them gain a deep understanding of the levels of agentic architecture, enterprise-grade Retrieval Augmented Generation (RAG), and open source agentic products deployment.
+This course is one of the top-rated courses on building AI Agents using no-code/low-code tools. So far, we’ve taught this course to over 1500 professionals, at MAVEN, Stanford Continuing Studies, UCLA and University of Minnesota, helping them gain a deep understanding of the levels of agentic architecture, enterprise-grade Retrieval Augmented Generation (RAG), and open source agentic products deployment.
 
 Unlike most courses, this course teaches you how to think about solving real-world problems using agentic AI combined with no-code tools and enabling you to design, build, and deploy your own custom AI products and solutions.
 
