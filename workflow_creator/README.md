@@ -45,3 +45,7 @@ Join our courses on Maven and never stop learning:
 - 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
 - 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
+---
+
+🎓 Special thanks to [Nate Herk](https://www.linkedin.com/in/nateherkelman/) for the original workflow inspiration.
+
