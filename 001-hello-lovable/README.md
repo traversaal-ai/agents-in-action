@@ -4,6 +4,13 @@ This folder demonstrates how to build a fully functional frontend application us
 
 The **Personal Task Tracker** is a clean, modern `React` app that allows users to create, categorize, filter, and manage tasks — all generated from a single, well-structured prompt.
 
+**URL**: https://task-charm-quest.lovable.app
+
+---
+
+## 🎨 Recreate in Lovable
+Want to build this project from scratch in Lovable? The complete prompt to recreate this entire application can be found in `prompt.md`. Simply copy the prompt and paste it into Lovable to generate this project instantly.
+
 ---
 
 ## ✨ What This Example Shows
