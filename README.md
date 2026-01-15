@@ -11,6 +11,56 @@ Unlike most courses, this course teaches you how to think about solving real-wor
 
 ---
 
+## Course Mindmap
+
+```mermaid
+mindmap
+  root((Agents in Action))
+
+    Core Learning Objectives
+      Identify high-value ROI use cases
+      Design production-ready AI agents
+      Master agentic architecture
+      Implement Enterprise RAG
+      Ensure safety and guardrails
+
+    Technology Stack
+      n8n (No-code automation)
+      Lovable (Frontend builder)
+      Supabase (Memory & persistence)
+      Webhooks & APIs
+      OpenRouter & LLMs
+
+    Hands-on Projects
+      Sales Prospecting Agent
+      Document-aware Chatbot
+      Perplexity Clone
+      Voice RAG Assistant
+      YouTube to LinkedIn Automator
+      Travel Agent
+      Workflow Creator Meta-Agent
+
+    Course Structure
+      6 Live Sessions
+      Pre-Reading Lessons
+      Demo Day
+      Capstone Experience
+      Office Hour Q&As
+      SaaS Templates Portfolio
+
+    Target Audience
+      Product Managers
+      Business Leaders
+      Non-Technical Executives
+      Job Seekers & Career Builders
+
+    Key Instructors
+      Hamza Farooq (Ex-Google)
+      Gabriela de Queiroz (Ex-Microsoft)
+```
+
+---
+
 ## 📌 Learning Outcomes
 By the end of this series, you will be able to:
 1. **Understand the evolution of AI agents** — from Large Language Models (LLMs) to autonomous, tool-using systems capable of reasoning, memory, and planning.
