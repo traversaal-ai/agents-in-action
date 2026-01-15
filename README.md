@@ -11,6 +11,10 @@ Unlike most courses, this course teaches you how to think about solving real-wor
 
 ---
 
+![Build AI Agents - Not Chatbots](images/agents-in-action-infographic.png)
+
+---
+
 ## Course Mindmap
 
 ```mermaid
