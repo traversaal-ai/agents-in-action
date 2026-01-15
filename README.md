@@ -15,7 +15,7 @@ Unlike most courses, this course teaches you how to think about solving real-wor
 
 ```mermaid
 mindmap
-root((fa:fa-robot Agents in Action))
+root((🤖<br/>Agents in Action))
   Objectives
     ::icon(fa fa-bullseye)
     ROI Use Cases
