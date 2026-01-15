@@ -11,6 +11,8 @@ Today, **Large Language Models (LLMs)** have evolved into **AI agents** — syst
 
 That’s where **Agents in Action** comes in.
 
+![Build AI Agents - Not Chatbots](images/agents-in-action-infographic.png)
+
 We wanted to **bridge the gap between AI theory and real-world application** — giving you not just the concepts, but also the workflows, integrations, and hands-on projects to bring intelligent systems to life.
 
 This course takes you step-by-step through the evolution of AI agents — from understanding how LLMs reason, to building full-fledged agents that can
@@ -42,6 +44,8 @@ All projects here are part of the following courses on Maven:
 
 - 🤖 [Agentic AI System Design for PMs — _For Leaders, Managers & Career Builders_](https://maven.com/boring-bot/ml-system-design?promoCode=201OFF)
 - 💻 [Agent Engineering Bootcamp: Developers Edition — _For Developers, Engineers & Researchers_](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+
+![Maven Courses](images/course-cta.png)
 
 These are hands-on, code-first/no-code programs where 10,000+ learners have already joined us to build autonomous, multi-agent systems using n8n and Lovable.
 
