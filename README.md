@@ -19,7 +19,7 @@ config:
   look: neo
   theme: forest
 ---
-graph LR
+graph TB
     Root("<b>🚀 Agents in Action</b>") --> Obj["🎯 Objectives"] & Tech["🛠️ Tech Stack"] & Agents["🤖Agents"] & Info["🗓️Course Info"] & Aud["👨🏻‍💻Audience"]
     Obj --> O1["High ROI Use Cases"] & O2["Agent Architecture"] & O3["Enterprise RAG"] & O4["Evaluations"] & O5["Safety & Guardrails"]
     Tech --> T1["n8n & Webhooks"] & T2["Lovable"] & T3["Supabase"] & T4["OpenRouter LLMs"]
