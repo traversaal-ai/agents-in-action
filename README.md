@@ -15,40 +15,37 @@ Unlike most courses, this course teaches you how to think about solving real-wor
 
 ```mermaid
 mindmap
-root((🤖<br/>Agents in Action))
-  Objectives
-    ::icon(fa fa-bullseye)
-    ROI Use Cases
-    Agent Architecture
-    Enterprise RAG
-    Safety & Guardrails
-  Tech Stack
-    ::icon(fa fa-layer-group)
-    n8n & Webhooks
-    Lovable & Supabase
-    OpenRouter LLMs
-  Builds
-    ::icon(fa fa-hammer)
-    Sales & Marketing
-      Prospecting Agent
-      Social Automators
-    Content & Search
-      Perplexity Clone
-      Voice RAG
-    Advanced
-      Travel Agent
-      Workflow Creator
-  Course Info
-    ::icon(fa fa-calendar-check)
-    6 Live Sessions
-    Reading Lessons
-    Capstone Project
-    SaaS Templates
-  Audience
-    ::icon(fa fa-users)
-    Product Managers
-    Business Leaders
-    Career Builders
+  root)🚀<br/>Agents in Action(
+    {{🎯<br/>Objectives}}
+      High ROI Use Cases
+      Agent Architecture
+      Enterprise RAG
+      Evaluations
+      Safety & Guardrails
+    {{🛠️<br/>Tech Stack}}
+      n8n & Webhooks
+      Lovable
+      Supabase
+      OpenRouter LLMs
+    {{🤖<br/>Agents}}
+      📈 Sales & Marketing
+        Prospecting Agent
+        Social Automators
+      🔎 Content & Search
+        Perplexity Clone
+        Voice Assistant
+      🌐 Vertical Agents    
+        Travel Agent
+        Finance Agent
+    {{🗓️<br/>Course Info}}
+      6 Live Sessions
+      Hands-On Exercises 
+      Office Hours Q/As 
+      Capstone Project
+    {{👨🏻‍💻<br/>Audience}}
+      Product Managers
+      Business Leaders
+      Career Builders
 ```
 
 ---
