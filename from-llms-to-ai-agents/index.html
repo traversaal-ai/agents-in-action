@@ -1,0 +1,1523 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../agents-are-here-and-they-are-staying/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Chapter 01 - From LLMs to AI Agents - Agents in Action</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#from-llms-to-ai-agents" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Agents in Action" class="md-header__button md-logo" aria-label="Agents in Action" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agents in Action
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 01 - From LLMs to AI Agents
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Agents in Action" class="md-nav__button md-logo" aria-label="Agents in Action" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agents in Action
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why we built this course
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 01 - From LLMs to AI Agents
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 01 - From LLMs to AI Agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-rise-of-agents-from-mere-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rise of Agents from mere LLMs!
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-youll-master-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 What You'll Master Today
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-exactly-is-an-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 What Exactly Is an AI Agent?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-pillars-that-transform-llms-into-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 The Three Pillars That Transform LLMs into Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 The Three Pillars That Transform LLMs into Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-memory-the-foundation-of-continuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 🧠 Memory: The Foundation of Continuity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tools-the-bridge-to-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🛠️ Tools: The Bridge to Reality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-planning-loops-the-engine-of-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 🔄 Planning Loops: The Engine of Intelligence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-four-levels-of-ai-agent-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 The Four Levels of AI Agent Evolution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 The Four Levels of AI Agent Evolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-1-simple-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1: Simple LLMs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-llms-with-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2: LLMs with Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-react-agents-reasoning-acting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3: ReAct Agents (Reasoning + Acting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-4-multi-agent-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4: Multi-Agent Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-our-agent-in-action-sales-research-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 See our Agent in action - Sales Research Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-agents-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Real-World Agents in Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Real-World Agents in Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#icp-ideal-customer-profile-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ICP (Ideal Customer Profile) Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bottleneck-summarizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bottleneck Summarizer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-creator-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Content Creator Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔮 Why This Matters Now
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-agent-journey-starts-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💪 Your Agent Journey Starts Here
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents-are-here-and-they-are-staying/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 02 - Agents are Here and They are Staying
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 03 - n8n - Build Your First End-to-End Agent
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapter 03 - n8n - Build Your First End-to-End Agent
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lovable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3a. Introducing Lovable
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meet-n8n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3b. Introducing n8n and Building Your First Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../301-lovable-webhook-n8n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3c. Connecting n8n and Lovable via Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sales-agent-to-find-the-right-customer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 04 - Sales Agent to Find the Right Customer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatbot-that-knows-your-docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 05 - Build a Chatbot that Knows Your Documents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../your-own-perplexity-clone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 06 - Build Your Own Perplexity Clone
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supabase-rag-with-memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 07 - Teach Your RAG Agent to Remember
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../book-companion-voice-rag-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 08 - Give Your Book A Voice - The AI Assisted Edition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../youtube-to-linkedin-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 09 - Automate Your Content - YouTube to LinkedIn Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-unofficial-airbnb-ai-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 - The Unofficial AirBnb AI Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linkedin-post-human-in-the-loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 - LinkedIn Human in the Loop Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-ultimate-ai-blog-post-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 12 - The Ultimate AI Blog Post Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../travel-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 13 - Fully Functional Agent Loop - Travel-Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-ultimate-ai-research-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 14 - Intelligent Research - The Ultimate AI Research Assistant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-ultimate-ai-finance-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 15 - Investment Intelligence - The Ultimate AI Finance Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow-creator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 16 - Agent that Creates Other Agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-rise-of-agents-from-mere-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rise of Agents from mere LLMs!
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-youll-master-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 What You'll Master Today
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-exactly-is-an-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 What Exactly Is an AI Agent?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-pillars-that-transform-llms-into-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 The Three Pillars That Transform LLMs into Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 The Three Pillars That Transform LLMs into Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-memory-the-foundation-of-continuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 🧠 Memory: The Foundation of Continuity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tools-the-bridge-to-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🛠️ Tools: The Bridge to Reality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-planning-loops-the-engine-of-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 🔄 Planning Loops: The Engine of Intelligence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-four-levels-of-ai-agent-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 The Four Levels of AI Agent Evolution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 The Four Levels of AI Agent Evolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-1-simple-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1: Simple LLMs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-llms-with-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2: LLMs with Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-react-agents-reasoning-acting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3: ReAct Agents (Reasoning + Acting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-4-multi-agent-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4: Multi-Agent Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-our-agent-in-action-sales-research-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 See our Agent in action - Sales Research Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-agents-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Real-World Agents in Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Real-World Agents in Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#icp-ideal-customer-profile-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ICP (Ideal Customer Profile) Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bottleneck-summarizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bottleneck Summarizer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-creator-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Content Creator Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔮 Why This Matters Now
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-agent-journey-starts-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💪 Your Agent Journey Starts Here
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="from-llms-to-ai-agents">🚀 From LLMs to AI Agents</h1>
+<h3 id="the-rise-of-agents-from-mere-llms">The rise of Agents from mere LLMs!</h3>
+<h2 id="what-youll-master-today">🎯 <strong>What You'll Master Today</strong></h2>
+<p>By the end of today's lesson, you'll have a comprehensive understanding of:</p>
+<ul>
+<li>✨ <strong>LLM Fundamentals</strong>: How large language models work and their limitations as standalone systems</li>
+<li>🧠 <strong>Agent Architecture</strong>: The three core components that transform LLMs into agents</li>
+<li>📈 <strong>Maturity Levels</strong>: The four stages of agent evolution and when to use each</li>
+<li>🛠️ <strong>Practical Applications</strong>: Real-world examples of agents driving business value</li>
+<li>🔄 <strong>Planning Loops</strong>: How agents think, act, and learn from their experiences</li>
+<li>💡 <strong>Strategic Thinking</strong>: How to identify agent opportunities in your own work or organization</li>
+</ul>
+<hr />
+<p>Over the past year, tools like ChatGPT have revolutionized how we interact with AI. They can generate text, answer complex questions, write code, and even engage in sophisticated conversations. But here's the thing, they're fundamentally reactive. They wait for us to prompt them, respond brilliantly, and then... wait again.</p>
+<p>They're like having an incredibly knowledgeable consultant who only speaks when spoken to and forgets everything the moment the conversation ends.</p>
+<p><img alt="ChatGPT" src="../images/chatgpt-image.png" /></p>
+<p><strong>That's where AI agents change everything.</strong></p>
+<h2 id="what-exactly-is-an-ai-agent"><strong>🤖 What Exactly Is an AI Agent?</strong></h2>
+<p>At its core, an <strong>AI agent is an LLM with access to tools</strong>, but that simple definition understates a profound shift in capability. Think of it this way: if an LLM is like a brilliant scholar locked in a library with no phone, no internet, and no way to affect the outside world, then an AI agent is that same scholar given a smartphone, a credit card, access to APIs, and the ability to take actions in the real world.</p>
+<p>But it's not just about tools. AI agents represent a fundamental evolution in how we think about AI systems. They transform passive responders into proactive digital workers that can:
+- <strong>Remember</strong> conversations and context across time
+- <strong>Use tools</strong> to interact with real-world systems, APIs, and databases
+- <strong>Plan and execute</strong> multi-step workflows
+- <strong>Learn and adapt</strong> from their actions and mistakes
+- <strong>Collaborate</strong> with other agents and humans</p>
+<p><img alt="ChatGPT" src="../images/how-ai-agents-work.png" /></p>
+<p>The magic happens when we combine these capabilities. An LLM might tell you how to book a flight; an AI agent actually books it, adds it to your calendar, sends confirmations to relevant parties, and sets up reminders, all while remembering your preferences for future trips.</p>
+<h2 id="the-three-pillars-that-transform-llms-into-agents">🧠 <strong>The Three Pillars That Transform LLMs into Agents</strong></h2>
+<h3 id="1-memory-the-foundation-of-continuity"><strong>1. 🧠 Memory: The Foundation of Continuity</strong></h3>
+<p>Traditional LLMs reside in the eternal present; each conversation begins anew. AI agents, however, maintain different types of memory:</p>
+<ul>
+<li><strong>Conversational Memory</strong>: Remembering what you discussed yesterday or last week</li>
+<li><strong>Procedural Memory</strong>: Learning your preferences and workflows over time</li>
+<li><strong>Knowledge Memory</strong>: Building and updating their understanding of your domain</li>
+<li><strong>Episodic Memory</strong>: Recalling specific events and outcomes from past actions</li>
+</ul>
+<p>This memory isn't just storage; it's the foundation of relationship-building between humans and AI.</p>
+<h3 id="2-tools-the-bridge-to-reality"><strong>2. 🛠️ Tools: The Bridge to Reality</strong></h3>
+<p>Tools are what transform an AI from a conversationalist into a digital worker. These can include:</p>
+<ul>
+<li><strong>API Integrations</strong>: Connecting to Slack, Salesforce, Google Workspace, or proprietary systems</li>
+<li><strong>Code Execution</strong>: Running Python scripts, SQL queries, or data analysis</li>
+<li><strong>File Operations</strong>: Reading, writing, and manipulating documents and databases</li>
+<li><strong>Web Interactions</strong>: Browsing, scraping, and gathering real-time information</li>
+<li><strong>Communication Tools</strong>: Sending emails, messages, or notifications</li>
+</ul>
+<p>The key insight is that tools aren't just add-ons, they're the agent's hands and eyes in the digital world.</p>
+<h3 id="3-planning-loops-the-engine-of-intelligence"><strong>3. 🔄 Planning Loops: The Engine of Intelligence</strong></h3>
+<p>This is where the real magic happens. Instead of generating a single response, agents operate in continuous <strong>Think → Act → Observe → Reflect</strong> cycles:</p>
+<ul>
+<li><strong>Think</strong>: Analyze the current situation and plan the next step</li>
+<li><strong>Act</strong>: Execute an action using available tools</li>
+<li><strong>Observe</strong>: Process the results and feedback</li>
+<li><strong>Reflect</strong>: Learn from outcomes and adjust future actions</li>
+</ul>
+<p>This loop enables agents to tackle complex, multi-step tasks that would overwhelm traditional LLMs.</p>
+<hr />
+<h2 id="the-four-levels-of-ai-agent-evolution"><strong>📊 The Four Levels of AI Agent Evolution</strong></h2>
+<p>Understanding these levels will help you choose the right approach for your specific use cases:</p>
+<h3 id="level-1-simple-llms"><strong>Level 1: Simple LLMs</strong></h3>
+<p><em>The Foundation</em></p>
+<p><img alt="Level 1" src="../images/level-1.png" /></p>
+<p>These are your standard chatbots, sophisticated text generators that excel at conversation but can't take actions. They're perfect for:</p>
+<ul>
+<li>Customer service queries</li>
+<li>Content generation</li>
+<li>Educational tutoring</li>
+<li>Creative writing assistance</li>
+</ul>
+<p><strong>When to use</strong>: When you need intelligent conversation without external actions.</p>
+<hr />
+<h3 id="level-2-llms-with-tools"><strong>Level 2: LLMs with Tools</strong></h3>
+<p><em>The Specialists</em></p>
+<p><img alt="Level 2" src="../images/level-2.png" /></p>
+<p>LLMs connected to specific, predefined tools and APIs. They can fetch weather data, send calendar invites, query databases, or integrate with specific software platforms.</p>
+<p><strong>Example workflow</strong>:</p>
+<p>User: "Schedule a meeting with the marketing team for next Tuesday"</p>
+<p>Agent: → Checks calendar API → Finds available slots → Sends invites → Confirms booking</p>
+<p><strong>When to use</strong>: For specific, well-defined tasks within known systems.</p>
+<hr />
+<h3 id="level-3-react-agents-reasoning-acting"><strong>Level 3: ReAct Agents (Reasoning + Acting)</strong></h3>
+<p><em>The Thinkers</em></p>
+<p><img alt="Level 3" src="../images/level-3.png" /></p>
+<p>These agents implement the "Think, Act, Observe, Reflect" loop, allowing them to tackle complex, multi-step problems dynamically. They can plan, execute, learn from mistakes, and adapt their approach in real-time.</p>
+<p><strong>Example workflow</strong>:</p>
+<p>User: "Research our top 3 competitors and create a comparison report"</p>
+<p>Agent thinks: "I need to identify competitors, research each one, and compile findings"</p>
+<p>→ Searches web for competitor information</p>
+<p>→ Observes: Found basic info but need financial data</p>
+<p>→ Thinks: "Let me check financial databases"</p>
+<p>→ Queries financial APIs</p>
+<p>→ Observes: Got financial data but missing recent news</p>
+<p>→ Searches recent news articles</p>
+<p>→ Compiles comprehensive comparison report</p>
+<p><strong>When to use</strong>: For complex, undefined problems requiring planning and adaptation.</p>
+<hr />
+<h3 id="level-4-multi-agent-systems"><strong>Level 4: Multi-Agent Systems</strong></h3>
+<p><em>The Teams</em></p>
+<p><img alt="Level 4" src="../images/level-4.png" /></p>
+<p>Multiple specialized agents working together, each with distinct roles, collaborating through shared memory or orchestration systems to solve complex, end-to-end workflows.</p>
+<p><strong>Example team structure</strong>:</p>
+<ul>
+<li><strong>Research Agent</strong>: Gathers information from multiple sources</li>
+<li><strong>Analysis Agent</strong>: Processes data and identifies patterns</li>
+<li><strong>Writer Agent</strong>: Creates polished reports and presentations</li>
+<li><strong>Validator Agent</strong>: Checks accuracy and completeness</li>
+<li><strong>Coordinator Agent</strong>: Manages workflow and deadlines</li>
+</ul>
+<p><strong>When to use</strong>: For enterprise-scale problems requiring multiple specialized skills.</p>
+<hr />
+<p><img alt="Agent Levels" src="../images/agent-levels.png" /></p>
+<h3 id="see-our-agent-in-action-sales-research-agent">🌐 <strong>See our Agent in action - <a href="https://preview--spark-lead-ignition.lovable.app/">Sales Research Agent</a></strong></h3>
+<hr />
+<h2 id="real-world-agents-in-action"><strong>🎯 Real-World Agents in Action</strong></h2>
+<p>Let me share three agents I personally use daily to give you concrete examples:</p>
+<h3 id="icp-ideal-customer-profile-agent"><strong>ICP (Ideal Customer Profile) Agent</strong></h3>
+<p>This Level 2 agent revolutionized our sales process:</p>
+<ul>
+<li><strong>Thinks</strong>: "What characteristics define our best customers?"</li>
+<li><strong>Acts</strong>: Scrapes LinkedIn, Crunchbase, and industry databases</li>
+<li><strong>Observes</strong>: Analyzes patterns in successful customer profiles</li>
+<li><strong>Reflects</strong>: Refines search criteria based on conversion rates</li>
+<li><strong>Result</strong>: Automatically surfaces 10-15 high-quality prospects daily, saving 4+ hours of manual research</li>
+</ul>
+<p><img alt="ICP Agent" src="../images/icp-agent.png" /></p>
+<h3 id="bottleneck-summarizer"><strong>Bottleneck Summarizer</strong></h3>
+<p>A specialized Level 2 agent that keeps our team focused:</p>
+<ul>
+<li>Continuously monitors support tickets, Slack threads, and GitHub issues</li>
+<li>Uses NLP to identify recurring pain points and frustrated language</li>
+<li>Generates daily summaries with severity rankings</li>
+<li>Automatically escalates critical issues to relevant team members</li>
+<li>Impact: Reduced response time to critical issues by 60%</li>
+</ul>
+<h3 id="content-creator-agent"><strong>Content Creator Agent</strong></h3>
+<p>A Level 2 agent that maintains our thought leadership:</p>
+<ul>
+<li><strong>Plans</strong>: Analyzes trending topics in our industry</li>
+<li><strong>Creates</strong>: Drafts LinkedIn posts, newsletter content, and course outlines</li>
+<li><strong>Optimizes</strong>: A/B tests different content styles and topics</li>
+<li><strong>Distributes</strong>: Schedules posts across platforms via APIs</li>
+<li><strong>Learns</strong>: Adjusts content strategy based on engagement metrics</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=vbccjer8rwI"><img alt="Watch the video" src="https://img.youtube.com/vi/vbccjer8rwI/0.jpg" /></a></p>
+<p><img alt="Content Creator Agent" src="../images/content-creator-agent.png" /></p>
+<p>See the LinkedIn Post <a href="https://www.linkedin.com/posts/hamzafarooq_a-picture-is-worth-a-thousand-words-but-activity-7334460279763677184-xOSm/?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAADtgS0BfFimbryOOYpG3yuWcOW3sFJUYmE">here</a></p>
+<h2 id="why-this-matters-now"><strong>🔮 Why This Matters Now</strong></h2>
+<p>We're at an inflection point. The companies and professionals who master AI agents in 2025 will have an insurmountable advantage over those still thinking of AI as just "a better search engine" or "writing assistant."</p>
+<p>But, and this is crucial, most organizations are still building simple chatbots and calling them "AI agents." They're missing the transformative potential that comes from memory, tools, and planning loops working together.</p>
+<hr />
+<h2 id="your-agent-journey-starts-here"><strong>💪 Your Agent Journey Starts Here</strong></h2>
+<p>Remember, the goal isn't just to understand AI agents, it's to build systems that can genuinely augment human intelligence and productivity. In this course, we'll progressively build more sophisticated agents, culminating in a multi-agent system that can handle complex, real-world workflows.</p>
+<p>This is your opportunity to get ahead of the curve, to become one of the practitioners who truly understands how to harness this technology effectively. The future belongs to those who can collaborate with AI agents as seamlessly as they do with human colleagues.</p>
+<p>Welcome to that future. Let's build it together.</p>
+<hr />
+<p>Don’t forget to check out our <strong>Agentic AI System Design for PMs</strong> course on Maven if you are interested to be a part of something bigger.</p>
+<p><img alt="AI Bootcamp" src="../images/ai-bootcamp.png" /></p>
+<hr />
+<p><a href="https://traversaal-ai.github.io/agents-in-action">🏠 <strong>Home</strong> - Agents in Action</a></p>
+<p><a href="https://traversaal-ai.github.io/agents-in-action">➡️ <strong>Previous</strong> - Agents in Action</a></p>
+<p><a href="https://traversaal-ai.github.io/agents-in-action/agents-are-here-and-they-are-staying/">➡️ <strong>Next</strong> - Agents are here and they are staying</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
