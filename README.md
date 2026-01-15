@@ -15,48 +15,40 @@ Unlike most courses, this course teaches you how to think about solving real-wor
 
 ```mermaid
 mindmap
-  root((Agents in Action))
-
-    **Core Learning Objectives**
-      Identify high-value ROI use cases
-      Design production-ready AI agents
-      Master agentic architecture
-      Implement Enterprise RAG
-      Ensure safety and guardrails
-
-    **Technology Stack**
-      n8n (No-code automation)
-      Lovable (Frontend builder)
-      Supabase (Memory & persistence)
-      Webhooks & APIs
-      OpenRouter & LLMs
-
-    **Hands-on Projects**
-      Sales Prospecting Agent
-      Document-aware Chatbot
+root((fa:fa-robot Agents in Action))
+  Objectives
+    ::icon(fa fa-bullseye)
+    ROI Use Cases
+    Agent Architecture
+    Enterprise RAG
+    Safety & Guardrails
+  Tech Stack
+    ::icon(fa fa-layer-group)
+    n8n & Webhooks
+    Lovable & Supabase
+    OpenRouter LLMs
+  Builds
+    ::icon(fa fa-hammer)
+    Sales & Marketing
+      Prospecting Agent
+      Social Automators
+    Content & Search
       Perplexity Clone
-      Voice RAG Assistant
-      YouTube to LinkedIn Automator
+      Voice RAG
+    Advanced
       Travel Agent
-      Workflow Creator Meta-Agent
-
-    **Course Structure**
-      6 Live Sessions
-      Pre-Reading Lessons
-      Demo Day
-      Capstone Experience
-      Office Hour Q&As
-      SaaS Templates Portfolio
-
-    **Target Audience**
-      Product Managers
-      Business Leaders
-      Non-Technical Executives
-      Job Seekers & Career Builders
-
-    **Key Instructors**
-      Hamza Farooq (Ex-Google)
-      Gabriela de Queiroz (Ex-Microsoft)
+      Workflow Creator
+  Course Info
+    ::icon(fa fa-calendar-check)
+    6 Live Sessions
+    Reading Lessons
+    Capstone Project
+    SaaS Templates
+  Audience
+    ::icon(fa fa-users)
+    Product Managers
+    Business Leaders
+    Career Builders
 ```
 
 ---
