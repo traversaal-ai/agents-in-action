@@ -11,6 +11,8 @@ Today, **Large Language Models (LLMs)** have evolved into **AI agents** — syst
 
 That’s where **Agents in Action** comes in.
 
+![Build AI Agents - Not Chatbots](images/agents-in-action-infographic.png)
+
 We wanted to **bridge the gap between AI theory and real-world application** — giving you not just the concepts, but also the workflows, integrations, and hands-on projects to bring intelligent systems to life.
 
 This course takes you step-by-step through the evolution of AI agents — from understanding how LLMs reason, to building full-fledged agents that can
