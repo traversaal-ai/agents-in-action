@@ -17,21 +17,21 @@ Unlike most courses, this course teaches you how to think about solving real-wor
 mindmap
   root((Agents in Action))
 
-    Core Learning Objectives
+    **Core Learning Objectives**
       Identify high-value ROI use cases
       Design production-ready AI agents
       Master agentic architecture
       Implement Enterprise RAG
       Ensure safety and guardrails
 
-    Technology Stack
+    **Technology Stack**
       n8n (No-code automation)
       Lovable (Frontend builder)
       Supabase (Memory & persistence)
       Webhooks & APIs
       OpenRouter & LLMs
 
-    Hands-on Projects
+    **Hands-on Projects**
       Sales Prospecting Agent
       Document-aware Chatbot
       Perplexity Clone
@@ -40,7 +40,7 @@ mindmap
       Travel Agent
       Workflow Creator Meta-Agent
 
-    Course Structure
+    **Course Structure**
       6 Live Sessions
       Pre-Reading Lessons
       Demo Day
@@ -48,13 +48,13 @@ mindmap
       Office Hour Q&As
       SaaS Templates Portfolio
 
-    Target Audience
+    **Target Audience**
       Product Managers
       Business Leaders
       Non-Technical Executives
       Job Seekers & Career Builders
 
-    Key Instructors
+    **Key Instructors**
       Hamza Farooq (Ex-Google)
       Gabriela de Queiroz (Ex-Microsoft)
 ```
