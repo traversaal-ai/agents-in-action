@@ -1,5 +1,5 @@
 # 💗 Introducing Lovable — Your AI Frontend
-## 🔀 Workflow: [All In One Lovable](https://github.com/traversaal-ai/agents-in-action/tree/main/401-all-in-one-lovable) 
+## 🔀 Workflow: [Hello Lovable - Personal Task Tracker](https://github.com/traversaal-ai/agents-in-action/tree/main/001-hello-lovable)
 
 As you begin building AI agents with n8n, you’ll soon want a way to **interact with them in real time** — to chat, test ideas, and experience your workflows as a user would. That’s where **Lovable** comes in.
 
