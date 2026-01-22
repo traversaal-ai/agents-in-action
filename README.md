@@ -1,8 +1,6 @@
 # Agents in Action
 ## 🚀 **Build AI Agents Like a Pro!** [🌐Start Here](https://traversaal-ai.github.io/agents-in-action)
 
-![Agents in Action](images/agents-in-action-banner.png)
-
 ### 👋 Welcome to our course on AI Agents. 
 
 This course is one of the top-rated courses on building AI Agents using no-code/low-code tools. So far, we’ve taught this course to over 1500 professionals, at MAVEN, Stanford Continuing Studies, UCLA and University of Minnesota, helping them gain a deep understanding of the levels of agentic architecture, enterprise-grade Retrieval Augmented Generation (RAG), and open source agentic products deployment.
@@ -17,86 +15,7 @@ Unlike most courses, this course teaches you how to think about solving real-wor
 
 ## Course Mindmap
 
-```mermaid
----
-config:
-  look: neo
-  theme: forest
----
-graph TB
-    Root("<b>🚀 Agents in Action</b>") --> Obj["🎯 Objectives"] & Tech["🛠️ Tech Stack"] & Agents["🤖Agents"] & Info["🗓️Course Info"] & Aud["👨🏻‍💻Audience"]
-    Obj --> O1["High ROI Use Cases"] & O2["Agent Architecture"] & O3["Enterprise RAG"] & O4["Evaluations"] & O5["Safety & Guardrails"]
-    Tech --> T1["n8n & Webhooks"] & T2["Lovable"] & T3["Supabase"] & T4["OpenRouter LLMs"]
-    Agents --> A1["📈 Sales & Marketing"] & A2["🔎 Content & Search"] & A3["🌐 Vertical Agents"]
-    A1 --> A1a["Prospecting Agent"] & A1b["Social Automators"]
-    A2 --> A2a["Perplexity Clone"] & A2b["Voice Assistant"]
-    A3 --> A3a["Travel Agent"] & A3b["Finance Agent"]
-    Info --> I1["6 Live Sessions"] & I2["Hands-On Exercises"] & I3["Office Hours Q/As"] & I4["Capstone Project"]
-    Aud --> AU1["Product Managers"] & AU2["Business Leaders"] & AU3["Career Builders"]
-
-    Obj@{ shape: rounded}
-    Tech@{ shape: rounded}
-    Agents@{ shape: rounded}
-    Info@{ shape: rounded}
-    Aud@{ shape: rounded}
-    O1@{ shape: rounded}
-    O2@{ shape: rounded}
-    O3@{ shape: rounded}
-    O4@{ shape: rounded}
-    O5@{ shape: rounded}
-    T1@{ shape: rounded}
-    T2@{ shape: rounded}
-    T3@{ shape: rounded}
-    T4@{ shape: rounded}
-    A1@{ shape: rounded}
-    A2@{ shape: rounded}
-    A3@{ shape: rounded}
-    A1a@{ shape: rounded}
-    A1b@{ shape: rounded}
-    A2a@{ shape: rounded}
-    A2b@{ shape: rounded}
-    A3a@{ shape: rounded}
-    A3b@{ shape: rounded}
-    I1@{ shape: rounded}
-    I2@{ shape: rounded}
-    I3@{ shape: rounded}
-    I4@{ shape: rounded}
-    AU1@{ shape: rounded}
-    AU2@{ shape: rounded}
-    AU3@{ shape: rounded}
-    classDef Peach stroke-width:1px, stroke-dasharray:none, stroke:#FBB35A, fill:#FFEFDB, color:#8F632D
-    style Root fill:#FFE0B2,stroke:none,stroke-width:2px,color:#000000
-    style Obj fill:#BBDEFB,stroke:none
-    style Tech fill:#BBDEFB,stroke:none
-    style Agents fill:#BBDEFB,stroke:none
-    style Info fill:#BBDEFB,stroke:none
-    style Aud fill:#BBDEFB,stroke:none
-    style O1 stroke:none,fill:#C8E6C9
-    style O2 fill:#C8E6C9,stroke:none
-    style O3 fill:#C8E6C9,stroke:none
-    style O4 fill:#C8E6C9,stroke:none
-    style O5 fill:#C8E6C9,stroke:none
-    style T1 fill:#C8E6C9,stroke:none
-    style T2 fill:#C8E6C9,stroke:none
-    style T3 fill:#C8E6C9,stroke:none
-    style T4 fill:#C8E6C9,stroke:none
-    style A1 fill:#C8E6C9,stroke:none
-    style A2 fill:#C8E6C9,stroke:none
-    style A3 stroke:none,fill:#C8E6C9
-    style A1a fill:#E1BEE7,stroke:none
-    style A1b stroke:#E1BEE7,fill:#E1BEE7
-    style A2a stroke:none,fill:#E1BEE7
-    style A2b stroke:none,fill:#E1BEE7
-    style A3a stroke:none,fill:#E1BEE7
-    style A3b stroke:none,fill:#E1BEE7
-    style I1 stroke:none,fill:#C8E6C9
-    style I2 stroke:none,fill:#C8E6C9
-    style I3 stroke:none,fill:#C8E6C9
-    style I4 stroke:none,fill:#C8E6C9
-    style AU1 stroke:none,fill:#C8E6C9
-    style AU2 stroke:none,fill:#C8E6C9
-    style AU3 stroke:none,fill:#C8E6C9
-```
+![Agents in Action - Mindmap](images/mindmap.png)
 
 ---
 
