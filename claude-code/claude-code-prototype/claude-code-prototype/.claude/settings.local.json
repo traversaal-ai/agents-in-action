@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "WebFetch(domain:docs.plane.so)",
+      "WebFetch(domain:plane.so)",
+      "Bash(du:*)",
+      "WebSearch",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:developers.plane.so)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Skill(claude-developer-platform)",
+      "WebFetch(domain:maven.com)"
+    ]
+  }
+}
