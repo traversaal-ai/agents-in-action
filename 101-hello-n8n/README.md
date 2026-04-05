@@ -45,7 +45,7 @@ flowchart LR
 
 1. 🗃️ Import **`101_hello_n8n.json`** into your **n8n Cloud** or self-hosted workspace.
 2. 🔑 Create an **OpenRouter API key** (free tier available) → [https://openrouter.ai/keys](https://openrouter.ai/keys)
-3. In **n8n Credentials**, add:
+3. In **n8n Credentials** available at [https://REPLACE_WITH_YOUR_DOMAIN/home/credentials](https://REPLACE_WITH_YOUR_DOMAIN/home/credentials) add:
 
    - **Credential Type:** `OpenRouter API`
    - **API Key:** paste your key
